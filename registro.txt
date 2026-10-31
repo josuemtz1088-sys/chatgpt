@@ -1,0 +1,641 @@
+PS C:\Users\Paul campos\Desktop\Nueva carpeta (3)\Nueva carpeta\logs_1031_1824> Select-String -Path .\bot_output.log -Pattern $patron -CaseSensitive:$false |
+>>     Select-Object -Last 150 |
+>>     ForEach-Object { $_.Line }
+  [08:34:15] SIGNAL TREND_DN | MODERATE | CL DN $-113 (ptb=$77,255→$77,142) | x6 confirms | imb=1.84 | SCORE=66 | ℹ️RSI_BLOCK: RSI=7 < 35 — oversold, don't buy DN | BTC=$77,296 win_chg=-0.00109 | imb=1.84
+  [08:34:17] SIGNAL TREND_DN | MODERATE | CL DN $-113 (ptb=$77,255→$77,142) | x6 confirms | imb=0.44 | SCORE=66 | ℹ️RSI_BLOCK: RSI=7 < 35 — oversold, don't buy DN | BTC=$77,296 win_chg=-0.00109 | imb=0.44
+  [08:34:19] SIGNAL TREND_DN | MODERATE | CL DN $-80 (ptb=$77,255→$77,175) | x7 confirms | imb=0.83 | SCORE=8 | ℹ️RSI_BLOCK: RSI=7 < 35 — oversold, don't buy DN | BTC=$77,296 win_chg=-0.00109 | imb=0.83
+  [08:34:21] SIGNAL TREND_DN | MODERATE | CL DN $-80 (ptb=$77,255→$77,175) | x7 confirms | imb=5.38 | SCORE=0 | ℹ️RSI_BLOCK: RSI=7 < 35 — oversold, don't buy DN | BTC=$77,296 win_chg=-0.00109 | imb=5.38
+  [08:34:25] SIGNAL TREND_DN | MODERATE | CL DN $-80 (ptb=$77,255→$77,175) | x7 confirms | imb=2.12 | SCORE=22 | ℹ️RSI_BLOCK: RSI=7 < 35 — oversold, don't buy DN | BTC=$77,300 win_chg=-0.00103 | imb=2.12
+  [08:34:27] SIGNAL TREND_DN | MODERATE | CL DN $-80 (ptb=$77,255→$77,175) | x7 confirms | imb=1.01 | SCORE=74 | ℹ️RSI_BLOCK: RSI=7 < 35 — oversold, don't buy DN | BTC=$77,300 win_chg=-0.00103 | imb=1.01
+  [08:34:29] SIGNAL TREND_DN | MODERATE | CL DN $-80 (ptb=$77,255→$77,175) | x7 confirms | imb=0.31 | SCORE=70 | ℹ️RSI_BLOCK: RSI=7 < 35 — oversold, don't buy DN | BTC=$77,288 win_chg=-0.00119 | imb=0.31
+  [08:34:31] SIGNAL TREND_DN | MODERATE | CL DN $-80 (ptb=$77,255→$77,175) | x7 confirms | imb=0.22 | SCORE=71 | ℹ️RSI_BLOCK: RSI=7 < 35 — oversold, don't buy DN | BTC=$77,288 win_chg=-0.00119 | imb=0.22
+  [08:34:33] SIGNAL TREND_DN | MODERATE | CL DN $-80 (ptb=$77,255→$77,175) | x7 confirms | imb=0.12 | SCORE=78 | ℹ️RSI_BLOCK: RSI=7 < 35 — oversold, don't buy DN | BTC=$77,286 win_chg=-0.00121 | imb=0.12
+  [08:34:35] SIGNAL TREND_DN | MODERATE | CL DN $-80 (ptb=$77,255→$77,175) | x7 confirms | imb=0.41 | SCORE=45 | ℹ️RSI_BLOCK: RSI=7 < 35 — oversold, don't buy DN | BTC=$77,282 win_chg=-0.00127 | imb=0.41
+  🧭 CB BUY UP @$0.950 t+131s | $2.53
+📋 Side order (MERCADO FAK $1.90 ≈ 2 acc @≤0.95): {'errorMsg': '', 'orderID': '0x75a0532c57a23948afd84414689c45838529bfdfcdd6852f401c52459e7ced98', 'takingAmount': '2', 'makingAmount': '1.9', 'status': 'matched', 'transactionsHashes': ['0xdf0c63e313d6230ad4789fb3a86ef4445fef061854f394439a1b7371b98d8c17'], 'success': True}
+  🧭 CB BUY UP @$0.930 t+174s | $2.55
+📋 Side order (MERCADO FAK $1.86 ≈ 2 acc @≤0.93): {'errorMsg': '', 'orderID': '0xd6a8fc18a091740d6fc6b99ced3f00bfa1a2771bd74438ba852fd774e06a9cd7', 'takingAmount': '2', 'makingAmount': '1.86', 'status': 'matched', 'transactionsHashes': ['0x9e67951c3df290b2878b708ae5deb43194f3f15f1db58571d23fafce8c979505'], 'success': True}
+  🧭 LATE BUY UP @$0.930 t+187s | $1.38
+[py_clob_client_v2] request error status=400 url=https://clob.polymarket.com/order body={"error":"invalid amount for a marketable BUY order ($0.93), min size: 1"}
+  ❌ LATE BUY no ejecutada (intento 1/5): excepción: PolyApiException[status_code=400, error_message={'error': 'invalid amount for a marketable BUY order ($0.93),
+  🧭 LATE BUY DN @$0.910 t+163s | $1.58
+[py_clob_client_v2] request error status=400 url=https://clob.polymarket.com/order body={"error":"invalid amount for a marketable BUY order ($0.91), min size: 1"}
+  ❌ LATE BUY no ejecutada (intento 1/5): excepción: PolyApiException[status_code=400, error_message={'error': 'invalid amount for a marketable BUY order ($0.91),
+  🧭 LATE BUY DN @$0.890 t+178s | $1.58
+[py_clob_client_v2] request error status=400 url=https://clob.polymarket.com/order body={"error":"invalid amount for a marketable BUY order ($0.89), min size: 1"}
+  ❌ LATE BUY no ejecutada (intento 2/5): excepción: PolyApiException[status_code=400, error_message={'error': 'invalid amount for a marketable BUY order ($0.89),
+  🧭 LATE BUY DN @$0.910 t+182s | $1.58
+[py_clob_client_v2] request error status=400 url=https://clob.polymarket.com/order body={"error":"invalid amount for a marketable BUY order ($0.91), min size: 1"}
+  ❌ LATE BUY no ejecutada (intento 3/5): excepción: PolyApiException[status_code=400, error_message={'error': 'invalid amount for a marketable BUY order ($0.91),
+  🧭 LATE BUY DN @$0.940 t+190s | $1.58
+[py_clob_client_v2] request error status=400 url=https://clob.polymarket.com/order body={"error":"invalid amount for a marketable BUY order ($0.94), min size: 1"}
+  ❌ LATE BUY no ejecutada (intento 4/5): excepción: PolyApiException[status_code=400, error_message={'error': 'invalid amount for a marketable BUY order ($0.94),
+  🧭 LATE BUY DN @$0.940 t+163s | $1.58
+[py_clob_client_v2] request error status=400 url=https://clob.polymarket.com/order body={"error":"invalid amount for a marketable BUY order ($0.94), min size: 1"}
+  ❌ LATE BUY no ejecutada (intento 1/5): excepción: PolyApiException[status_code=400, error_message={'error': 'invalid amount for a marketable BUY order ($0.94),
+  🧭 LATE BUY DN @$0.960 t+193s | $1.58
+[py_clob_client_v2] request error status=400 url=https://clob.polymarket.com/order body={"error":"invalid amount for a marketable BUY order ($0.96), min size: 1"}
+  ❌ LATE BUY no ejecutada (intento 2/5): excepción: PolyApiException[status_code=400, error_message={'error': 'invalid amount for a marketable BUY order ($0.96),
+signal=NONE | IMB_FILTER: imb=19.12 > 7.0 (extreme buying, don't buy DN)
+signal=TREND_UP | MODERATE | CL UP $+76 (ptb=$77,418→$77,494) | x7 confirms | imb=7.73 | SCORE=88 | ℹ️RSI_BLOCK: RSI=68 > 65 — overbought, don't buy UP
+signal=TREND_UP | MODERATE | CL UP $+76 (ptb=$77,418→$77,494) | x7 confirms | imb=8.65 | SCORE=100 | ℹ️RSI_BLOCK: RSI=68 > 65 — overbought, don't buy UP
+signal=TREND_UP | MODERATE | CL UP $+76 (ptb=$77,418→$77,494) | x7 confirms | imb=10.31 | SCORE=100 | ℹ️RSI_BLOCK: RSI=68 > 65 — overbought, don't buy UP
+signal=TREND_UP | MODERATE | CL UP $+76 (ptb=$77,418→$77,494) | x7 confirms | imb=3.03 | SCORE=20 | ℹ️RSI_BLOCK: RSI=68 > 65 — overbought, don't buy UP
+signal=TREND_UP | MODERATE | CL UP $+76 (ptb=$77,418→$77,494) | x7 confirms | imb=1.36 | SCORE=12 | ℹ️RSI_BLOCK: RSI=68 > 65 — overbought, don't buy UP
+signal=TREND_UP | MODERATE | CL UP $+76 (ptb=$77,418→$77,494) | x7 confirms | imb=0.99 | SCORE=10 | ℹ️RSI_BLOCK: RSI=68 > 65 — overbought, don't buy UP
+signal=TREND_UP | MODERATE | CL UP $+76 (ptb=$77,418→$77,494) | x7 confirms | imb=1.00 | SCORE=10 | ℹ️RSI_BLOCK: RSI=68 > 65 — overbought, don't buy UP
+signal=TREND_UP | MODERATE | CL UP $+76 (ptb=$77,418→$77,494) | x7 confirms | imb=1.53 | SCORE=33 | ℹ️RSI_BLOCK: RSI=68 > 65 — overbought, don't buy UP
+signal=TREND_UP | MODERATE | CL UP $+76 (ptb=$77,418→$77,494) | x7 confirms | imb=1.25 | SCORE=15 | ℹ️RSI_BLOCK: RSI=68 > 65 — overbought, don't buy UP
+signal=TREND_UP | MODERATE | CL UP $+76 (ptb=$77,418→$77,494) | x7 confirms | imb=1.35 | SCORE=24 | ℹ️RSI_BLOCK: RSI=68 > 65 — overbought, don't buy UP
+signal=TREND_UP | MODERATE | CL UP $+76 (ptb=$77,418→$77,494) | x7 confirms | imb=1.42 | SCORE=13 | ℹ️RSI_BLOCK: RSI=68 > 65 — overbought, don't buy UP
+signal=TREND_UP | MODERATE | CL UP $+76 (ptb=$77,418→$77,494) | x7 confirms | imb=1.10 | SCORE=4 | ℹ️RSI_BLOCK: RSI=77 > 65 — overbought, don't buy UP
+signal=TREND_UP | MODERATE | CL UP $+76 (ptb=$77,418→$77,494) | x7 confirms | imb=0.27 | SCORE=0 | ℹ️RSI_BLOCK: RSI=77 > 65 — overbought, don't buy UP
+signal=NONE | IMB_FILTER: imb=0.09 < 0.15 (extreme selling, don't buy UP)
+signal=NONE | IMB_FILTER: imb=0.14 < 0.15 (extreme selling, don't buy UP)
+signal=NONE | IMB_FILTER: imb=0.08 < 0.15 (extreme selling, don't buy UP)
+signal=NONE | IMB_FILTER: imb=0.08 < 0.15 (extreme selling, don't buy UP)
+signal=NONE | IMB_FILTER: imb=0.09 < 0.15 (extreme selling, don't buy UP)
+signal=NONE | IMB_FILTER: imb=0.07 < 0.15 (extreme selling, don't buy UP)
+signal=NONE | IMB_FILTER: imb=0.06 < 0.15 (extreme selling, don't buy UP)
+signal=NONE | IMB_FILTER: imb=0.07 < 0.15 (extreme selling, don't buy UP)
+signal=NONE | IMB_FILTER: imb=0.05 < 0.15 (extreme selling, don't buy UP)
+signal=NONE | IMB_FILTER: imb=0.06 < 0.15 (extreme selling, don't buy UP)
+signal=NONE | IMB_FILTER: imb=0.06 < 0.15 (extreme selling, don't buy UP)
+signal=NONE | IMB_FILTER: imb=0.05 < 0.15 (extreme selling, don't buy UP)
+signal=NONE | IMB_FILTER: imb=0.10 < 0.15 (extreme selling, don't buy UP)
+signal=TREND_UP | MODERATE | CL UP $+88 (ptb=$77,418→$77,505) | x8 confirms | imb=0.21 | SCORE=0 | ℹ️RSI_BLOCK: RSI=77 > 65 — overbought, don't buy UP
+signal=TREND_UP | MODERATE | CL UP $+88 (ptb=$77,418→$77,505) | x8 confirms | imb=13.79 | SCORE=85 | ℹ️RSI_BLOCK: RSI=77 > 65 — overbought, don't buy UP
+signal=TREND_UP | MODERATE | CL UP $+88 (ptb=$77,418→$77,505) | x8 confirms | imb=17.55 | SCORE=80 | ℹ️RSI_BLOCK: RSI=77 > 65 — overbought, don't buy UP
+signal=TREND_UP | MODERATE | CL UP $+88 (ptb=$77,418→$77,505) | x8 confirms | imb=4.52 | SCORE=0 | ℹ️RSI_BLOCK: RSI=77 > 65 — overbought, don't buy UP
+signal=TREND_UP | MODERATE | CL UP $+88 (ptb=$77,418→$77,505) | x8 confirms | imb=0.98 | SCORE=0 | ℹ️RSI_BLOCK: RSI=77 > 65 — overbought, don't buy UP
+signal=TREND_UP | MODERATE | CL UP $+88 (ptb=$77,418→$77,505) | x8 confirms | imb=5.01 | SCORE=67 | ℹ️RSI_BLOCK: RSI=77 > 65 — overbought, don't buy UP
+signal=TREND_UP | MODERATE | CL UP $+88 (ptb=$77,418→$77,505) | x8 confirms | imb=6.13 | SCORE=59 | ℹ️RSI_BLOCK: RSI=77 > 65 — overbought, don't buy UP
+  [11:49:00] SIGNAL TREND_UP | MODERATE | CL UP $+76 (ptb=$77,418→$77,494) | x7 confirms | imb=1.42 | SCORE=13 | ℹ️RSI_BLOCK: RSI=68 > 65 — overbought, don't buy UP | BTC=$77,630 win_chg=+0.00039 | imb=1.42
+  [11:49:02] SIGNAL TREND_UP | MODERATE | CL UP $+76 (ptb=$77,418→$77,494) | x7 confirms | imb=1.10 | SCORE=4 | ℹ️RSI_BLOCK: RSI=77 > 65 — overbought, don't buy UP | BTC=$77,663 win_chg=+0.00081 | imb=1.10
+  [11:49:04] SIGNAL TREND_UP | MODERATE | CL UP $+76 (ptb=$77,418→$77,494) | x7 confirms | imb=0.27 | SCORE=0 | ℹ️RSI_BLOCK: RSI=77 > 65 — overbought, don't buy UP | BTC=$77,657 win_chg=+0.00073 | imb=0.27
+  [11:49:32] SIGNAL TREND_UP | MODERATE | CL UP $+88 (ptb=$77,418→$77,505) | x8 confirms | imb=0.21 | SCORE=0 | ℹ️RSI_BLOCK: RSI=77 > 65 — overbought, don't buy UP | BTC=$77,608 win_chg=+0.00010 | imb=0.21
+  [11:49:34] SIGNAL TREND_UP | MODERATE | CL UP $+88 (ptb=$77,418→$77,505) | x8 confirms | imb=13.79 | SCORE=85 | ℹ️RSI_BLOCK: RSI=77 > 65 — overbought, don't buy UP | BTC=$77,616 win_chg=+0.00021 | imb=13.79
+  [11:49:36] SIGNAL TREND_UP | MODERATE | CL UP $+88 (ptb=$77,418→$77,505) | x8 confirms | imb=17.55 | SCORE=80 | ℹ️RSI_BLOCK: RSI=77 > 65 — overbought, don't buy UP | BTC=$77,620 win_chg=+0.00026 | imb=17.55
+  [11:49:38] SIGNAL TREND_UP | MODERATE | CL UP $+88 (ptb=$77,418→$77,505) | x8 confirms | imb=4.52 | SCORE=0 | ℹ️RSI_BLOCK: RSI=77 > 65 — overbought, don't buy UP | BTC=$77,620 win_chg=+0.00026 | imb=4.52
+  [11:49:40] SIGNAL TREND_UP | MODERATE | CL UP $+88 (ptb=$77,418→$77,505) | x8 confirms | imb=0.98 | SCORE=0 | ℹ️RSI_BLOCK: RSI=77 > 65 — overbought, don't buy UP | BTC=$77,614 win_chg=+0.00018 | imb=0.98
+  [11:49:42] SIGNAL TREND_UP | MODERATE | CL UP $+88 (ptb=$77,418→$77,505) | x8 confirms | imb=5.01 | SCORE=67 | ℹ️RSI_BLOCK: RSI=77 > 65 — overbought, don't buy UP | BTC=$77,614 win_chg=+0.00018 | imb=5.01
+  [11:49:44] SIGNAL TREND_UP | MODERATE | CL UP $+88 (ptb=$77,418→$77,505) | x8 confirms | imb=6.13 | SCORE=59 | ℹ️RSI_BLOCK: RSI=77 > 65 — overbought, don't buy UP | BTC=$77,614 win_chg=+0.00018 | imb=6.13
+signal=TREND_UP | MODERATE | CL UP $+79 (ptb=$77,485→$77,564) | x7 confirms | imb=7.49 | SCORE=66 | ℹ️RSI_BLOCK: RSI=68 > 65 — overbought, don't buy UP
+  [12:39:14] SIGNAL TREND_UP | MODERATE | CL UP $+79 (ptb=$77,485→$77,564) | x7 confirms | imb=7.49 | SCORE=66 | ℹ️RSI_BLOCK: RSI=68 > 65 — overbought, don't buy UP | BTC=$77,680 win_chg=+0.00078 | imb=7.49
+signal=NONE | IMB_FILTER: imb=7.00 > 7.0 (extreme buying, don't buy DN)
+signal=TREND_DN | MODERATE | CL DN $-105 (ptb=$77,410→$77,304) | x6 confirms | imb=0.62 | SCORE=94 | ℹ️RSI_BLOCK: RSI=31 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-105 (ptb=$77,410→$77,304) | x6 confirms | imb=0.23 | SCORE=70 | ℹ️RSI_BLOCK: RSI=31 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-105 (ptb=$77,410→$77,304) | x6 confirms | imb=0.16 | SCORE=73 | ℹ️RSI_BLOCK: RSI=31 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-105 (ptb=$77,410→$77,304) | x6 confirms | imb=0.16 | SCORE=73 | ℹ️RSI_BLOCK: RSI=31 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-105 (ptb=$77,410→$77,304) | x6 confirms | imb=0.14 | SCORE=78 | ℹ️RSI_BLOCK: RSI=31 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-105 (ptb=$77,410→$77,304) | x6 confirms | imb=0.64 | SCORE=28 | ℹ️RSI_BLOCK: RSI=31 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-105 (ptb=$77,410→$77,304) | x6 confirms | imb=0.74 | SCORE=31 | ℹ️RSI_BLOCK: RSI=31 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-105 (ptb=$77,410→$77,304) | x6 confirms | imb=0.91 | SCORE=7 | ℹ️RSI_BLOCK: RSI=31 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-105 (ptb=$77,410→$77,304) | x6 confirms | imb=1.02 | SCORE=7 | ℹ️RSI_BLOCK: RSI=31 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-105 (ptb=$77,410→$77,304) | x6 confirms | imb=0.69 | SCORE=67 | ℹ️RSI_BLOCK: RSI=31 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-105 (ptb=$77,410→$77,304) | x6 confirms | imb=0.20 | SCORE=68 | ℹ️RSI_BLOCK: RSI=31 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-105 (ptb=$77,410→$77,304) | x6 confirms | imb=0.11 | SCORE=66 | ℹ️RSI_BLOCK: RSI=31 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-105 (ptb=$77,410→$77,304) | x6 confirms | imb=0.14 | SCORE=53 | ℹ️RSI_BLOCK: RSI=31 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-102 (ptb=$77,410→$77,307) | x7 confirms | imb=0.24 | SCORE=46 | ℹ️RSI_BLOCK: RSI=31 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-102 (ptb=$77,410→$77,307) | x7 confirms | imb=0.25 | SCORE=58 | ℹ️RSI_BLOCK: RSI=31 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-102 (ptb=$77,410→$77,307) | x7 confirms | imb=3.60 | SCORE=1 | ℹ️RSI_BLOCK: RSI=31 < 35 — oversold, don't buy DN
+signal=NONE | IMB_FILTER: imb=9.28 > 7.0 (extreme buying, don't buy DN)
+signal=NONE | IMB_FILTER: imb=10.74 > 7.0 (extreme buying, don't buy DN)
+signal=NONE | IMB_FILTER: imb=10.90 > 7.0 (extreme buying, don't buy DN)
+signal=TREND_DN | MODERATE | CL DN $-102 (ptb=$77,410→$77,307) | x7 confirms | imb=4.53 | SCORE=6 | ℹ️RSI_BLOCK: RSI=31 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-102 (ptb=$77,410→$77,307) | x7 confirms | imb=1.12 | SCORE=68 | ℹ️RSI_BLOCK: RSI=31 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-102 (ptb=$77,410→$77,307) | x7 confirms | imb=0.44 | SCORE=67 | ℹ️RSI_BLOCK: RSI=31 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-102 (ptb=$77,410→$77,307) | x7 confirms | imb=0.37 | SCORE=66 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-102 (ptb=$77,410→$77,307) | x7 confirms | imb=0.43 | SCORE=45 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-102 (ptb=$77,410→$77,307) | x7 confirms | imb=0.60 | SCORE=45 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-102 (ptb=$77,410→$77,307) | x7 confirms | imb=1.47 | SCORE=15 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-102 (ptb=$77,410→$77,307) | x7 confirms | imb=1.86 | SCORE=15 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-102 (ptb=$77,410→$77,307) | x7 confirms | imb=1.88 | SCORE=0 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x8 confirms | imb=2.21 | SCORE=0 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x8 confirms | imb=1.32 | SCORE=8 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x8 confirms | imb=2.98 | SCORE=0 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x8 confirms | imb=3.52 | SCORE=0 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x8 confirms | imb=2.46 | SCORE=8 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x8 confirms | imb=4.16 | SCORE=43 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x8 confirms | imb=1.07 | SCORE=34 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x8 confirms | imb=0.55 | SCORE=49 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x8 confirms | imb=0.36 | SCORE=54 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x8 confirms | imb=0.76 | SCORE=1 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x8 confirms | imb=0.88 | SCORE=60 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x8 confirms | imb=0.33 | SCORE=60 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x8 confirms | imb=0.25 | SCORE=59 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x8 confirms | imb=0.37 | SCORE=62 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x8 confirms | imb=0.14 | SCORE=66 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x8 confirms | imb=0.68 | SCORE=13 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x8 confirms | imb=0.78 | SCORE=24 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x8 confirms | imb=3.69 | SCORE=15 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x9 confirms | imb=4.61 | SCORE=23 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x9 confirms | imb=5.05 | SCORE=15 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x9 confirms | imb=6.66 | SCORE=0 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x9 confirms | imb=4.95 | SCORE=0 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x9 confirms | imb=4.61 | SCORE=0 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+signal=TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x9 confirms | imb=4.32 | SCORE=0 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN
+  [14:59:40] SIGNAL TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x8 confirms | imb=0.14 | SCORE=66 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN | BTC=$77,438 win_chg=-0.00080 | imb=0.14
+  [14:59:42] SIGNAL TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x8 confirms | imb=0.68 | SCORE=13 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN | BTC=$77,438 win_chg=-0.00080 | imb=0.68
+  [14:59:44] SIGNAL TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x8 confirms | imb=0.78 | SCORE=24 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN | BTC=$77,438 win_chg=-0.00080 | imb=0.78
+  [14:59:46] SIGNAL TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x8 confirms | imb=3.69 | SCORE=15 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN | BTC=$77,438 win_chg=-0.00080 | imb=3.69
+  [14:59:48] SIGNAL TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x9 confirms | imb=4.61 | SCORE=23 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN | BTC=$77,440 win_chg=-0.00078 | imb=4.61
+  [14:59:50] SIGNAL TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x9 confirms | imb=5.05 | SCORE=15 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN | BTC=$77,440 win_chg=-0.00078 | imb=5.05
+  [14:59:52] SIGNAL TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x9 confirms | imb=6.66 | SCORE=0 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN | BTC=$77,440 win_chg=-0.00078 | imb=6.66
+  [14:59:54] SIGNAL TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x9 confirms | imb=4.95 | SCORE=0 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN | BTC=$77,440 win_chg=-0.00078 | imb=4.95
+  [14:59:56] SIGNAL TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x9 confirms | imb=4.61 | SCORE=0 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN | BTC=$77,440 win_chg=-0.00078 | imb=4.61
+  [14:59:58] SIGNAL TREND_DN | MODERATE | CL DN $-97 (ptb=$77,410→$77,313) | x9 confirms | imb=4.32 | SCORE=0 | ℹ️RSI_BLOCK: RSI=35 < 35 — oversold, don't buy DN | BTC=$77,440 win_chg=-0.00078 | imb=4.32
+signal=TREND_UP | MODERATE | CL UP $+77 (ptb=$77,386→$77,463) | x10 confirms | imb=0.27 | SCORE=0 | ℹ️RSI_BLOCK: RSI=85 > 65 — overbought, don't buy UP
+signal=TREND_UP | MODERATE | CL UP $+77 (ptb=$77,386→$77,463) | x10 confirms | imb=0.25 | SCORE=0 | ℹ️RSI_BLOCK: RSI=85 > 65 — overbought, don't buy UP
+  [15:39:56] SIGNAL TREND_UP | MODERATE | CL UP $+77 (ptb=$77,386→$77,463) | x10 confirms | imb=0.27 | SCORE=0 | ℹ️RSI_BLOCK: RSI=85 > 65 — overbought, don't buy UP | BTC=$77,599 win_chg=+0.00077 | imb=0.27
+  [15:39:58] SIGNAL TREND_UP | MODERATE | CL UP $+77 (ptb=$77,386→$77,463) | x10 confirms | imb=0.25 | SCORE=0 | ℹ️RSI_BLOCK: RSI=85 > 65 — overbought, don't buy UP | BTC=$77,599 win_chg=+0.00077 | imb=0.25
+signal=NONE | IMB_FILTER: imb=12.59 > 7.0 (extreme buying, don't buy DN)
+signal=NONE | IMB_FILTER: imb=8.19 > 7.0 (extreme buying, don't buy DN)
+PS C:\Users\Paul campos\Desktop\Nueva carpeta (3)\Nueva carpeta\logs_1031_1824> Select-String -Path .\tw_log.jsonl -Pattern 'TW_SIGNAL|TW_RESULT|orderID|order_id|fill_price|paid_usdc|shares' |
+>>     Select-Object -Last 100 |
+>>     ForEach-Object { $_.Line }
+{"ts": 1793185601.67, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793185500", "epoch": 1793185500, "side": "DN", "elapsed": 101.7, "ask": 0.94, "ask_top3": 5410.35, "ws_ask": 0.94, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.013, "try": 1, "z": 3.855, "ptb_real": 81344.12, "ptb_bot": 81344.57, "ds_px": 81275.98, "ds_delta": -68.14, "ds_age_s": 1.67, "ret": 0.13, "v10": 10.62, "sigma": 1.3975, "usdc": 64.46, "pct": 0.25, "cl_delta_bot": -57.98000000001048, "fast_track_holding": false, "ok": true, "price_cap": 0.95, "fill_price": 0.94, "shares": 67.7128, "paid_usdc": 63.65, "slip": -0.0}
+{"ts": 1793186030.4102314, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793185500", "side": "DN", "winner": "DN", "won": true, "entry": 0.9399999994092694, "usdc": 63.65, "pnl_est": 4.06, "wins": 80, "losses": 0}
+{"ts": 1793186588.42, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793186400", "epoch": 1793186400, "side": "UP", "elapsed": 188.4, "ask": 0.97, "ask_top3": 14765.939999999999, "ws_ask": 0.97, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.012, "try": 1, "z": 3.538, "ptb_real": 81269.51, "ptb_bot": 81269.71, "ds_px": 81306.04, "ds_delta": 36.53, "ds_age_s": 1.42, "ret": 0.0, "v10": 7.96, "sigma": 1.2085, "usdc": 65.87, "pct": 0.25, "cl_delta_bot": 26.73110151999572, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.97, "shares": 67.6907, "paid_usdc": 65.66, "slip": 0.0}
+{"ts": 1793186772.297996, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793186400", "side": "UP", "winner": "UP", "won": true, "entry": 0.97, "usdc": 65.659979, "pnl_est": 2.03, "wins": 81, "losses": 0}
+{"ts": 1793188601.33, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793188500", "epoch": 1793188500, "side": "DN", "elapsed": 101.3, "ask": 0.98, "ask_top3": 7439.469999999999, "ws_ask": 0.97, "ws_ask_minus_real": -0.01, "book_lag_p50_s": 0.011, "try": 1, "z": 4.164, "ptb_real": 81269.36, "ptb_bot": 81270.36, "ds_px": 81209.48, "ds_delta": -59.88, "ds_age_s": 2.33, "ret": 0.36, "v10": 28.91, "sigma": 1.1333, "usdc": 66.9, "pct": 0.25, "cl_delta_bot": -44.83572016999824, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.98, "shares": 68.0, "paid_usdc": 66.64, "slip": 0.0}
+{"ts": 1793188875.5766299, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793188500", "side": "DN", "winner": "DN", "won": true, "entry": 0.98, "usdc": 66.64, "pnl_est": 1.36, "wins": 82, "losses": 0}
+{"ts": 1793189526.95, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793189400", "epoch": 1793189400, "side": "DN", "elapsed": 127.0, "ask": 0.98, "ask_top3": 6246.56, "ws_ask": 0.98, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.012, "try": 1, "z": 3.379, "ptb_real": 81073.3, "ptb_bot": 81073.71, "ds_px": 80954.68, "ds_delta": -118.62, "ds_age_s": 1.95, "ret": 0.0, "v10": 71.75, "sigma": 3.021, "usdc": 50.77, "pct": 0.25, "cl_delta_bot": -47.42898731000605, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.98, "shares": 51.0, "paid_usdc": 49.98, "slip": 0.0}
+{"ts": 1793189770.724594, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793189400", "side": "DN", "winner": "DN", "won": true, "entry": 0.98, "usdc": 49.98, "pnl_est": 1.02, "wins": 83, "losses": 0}
+{"ts": 1793194337.72, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793194200", "epoch": 1793194200, "side": "UP", "elapsed": 137.7, "ask": 0.92, "ask_top3": 2632.34, "ws_ask": 0.92, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.012, "try": 1, "z": 3.542, "ptb_real": 80521.18, "ptb_bot": 80521.25, "ds_px": 80626.32, "ds_delta": 105.15, "ds_age_s": 1.72, "ret": 0.0, "v10": 19.97, "sigma": 2.6659, "usdc": 56.62, "pct": 0.25, "cl_delta_bot": 99.32362470999942, "fast_track_holding": false, "ok": true, "price_cap": 0.93, "fill_price": 0.92, "shares": 60.6522, "paid_usdc": 55.8, "slip": -0.0}
+{"ts": 1793194575.585222, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793194200", "side": "UP", "winner": "UP", "won": true, "entry": 0.9199999993405017, "usdc": 55.799989, "pnl_est": 4.85, "wins": 84, "losses": 0}
+{"ts": 1793194608.03, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793194500", "epoch": 1793194500, "side": "UP", "elapsed": 108.0, "ask": 0.97, "ask_top3": 6941.08, "ws_ask": 0.97, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.014, "try": 1, "z": 3.014, "ptb_real": 80592.86, "ptb_bot": 80593.68, "ds_px": 80754.85, "ds_delta": 161.98, "ds_age_s": 2.03, "ret": 0.0, "v10": 53.38, "sigma": 4.3302, "usdc": 58.22, "pct": 0.25, "cl_delta_bot": 41.62243450000824, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.98, "shares": 59.0, "paid_usdc": 57.82, "slip": 0.01}
+{"ts": 1793194875.7202759, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793194500", "side": "UP", "winner": "UP", "won": true, "entry": 0.98, "usdc": 57.82, "pnl_est": 1.18, "wins": 85, "losses": 0}
+{"ts": 1793197013.73, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793196900", "epoch": 1793196900, "side": "DN", "elapsed": 113.7, "ask": 0.96, "ask_top3": 6068.58, "ws_ask": 0.96, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.011, "try": 1, "z": 2.81, "ptb_real": 80564.77, "ptb_bot": 80565.96, "ds_px": 80450.43, "ds_delta": -114.34, "ds_age_s": 1.73, "ret": 0.0, "v10": 7.41, "sigma": 3.3452, "usdc": 60.39, "pct": 0.25, "cl_delta_bot": -56.34000000001106, "fast_track_holding": false, "ok": true, "price_cap": 0.97, "fill_price": 0.96, "shares": 62.6458, "paid_usdc": 60.14, "slip": 0.0}
+{"ts": 1793197275.5366864, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793196900", "side": "DN", "winner": "DN", "won": true, "entry": 0.96, "usdc": 60.139992, "pnl_est": 2.51, "wins": 86, "losses": 0}
+{"ts": 1793198263.73, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793198100", "epoch": 1793198100, "side": "DN", "elapsed": 163.7, "ask": 0.98, "ask_top3": 12447.5, "ws_ask": 0.98, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.014, "try": 1, "z": 2.853, "ptb_real": 80434.23, "ptb_bot": 80433.9, "ds_px": 80355.76, "ds_delta": -78.47, "ds_age_s": 1.73, "ret": 0.0, "v10": 5.36, "sigma": 2.7785, "usdc": 42.63, "pct": 0.25, "cl_delta_bot": -60.830898609987344, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.98, "shares": 43.0, "paid_usdc": 42.14, "slip": 0.0}
+{"ts": 1793198519.34, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793198400", "epoch": 1793198400, "side": "UP", "elapsed": 119.3, "ask": 0.98, "ask_top3": 6465.540000000001, "ws_ask": 0.98, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.014, "try": 1, "z": 3.006, "ptb_real": 80377.59, "ptb_bot": 80375.77, "ds_px": 80474.01, "ds_delta": 96.43, "ds_age_s": 2.34, "ret": 0.0, "v10": 15.25, "sigma": 2.6828, "usdc": 49.14, "pct": 0.25, "cl_delta_bot": 75.5378962699906, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.98, "shares": 50.0, "paid_usdc": 49.0, "slip": 0.0}
+{"ts": 1793198561.9756749, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793198100", "side": "DN", "winner": "DN", "won": true, "entry": 0.98, "usdc": 42.14, "pnl_est": 0.86, "wins": 87, "losses": 0}
+{"ts": 1793198775.5243907, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793198400", "side": "UP", "winner": "UP", "won": true, "entry": 0.98, "usdc": 49.0, "pnl_est": 1.0, "wins": 88, "losses": 0}
+{"ts": 1793199703.46, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793199600", "epoch": 1793199600, "side": "UP", "elapsed": 103.5, "ask": 0.97, "ask_top3": 16644.96, "ws_ask": 0.97, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.013, "try": 1, "z": 3.283, "ptb_real": 80473.97, "ptb_bot": 80473.12, "ds_px": 80563.71, "ds_delta": 89.74, "ds_age_s": 1.46, "ret": 0.0, "v10": 8.25, "sigma": 2.1746, "usdc": 70.03, "pct": 0.25, "cl_delta_bot": 81.5926621700055, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.97, "shares": 71.732, "paid_usdc": 69.58, "slip": -0.0}
+{"ts": 1793199975.3727093, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793199600", "side": "UP", "winner": "UP", "won": true, "entry": 0.9699999967936188, "usdc": 69.58, "pnl_est": 2.15, "wins": 89, "losses": 0}
+{"ts": 1793204522.54, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793204400", "epoch": 1793204400, "side": "DN", "elapsed": 122.5, "ask": 0.96, "ask_top3": 7012.89, "ws_ask": 0.96, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.013, "try": 1, "z": 2.837, "ptb_real": 80447.27, "ptb_bot": 80448.67, "ds_px": 80388.54, "ds_delta": -58.73, "ds_age_s": 1.54, "ret": 0.0, "v10": 5.72, "sigma": 1.756, "usdc": 50.32, "pct": 0.25, "cl_delta_bot": -54.679999999993015, "fast_track_holding": false, "ok": true, "price_cap": 0.97, "fill_price": 0.96, "shares": 51.5312, "paid_usdc": 49.47, "slip": 0.0}
+{"ts": 1793204775.4759748, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793204400", "side": "DN", "winner": "DN", "won": true, "entry": 0.96, "usdc": 49.47, "pnl_est": 2.06, "wins": 90, "losses": 0}
+{"ts": 1793205474.33, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793205300", "epoch": 1793205300, "side": "DN", "elapsed": 174.3, "ask": 0.98, "ask_top3": 13436.67, "ws_ask": 0.98, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.012, "try": 1, "z": 2.831, "ptb_real": 80452.81, "ptb_bot": 80451.71, "ds_px": 80407.0, "ds_delta": -45.81, "ds_age_s": 2.33, "ret": 0.0, "v10": 14.68, "sigma": 1.725, "usdc": 50.8, "pct": 0.25, "cl_delta_bot": -9.844286140010809, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.98, "shares": 51.0, "paid_usdc": 49.98, "slip": 0.0}
+{"ts": 1793205670.3516421, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793205300", "side": "DN", "winner": "DN", "won": true, "entry": 0.98, "usdc": 49.98, "pnl_est": 1.02, "wins": 91, "losses": 0}
+{"ts": 1793207873.64, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793207700", "epoch": 1793207700, "side": "UP", "elapsed": 173.6, "ask": 0.96, "ask_top3": 6887.75, "ws_ask": 0.96, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.016, "try": 1, "z": 2.862, "ptb_real": 80382.77, "ptb_bot": 80381.94, "ds_px": 80432.64, "ds_delta": 49.88, "ds_age_s": 1.64, "ret": 0.0, "v10": 22.21, "sigma": 1.8579, "usdc": 46.0, "pct": 0.25, "cl_delta_bot": 31.783244999998715, "fast_track_holding": false, "ok": true, "price_cap": 0.97, "fill_price": 0.96, "shares": 47.4896, "paid_usdc": 45.59, "slip": 0.0}
+{"ts": 1793208073.7746148, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793207700", "side": "UP", "winner": "UP", "won": true, "entry": 0.96, "usdc": 45.589992, "pnl_est": 1.9, "wins": 92, "losses": 0}
+{"ts": 1793208103.99, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793208000", "epoch": 1793208000, "side": "UP", "elapsed": 104.0, "ask": 0.92, "ask_top3": 3839.9, "ws_ask": 0.92, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.014, "try": 1, "z": 3.827, "ptb_real": 80414.4, "ptb_bot": 80414.56, "ds_px": 80495.15, "ds_delta": 80.75, "ds_age_s": 1.99, "ret": 0.0, "v10": 56.32, "sigma": 1.6786, "usdc": 51.68, "pct": 0.25, "cl_delta_bot": -1.6300000000046566, "fast_track_holding": false, "ok": true, "price_cap": 0.93, "fill_price": 0.93, "shares": 55.0, "paid_usdc": 51.15, "slip": 0.01}
+{"ts": 1793208375.4805684, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793208000", "side": "UP", "winner": "UP", "won": true, "entry": 0.9299999999999999, "usdc": 51.15, "pnl_est": 3.85, "wins": 93, "losses": 0}
+{"ts": 1793209362.31, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793209200", "epoch": 1793209200, "side": "UP", "elapsed": 162.3, "ask": 0.98, "ask_top3": 8954.92, "ws_ask": 0.98, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.012, "try": 1, "z": 2.821, "ptb_real": 80548.96, "ptb_bot": 80549.34, "ds_px": 80607.94, "ds_delta": 58.98, "ds_age_s": 1.31, "ret": 0.0, "v10": 17.55, "sigma": 2.1009, "usdc": 41.34, "pct": 0.25, "cl_delta_bot": 26.270940829999745, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.98, "shares": 42.0, "paid_usdc": 41.16, "slip": -0.0}
+{"ts": 1793209606.6646068, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793209200", "side": "UP", "winner": "UP", "won": true, "entry": 0.9799999999999999, "usdc": 41.16, "pnl_est": 0.84, "wins": 94, "losses": 0}
+{"ts": 1793210557.1, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793210400", "epoch": 1793210400, "side": "UP", "elapsed": 157.1, "ask": 0.9, "ask_top3": 2680.23, "ws_ask": 0.9, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.016, "try": 1, "z": 4.67, "ptb_real": 80763.54, "ptb_bot": 80763.63, "ds_px": 80916.96, "ds_delta": 153.42, "ds_age_s": 2.1, "ret": 0.0, "v10": 111.99, "sigma": 3.2064, "usdc": 57.75, "pct": 0.25, "cl_delta_bot": 60.61000000000058, "fast_track_holding": false, "ok": true, "price_cap": 0.91, "fill_price": 0.9, "shares": 63.7, "paid_usdc": 57.33, "slip": -0.0}
+{"ts": 1793210770.847399, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793210400", "side": "UP", "winner": "UP", "won": true, "entry": 0.8999999999999999, "usdc": 57.33, "pnl_est": 6.37, "wins": 95, "losses": 0}
+{"ts": 1793212354.17, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793212200", "epoch": 1793212200, "side": "DN", "elapsed": 154.2, "ask": 0.91, "ask_top3": 720.6, "ws_ask": 0.93, "ws_ask_minus_real": 0.02, "book_lag_p50_s": 0.015, "try": 1, "z": 3.005, "ptb_real": 80832.74, "ptb_bot": 80832.31, "ds_px": 80728.59, "ds_delta": -104.14, "ds_age_s": 1.17, "ret": 0.0, "v10": 34.17, "sigma": 3.3505, "usdc": 62.09, "pct": 0.25, "cl_delta_bot": -72.13000000000466, "fast_track_holding": false, "ok": true, "price_cap": 0.92, "fill_price": 0.91, "shares": 67.7363, "paid_usdc": 61.64, "slip": -0.0}
+{"ts": 1793212609.93, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793212500", "epoch": 1793212500, "side": "UP", "elapsed": 109.9, "ask": 0.96, "ask_top3": 6999.12, "ws_ask": 0.96, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.013, "try": 1, "z": 3.202, "ptb_real": 80956.49, "ptb_bot": 80959.53, "ds_px": 81211.87, "ds_delta": 255.38, "ds_age_s": 1.93, "ret": 0.0, "v10": 43.56, "sigma": 6.4683, "usdc": 42.1, "pct": 0.25, "cl_delta_bot": 208.50900000000547, "fast_track_holding": false, "ok": true, "price_cap": 0.97, "fill_price": 0.96, "shares": 43.4479, "paid_usdc": 41.71, "slip": 0.0}
+{"ts": 1793212637.0678358, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793212200", "side": "DN", "winner": "UP", "won": false, "entry": 0.9099999992618428, "usdc": 61.639992, "pnl_est": -61.64, "wins": 95, "losses": 1}
+{"ts": 1793212906.0898204, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793212500", "side": "UP", "winner": "DN", "won": false, "entry": 0.9600000000000001, "usdc": 41.709984, "pnl_est": -41.71, "wins": 95, "losses": 2}
+{"ts": 1793224004.61, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793223900", "epoch": 1793223900, "side": "UP", "elapsed": 104.6, "ask": 0.97, "ask_top3": 12712.710000000001, "ws_ask": 0.97, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.009, "try": 1, "z": 3.428, "ptb_real": 81148.69, "ptb_bot": 81148.04, "ds_px": 81232.61, "ds_delta": 83.92, "ds_age_s": 2.61, "ret": 0.0, "v10": 5.7, "sigma": 1.9475, "sigma60": 1.002, "usdc": 12.24, "pct": 0.25, "cl_delta_bot": 79.5416276800097, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.97, "shares": 12.1237, "paid_usdc": 11.76, "slip": 0.0}
+{"ts": 1793224305.6468966, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793223900", "side": "UP", "winner": "UP", "won": true, "entry": 0.97, "usdc": 11.759989, "pnl_est": 0.36, "wins": 1, "losses": 0}
+{"ts": 1793224922.24, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793224800", "epoch": 1793224800, "side": "DN", "elapsed": 122.2, "ask": 0.93, "ask_top3": 3823.3, "ws_ask": 0.93, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.012, "try": 1, "z": 3.083, "ptb_real": 81281.28, "ptb_bot": 81281.02, "ds_px": 81222.92, "ds_delta": -58.36, "ds_age_s": 2.24, "ret": 0.0, "v10": 28.73, "sigma": 1.5998, "sigma60": 2.84, "usdc": 16.31, "pct": 0.25, "cl_delta_bot": -29.669747620006092, "fast_track_holding": false, "ok": true, "price_cap": 0.94, "fill_price": 0.9, "shares": 17.7555, "paid_usdc": 15.98, "slip": -0.03}
+{"ts": 1793225236.2953303, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793224800", "side": "DN", "winner": "DN", "won": true, "entry": 0.9, "usdc": 15.979995, "pnl_est": 1.78, "wins": 2, "losses": 0}
+{"ts": 1793226707.91, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793226600", "epoch": 1793226600, "side": "UP", "elapsed": 107.9, "ask": 0.92, "ask_top3": 3509.76, "ws_ask": 0.92, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.013, "try": 1, "z": 2.861, "ptb_real": 81177.81, "ptb_bot": 81177.54, "ds_px": 81241.07, "ds_delta": 63.27, "ds_age_s": 1.91, "ret": 0.0, "v10": 10.85, "sigma": 1.7821, "sigma60": 2.144, "usdc": 17.04, "pct": 0.25, "cl_delta_bot": 54.69790598000691, "fast_track_holding": false, "ok": true, "price_cap": 0.93, "fill_price": 0.92, "shares": 18.1957, "paid_usdc": 16.74, "slip": -0.0}
+{"ts": 1793227000.6680577, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793226600", "side": "UP", "winner": "UP", "won": true, "entry": 0.9199999999999999, "usdc": 16.739998, "pnl_est": 1.46, "wins": 3, "losses": 0}
+{"ts": 1793227029.24, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793226900", "epoch": 1793226900, "side": "DN", "elapsed": 129.2, "ask": 0.96, "ask_top3": 5069.44, "ws_ask": 0.96, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.012, "try": 1, "z": 2.811, "ptb_real": 81312.02, "ptb_bot": 81311.48, "ds_px": 81230.9, "ds_delta": -81.12, "ds_age_s": 2.24, "ret": 0.13, "v10": 25.1, "sigma": 2.5026, "sigma60": 3.458, "usdc": 13.12, "pct": 0.25, "cl_delta_bot": -56.76999999998952, "fast_track_holding": false, "ok": true, "price_cap": 0.97, "fill_price": 0.96, "shares": 13.1354, "paid_usdc": 12.61, "slip": 0.0}
+{"ts": 1793227305.5489252, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793226900", "side": "DN", "winner": "DN", "won": true, "entry": 0.96, "usdc": 12.609984, "pnl_est": 0.53, "wins": 4, "losses": 0}
+{"ts": 1793231840.6, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793231700", "epoch": 1793231700, "side": "UP", "elapsed": 140.6, "ask": 0.98, "ask_top3": 5451.48, "ws_ask": 0.98, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.024, "try": 1, "z": 2.855, "ptb_real": 81210.48, "ptb_bot": 81210.03, "ds_px": 81263.03, "ds_delta": 52.56, "ds_age_s": 1.6, "ret": 0.0, "v10": 11.05, "sigma": 1.6733, "sigma60": 1.169, "usdc": 19.71, "pct": 0.25, "cl_delta_bot": 33.02755750999495, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.98, "shares": 20.0, "paid_usdc": 19.6, "slip": 0.0}
+{"ts": 1793232160.69, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793232000", "epoch": 1793232000, "side": "DN", "elapsed": 160.7, "ask": 0.94, "ask_top3": 849.64, "ws_ask": 0.95, "ws_ask_minus_real": 0.01, "book_lag_p50_s": 0.014, "try": 1, "z": 2.953, "ptb_real": 81258.76, "ptb_bot": 81258.78, "ds_px": 81206.58, "ds_delta": -52.18, "ds_age_s": 1.69, "ret": 0.0, "v10": 30.85, "sigma": 1.7581, "sigma60": 2.618, "usdc": 19.8, "pct": 0.25, "cl_delta_bot": -22.28219800000079, "fast_track_holding": false, "ok": true, "price_cap": 0.95, "fill_price": 0.91, "shares": 20.8791, "paid_usdc": 19.0, "slip": -0.03}
+{"ts": 1793232164.2314007, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793231700", "side": "UP", "winner": "UP", "won": true, "entry": 0.9800000000000001, "usdc": 19.6, "pnl_est": 0.4, "wins": 5, "losses": 0}
+{"ts": 1793232437.5691283, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793232000", "side": "DN", "winner": "DN", "won": true, "entry": 0.9099999995210524, "usdc": 18.999991, "pnl_est": 1.88, "wins": 6, "losses": 0}
+{"ts": 1793233086.14, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793232900", "epoch": 1793232900, "side": "DN", "elapsed": 186.1, "ask": 0.97, "ask_top3": 5074.85, "ws_ask": 0.97, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.012, "try": 1, "z": 3.32, "ptb_real": 81236.57, "ptb_bot": 81236.8, "ds_px": 81177.11, "ds_delta": -59.46, "ds_age_s": 2.14, "ret": 0.0, "v10": 6.39, "sigma": 2.0542, "sigma60": 1.205, "usdc": 15.45, "pct": 0.25, "cl_delta_bot": -54.021870490003494, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.97, "shares": 15.1546, "paid_usdc": 14.7, "slip": -0.0}
+{"ts": 1793233300.5896633, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793232900", "side": "DN", "winner": "DN", "won": true, "entry": 0.9699999472108871, "usdc": 14.7, "pnl_est": 0.45, "wins": 7, "losses": 0}
+{"ts": 1793233329.54, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793233200", "epoch": 1793233200, "side": "DN", "elapsed": 129.5, "ask": 0.97, "ask_top3": 8666.9, "ws_ask": 0.97, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.01, "try": 1, "z": 3.781, "ptb_real": 81176.61, "ptb_bot": 81176.79, "ds_px": 81102.6, "ds_delta": -74.01, "ds_age_s": 1.54, "ret": 0.0, "v10": 19.7, "sigma": 1.7036, "sigma60": 2.306, "usdc": 21.06, "pct": 0.25, "cl_delta_bot": -47.53447063999192, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.96, "shares": 21.4375, "paid_usdc": 20.58, "slip": -0.01}
+{"ts": 1793233605.836164, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793233200", "side": "DN", "winner": "DN", "won": true, "entry": 0.96, "usdc": 20.58, "pnl_est": 0.86, "wins": 8, "losses": 0}
+{"ts": 1793235733.33, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793235600", "epoch": 1793235600, "side": "DN", "elapsed": 133.3, "ask": 0.95, "ask_top3": 2476.32, "ws_ask": 0.95, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.014, "try": 1, "z": 3.086, "ptb_real": 81017.01, "ptb_bot": 81017.3, "ds_px": 80962.35, "ds_delta": -54.66, "ds_age_s": 1.33, "ret": 0.0, "v10": 9.9, "sigma": 1.5656, "sigma60": 1.654, "usdc": 21.9, "pct": 0.25, "cl_delta_bot": -40.38999999999942, "fast_track_holding": false, "ok": true, "price_cap": 0.96, "fill_price": 0.95, "shares": 22.2316, "paid_usdc": 21.12, "slip": -0.0}
+{"ts": 1793235975.410274, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793235600", "side": "DN", "winner": "DN", "won": true, "entry": 0.949999997750947, "usdc": 21.12, "pnl_est": 1.11, "wins": 9, "losses": 0}
+{"ts": 1793245084.8, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793244900", "epoch": 1793244900, "side": "DN", "elapsed": 184.8, "ask": 0.95, "ask_top3": 3657.36, "ws_ask": 0.95, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.013, "try": 1, "z": 2.926, "ptb_real": 79753.55, "ptb_bot": 79752.72, "ds_px": 79698.0, "ds_delta": -55.55, "ds_age_s": 1.8, "ret": 1.15, "v10": 10.76, "sigma": 2.1634, "sigma60": 3.227, "usdc": 24.05, "pct": 0.25, "cl_delta_bot": -54.44000000000233, "fast_track_holding": false, "ok": true, "price_cap": 0.96, "fill_price": 0.95, "shares": 25.2631, "paid_usdc": 24.0, "slip": 0.0}
+{"ts": 1793245275.3052335, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793244900", "side": "DN", "winner": "DN", "won": true, "entry": 0.9500000000000001, "usdc": 23.999983, "pnl_est": 1.26, "wins": 10, "losses": 0}
+{"ts": 1793246544.63, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793246400", "epoch": 1793246400, "side": "DN", "elapsed": 144.6, "ask": 0.96, "ask_top3": 5549.4, "ws_ask": 0.96, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.01, "try": 1, "z": 3.102, "ptb_real": 79752.41, "ptb_bot": 79752.35, "ds_px": 79695.95, "ds_delta": -56.45, "ds_age_s": 1.63, "ret": 1.87, "v10": 6.07, "sigma": 1.6826, "sigma60": 1.037, "usdc": 28.09, "pct": 0.25, "cl_delta_bot": -45.51434976000746, "fast_track_holding": false, "ok": true, "price_cap": 0.97, "fill_price": 0.96, "shares": 28.2917, "paid_usdc": 27.16, "slip": 0.0}
+{"ts": 1793246775.5038695, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793246400", "side": "DN", "winner": "DN", "won": true, "entry": 0.9600000000000001, "usdc": 27.159984, "pnl_est": 1.13, "wins": 11, "losses": 0}
+{"ts": 1793247461.38, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793247300", "epoch": 1793247300, "side": "UP", "elapsed": 161.4, "ask": 0.96, "ask_top3": 7136.24, "ws_ask": 0.96, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.012, "try": 1, "z": 3.001, "ptb_real": 79758.27, "ptb_bot": 79757.81, "ds_px": 79813.55, "ds_delta": 55.28, "ds_age_s": 1.38, "ret": 0.0, "v10": 10.76, "sigma": 1.8422, "sigma60": 3.446, "usdc": 28.72, "pct": 0.25, "cl_delta_bot": 36.65000000000873, "fast_track_holding": false, "ok": true, "price_cap": 0.97, "fill_price": 0.96, "shares": 29.3021, "paid_usdc": 28.13, "slip": 0.0}
+{"ts": 1793247736.1917043, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793247300", "side": "UP", "winner": "UP", "won": true, "entry": 0.9600000000000001, "usdc": 28.129992, "pnl_est": 1.17, "wins": 12, "losses": 0}
+{"ts": 1793249210.21, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793249100", "epoch": 1793249100, "side": "UP", "elapsed": 110.2, "ask": 0.94, "ask_top3": 4949.37, "ws_ask": 0.94, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.014, "try": 1, "z": 3.255, "ptb_real": 79969.18, "ptb_bot": 79969.5, "ds_px": 80041.92, "ds_delta": 72.74, "ds_age_s": 1.21, "ret": 0.0, "v10": 48.93, "sigma": 1.8187, "sigma60": 3.156, "usdc": 29.36, "pct": 0.25, "cl_delta_bot": 20.36262283999531, "fast_track_holding": false, "ok": false, "price_cap": 0.95, "resp": "excepci\u00f3n: PolyApiException[status_code=400, error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID': '0xee334b2bd04e69e49b6202332794966fa0a6a613865e0de24207b0e472bb7869'}]"}
+{"ts": 1793249212.31, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793249100", "epoch": 1793249100, "side": "UP", "elapsed": 112.3, "ask": 0.96, "ask_top3": 6563.83, "ws_ask": 0.96, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.014, "try": 2, "z": 3.729, "ptb_real": 79969.18, "ptb_bot": 79969.5, "ds_px": 80051.96, "ds_delta": 82.78, "ds_age_s": 1.31, "ret": 0.0, "v10": 59.85, "sigma": 1.8187, "sigma60": 3.282, "usdc": 29.36, "pct": 0.25, "cl_delta_bot": 20.36262283999531, "fast_track_holding": false, "ok": true, "price_cap": 0.97, "fill_price": 0.97, "shares": 30.0, "paid_usdc": 29.1, "slip": 0.01}
+{"ts": 1793249475.208746, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793249100", "side": "UP", "winner": "UP", "won": true, "entry": 0.9700000000000001, "usdc": 29.1, "pnl_est": 0.9, "wins": 13, "losses": 0}
+{"ts": 1793250767.47, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793250600", "epoch": 1793250600, "side": "UP", "elapsed": 167.5, "ask": 0.98, "ask_top3": 6042.93, "ws_ask": 0.99, "ws_ask_minus_real": 0.01, "book_lag_p50_s": 0.01, "try": 1, "z": 3.259, "ptb_real": 80256.8, "ptb_bot": 80256.66, "ds_px": 80335.73, "ds_delta": 78.93, "ds_age_s": 2.47, "ret": 0.75, "v10": 27.97, "sigma": 2.4848, "sigma60": 3.171, "usdc": 17.34, "pct": 0.25, "cl_delta_bot": 53.107055710002896, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.98, "shares": 17.0, "paid_usdc": 16.66, "slip": 0.0}
+{"ts": 1793250975.4649136, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793250600", "side": "UP", "winner": "UP", "won": true, "entry": 0.98, "usdc": 16.66, "pnl_est": 0.34, "wins": 14, "losses": 0}
+{"ts": 1793253116.41, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793253000", "epoch": 1793253000, "side": "DN", "elapsed": 116.4, "ask": 0.97, "ask_top3": 13951.119999999999, "ws_ask": 0.97, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.011, "try": 1, "z": 3.411, "ptb_real": 80255.58, "ptb_bot": 80255.84, "ds_px": 80197.74, "ds_delta": -57.84, "ds_age_s": 1.41, "ret": 0.0, "v10": 19.37, "sigma": 1.4085, "sigma60": 1.883, "usdc": 32.13, "pct": 0.25, "cl_delta_bot": -24.265734269996756, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.96, "shares": 32.6666, "paid_usdc": 31.36, "slip": -0.01}
+{"ts": 1793253375.6443043, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793253000", "side": "DN", "winner": "DN", "won": true, "entry": 0.9600000000000001, "usdc": 31.359984, "pnl_est": 1.31, "wins": 15, "losses": 0}
+{"ts": 1793254938.0, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793254800", "epoch": 1793254800, "side": "DN", "elapsed": 138.0, "ask": 0.93, "ask_top3": 4078.5699999999997, "ws_ask": 0.93, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.014, "try": 1, "z": 2.816, "ptb_real": 79986.46, "ptb_bot": 79986.45, "ds_px": 79943.63, "ds_delta": -42.83, "ds_age_s": 2.0, "ret": 0.0, "v10": 33.58, "sigma": 1.3661, "sigma60": 2.401, "usdc": 32.56, "pct": 0.25, "cl_delta_bot": -15.443413560002227, "fast_track_holding": false, "ok": true, "price_cap": 0.94, "fill_price": 0.93, "shares": 34.3656, "paid_usdc": 31.96, "slip": -0.0}
+{"ts": 1793255175.8387537, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793254800", "side": "DN", "winner": "DN", "won": true, "entry": 0.9299999985450559, "usdc": 31.959994, "pnl_est": 2.41, "wins": 16, "losses": 0}
+{"ts": 1793255266.31, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793255100", "epoch": 1793255100, "side": "UP", "elapsed": 166.3, "ask": 0.95, "ask_top3": 3459.66, "ws_ask": 0.95, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.012, "try": 1, "z": 3.086, "ptb_real": 79943.25, "ptb_bot": 79942.02, "ds_px": 79989.4, "ds_delta": 46.15, "ds_age_s": 1.31, "ret": 0.0, "v10": 5.37, "sigma": 1.5343, "sigma60": 1.716, "usdc": 33.24, "pct": 0.25, "cl_delta_bot": 39.55981780998991, "fast_track_holding": false, "ok": true, "price_cap": 0.96, "fill_price": 0.96, "shares": 34.0, "paid_usdc": 32.64, "slip": 0.01}
+{"ts": 1793255506.0059948, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793255100", "side": "UP", "winner": "UP", "won": true, "entry": 0.96, "usdc": 32.64, "pnl_est": 1.36, "wins": 17, "losses": 0}
+{"ts": 1793255824.87, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793255700", "epoch": 1793255700, "side": "DN", "elapsed": 124.9, "ask": 0.98, "ask_top3": 12251.81, "ws_ask": 0.98, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.01, "try": 1, "z": 3.03, "ptb_real": 80002.72, "ptb_bot": 80002.16, "ds_px": 79929.02, "ds_delta": -73.7, "ds_age_s": 1.87, "ret": 0.0, "v10": 6.07, "sigma": 2.0781, "sigma60": 1.403, "usdc": 33.65, "pct": 0.25, "cl_delta_bot": -66.91999999999825, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.98, "shares": 34.0, "paid_usdc": 33.32, "slip": 0.0}
+{"ts": 1793256075.1902153, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793255700", "side": "DN", "winner": "DN", "won": true, "entry": 0.98, "usdc": 33.32, "pnl_est": 0.68, "wins": 18, "losses": 0}
+{"ts": 1793256437.93, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793256300", "epoch": 1793256300, "side": "DN", "elapsed": 137.9, "ask": 0.98, "ask_top3": 5898.71, "ws_ask": 0.98, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.013, "try": 1, "z": 3.53, "ptb_real": 79894.36, "ptb_bot": 79894.48, "ds_px": 79819.4, "ds_delta": -74.95, "ds_age_s": 1.93, "ret": 0.0, "v10": 42.62, "sigma": 1.9071, "sigma60": 3.302, "usdc": 25.69, "pct": 0.25, "cl_delta_bot": -28.45311016999767, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.98, "shares": 26.0, "paid_usdc": 25.48, "slip": 0.0}
+{"ts": 1793256670.6771255, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793256300", "side": "DN", "winner": "DN", "won": true, "entry": 0.98, "usdc": 25.48, "pnl_est": 0.52, "wins": 19, "losses": 0}
+{"ts": 1793257948.41, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793257800", "epoch": 1793257800, "side": "DN", "elapsed": 148.4, "ask": 0.96, "ask_top3": 5859.04, "ws_ask": 0.96, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.011, "try": 1, "z": 3.165, "ptb_real": 79849.68, "ptb_bot": 79849.57, "ds_px": 79797.66, "ds_delta": -52.02, "ds_age_s": 1.41, "ret": 0.0, "v10": 25.25, "sigma": 1.5464, "sigma60": 1.525, "usdc": 35.09, "pct": 0.25, "cl_delta_bot": -22.47031154000433, "fast_track_holding": false, "ok": true, "price_cap": 0.97, "fill_price": 0.96, "shares": 36.375, "paid_usdc": 34.92, "slip": 0.0}
+{"ts": 1793258413.0939646, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793257800", "side": "DN", "winner": "DN", "won": true, "entry": 0.9600000000000001, "usdc": 34.92, "pnl_est": 1.45, "wins": 20, "losses": 0}
+{"ts": 1793259101.86, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793259000", "epoch": 1793259000, "side": "UP", "elapsed": 101.9, "ask": 0.9, "ask_top3": 2307.59, "ws_ask": 0.9, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.013, "try": 1, "z": 2.956, "ptb_real": 79769.7, "ptb_bot": 79769.87, "ds_px": 79817.96, "ds_delta": 48.26, "ds_age_s": 1.86, "ret": 0.24, "v10": 30.93, "sigma": 1.2908, "sigma60": 3.221, "usdc": 35.43, "pct": 0.25, "cl_delta_bot": 16.231439970011706, "fast_track_holding": false, "ok": true, "price_cap": 0.91, "fill_price": 0.9, "shares": 38.4222, "paid_usdc": 34.58, "slip": 0.0}
+{"ts": 1793259375.2025206, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793259000", "side": "UP", "winner": "UP", "won": true, "entry": 0.9, "usdc": 34.579998, "pnl_est": 3.84, "wins": 21, "losses": 0}
+{"ts": 1793260663.97, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793260500", "epoch": 1793260500, "side": "UP", "elapsed": 164.0, "ask": 0.94, "ask_top3": 2233.5, "ws_ask": 0.94, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.014, "try": 1, "z": 3.349, "ptb_real": 79756.66, "ptb_bot": 79756.64, "ds_px": 79807.14, "ds_delta": 50.48, "ds_age_s": 1.97, "ret": 0.0, "v10": 20.48, "sigma": 1.5225, "sigma60": 2.179, "usdc": 36.45, "pct": 0.25, "cl_delta_bot": 22.692429830000037, "fast_track_holding": false, "ok": true, "price_cap": 0.95, "fill_price": 0.9411, "shares": 38.3579, "paid_usdc": 36.1, "slip": 0.0011}
+{"ts": 1793260914.09, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793260800", "epoch": 1793260800, "side": "UP", "elapsed": 114.1, "ask": 0.94, "ask_top3": 5890.34, "ws_ask": 0.94, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.012, "try": 1, "z": 2.883, "ptb_real": 79763.4, "ptb_bot": 79763.73, "ds_px": 79821.65, "ds_delta": 58.25, "ds_age_s": 2.09, "ret": 0.0, "v10": 8.76, "sigma": 1.6609, "sigma60": 2.235, "usdc": 37.31, "pct": 0.25, "cl_delta_bot": 50.61056255000585, "fast_track_holding": false, "ok": true, "price_cap": 0.95, "fill_price": 0.94, "shares": 39.4149, "paid_usdc": 37.05, "slip": -0.0}
+{"ts": 1793261059.1859136, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793260500", "side": "UP", "winner": "UP", "won": true, "entry": 0.9411361107548175, "usdc": 36.099986, "pnl_est": 2.26, "wins": 22, "losses": 0}
+{"ts": 1793261322.8627648, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793260800", "side": "UP", "winner": "UP", "won": true, "entry": 0.9399999994925774, "usdc": 37.04999, "pnl_est": 2.36, "wins": 23, "losses": 0}
+{"ts": 1793302925.92, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793302800", "epoch": 1793302800, "side": "UP", "elapsed": 125.9, "ask": 0.91, "ask_top3": 1252.52, "ws_ask": 0.91, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.011, "try": 1, "z": 2.834, "ptb_real": 80752.93, "ptb_bot": 80752.97, "ds_px": 80823.0, "ds_delta": 70.07, "ds_age_s": 1.92, "ret": 0.0, "v10": 16.26, "sigma": 2.1199, "sigma60": 2.712, "usdc": 8.8, "pct": 0.25, "cl_delta_bot": 58.71551436999289, "fast_track_holding": false, "ok": true, "price_cap": 0.92, "fill_price": 0.91, "shares": 9.0989, "paid_usdc": 8.28, "slip": -0.0}
+{"ts": 1793303175.578259, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793302800", "side": "UP", "winner": "UP", "won": true, "entry": 0.9099999098792358, "usdc": 8.28, "pnl_est": 0.82, "wins": 24, "losses": 0}
+{"ts": 1793329310.28, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793329200", "epoch": 1793329200, "side": "UP", "elapsed": 110.3, "ask": 0.92, "ask_top3": 4667.91, "ws_ask": 0.92, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.011, "try": 1, "z": 2.856, "ptb_real": 77221.99, "ptb_bot": 77223.04, "ds_px": 77340.36, "ds_delta": 118.37, "ds_age_s": 1.28, "ret": 0.0, "v10": 21.66, "sigma": 3.3728, "sigma60": 4.333, "usdc": 9.73, "pct": 0.25, "cl_delta_bot": 94.60592186001304, "fast_track_holding": false, "ok": true, "price_cap": 0.93, "fill_price": 0.91, "shares": 10.2198, "paid_usdc": 9.3, "slip": -0.01}
+{"ts": 1793329575.563786, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793329200", "side": "UP", "winner": "UP", "won": true, "entry": 0.9099999931505354, "usdc": 9.299997, "pnl_est": 0.92, "wins": 25, "losses": 0}
+{"ts": 1793331119.62, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793331000", "epoch": 1793331000, "side": "UP", "elapsed": 119.6, "ask": 0.97, "ask_top3": 12583.54, "ws_ask": 0.97, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.01, "try": 1, "z": 3.295, "ptb_real": 77424.86, "ptb_bot": 77424.33, "ds_px": 77546.16, "ds_delta": 121.3, "ds_age_s": 1.62, "ret": 0.0, "v10": 5.15, "sigma": 3.089, "sigma60": 3.967, "usdc": 9.51, "pct": 0.6, "cl_delta_bot": 121.05875024000125, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.97, "shares": 9.0928, "paid_usdc": 8.82, "slip": -0.0}
+{"ts": 1793331375.1094458, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793331000", "side": "UP", "winner": "UP", "won": true, "entry": 0.9699999978004494, "usdc": 8.819983, "pnl_est": 0.27, "wins": 26, "losses": 0}
+{"ts": 1793333824.4, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793333700", "epoch": 1793333700, "side": "UP", "elapsed": 124.4, "ask": 0.97, "ask_top3": 8512.01, "ws_ask": 0.97, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.01, "try": 1, "z": 2.96, "ptb_real": 77939.06, "ptb_bot": 77935.18, "ds_px": 78063.15, "ds_delta": 124.09, "ds_age_s": 1.4, "ret": 0.0, "v10": 9.43, "sigma": 3.582, "sigma60": 3.984, "usdc": 26.15, "pct": 0.6, "cl_delta_bot": 65.22053330000199, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.97, "shares": 26.268, "paid_usdc": 25.48, "slip": -0.0}
+{"ts": 1793334075.4596395, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793333700", "side": "UP", "winner": "UP", "won": true, "entry": 0.9699999996193092, "usdc": 25.479992, "pnl_est": 0.79, "wins": 27, "losses": 0}
+{"ts": 1793340194.39, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793340000", "epoch": 1793340000, "side": "UP", "elapsed": 194.4, "ask": 0.97, "ask_top3": 11515.460000000001, "ws_ask": 0.96, "ws_ask_minus_real": -0.01, "book_lag_p50_s": 0.01, "try": 1, "z": 3.169, "ptb_real": 78376.51, "ptb_bot": 78375.51, "ds_px": 78436.54, "ds_delta": 60.03, "ds_age_s": 1.39, "ret": 0.0, "v10": 8.64, "sigma": 2.3139, "sigma60": 2.565, "usdc": 14.64, "pct": 0.6, "cl_delta_bot": 41.641738600010285, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.97, "shares": 14.1443, "paid_usdc": 13.72, "slip": 0.0}
+{"ts": 1793340493.28, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793340300", "epoch": 1793340300, "side": "UP", "elapsed": 193.3, "ask": 0.98, "ask_top3": 9501.58, "ws_ask": 0.98, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.011, "try": 1, "z": 2.845, "ptb_real": 78415.58, "ptb_bot": 78415.87, "ds_px": 78481.85, "ds_delta": 66.27, "ds_age_s": 2.28, "ret": 0.0, "v10": 6.51, "sigma": 2.8047, "sigma60": 0.949, "usdc": 15.12, "pct": 0.6, "cl_delta_bot": 63.11714976000076, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.98, "shares": 15.0, "paid_usdc": 14.7, "slip": 0.0}
+{"ts": 1793340495.467216, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793340000", "side": "UP", "winner": "UP", "won": true, "entry": 0.97, "usdc": 13.719971, "pnl_est": 0.42, "wins": 28, "losses": 0}
+{"ts": 1793340800.563187, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793340300", "side": "UP", "winner": "UP", "won": true, "entry": 0.98, "usdc": 14.7, "pnl_est": 0.3, "wins": 29, "losses": 0}
+{"ts": 1793343143.95, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793343000", "epoch": 1793343000, "side": "UP", "elapsed": 144.0, "ask": 0.98, "ask_top3": 8445.79, "ws_ask": 0.98, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.009, "try": 1, "z": 3.077, "ptb_real": 78298.42, "ptb_bot": 78297.22, "ds_px": 78399.44, "ds_delta": 101.01, "ds_age_s": 1.95, "ret": 0.0, "v10": 9.77, "sigma": 3.0221, "sigma60": 2.94, "usdc": 17.79, "pct": 0.6, "cl_delta_bot": 95.19537909999781, "fast_track_holding": false, "ok": false, "price_cap": 0.98, "resp": "excepci\u00f3n: PolyApiException[status_code=400, error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID': '0xdf4695d6a90c7683c8ae9dcbc2b8964f5949b033ddcb8d4dce8da584a9c4f2ae'}]"}
+{"ts": 1793345500.61, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793345400", "epoch": 1793345400, "side": "UP", "elapsed": 100.6, "ask": 0.97, "ask_top3": 13060.45, "ws_ask": 0.97, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.009, "try": 1, "z": 2.936, "ptb_real": 78326.89, "ptb_bot": 78325.12, "ds_px": 78424.18, "ds_delta": 97.29, "ds_age_s": 1.61, "ret": 0.0, "v10": 14.34, "sigma": 2.6114, "sigma60": 3.263, "usdc": 52.14, "pct": 0.6, "cl_delta_bot": 100.44000000000233, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.97, "shares": 53.5464, "paid_usdc": 51.94, "slip": -0.0}
+{"ts": 1793345867.9336543, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793345400", "side": "UP", "winner": "DN", "won": false, "entry": 0.9699999996264919, "usdc": 51.939975, "pnl_est": -51.94, "wins": 29, "losses": 1}
+{"ts": 1793394109.68, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793394000", "epoch": 1793394000, "side": "UP", "elapsed": 109.7, "ask": 0.98, "ask_top3": 10144.07, "ws_ask": 0.98, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.009, "try": 1, "z": 3.713, "ptb_real": 76779.26, "ptb_bot": 76779.04, "ds_px": 76913.23, "ds_delta": 133.96, "ds_age_s": 1.68, "ret": 0.0, "v10": 13.25, "sigma": 2.926, "sigma60": 3.88, "usdc": 3.8, "pct": 0.25, "cl_delta_bot": 117.55493969999952, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.98, "shares": 5.0, "paid_usdc": 4.9, "slip": 0.0}
+{"ts": 1793394375.0098476, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793394000", "side": "UP", "winner": "UP", "won": true, "entry": 0.9800000000000001, "usdc": 4.9, "pnl_est": 0.1, "wins": 1, "losses": 0}
+PS C:\Users\Paul campos\Desktop\Nueva carpeta (3)\Nueva carpeta\logs_1031_1824> Select-String -Path .\bot_output.log,.\tw_log.jsonl,.\signals_log.jsonl `
+>>     -Pattern 'orderID|order_id|orderHash|order_hash|transactionHash|transaction_hash' `
+>>     -CaseSensitive:$false |
+>>     Select-Object -Last 100
+
+bot_output.log:1340431:📋 Side order (MERCADO FAK $1.84 ≈ 2 acc @≤0.92): {'errorMsg': '', 'orderID':
+'0x4a4a4ff190f64ff8430df585737506312e9fdb5ab941224ee7f8c06a9a67047e', 'takingAmount': '2', 'makingAmount': '1.84', 'status': 'matched',
+'transactionsHashes': ['0x08281332d1ec9b7949dc0563d849bff9b59e24d66ee10c27f49549afefd3044c'], 'success': True}
+bot_output.log:1341763:📋 TW order (LÍMITE FAK BUY @$0.92 x9.0): {'errorMsg': '', 'orderID':
+'0xc5b1725ca911f0a151af4cf1450af0d77eacc9859142371d96b24f79cf6ca1c6', 'takingAmount': '9.098902', 'makingAmount': '8.28', 'status': 'matched',
+'transactionsHashes': ['0x5c23dfdb41856754b860045c8af2dae1cb03a541f740f61904c95c60812b939c'], 'success': True}
+bot_output.log:1394350:📋 Order response (MERCADO BUY, FAK, intento 1/3): {'errorMsg': '', 'orderID':
+'0xe54c61e94eb60a87e8d05fca0904bb6b621c068c8cc4be944d012bb8efe822b5', 'takingAmount': '31.614575', 'makingAmount': '30.349992', 'status': 'matched',
+'transactionsHashes': ['0x79c0afa7e3a697fc8630e352b8871f5988e292a1026cfecf02289fdfc59b9147'], 'success': True}
+bot_output.log:1469433:📋 Side order (MERCADO FAK $8.73 ≈ 9 acc @≤0.97): {'errorMsg': '', 'orderID':
+'0xbb7fad1b1419ea98caa9a73aa4aed9218c97f4a0d7e0511fc12da2e60e08fde0', 'takingAmount': '9', 'makingAmount': '8.73', 'status': 'matched',
+'transactionsHashes': ['0xaaf62a776bd3756437b69e045be5bd9e3cc32167b1545cd6a6817f040615736c'], 'success': True}
+bot_output.log:1473745:📋 TW order (LÍMITE FAK BUY @$0.93 x10.0): {'errorMsg': '', 'orderID':
+'0x4cb2be533359023e333eeaacc83ebf2bc9260903b0931b7ab126fc9abba58081', 'takingAmount': '10.219777', 'makingAmount': '9.299997', 'status': 'matched',
+'transactionsHashes': ['0x474fb0e9aea27ab912ee16dfb50cbe5c3495a258015f0661448a72b5e5cac2c6'], 'success': True}
+bot_output.log:1474127:📋 Side order (MERCADO FAK $6.86 ≈ 7 acc @≤0.98): {'errorMsg': '', 'orderID':
+'0xec08c65af394eed9faf1dbb71ddc0dde8fa0c991e96e559bc91a5f4ef585dd7d', 'takingAmount': '7', 'makingAmount': '6.86', 'status': 'matched',
+'transactionsHashes': ['0xf087ef7d0d4a4c4fe9a83c7e4c902272284940d483a36484ac21d18270b6a692'], 'success': True}
+bot_output.log:1482316:📋 Side order (MERCADO FAK $23.92 ≈ 26 acc @≤0.92): {'errorMsg': '', 'orderID':
+'0x5797e7fe74ecb24e54dcc580198f73fa284b161524dbb2d911d81d7d8b13c271', 'takingAmount': '26', 'makingAmount': '23.92', 'status': 'matched',
+'transactionsHashes': ['0x757bf3d24f461c93a1bdf815af1178b7c2bde561ea7ddfe5b1b24610152d03a1'], 'success': True}
+bot_output.log:1482355:📋 TW order (LÍMITE FAK BUY @$0.98 x9.0): {'errorMsg': '', 'orderID':
+'0x1d4c6dbb25da193cd7d0dcd9a19d118185fd4955060bb0dfc8a4450304265224', 'takingAmount': '9.092766', 'makingAmount': '8.819983', 'status': 'matched',
+'transactionsHashes': ['0xe806c093c1b07647078336a2b1bc73257b0a79684018ca21f63664bdca20ef01'], 'success': True}
+bot_output.log:1495184:📋 Side order (MERCADO FAK $24.70 ≈ 26 acc @≤0.95): {'errorMsg': '', 'orderID':
+'0x3a8c22f67653b5f182f82566af51a5c2f41e1d02548572bd34fc51c2d1d3d2d5', 'takingAmount': '26', 'makingAmount': '24.7', 'status': 'matched',
+'transactionsHashes': ['0x8533b94c3af9a45a610e7d6e1d798f20ff0e359a749e8b07369a4cc35713ae95'], 'success': True}
+bot_output.log:1495272:📋 Side order (MERCADO FAK $9.70 ≈ 10 acc @≤0.97): {'errorMsg': '', 'orderID':
+'0xcc3510450c4ebe5fc934ce5060af42e0dbd4bd7fa0bcc57d9a0ce61742a17191', 'takingAmount': '9.989666', 'makingAmount': '9.689976', 'status': 'matched',
+'transactionsHashes': ['0xb2a6323e2be4f22906f162d57d193cf2a5198c3a15d7c410d39b0c27d9e48748'], 'success': True}
+bot_output.log:1496564:📋 TW order (LÍMITE FAK BUY @$0.98 x26.0): {'errorMsg': '', 'orderID':
+'0xad6aed401d0c0edb8f748a24f8cf13098ae405e5ac8fe67296b7867b2e9a6333', 'takingAmount': '26.268033', 'makingAmount': '25.479992', 'status': 'matched',
+'transactionsHashes': ['0xca2078e4ce9da735bb5e5dcc19ca4efe683c6289a42a50ce3f8e1df684a87c87'], 'success': True}
+bot_output.log:1504683:📋 Side order (MERCADO FAK $25.76 ≈ 28 acc @≤0.92): {'errorMsg': '', 'orderID':
+'0x9b0424360c4f90cd2bd488bfbb824cdf55b379347e1973e5c3a632db41df436c', 'takingAmount': '28', 'makingAmount': '25.76', 'status': 'matched',
+'transactionsHashes': ['0x205ef2e5cc8cb92517932e424362194a1fdf0eb23980ed48862ebccf096cfacd'], 'success': True}
+bot_output.log:1504685:📋 Side order (MERCADO FAK $1.84 ≈ 2 acc @≤0.92): {'errorMsg': '', 'orderID':
+'0xeade43904aa4e0923774b81e409359049e75d0f705c54f2e201e7882bc2f922b', 'takingAmount': '2', 'makingAmount': '1.84', 'status': 'matched',
+'transactionsHashes': ['0x58421ca2326a3fe98f7e02f39cbf42082dad99abeb3ecfa1309e3e71799870c3'], 'success': True}
+bot_output.log:1505967:📋 Side order (MERCADO FAK $27.59 ≈ 31 acc @≤0.89): {'errorMsg': '', 'orderID':
+'0x8e688b43fb0bd1472142defaf24853170aa6beeb0635a267d8f6e0dd828ffa04', 'takingAmount': '31', 'makingAmount': '27.59', 'status': 'matched',
+'transactionsHashes': ['0x838c7480e52ef9e99d9cfdad89c05e5cf98b467f59304d388df9cb46370f2fb6'], 'success': True}
+bot_output.log:1507894:📋 Side order (MERCADO FAK $18.24 ≈ 19 acc @≤0.96): {'errorMsg': '', 'orderID':
+'0xaa1aabf4c8c953989b3a74344358237efdaeea4a6c5de28aa52b4e4f6d3069ec', 'takingAmount': '18.989575', 'makingAmount': '18.229992', 'status': 'matched',
+'transactionsHashes': ['0x3f3c3be62928caedf15d79d0af563e0dca34e5ac40517bacc093cbd0f2a5e3c2'], 'success': True}
+bot_output.log:1509404:📋 Side order (MERCADO FAK $28.50 ≈ 30 acc @≤0.95): {'errorMsg': '', 'orderID':
+'0x5fdf6ea51e57b958cadea5e7d81e8747aad6d51291f1ba9f5376dea81638c2f6', 'takingAmount': '30', 'makingAmount': '28.5', 'status': 'matched',
+'transactionsHashes': ['0x572ce1a32f592297436ce2923814a6dac976f6daffbcc5b37d1fea94697657ed'], 'success': True}
+bot_output.log:1509444:📋 Side order (MERCADO FAK $11.76 ≈ 12 acc @≤0.98): {'errorMsg': '', 'orderID':
+'0x7b46253e27299ee121519220de51f442aad15f0e3d0af3d3810332a2a7d2fa5e', 'takingAmount': '12.1237', 'makingAmount': '11.759989', 'status': 'matched',
+'transactionsHashes': ['0x6fd4f04d1ebe1aee1c06a2bb63c2cba627fd8411527b6023bd6f6810278e47fe'], 'success': True}
+bot_output.log:1520407:📋 Side order (MERCADO FAK $4.45 ≈ 5 acc @≤0.89): {'errorMsg': '', 'orderID':
+'0xc9f712bb7e850b17bf1fd06b85fc92a610a686d78eb34e00f498359efdc66c09', 'takingAmount': '5', 'makingAmount': '4.45', 'status': 'matched',
+'transactionsHashes': ['0x779ec5adf9ec06c1e69f13499a3a721e92834c32ac1bb2c86ccaed9e0b366f48'], 'success': True}
+bot_output.log:1520421:📋 Side order (MERCADO FAK $27.59 ≈ 31 acc @≤0.89): {'errorMsg': '', 'orderID':
+'0x0131a2c4a812ed3619637836c2403b21b51cfafd780b40b9fba044f8f571148a', 'takingAmount': '31', 'makingAmount': '27.59', 'status': 'matched',
+'transactionsHashes': ['0xf2b05ef8d0ea9b555867354e9f90e0f39b4134a86d3e9a61bfc7622de61c50cf'], 'success': True}
+bot_output.log:1520448:📋 Side order (MERCADO FAK $10.68 ≈ 12 acc @≤0.89): {'errorMsg': '', 'orderID':
+'0x9b2c57a1248ad6b1050791bfe5f4c5d5c54e611dbc5e91f3a00e5c8b6e5ed46b', 'takingAmount': '12.136358', 'makingAmount': '10.679995', 'status': 'matched',
+'transactionsHashes': ['0x5afbfea1fac746bb394fb685cc6abd56ee4eea241724d0672e64bfe34c949377'], 'success': True}
+bot_output.log:1522133:📋 Side order (MERCADO FAK $33.12 ≈ 36 acc @≤0.92): {'errorMsg': '', 'orderID':
+'0x7f505860d351b96391a744c3693b50eb555797968fc132b866a9085d7e598a86', 'takingAmount': '35.989125', 'makingAmount': '33.109995', 'status': 'matched',
+'transactionsHashes': ['0x100084650d9be04f035e85caa9c2fa4da38c337a354ba5c18cdfa2dfc64ce858'], 'success': True}
+bot_output.log:1526601:📋 Side order (MERCADO FAK $34.78 ≈ 37 acc @≤0.94): {'errorMsg': '', 'orderID':
+'0xe8ad988d3d017de7fb28d3d989d20041ff5070d4d3fba923bb0272fa27abbeac', 'takingAmount': '37', 'makingAmount': '34.78', 'status': 'matched',
+'transactionsHashes': ['0x70b623ca814406fbc477e3993a5ad2a2298d14e936ad5fb17c8df722d339cf3c'], 'success': True}
+bot_output.log:1526677:📋 Side order (MERCADO FAK $13.72 ≈ 14 acc @≤0.98): {'errorMsg': '', 'orderID':
+'0x8955b3a261aa7f27daa6092376f410c95c73680562b66738fc32339ac1a49aed', 'takingAmount': '14', 'makingAmount': '13.72', 'status': 'matched',
+'transactionsHashes': ['0xfb58bbb35fc9b67df1cd20724deddb4d294bb804758877d472356c89325a0f9a'], 'success': True}
+bot_output.log:1527957:📋 Side order (MERCADO FAK $35.60 ≈ 40 acc @≤0.89): {'errorMsg': '', 'orderID':
+'0x15a2ec6bb73cfd9f47cb48d39ebe8596e364333fce4b90384db34c4f323cfb87', 'takingAmount': '40', 'makingAmount': '35.6', 'status': 'matched',
+'transactionsHashes': ['0x59012a5165a57042fdda26178621b19db63ca29ce7e0ed3a05919e9c424adc19'], 'success': True}
+bot_output.log:1527959:📋 Side order (MERCADO FAK $9.00 ≈ 10 acc @≤0.90): {'errorMsg': '', 'orderID':
+'0xccd06e4734663760212c2bfb8ad99c4da13c910770f1564a1e7c70bc27af4a8c', 'takingAmount': '10', 'makingAmount': '9', 'status': 'matched',
+'transactionsHashes': ['0xb29e47b06ccac7d62cbd3651df1c75a935bf094d0dd2cdfaf785ecf1e7ca97b9'], 'success': True}
+bot_output.log:1529875:📋 Side order (MERCADO FAK $6.37 ≈ 7 acc @≤0.91): {'errorMsg': '', 'orderID':
+'0xd59c16baa9889542d25eb1a970f56a32c9ed283a65054cba09da7be1766d90e9', 'takingAmount': '7', 'makingAmount': '6.37', 'status': 'matched',
+'transactionsHashes': ['0xa2ed16f5cc242ad584102be7b5da193ffdb05a053eb719d70bf917894067efe5'], 'success': True}
+bot_output.log:1529889:📋 Side order (MERCADO FAK $34.96 ≈ 38 acc @≤0.92): {'errorMsg': '', 'orderID':
+'0x4392b11f47e77d1761737706fff3cb22f2abec1d0e26bb7da1dade50c11193f2', 'takingAmount': '38', 'makingAmount': '34.96', 'status': 'matched',
+'transactionsHashes': ['0x609360596f939e9f1556f361d7040f7fabe711c4146e29196c92f104eafc1c18'], 'success': True}
+bot_output.log:1529939:📋 TW order (LÍMITE FAK BUY @$0.98 x14.0): {'errorMsg': '', 'orderID':
+'0x21784b8e5418f7d5e56cfb152c36c0f41d6cb8de7e3dd6069bb141b3d51407ca', 'takingAmount': '14.1443', 'makingAmount': '13.719971', 'status': 'matched',
+'transactionsHashes': ['0x319a1191879a0f5f567e3beff116d6275fb603d823b02c335d8d2c7031e64dcc'], 'success': True}
+bot_output.log:1531368:📋 Side order (MERCADO FAK $41.36 ≈ 44 acc @≤0.94): {'errorMsg': '', 'orderID':
+'0xf4c63af5f2dfa3de8cb563492135c8bb84e8c28d402765be29c04c27b03ae00a', 'takingAmount': '44', 'makingAmount': '41.36', 'status': 'matched',
+'transactionsHashes': ['0x52e3892d41f1be757a0de6f37ddac4b16e925b041482ebc18eff1f8e38287d85'], 'success': True}
+bot_output.log:1531370:📋 Side order (MERCADO FAK $2.82 ≈ 3 acc @≤0.94): {'errorMsg': '', 'orderID':
+'0x92a41a6d5266371c047c5826f7b2fc8e2e33b50a875ca6b632b7fd65b9817d1d', 'takingAmount': '3', 'makingAmount': '2.82', 'status': 'matched',
+'transactionsHashes': ['0x0142cea58907778b8ade19d617569112e29b2cb83c78f8569e1ce2636de61271'], 'success': True}
+bot_output.log:1531519:📋 TW order (LÍMITE FAK BUY @$0.98 x15.0): {'errorMsg': '', 'orderID':
+'0x3a012d1686e853e3312f08a4ae2de926a4be4da985bc0eb88dd12246a3a99890', 'takingAmount': '15', 'makingAmount': '14.7', 'status': 'matched',
+'transactionsHashes': ['0x63f6cf364a22aba034bdb54a17a927135230684ec1625dd1ce404ba601976ade'], 'success': True}
+bot_output.log:1543539:📋 Side order (MERCADO FAK $43.12 ≈ 44 acc @≤0.98): {'errorMsg': '', 'orderID':
+'0xb0470a5a8d54d03286d08cd8ad4403e01806a7ca8211188f92e21b2c396a7433', 'takingAmount': '44', 'makingAmount': '43.12', 'status': 'matched',
+'transactionsHashes': ['0x354faae7dc8f032d7115ff304957a48451d75dc94dc2a32013c717fba9b245a2'], 'success': True}
+bot_output.log:1544967:📋 Side order (MERCADO FAK $43.65 ≈ 45 acc @≤0.97): {'errorMsg': '', 'orderID':
+'0x59c126f653d691c7313c0f54c3e5e6600aac1802c9e0c475cb50e76fb23e6b04', 'takingAmount': '45', 'makingAmount': '43.65', 'status': 'matched',
+'transactionsHashes': ['0x87c76107eeb7bec8c866064fa7eae99982326ffe9ab38dda5ac5afdfa579466d'], 'success': True}
+bot_output.log:1545017:[py_clob_client_v2] request error status=400 url=https://clob.polymarket.com/order body={"error":"no orders found to match with FAK
+order. FAK orders are partially filled or killed if no match is found.","orderID":"0xdf4695d6a90c7683c8ae9dcbc2b8964f5949b033ddcb8d4dce8da584a9c4f2ae"}
+bot_output.log:1546714:📋 Side order (MERCADO FAK $44.10 ≈ 45 acc @≤0.98): {'errorMsg': '', 'orderID':
+'0x31179cdf892698bcfa1236bba6fa4e0564484b760a72b7674d56296ce33b516d', 'takingAmount': '45', 'makingAmount': '44.1', 'status': 'matched',
+'transactionsHashes': ['0x569a71c17dae46a4a88a55208d95799f0e08abbd77af5fa1edbf3a8edaa73bc9'], 'success': True}
+bot_output.log:1549771:📋 Side order (MERCADO FAK $45.12 ≈ 48 acc @≤0.94): {'errorMsg': '', 'orderID':
+'0xe40d00548a1c7ca156abeec593a42f51ef7dd8ba98783c8ed0d56bf3f42deaf4', 'takingAmount': '48', 'makingAmount': '45.12', 'status': 'matched',
+'transactionsHashes': ['0x7ceb272fa488f45cefc49eeb114bb52c8887dd4f9d481eeb8a0a1520301598c5'], 'success': True}
+bot_output.log:1551004:📋 Side order (MERCADO FAK $46.41 ≈ 51 acc @≤0.91): {'errorMsg': '', 'orderID':
+'0x3a153675a2d0917a224050b0a051972c503e32b144f1e48a0f7445719f4106c2', 'takingAmount': '51', 'makingAmount': '46.41', 'status': 'matched',
+'transactionsHashes': ['0x51126cc69f799adce09320cdd0aef0cb49e8933291833e5fe029bffcda75bb17'], 'success': True}
+bot_output.log:1551334:📋 Side order (MERCADO FAK $2.85 ≈ 3 acc @≤0.95): {'errorMsg': '', 'orderID':
+'0xe70bfafb8f61a689a3600d013b77cdf645996d40a321072fdd0136815133a7d2', 'takingAmount': '3', 'makingAmount': '2.85', 'status': 'matched',
+'transactionsHashes': ['0xf817849dbc13e9ab65ef80db19d90e9c6366142b939eeb7adffcacecf99b844c'], 'success': True}
+bot_output.log:1552822:📋 Side order (MERCADO FAK $48.88 ≈ 52 acc @≤0.94): {'errorMsg': '', 'orderID':
+'0xb769d5efb783b2a817d1be4cbc04c0b290db6fd6de86e7eccbf8a022ca2cd440', 'takingAmount': '52', 'makingAmount': '48.88', 'status': 'matched',
+'transactionsHashes': ['0xc62472e6aaa43c233eab62a191b66837d00ab5f5247519e9e3c3c003330cb2a2'], 'success': True}
+bot_output.log:1552873:📋 Side order (MERCADO FAK $2.76 ≈ 3 acc @≤0.92): {'errorMsg': '', 'orderID':
+'0x61b227abcb0b8c0e7bcfb9ea80902c16c8979ee5a6a061edc8aae553938ffcc8', 'takingAmount': '3', 'makingAmount': '2.76', 'status': 'matched',
+'transactionsHashes': ['0x5e76de75e2aaa3867da673f018ac0aa9521d8d8a69202be482656c8474cf7a39'], 'success': True}
+bot_output.log:1552951:📋 Side order (MERCADO FAK $17.67 ≈ 19 acc @≤0.93): {'errorMsg': '', 'orderID':
+'0x02a41de9449ae870a5d614e70abe10fdbb765cb9536dc446c5587e62518e7c96', 'takingAmount': '19', 'makingAmount': '17.67', 'status': 'matched',
+'transactionsHashes': ['0xdb3592b0a4a52b66653d51899c091c77ed4b42f5849a524ad6e0e75b89d2ab37'], 'success': True}
+bot_output.log:1557149:📋 TW order (LÍMITE FAK BUY @$0.98 x53.0): {'errorMsg': '', 'orderID':
+'0xfd022ca05ebf8c44c95869b456a3f81b1ccdf5c80487a6dc4a72536b52647764', 'takingAmount': '53.546366', 'makingAmount': '51.939975', 'status': 'matched',
+'transactionsHashes': ['0xe6a8bcfa8b341d83403664239dd04e33d04cb34284359fbd0e88647753eef726'], 'success': True}
+bot_output.log:1557151:📋 Side order (MERCADO FAK $20.37 ≈ 21 acc @≤0.97): {'errorMsg': '', 'orderID':
+'0xb1dd7ace8783cdc7b6f890d1246a29fc79eff7eb3453ce35261c6da9e2955d22', 'takingAmount': '21', 'makingAmount': '20.37', 'status': 'matched',
+'transactionsHashes': ['0xb44c84a81670e873372a6d60bafdcbf34e87b9434509d6ffd14267e74ea75713'], 'success': True}
+bot_output.log:1557312:📋 Side order (MERCADO FAK $7.84 ≈ 8 acc @≤0.98): {'errorMsg': '', 'orderID':
+'0xc8d4f947504fa37ee542b684e042dfae58131725fb2458dee8c9a5f1e1175e67', 'takingAmount': '8', 'makingAmount': '7.84', 'status': 'matched',
+'transactionsHashes': ['0x6e90b59319fc68a2e295aef6e9d92402464209b2864150f35800e15fcb62d488'], 'success': True}
+bot_output.log:1563968:📋 Order response (MERCADO BUY, FAK, intento 1/3): {'errorMsg': '', 'orderID':
+'0xaaf97aef60619ec9c1200739aef91c535906bd3d5a4ebe9db0b8449235848ea5', 'takingAmount': '6.649466', 'makingAmount': '6.449982', 'status': 'matched',
+'transactionsHashes': ['0x3b382d009da995c4640648d44875a658022c3902a51b51244aba76877f01b29d'], 'success': True}
+bot_output.log:1567077:📋 Side order (MERCADO FAK $3.56 ≈ 4 acc @≤0.89): {'errorMsg': '', 'orderID':
+'0x351abeec7e0b40b78dde6cf8c006a1998762b91f38009d4a4be19f95c6c5999c', 'takingAmount': '4', 'makingAmount': '3.56', 'status': 'matched',
+'transactionsHashes': ['0x987b144de150f2c26bcffbfca16f496775338437119c8c5f721e0fcb16206999'], 'success': True}
+bot_output.log:1568607:📋 Side order (MERCADO FAK $3.60 ≈ 4 acc @≤0.90): {'errorMsg': '', 'orderID':
+'0x7d45017d2e2bace6a0fd4777e079f82e6ebc516a8f265ccff5768a08ce4ba1af', 'takingAmount': '4', 'makingAmount': '3.6', 'status': 'matched',
+'transactionsHashes': ['0x06e2f607c531c929be0e31762068a84a4308d538100cfe5ba5527fd66838f80e'], 'success': True}
+bot_output.log:1570194:📋 Side order (MERCADO FAK $3.84 ≈ 4 acc @≤0.96): {'errorMsg': '', 'orderID':
+'0x6c7b57c4138f008108d32a57238f7894269b55b86a3862832799439bd9fa5e5e', 'takingAmount': '4', 'makingAmount': '3.84', 'status': 'matched',
+'transactionsHashes': ['0xcd363219a40e36bf8967af7e509adec05c3ccc9fbb5240f542f2164389f8b14b'], 'success': True}
+bot_output.log:1576453:📋 Side order (MERCADO FAK $4.60 ≈ 5 acc @≤0.92): {'errorMsg': '', 'orderID':
+'0xb057571e59959c70ff13ee1fc5fcf9740e672e07d3ab33b54d1ba21dae0e05b7', 'takingAmount': '4.989125', 'makingAmount': '4.589995', 'status': 'matched',
+'transactionsHashes': ['0xcdeb8c1c291e118fc2db63cbc4a463d020831bdde0be8c66608dbea1fbe8143c'], 'success': True}
+bot_output.log:1579552:📋 Side order (MERCADO FAK $4.80 ≈ 5 acc @≤0.96): {'errorMsg': '', 'orderID':
+'0x42c2448d7d6d9b702a82921fb4e2f5eec72722836ce078e1086f4e029424e6c0', 'takingAmount': '5', 'makingAmount': '4.8', 'status': 'matched',
+'transactionsHashes': ['0x5a2cdc27bf75d6fe56fb42623a3c8621cf1640b67897d9060beca353a4928523'], 'success': True}
+bot_output.log:1582554:📋 Side order (MERCADO FAK $4.85 ≈ 5 acc @≤0.97): {'errorMsg': '', 'orderID':
+'0x9eb0a8cd6b68bc20db767a7aa86209a8241a4f1d3bba87db42f29b23907102a7', 'takingAmount': '4.989666', 'makingAmount': '4.839976', 'status': 'matched',
+'transactionsHashes': ['0xe28fbbce7a3c26f48fb489ad8634828ac99e0aea16d6714b3c054ad9375b4166'], 'success': True}
+bot_output.log:1584057:📋 Side order (MERCADO FAK $4.60 ≈ 5 acc @≤0.92): {'errorMsg': '', 'orderID':
+'0xd9dba4abfcf6c9547ef257b84ac18ce71724d36c6802bdb42e937df058c45bf1', 'takingAmount': '4.989125', 'makingAmount': '4.589995', 'status': 'matched',
+'transactionsHashes': ['0x9853e43f82b5fde4646806260f49156d6d3df9e1e857da8d44e2ba6635c72e95'], 'success': True}
+bot_output.log:1594915:📋 Side order (MERCADO FAK $4.85 ≈ 5 acc @≤0.97): {'errorMsg': '', 'orderID':
+'0x32ac16092be0b7632f62bb2177e63d9405237e2b2bd8d805137796e9d11fd0cd', 'takingAmount': '4.989666', 'makingAmount': '4.839976', 'status': 'matched',
+'transactionsHashes': ['0xe2403e18210031abdae25857cbe99157d7d6154f799e5c5fa3f383dd5170e931'], 'success': True}
+bot_output.log:1598099:📋 Side order (MERCADO FAK $4.60 ≈ 5 acc @≤0.92): {'errorMsg': '', 'orderID':
+'0xf80c41ae7f83d0ad5cf4990df302a5f86680e50cdf339fccd1a5142c2e0711a0', 'takingAmount': '4.989125', 'makingAmount': '4.589995', 'status': 'matched',
+'transactionsHashes': ['0x0ab66fd2190a27225991b6709809ec435484a2467d88f89f97fe29604f2c66cf'], 'success': True}
+bot_output.log:1619797:📋 Side order (MERCADO FAK $4.65 ≈ 5 acc @≤0.93): {'errorMsg': '', 'orderID':
+'0x2734ce5d8a993f0994310524f11ecd35a0ce544cbeade5a3cc803008e4b04d76', 'takingAmount': '5', 'makingAmount': '4.65', 'status': 'matched',
+'transactionsHashes': ['0x0597a1eee45a86deabc6a3423649c1734e962a49391e01a05683ec705184423e'], 'success': True}
+bot_output.log:1621323:[py_clob_client_v2] request error status=400 url=https://clob.polymarket.com/order body={"error":"no orders found to match with FAK
+order. FAK orders are partially filled or killed if no match is found.","orderID":"0xba6520036a84d56ad773bfe0a90fc22ebdf7ac596ae3184f2f4d2a4860416ec7"}
+bot_output.log:1621341:📋 Side order (MERCADO FAK $5.76 ≈ 6 acc @≤0.96): {'errorMsg': '', 'orderID':
+'0x53bf29d2c60e42d7b177fc140a4b9035614e57f848c2b38eef19f896ba880f9f', 'takingAmount': '6', 'makingAmount': '5.76', 'status': 'matched',
+'transactionsHashes': ['0xbc264fd11fe2bfa3d48042d86f0206362f4d9987cce9aa800afa2d5e98f267f1'], 'success': True}
+bot_output.log:1622917:📋 Side order (MERCADO FAK $5.34 ≈ 6 acc @≤0.89): {'errorMsg': '', 'orderID':
+'0xb7317631992bc85132b648ae9ccccbf7d26ebf92f145396f53bd04bc0ca413ad', 'takingAmount': '7.97015', 'makingAmount': '5.34', 'status': 'matched',
+'transactionsHashes': ['0x3666085aadea364c0a950c2410da2d51c69191fc8d8908f27d38f83a5a9bae02'], 'success': True}
+bot_output.log:1635191:📋 Side order (MERCADO FAK $6.58 ≈ 7 acc @≤0.94): {'errorMsg': '', 'orderID':
+'0x1ca1a54f1f8c5f4a11744c5d419f3c92fa703f39aba6edfff14f6c97b2ff8015', 'takingAmount': '7', 'makingAmount': '6.58', 'status': 'matched',
+'transactionsHashes': ['0x3b3305364c1c0dd0679b64573746fe038124ffbe46f0dd0ad6557a3bfcead407'], 'success': True}
+bot_output.log:1636705:📋 Side order (MERCADO FAK $7.52 ≈ 8 acc @≤0.94): {'errorMsg': '', 'orderID':
+'0x8110e81b5e513de4da85bd58b01d875d72ac2efc7ae135152d69c95e33c47e53', 'takingAmount': '8', 'makingAmount': '7.52', 'status': 'matched',
+'transactionsHashes': ['0xbdebed5affd18d313f2fc5f2c73319a46153e75697dd712f8d524484bb532bf0'], 'success': True}
+bot_output.log:1638328:📋 Side order (MERCADO FAK $7.68 ≈ 8 acc @≤0.96): {'errorMsg': '', 'orderID':
+'0xdf3ffcace7a270a79862166fcc7dec5cb5ec6801e20a494950a28753ef798157', 'takingAmount': '8', 'makingAmount': '7.68', 'status': 'matched',
+'transactionsHashes': ['0xb92e8cd8dc12229475baf709bb9892140782fb27bf38e7063451240ca7e4a4b4'], 'success': True}
+bot_output.log:1674033:📋 Order response (MERCADO BUY, FAK, intento 1/3): {'errorMsg': '', 'orderID':
+'0x7ade21476676c14666ddcca2a704aeff895569734085afb6afe74a97f578c117', 'takingAmount': '13.770825', 'makingAmount': '13.219992', 'status': 'matched',
+'transactionsHashes': ['0xac6c520cc93195482cb5f2f71603a83743c38d52123d260f8fe5ca1643e4884c'], 'success': True}
+bot_output.log:1760786:📋 Side order (MERCADO FAK $8.28 ≈ 9 acc @≤0.92): {'errorMsg': '', 'orderID':
+'0xc66a17a195d5bfef24862216551561932f20876832a5bb755eee74314b2ac4f0', 'takingAmount': '8.989125', 'makingAmount': '8.269995', 'status': 'matched',
+'transactionsHashes': ['0x4226c5c1974caa22a8cde3826e5423176ea8fddebf335d941619b35b1c9111f7'], 'success': True}
+bot_output.log:1767245:📋 Order response (MERCADO BUY, FAK, intento 1/3): {'errorMsg': '', 'orderID':
+'0x749e79bc79200b7e528b70489f6e4077e79d74fa50969935fc9101fa44b3a528', 'takingAmount': '14.68365', 'makingAmount': '14.389977', 'status': 'matched',
+'transactionsHashes': ['0xc60424e2c19fcb76559e792932269f77cb12611cbfb6324ddd92b9a90da0a484'], 'success': True}
+bot_output.log:1800378:📋 Side order (MERCADO FAK $3.72 ≈ 4 acc @≤0.93): {'errorMsg': '', 'orderID':
+'0x810769c203bbfd3b4ac7d42ed941925529cd9492ec1b049c52d73e4e8eb0a25c', 'takingAmount': '4', 'makingAmount': '3.72', 'status': 'matched',
+'transactionsHashes': ['0xf940b486e2fe6afeca00ea2eed880be8e3643fc9fc0564d9827199dd007e0b36'], 'success': True}
+bot_output.log:1804851:📋 TW order (LÍMITE FAK BUY @$0.98 x5.0): {'errorMsg': '', 'orderID':
+'0xd0f18f3c1b68580e6782b602aeec7289d65679a65a333cc0be6dba289179a31f', 'takingAmount': '5', 'makingAmount': '4.9', 'status': 'matched',
+'transactionsHashes': ['0x23e612d3bccfad0030033c689d44dbba6087020974201d713c2d96dfdc79aaf5'], 'success': True}
+bot_output.log:1804878:📋 Side order (MERCADO FAK $1.88 ≈ 2 acc @≤0.94): {'errorMsg': '', 'orderID':
+'0x0b9353f42d3a81c3e1f91bc95d41775a09d517f01006ad277828ab323f1a28ca', 'takingAmount': '2', 'makingAmount': '1.88', 'status': 'matched',
+'transactionsHashes': ['0x9786446ba4f0910c968f3e9bc9d19bf5c9d308694c456fc5aef55faa947ceff1'], 'success': True}
+bot_output.log:1954156:📋 Side order (MERCADO FAK $2.94 ≈ 3 acc @≤0.98): {'errorMsg': '', 'orderID':
+'0x0c843239f33857c52392b6318d01ca5c7767989e538d362f5ec6f07728784e6f', 'takingAmount': '3', 'makingAmount': '2.94', 'status': 'matched',
+'transactionsHashes': ['0x560125d31a4dd9aa4b776c8db8c0ef4e9774eb3fec0946343605ee2110f8530c'], 'success': True}
+bot_output.log:1955622:📋 Side order (MERCADO FAK $1.90 ≈ 2 acc @≤0.95): {'errorMsg': '', 'orderID':
+'0xcb5722320e2cc4471d1bab5edc12980f1c9509ac5dcb9ad86b96a9c694e2bff3', 'takingAmount': '2', 'makingAmount': '1.9', 'status': 'matched',
+'transactionsHashes': ['0xefc783dfd88610880766224e1fdb1713e2ad1ce8290cabe73e9283328d97369c'], 'success': True}
+bot_output.log:2028230:📋 Side order (MERCADO FAK $1.90 ≈ 2 acc @≤0.95): {'errorMsg': '', 'orderID':
+'0x75a0532c57a23948afd84414689c45838529bfdfcdd6852f401c52459e7ced98', 'takingAmount': '2', 'makingAmount': '1.9', 'status': 'matched',
+'transactionsHashes': ['0xdf0c63e313d6230ad4789fb3a86ef4445fef061854f394439a1b7371b98d8c17'], 'success': True}
+bot_output.log:2030023:📋 Side order (MERCADO FAK $1.86 ≈ 2 acc @≤0.93): {'errorMsg': '', 'orderID':
+'0xd6a8fc18a091740d6fc6b99ced3f00bfa1a2771bd74438ba852fd774e06a9cd7', 'takingAmount': '2', 'makingAmount': '1.86', 'status': 'matched',
+'transactionsHashes': ['0x9e67951c3df290b2878b708ae5deb43194f3f15f1db58571d23fafce8c979505'], 'success': True}
+tw_log.jsonl:218:{"ts": 1793113935.75, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793113800", "epoch": 1793113800, "side": "UP", "elapsed": 135.8,
+"ask": 0.98, "ask_top3": 10944.26, "ws_ask": 0.98, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.016, "try": 1, "z": 2.885, "ptb_real": 80167.33,
+"ptb_bot": 80168.6, "ds_px": 80275.75, "ds_delta": 108.43, "ds_age_s": 1.75, "ret": 0.0, "v10": 71.86, "sigma": 3.3483, "usdc": 56.91, "pct": 0.25,
+"cl_delta_bot": 40.437508470000466, "fast_track_holding": false, "ok": false, "price_cap": 0.98, "resp": "excepci\u00f3n:
+PolyApiException[status_code=400, error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match
+is found.', 'orderID': '0xa147b8bfc51a553ae198f1a23dd7c6beacaed0f3eedc52c51145dc0286531f9a'}]"}
+tw_log.jsonl:251:{"ts": 1793134328.46, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793134200", "epoch": 1793134200, "side": "UP", "elapsed": 128.5,
+"ask": 0.98, "ask_top3": 3721.66, "ws_ask": 0.98, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.016, "try": 1, "z": 2.995, "ptb_real": 80625.85,
+"ptb_bot": 80625.55, "ds_px": 80688.41, "ds_delta": 62.56, "ds_age_s": 1.46, "ret": 0.0, "v10": 26.53, "sigma": 1.8111, "usdc": 65.74, "pct": 0.25,
+"cl_delta_bot": 35.312826779991155, "fast_track_holding": false, "ok": false, "price_cap": 0.98, "resp": "excepci\u00f3n:
+PolyApiException[status_code=400, error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match
+is found.', 'orderID': '0xc8705f4a2033dc2fa61214021799fcd634f5e343dfe8b6736ac6d1def23402b2'}]"}
+tw_log.jsonl:397:{"ts": 1793249210.21, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793249100", "epoch": 1793249100, "side": "UP", "elapsed": 110.2,
+"ask": 0.94, "ask_top3": 4949.37, "ws_ask": 0.94, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.014, "try": 1, "z": 3.255, "ptb_real": 79969.18,
+"ptb_bot": 79969.5, "ds_px": 80041.92, "ds_delta": 72.74, "ds_age_s": 1.21, "ret": 0.0, "v10": 48.93, "sigma": 1.8187, "sigma60": 3.156, "usdc": 29.36,
+"pct": 0.25, "cl_delta_bot": 20.36262283999531, "fast_track_holding": false, "ok": false, "price_cap": 0.95, "resp": "excepci\u00f3n:
+PolyApiException[status_code=400, error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match
+is found.', 'orderID': '0xee334b2bd04e69e49b6202332794966fa0a6a613865e0de24207b0e472bb7869'}]"}
+tw_log.jsonl:538:{"ts": 1793343143.95, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793343000", "epoch": 1793343000, "side": "UP", "elapsed": 144.0,
+"ask": 0.98, "ask_top3": 8445.79, "ws_ask": 0.98, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.009, "try": 1, "z": 3.077, "ptb_real": 78298.42,
+"ptb_bot": 78297.22, "ds_px": 78399.44, "ds_delta": 101.01, "ds_age_s": 1.95, "ret": 0.0, "v10": 9.77, "sigma": 3.0221, "sigma60": 2.94, "usdc": 17.79,
+"pct": 0.6, "cl_delta_bot": 95.19537909999781, "fast_track_holding": false, "ok": false, "price_cap": 0.98, "resp": "excepci\u00f3n:
+PolyApiException[status_code=400, error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match
+is found.', 'orderID': '0xdf4695d6a90c7683c8ae9dcbc2b8964f5949b033ddcb8d4dce8da584a9c4f2ae'}]"}
+signals_log.jsonl:7234:{"ts": 1792520018.1686978, "slug": "btc-updown-5m-1792519800", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 3 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0x9ae196aaca562e8804aa11a70053220b28c675c5869829611021aaf4d435be3c'}]", "reject_category": "ORDER_EXCEPTION", "outcome_ts": 1792520099.843377, "won":
+false, "market_winning_side": "DN", "market_frac": -0.000677, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7264:{"ts": 1792570790.8400373, "slug": "btc-updown-5m-1792570500", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 76 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0xecfa5ee6dbd4a60fd8e6852e452565466a73f055b654897b4c7a42a21f068675'}]", "reject_category": "ORDER_EXCEPTION", "outcome_ts": 1792570802.574534, "won":
+false, "market_winning_side": "DN", "market_frac": -0.001013, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7270:{"ts": 1792573190.9165864, "slug": "btc-updown-5m-1792572900", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 39 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0x4e12d0077b0166322f757bd54a2cde34e33069cbb98aa37a42c7c143f958330f'}]", "reject_category": "ORDER_EXCEPTION", "outcome_ts": 1792573202.5966709, "won":
+false, "market_winning_side": "DN", "market_frac": -0.000953, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7272:{"ts": 1792573790.6660957, "slug": "btc-updown-5m-1792573500", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 77 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0x2358190bb8ff341b8dc2f84a400a76aba1093fe3343db6553bdb4efade1c2628'}]", "reject_category": "ORDER_EXCEPTION", "outcome_ts": 1792573802.954941, "won":
+false, "market_winning_side": "UP", "market_frac": 0.002128, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7276:{"ts": 1792575591.0934725, "slug": "btc-updown-5m-1792575300", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 73 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0x3436290c3626edc0f13056bcc71414fc5cbdfdc18c38f344ee3a94c9f819a374'}]", "reject_category": "ORDER_EXCEPTION", "outcome_ts": 1792575602.5881002, "won":
+false, "market_winning_side": "DN", "market_frac": -0.001005, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7313:{"ts": 1792608509.0502818, "slug": "btc-updown-5m-1792608300", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 7 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0xfc80cd7e34224a630fd8a0c5769ff2da4f4d37bd461a2302b895b11f6d792c40'}]", "reject_category": "ORDER_EXCEPTION", "attempted_usdc": 311.36, "pm_up_bid":
+0.06, "pm_up_ask": 0.07, "pm_dn_bid": 0.93, "pm_dn_ask": 0.94, "outcome_ts": 1792608598.5274117, "won": false, "market_winning_side": "DN", "market_frac":
+-0.001561, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7390:{"ts": 1792648704.7326355, "slug": "btc-updown-5m-1792648500", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 8 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0xa2726e628d45d36a53fd7a71a32fff1294f7d0b0e2d6e7d84989e4ff510df405'}]", "reject_category": "ORDER_EXCEPTION", "attempted_usdc": 245.08, "pm_up_bid":
+0.97, "pm_up_ask": 0.98, "pm_dn_bid": 0.02, "pm_dn_ask": 0.03, "outcome_ts": 1792648798.2174244, "won": false, "market_winning_side": "UP", "market_frac":
+0.001371, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7399:{"ts": 1792653536.2636244, "slug": "btc-updown-5m-1792653300", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 8 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0x9ddb525ddf00d91983f20e683ed8f918df7b89b42055918588b29e5b3bfe0600'}]", "reject_category": "ORDER_EXCEPTION", "attempted_usdc": 245.08, "pm_up_bid":
+0.02, "pm_up_ask": 0.03, "pm_dn_bid": 0.97, "pm_dn_ask": 0.98, "outcome_ts": 1792653599.4803655, "won": false, "market_winning_side": "DN", "market_frac":
+-0.000205, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7404:{"ts": 1792657106.257512, "slug": "btc-updown-5m-1792656900", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 8 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0xf93b1fbec58c9503954a257b9c54afd648e21af606835319c42e08423c05cb91'}]", "reject_category": "ORDER_EXCEPTION", "attempted_usdc": 245.08, "pm_up_bid":
+0.02, "pm_up_ask": 0.03, "pm_dn_bid": 0.97, "pm_dn_ask": 0.98, "outcome_ts": 1792657196.0323899, "won": false, "market_winning_side": "DN", "market_frac":
+-0.001828, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7446:{"ts": 1792680214.9784176, "slug": "btc-updown-5m-1792680000", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 7 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0xa55bb6901857e88fdf559b8b3a7c9e708bd15be3ca9fbdf4a18e9edd6a59a29e'}]", "reject_category": "ORDER_EXCEPTION", "attempted_usdc": 247.34, "pm_up_bid":
+0.96, "pm_up_ask": 0.97, "pm_dn_bid": 0.03, "pm_dn_ask": 0.04, "outcome_ts": 1792680300.7686758, "won": false, "market_winning_side": "UP", "market_frac":
+0.001516, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7501:{"ts": 1792732122.4825845, "slug": "btc-updown-5m-1792731900", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 8 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0x429be2113ab38030e9a0c8995c3017d29a38027f594d25d8193259965533243e'}]", "reject_category": "ORDER_EXCEPTION", "attempted_usdc": 196.38, "pm_up_bid":
+0.96, "pm_up_ask": 0.97, "pm_dn_bid": 0.03, "pm_dn_ask": 0.04, "outcome_ts": 1792732199.038855, "won": false, "market_winning_side": "UP", "market_frac":
+0.001493, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7510:{"ts": 1792735724.1748774, "slug": "btc-updown-5m-1792735500", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 8 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0xbc728c9385f6d09f04679ea1c61c48fff766a2a92b2d11f704eff53d63e80032'}]", "reject_category": "ORDER_EXCEPTION", "attempted_usdc": 196.38, "pm_up_bid":
+0.95, "pm_up_ask": 0.96, "pm_dn_bid": 0.04, "pm_dn_ask": 0.05, "outcome_ts": 1792735799.3896596, "won": false, "market_winning_side": "UP", "market_frac":
+0.001026, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7549:{"ts": 1792767207.7602532, "slug": "btc-updown-5m-1792767000", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 7 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0xa584d53da8d144b88cb20409255a0b2ab56ae93ced6f6b2aa4d867045ac69460'}]", "reject_category": "ORDER_EXCEPTION", "attempted_usdc": 200.01, "pm_up_bid": 0.9,
+"pm_up_ask": 0.91, "pm_dn_bid": 0.09, "pm_dn_ask": 0.1, "outcome_ts": 1792767299.3699887, "won": false, "market_winning_side": "UP", "market_frac":
+0.00081, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7571:{"ts": 1792796642.4871845, "slug": "btc-updown-5m-1792796400", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 8 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0x03b48c205958864af30ed8a1903394447d617803038885e22f8c4ebef6bc8ddf'}]", "reject_category": "ORDER_EXCEPTION", "attempted_usdc": 200.01, "pm_up_bid":
+0.94, "pm_up_ask": 0.95, "pm_dn_bid": 0.05, "pm_dn_ask": 0.06, "outcome_ts": 1792796700.5934372, "won": false, "market_winning_side": "UP", "market_frac":
+0.001425, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7601:{"ts": 1792857807.267066, "slug": "btc-updown-5m-1792857600", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 7 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0x0f61435020229933dd347a7bca341682ee1ec0f5b0404160b12228f159450e33'}]", "reject_category": "ORDER_EXCEPTION", "attempted_usdc": 195.83, "pm_up_bid":
+0.06, "pm_up_ask": 0.07, "pm_dn_bid": 0.93, "pm_dn_ask": 0.94, "outcome_ts": 1792857899.1292443, "won": false, "market_winning_side": "DN", "market_frac":
+-0.001373, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7617:{"ts": 1792866207.871115, "slug": "btc-updown-5m-1792866000", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 7 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0x4a00bdf2989e00111cc809def80cd04093353a7500839acfad5b101db68767e4'}]", "reject_category": "ORDER_EXCEPTION", "attempted_usdc": 103.36, "pm_up_bid":
+0.02, "pm_up_ask": 0.03, "pm_dn_bid": 0.97, "pm_dn_ask": 0.98, "outcome_ts": 1792866297.9183602, "won": false, "market_winning_side": "DN", "market_frac":
+-0.001007, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7639:{"ts": 1792919608.5234845, "slug": "btc-updown-5m-1792919400", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 8 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0xbab9b227215b00ce29f08a9480d66d41faa816da4d736eeefc1ffc21b4b6aa21'}]", "reject_category": "ORDER_EXCEPTION", "attempted_usdc": 98.46, "pm_up_bid": 0.02,
+"pm_up_ask": 0.03, "pm_dn_bid": 0.97, "pm_dn_ask": 0.98, "outcome_ts": 1792919695.5969, "won": false, "market_winning_side": "DN", "market_frac":
+-0.002974, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7645:{"ts": 1792935507.6635742, "slug": "btc-updown-5m-1792935300", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 8 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0x1f0203876807bfe41faaa3d87d0005bb4e5bae2bd5b4a3f3e199e0cd77575923'}]", "reject_category": "ORDER_EXCEPTION", "attempted_usdc": 98.46, "pm_up_bid": 0.96,
+"pm_up_ask": 0.97, "pm_dn_bid": 0.03, "pm_dn_ask": 0.04, "outcome_ts": 1792935592.970877, "won": false, "market_winning_side": "UP", "market_frac":
+0.001131, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7664:{"ts": 1792964020.6109493, "slug": "btc-updown-5m-1792963800", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 7 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0x3d1a3d43caaee51feeb563d4ea486646ba85e07dfb1b361aff08882f0fa35cb8'}]", "reject_category": "ORDER_EXCEPTION", "attempted_usdc": 93.56, "pm_up_bid": 0.02,
+"pm_up_ask": 0.07, "pm_dn_bid": 0.93, "pm_dn_ask": 0.98, "outcome_ts": 1792964099.9813302, "won": false, "market_winning_side": "DN", "market_frac":
+-0.001001, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7668:{"ts": 1792970319.7158232, "slug": "btc-updown-5m-1792970100", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 8 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0x83db04972309163b9ea0210c0917dedbbe6c1bb53a4acb35defd02d88f104842'}]", "reject_category": "ORDER_EXCEPTION", "attempted_usdc": 93.56, "pm_up_bid": 0.02,
+"pm_up_ask": 0.03, "pm_dn_bid": 0.97, "pm_dn_ask": 0.98, "outcome_ts": 1792970400.6770961, "won": false, "market_winning_side": "DN", "market_frac":
+-0.002088, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7686:{"ts": 1792975163.809765, "slug": "btc-updown-5m-1792974900", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 7 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0xcf5dc64af90f60ca7a4751cc84c278fbf0aeb29c77aa1b83cc8803f3510a90a1'}]", "reject_category": "ORDER_EXCEPTION", "attempted_usdc": 93.56, "pm_up_bid": 0.03,
+"pm_up_ask": 0.04, "pm_dn_bid": 0.96, "pm_dn_ask": 0.97, "outcome_ts": 1792975202.758091, "won": false, "market_winning_side": "DN", "market_frac":
+-0.001187, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7687:{"ts": 1792975183.0602672, "slug": "btc-updown-5m-1792974900", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 8 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0xda0230e75dab921c38ba98cf99febcbcb5be604393418f078beba55fc5da34d8'}]", "reject_category": "ORDER_EXCEPTION", "attempted_usdc": 93.56, "pm_up_bid": 0.03,
+"pm_up_ask": 0.04, "pm_dn_bid": 0.96, "pm_dn_ask": 0.97, "outcome_ts": 1792975202.758117, "won": false, "market_winning_side": "DN", "market_frac":
+-0.001187, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7707:{"ts": 1792982056.8905714, "slug": "btc-updown-5m-1792981800", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 8 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0x5aaf0f7175552f1a72b394bfe817c19039f3c23710c50cf26dedea1ec9fb903c'}]", "reject_category": "ORDER_EXCEPTION", "attempted_usdc": 95.05, "pm_up_bid": 0.02,
+"pm_up_ask": 0.03, "pm_dn_bid": 0.97, "pm_dn_ask": 0.98, "outcome_ts": 1792982100.330556, "won": false, "market_winning_side": "DN", "market_frac":
+-0.00033, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7716:{"ts": 1792985353.5593138, "slug": "btc-updown-5m-1792985100", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 7 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0x524b8afa9cfef552522391e1c435bc3df5b60b059e197d0d37017c2eb87a9b54'}]", "reject_category": "ORDER_EXCEPTION", "attempted_usdc": 95.93, "pm_up_bid": 0.06,
+"pm_up_ask": 0.07, "pm_dn_bid": 0.93, "pm_dn_ask": 0.94, "outcome_ts": 1792985401.1425571, "won": false, "market_winning_side": "DN", "market_frac":
+-0.001171, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
+signals_log.jsonl:7725:{"ts": 1792988607.6139152, "slug": "btc-updown-5m-1792988400", "side": "BUY", "decision": "NOT_EXECUTED", "exec_status":
+"ORDER_EXCEPTION", "exec_detail": "tras 8 intentos (mercado+l\u00edmite): l\u00edmite excepci\u00f3n: PolyApiException[status_code=400,
+error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID':
+'0xde686e3b9926802bb068067b84ecc2af7a7c906daf432b995381efd1e0f1a495'}]", "reject_category": "ORDER_EXCEPTION", "attempted_usdc": 95.93, "pm_up_bid": 0.04,
+"pm_up_ask": 0.05, "pm_dn_bid": 0.95, "pm_dn_ask": 0.96, "outcome_ts": 1792988697.6639888, "won": false, "market_winning_side": "DN", "market_frac":
+-0.001137, "exit_reason": "NOT_BOUGHT", "pnl": 0.0}
