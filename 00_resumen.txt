@@ -1,0 +1,20 @@
+﻿AUDITORIA TW
+============
+
+Respuestas TW encontradas: 128
+Ordenes matched confirmadas: 128
+Respuestas no confirmadas: 0
+
+Participaciones confirmadas: 4588.915407
+Costo reportado USDC: 4421.589429
+Precio promedio ponderado: 0.963536922527541
+
+TW_SIGNAL: 138
+TW_RESULT: 133
+TW_SKIP: 0
+
+NOTA:
+Las órdenes se extraen del texto de bot_output.log.
+La conciliacion por slug usa los eventos de tw_log.jsonl.
+Todavia debe verificarse que cada orden corresponda a una señal
+y que no existan ejecuciones parciales, duplicadas o sin resultado.

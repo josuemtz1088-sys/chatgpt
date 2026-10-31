@@ -1,0 +1,40 @@
+﻿DIAGNOSTICO DE INTEGRIDAD TW
+============================
+
+EVENTOS TW
+TW_SIGNAL: 138
+TW_RESULT: 133
+TW_SIGNAL ok=True: 133
+TW_SIGNAL ok=False: 5
+
+SLUGS
+Señales sin resultado: 3
+Resultados sin señal: 0
+Slugs de señal duplicados: 2
+Slugs de resultado duplicados: 0
+
+ORDENES EXTRAIDAS
+Respuestas encontradas: 128
+Matched clasificadas: 128
+No confirmadas: 0
+Sin orderID: 0
+orderID duplicados: 0
+Shares reportadas: 
+Costo reportado USDC: 
+Precio promedio ponderado: 0
+
+EVENTOS CUYO NOMBRE CONTIENE SKIP
+TW_SKIP_VOL: 398
+TW_SKIP_PRICE: 85
+TW_SKIP_VOL60: 67
+TW_SKIP_EVENTO: 21
+
+TODOS LOS TIPOS DE EVENTO
+TW_SKIP_VOL: 398
+TW_SIGNAL: 138
+TW_RESULT: 133
+TW_SKIP_PRICE: 85
+TW_SKIP_VOL60: 67
+TW_PAPER: 40
+TW_PAPER_RESULT: 40
+TW_SKIP_EVENTO: 21
