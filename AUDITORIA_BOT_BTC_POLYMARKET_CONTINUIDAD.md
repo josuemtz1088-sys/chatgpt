@@ -307,7 +307,7 @@ Salida revisada del CSV:
 | 1793345400 | 2026-10-30 00:29:59 | 78329.75 | 78325.12 | 1 |
 | 1793418600 | 2026-10-30 20:49:58 | 77076.16 | 77080.81 | 1 |
 
-**Alerta concreta:** para epoch 1793313300, los mensajes que el usuario compartió muestran un anuncio de ciclo con PTB $78,956.83 (id 142694), otro anuncio del mismo epoch con PTB $79,067.40 (id 142695), un mensaje numérico $78,900.06 y después “PTB actualizado” (id 142697). El CSV tomó $79,067.40 como inicial y $78,900.06 como final. Es posible que el extractor haya omitido un anuncio duplicado o que exista una secuencia más compleja. Auditar todos los mensajes del epoch antes de usar el CSV como verdad.
+**Aclaración del usuario:** el cambio observado en epoch 1793313300 corresponde a un **reinicio del bot**, no a una anomalía de datos. El PTB $78,956.83 del mensaje id 142694 corresponde al ciclo previo a ese reinicio; el nuevo anuncio de ciclo (id 142695) con PTB $79,067.40 es el punto de partida posterior al reinicio, y la actualización manual a $78,900.06 (id 142697) es la corrección asociada a esa nueva sesión. Por tanto, el CSV no debe marcar este caso como anomalía. La auditoría debe reconocer explícitamente los reinicios/sesiones del bot y usar el PTB del ciclo vigente después del reinicio.
 
 Ciclos faltantes en la ventana:
 
