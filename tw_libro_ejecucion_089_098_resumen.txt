@@ -1,0 +1,50 @@
+AUDITORIA TW - LIBROS Y EJECUCION HIPOTETICA
+Generado: 2026-10-31T12:59:20
+Rango objetivo: 0.89 - 0.98
+Limite de compra simulado: 0.98
+Los resultados son snapshots, no ejecuciones garantizadas.
+
+SIGMA 4 A 5
+-----------
+Libros encontrados: 54
+Señales con resultado clasificable: 52
+Aciertos direccionales: 35/52
+Porcentaje descriptivo: 67.3%
+Mejor ask entre 0.89 y 0.98: 12 libros; 11/12 aciertos clasificables
+Spread <= 0.03: 53 libros; 34/51 aciertos clasificables
+Antigüedad del libro <= 3s: 53 libros; 35/52 aciertos clasificables
+Compra hipotética $5 completa: 54 libros; 35/52 aciertos clasificables
+Compra hipotética $10 completa: 54 libros; 35/52 aciertos clasificables
+Compra hipotética $20 completa: 54 libros; 35/52 aciertos clasificables
+VWAP medio hipotético $5: 0.7389 (54 libros)
+VWAP medio hipotético $10: 0.7391 (54 libros)
+VWAP medio hipotético $20: 0.7395 (54 libros)
+
+SIGMA 5 A 6
+-----------
+Libros encontrados: 33
+Señales con resultado clasificable: 33
+Aciertos direccionales: 22/33
+Porcentaje descriptivo: 66.7%
+Mejor ask entre 0.89 y 0.98: 4 libros; 4/4 aciertos clasificables
+Spread <= 0.03: 31 libros; 20/31 aciertos clasificables
+Antigüedad del libro <= 3s: 33 libros; 22/33 aciertos clasificables
+Compra hipotética $5 completa: 32 libros; 21/32 aciertos clasificables
+Compra hipotética $10 completa: 32 libros; 21/32 aciertos clasificables
+Compra hipotética $20 completa: 32 libros; 21/32 aciertos clasificables
+VWAP medio hipotético $5: 0.7159 (32 libros)
+VWAP medio hipotético $10: 0.7161 (32 libros)
+VWAP medio hipotético $20: 0.7168 (32 libros)
+
+DIRECCION TW DESCONOCIDA
+-----------------------
+Libros contextuales encontrados: 8
+No se cuentan como aciertos ni fallos TW.
+
+IMPORTANTE:
+- La simulacion consume asks desde el precio mas barato.
+- Los niveles inferiores a 0.89 se consumen primero.
+- La profundidad 0.89-0.98 se mide por separado.
+- No se incluyen comisiones ni latencia.
+- Un VWAP calculado no garantiza ejecucion real.
+- Solo se usan snapshots con timestamp anterior o igual al rechazo.
