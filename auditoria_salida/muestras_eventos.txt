@@ -1,0 +1,211 @@
+TOTAL EVENTOS: 2052
+ERRORES JSON: 0
+
+
+================================================================================
+('CB', 'CB_PAPER')
+================================================================================
+{"ts": 1793143646.43, "slug": "btc-updown-5m-1793143500", "epoch": 1793143500, "side": "UP", "elapsed": 146.3, "real_ask": 0.95, "real_top3": 4120.6, "ws_ask": 0.96, "ptb_real": 80705.52, "ds_delta": 55.37, "ds_age_s": 1.33, "v60": 16.8, "pm_net_side_usd": 5264.6, "cvd_bn_60s_side": -3.41, "cvd_cb_30s_side": -0.667, "vel5": 1.09, "pct": 0.25, "rule": "cb30<-0.6146", "kind": "CB_PAPER", "motivo": "apagado tras pérdida", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 249}
+{"ts": 1793144822.84, "slug": "btc-updown-5m-1793144700", "epoch": 1793144700, "side": "UP", "elapsed": 122.7, "real_ask": 0.9, "real_top3": 2095.1, "ws_ask": 0.9, "ptb_real": 80834.17, "ds_delta": 44.52, "ds_age_s": 1.67, "v60": 11.38, "pm_net_side_usd": 2676.0, "cvd_bn_60s_side": 5.787, "cvd_cb_30s_side": -0.624, "vel5": -0.04, "pct": 0.25, "rule": "cb30<-0.6146", "kind": "CB_PAPER", "motivo": "apagado tras pérdida", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 252}
+{"ts": 1793145707.27, "slug": "btc-updown-5m-1793145600", "epoch": 1793145600, "side": "DN", "elapsed": 107.2, "real_ask": 0.95, "real_top3": 3484.5, "ws_ask": 0.95, "ptb_real": 80800.35, "ds_delta": -59.51, "ds_age_s": 1.17, "v60": 23.51, "pm_net_side_usd": 2840.6, "cvd_bn_60s_side": 2.258, "cvd_cb_30s_side": -12.379, "vel5": 0.16, "pct": 0.25, "rule": "cb30<-0.6146", "kind": "CB_PAPER", "motivo": "apagado tras pérdida", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 255}
+
+================================================================================
+('CB', 'CB_PAPER_RESULT')
+================================================================================
+{"ts": 1793143875.295122, "kind": "CB_PAPER_RESULT", "slug": "btc-updown-5m-1793143500", "side": "UP", "winner": "UP", "won": true, "entry_real_ask": 0.95, "paper_wins": 1, "paper_losses": 0, "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 250}
+{"ts": 1793145132.3648722, "kind": "CB_PAPER_RESULT", "slug": "btc-updown-5m-1793144700", "side": "UP", "winner": "UP", "won": true, "entry_real_ask": 0.9, "paper_wins": 2, "paper_losses": 0, "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 253}
+{"ts": 1793145975.170233, "kind": "CB_PAPER_RESULT", "slug": "btc-updown-5m-1793145600", "side": "DN", "winner": "DN", "won": true, "entry_real_ask": 0.95, "paper_wins": 3, "paper_losses": 0, "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 256}
+
+================================================================================
+('CB', 'CB_RESULT')
+================================================================================
+{"ts": 1793046975.330712, "kind": "CB_RESULT", "slug": "btc-updown-5m-1793046600", "side": "UP", "winner": "UP", "won": true, "entry": 0.9, "usdc": 1.8, "pnl_est": 0.2, "wins": 1, "losses": 0, "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 5}
+{"ts": 1793047305.7103882, "kind": "CB_RESULT", "slug": "btc-updown-5m-1793046900", "side": "DN", "winner": "DN", "won": true, "entry": 0.9, "usdc": 1.8, "pnl_est": 0.2, "wins": 2, "losses": 0, "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 7}
+{"ts": 1793049287.8900576, "kind": "CB_RESULT", "slug": "btc-updown-5m-1793048700", "side": "DN", "winner": "DN", "won": true, "entry": 0.96, "usdc": 1.92, "pnl_est": 0.08, "wins": 3, "losses": 0, "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 13}
+
+================================================================================
+('CB', 'CB_SIGNAL')
+================================================================================
+{"ts": 1793046719.51, "slug": "btc-updown-5m-1793046600", "epoch": 1793046600, "side": "UP", "elapsed": 119.5, "real_ask": 0.9, "real_top3": 4846.7, "ws_ask": 0.9, "ptb_real": 79720.79, "ds_delta": 26.76, "ds_age_s": 2.51, "v60": 18.39, "pm_net_side_usd": 800.9, "cvd_bn_60s_side": 4.331, "cvd_cb_30s_side": -0.679, "rule": "cb30<-0.6146", "kind": "CB_SIGNAL", "ok": true, "try": 1, "amount": 1.8, "fill_price": 0.9, "shares": 2.0, "paid_usdc": 1.8, "slip": 0.0, "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 4}
+{"ts": 1793047029.73, "slug": "btc-updown-5m-1793046900", "epoch": 1793046900, "side": "DN", "elapsed": 129.7, "real_ask": 0.9, "real_top3": 2772.9, "ws_ask": 0.9, "ptb_real": 79786.2, "ds_delta": -36.41, "ds_age_s": 1.72, "v60": 21.69, "pm_net_side_usd": 933.1, "cvd_bn_60s_side": 0.864, "cvd_cb_30s_side": -0.753, "rule": "cb30<-0.6146", "kind": "CB_SIGNAL", "ok": true, "try": 1, "amount": 1.8, "fill_price": 0.9, "shares": 2.0, "paid_usdc": 1.8, "slip": 0.0, "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 6}
+{"ts": 1793048858.66, "slug": "btc-updown-5m-1793048700", "epoch": 1793048700, "side": "DN", "elapsed": 158.6, "real_ask": 0.96, "real_top3": 5468.0, "ws_ask": 0.96, "ptb_real": 79829.09, "ds_delta": -57.89, "ds_age_s": 1.64, "v60": 3.21, "pm_net_side_usd": 1960.5, "cvd_bn_60s_side": -3.799, "cvd_cb_30s_side": -0.689, "rule": "cb30<-0.6146", "kind": "CB_SIGNAL", "ok": true, "try": 1, "amount": 1.92, "fill_price": 0.96, "shares": 2.0, "paid_usdc": 1.92, "slip": 0.0, "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 11}
+
+================================================================================
+('CB', 'CB_SKIP_CUSH')
+================================================================================
+{"ts": 1793066231.69, "kind": "CB_SKIP_CUSH", "slug": "btc-updown-5m-1793066100", "epoch": 1793066100, "side": "UP", "elapsed": 131.7, "ds_delta": 12.7, "min_cush": 20.0, "ws_ask": 0.57, "rule": "cb30<-0.6146", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 37}
+{"ts": 1793066501.78, "kind": "CB_SKIP_CUSH", "slug": "btc-updown-5m-1793066400", "epoch": 1793066400, "side": "DN", "elapsed": 101.8, "ds_delta": -19.01, "min_cush": 20.0, "ws_ask": 0.7, "rule": "cb30<-0.6146", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 38}
+{"ts": 1793068311.44, "kind": "CB_SKIP_CUSH", "slug": "btc-updown-5m-1793068200", "epoch": 1793068200, "side": "DN", "elapsed": 111.4, "ds_delta": -4.27, "min_cush": 20.0, "ws_ask": 0.52, "rule": "cb30<-0.6146", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 40}
+
+================================================================================
+('CB', 'CB_SKIP_EVENTO')
+================================================================================
+{"ts": 1793217705.72, "kind": "CB_SKIP_EVENTO", "slug": "btc-updown-5m-1793217600", "epoch": 1793217600, "side": "UP", "elapsed": 105.7, "evento": "Resultados Microsoft/Alphabet", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 506}
+{"ts": 1793218001.83, "kind": "CB_SKIP_EVENTO", "slug": "btc-updown-5m-1793217900", "epoch": 1793217900, "side": "DN", "elapsed": 101.8, "evento": "Resultados Microsoft/Alphabet", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 507}
+{"ts": 1793218601.86, "kind": "CB_SKIP_EVENTO", "slug": "btc-updown-5m-1793218500", "epoch": 1793218500, "side": "DN", "elapsed": 101.9, "evento": "Resultados Microsoft/Alphabet", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 508}
+
+================================================================================
+('CB', 'CB_SKIP_PRICE')
+================================================================================
+{"ts": 1793046130.2, "slug": "btc-updown-5m-1793046000", "epoch": 1793046000, "side": "UP", "elapsed": 130.2, "real_ask": 0.54, "real_top3": 580.0, "ws_ask": 0.57, "ptb_real": 79775.68, "ds_delta": 16.63, "ds_age_s": 2.2, "v60": 29.65, "pm_net_side_usd": 274.2, "cvd_bn_60s_side": 5.917, "cvd_cb_30s_side": -1.266, "rule": "cb30<-0.6146", "kind": "CB_SKIP_PRICE", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 1}
+{"ts": 1793046446.17, "slug": "btc-updown-5m-1793046300", "epoch": 1793046300, "side": "DN", "elapsed": 146.2, "real_ask": 0.73, "real_top3": 2213.3, "ws_ask": 0.73, "ptb_real": 79765.4, "ds_delta": -21.52, "ds_age_s": 1.17, "v60": 19.17, "pm_net_side_usd": -479.3, "cvd_bn_60s_side": 1.878, "cvd_cb_30s_side": -0.695, "rule": "cb30<-0.6146", "kind": "CB_SKIP_PRICE", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 2}
+{"ts": 1793046701.18, "slug": "btc-updown-5m-1793046600", "epoch": 1793046600, "side": "UP", "elapsed": 101.2, "real_ask": 0.83, "real_top3": 6541.1, "ws_ask": 0.83, "ptb_real": 79720.79, "ds_delta": 27.02, "ds_age_s": 2.18, "v60": 17.72, "pm_net_side_usd": 428.8, "cvd_bn_60s_side": 3.377, "cvd_cb_30s_side": -0.866, "rule": "cb30<-0.6146", "kind": "CB_SKIP_PRICE", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 3}
+
+================================================================================
+('CB', 'CB_SKIP_RET')
+================================================================================
+{"ts": 1793176087.85, "kind": "CB_SKIP_RET", "slug": "btc-updown-5m-1793175900", "epoch": 1793175900, "side": "UP", "elapsed": 187.8, "ds_delta": 209.59, "ret_rel": 0.309, "max_ret_rel": 0.3, "ws_ask": null, "rule": "cb30<-0.6146", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 315}
+{"ts": 1793176601.6, "kind": "CB_SKIP_RET", "slug": "btc-updown-5m-1793176500", "epoch": 1793176500, "side": "UP", "elapsed": 101.6, "ds_delta": 216.26, "ret_rel": 0.567, "max_ret_rel": 0.3, "ws_ask": 0.98, "rule": "cb30<-0.6146", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 318}
+{"ts": 1793177219.89, "kind": "CB_SKIP_RET", "slug": "btc-updown-5m-1793177100", "epoch": 1793177100, "side": "DN", "elapsed": 119.9, "ds_delta": -87.27, "ret_rel": 0.673, "max_ret_rel": 0.3, "ws_ask": 0.91, "rule": "cb30<-0.6146", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 320}
+
+================================================================================
+('CB', 'CB_SKIP_RET_MEM')
+================================================================================
+{"ts": 1793209663.68, "kind": "CB_SKIP_RET_MEM", "slug": "btc-updown-5m-1793209500", "epoch": 1793209500, "side": "UP", "elapsed": 163.7, "ds_delta": 26.3, "ret_rel": 0.176, "z": 1.409, "ws_ask": 0.84, "rule": "cb30<-0.5", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 464}
+{"ts": 1793211734.83, "kind": "CB_SKIP_RET_MEM", "slug": "btc-updown-5m-1793211600", "epoch": 1793211600, "side": "UP", "elapsed": 134.8, "ds_delta": 25.91, "ret_rel": 0.277, "z": 0.525, "ws_ask": 0.68, "rule": "cb30<-0.5", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 476}
+{"ts": 1793212910.27, "kind": "CB_SKIP_RET_MEM", "slug": "btc-updown-5m-1793212800", "epoch": 1793212800, "side": "UP", "elapsed": 110.2, "ds_delta": 113.49, "ret_rel": 0.139, "z": 1.102, "ws_ask": 0.79, "rule": "cb30<-0.5", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 485}
+
+================================================================================
+('CB', 'CB_SKIP_VOL')
+================================================================================
+{"ts": 1793217101.61, "kind": "CB_SKIP_VOL", "slug": "btc-updown-5m-1793217000", "epoch": 1793217000, "side": "UP", "elapsed": 101.6, "sigma": 3.6175, "vol_max": 3.0, "rule": "cb30<-0.5", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 505}
+{"ts": 1793239058.3, "kind": "CB_SKIP_VOL", "slug": "btc-updown-5m-1793238900", "epoch": 1793238900, "side": "DN", "elapsed": 158.2, "sigma": 7.4994, "vol_max": 4.0, "rule": "cb30<-0.5", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 600}
+{"ts": 1793239301.78, "kind": "CB_SKIP_VOL", "slug": "btc-updown-5m-1793239200", "epoch": 1793239200, "side": "DN", "elapsed": 101.7, "sigma": 7.7558, "vol_max": 4.0, "rule": "cb30<-0.5", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 601}
+
+================================================================================
+('CB', 'CB_SKIP_VOL60')
+================================================================================
+{"ts": 1793220449.15, "kind": "CB_SKIP_VOL60", "slug": "btc-updown-5m-1793220300", "epoch": 1793220300, "side": "DN", "elapsed": 149.1, "sigma60": 5.398, "vol60_max": 4.5, "rule": "cb30<-0.5", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 511}
+{"ts": 1793221038.29, "kind": "CB_SKIP_VOL60", "slug": "btc-updown-5m-1793220900", "epoch": 1793220900, "side": "UP", "elapsed": 138.3, "sigma60": 5.315, "vol60_max": 4.5, "rule": "cb30<-0.5", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 513}
+{"ts": 1793226763.37, "kind": "CB_SKIP_VOL60", "slug": "btc-updown-5m-1793226600", "epoch": 1793226600, "side": "UP", "elapsed": 163.3, "sigma60": 6.089, "vol60_max": 4.5, "rule": "cb30<-0.5", "_strategy": "CB", "_source_file": "cb_log.jsonl", "_line": 541}
+
+================================================================================
+('FLOW', 'FLOW_PAPER')
+================================================================================
+{"ts": 1793127450.76, "slug": "btc-updown-5m-1793127300", "epoch": 1793127300, "side": "UP", "elapsed": 150.7, "real_ask": 0.97, "real_top3": 12429.8, "ws_ask": 0.97, "ptb_real": 80504.39, "ds_delta": 38.94, "ds_age_s": 2.66, "v60": 5.31, "pm_net_side_usd": 2828.5, "cvd_bn_60s_side": 2.946, "cvd_cb_30s_side": -0.205, "vel5": 0.44, "pct": 0.25, "rule": "pm≥2268 cvd60≥2.782 v60<53.3", "kind": "FLOW_PAPER", "motivo": "apagado tras pérdida", "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 193}
+{"ts": 1793127758.25, "slug": "btc-updown-5m-1793127600", "epoch": 1793127600, "side": "UP", "elapsed": 158.2, "real_ask": 0.95, "real_top3": 3799.1, "ws_ask": 0.95, "ptb_real": 80523.52, "ds_delta": 40.9, "ds_age_s": 1.16, "v60": 3.52, "pm_net_side_usd": 2902.3, "cvd_bn_60s_side": 3.172, "cvd_cb_30s_side": 0.009, "vel5": 2.95, "pct": 0.25, "rule": "pm≥2268 cvd60≥2.782 v60<53.3", "kind": "FLOW_PAPER", "motivo": "apagado tras pérdida", "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 194}
+{"ts": 1793128684.42, "slug": "btc-updown-5m-1793128500", "epoch": 1793128500, "side": "DN", "elapsed": 184.3, "real_ask": 0.96, "real_top3": 6929.9, "ws_ask": 0.96, "ptb_real": 80567.62, "ds_delta": -30.17, "ds_age_s": 1.3, "v60": 19.43, "pm_net_side_usd": 4673.2, "cvd_bn_60s_side": 5.393, "cvd_cb_30s_side": 0.1, "vel5": 2.25, "pct": 0.25, "rule": "pm≥2268 cvd60≥2.782 v60<53.3", "kind": "FLOW_PAPER", "motivo": "apagado tras pérdida", "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 197}
+
+================================================================================
+('FLOW', 'FLOW_PAPER_RESULT')
+================================================================================
+{"ts": 1793127826.461424, "kind": "FLOW_PAPER_RESULT", "slug": "btc-updown-5m-1793127300", "side": "UP", "winner": "UP", "won": true, "entry_real_ask": 0.97, "paper_wins": 1, "paper_losses": 0, "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 195}
+{"ts": 1793127975.6551445, "kind": "FLOW_PAPER_RESULT", "slug": "btc-updown-5m-1793127600", "side": "UP", "winner": "UP", "won": true, "entry_real_ask": 0.95, "paper_wins": 2, "paper_losses": 0, "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 196}
+{"ts": 1793129026.305626, "kind": "FLOW_PAPER_RESULT", "slug": "btc-updown-5m-1793128500", "side": "DN", "winner": "DN", "won": true, "entry_real_ask": 0.96, "paper_wins": 3, "paper_losses": 0, "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 198}
+
+================================================================================
+('FLOW', 'FLOW_RESULT')
+================================================================================
+{"ts": 1793046975.3173835, "kind": "FLOW_RESULT", "slug": "btc-updown-5m-1793046600", "side": "UP", "winner": "UP", "won": true, "entry": 0.98, "usdc": 1.96, "pnl_est": 0.04, "wins": 1, "losses": 0, "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 3}
+{"ts": 1793047575.5745604, "kind": "FLOW_RESULT", "slug": "btc-updown-5m-1793047200", "side": "DN", "winner": "DN", "won": true, "entry": 0.9, "usdc": 1.8, "pnl_est": 0.2, "wins": 2, "losses": 0, "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 6}
+{"ts": 1793050901.5572038, "kind": "FLOW_RESULT", "slug": "btc-updown-5m-1793050500", "side": "UP", "winner": "UP", "won": true, "entry": 0.97, "usdc": 1.94, "pnl_est": 0.06, "wins": 3, "losses": 0, "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 9}
+
+================================================================================
+('FLOW', 'FLOW_SIGNAL')
+================================================================================
+{"ts": 1793046754.7, "slug": "btc-updown-5m-1793046600", "epoch": 1793046600, "side": "UP", "elapsed": 154.7, "real_ask": 0.98, "real_top3": 7216.1, "ws_ask": 0.98, "ptb_real": 79720.79, "ds_delta": 75.57, "ds_age_s": 1.7, "v60": 53.87, "pm_net_side_usd": 2417.4, "cvd_bn_60s_side": 9.462, "cvd_cb_30s_side": 1.229, "rule": "pm≥2062 cvd60≥2.529 v60<59.22", "kind": "FLOW_SIGNAL", "ok": true, "try": 1, "amount": 1.96, "fill_price": 0.98, "shares": 2.0, "paid_usdc": 1.96, "slip": 0.0, "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 2}
+{"ts": 1793047350.79, "slug": "btc-updown-5m-1793047200", "epoch": 1793047200, "side": "DN", "elapsed": 150.8, "real_ask": 0.9, "real_top3": 1929.0, "ws_ask": 0.9, "ptb_real": 79762.15, "ds_delta": -21.18, "ds_age_s": 1.78, "v60": 4.49, "pm_net_side_usd": 13243.8, "cvd_bn_60s_side": 2.565, "cvd_cb_30s_side": 2.091, "rule": "pm≥2062 cvd60≥2.529 v60<59.22", "kind": "FLOW_SIGNAL", "ok": true, "try": 1, "amount": 1.8, "fill_price": 0.9, "shares": 2.0, "paid_usdc": 1.8, "slip": 0.0, "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 5}
+{"ts": 1793050683.23, "slug": "btc-updown-5m-1793050500", "epoch": 1793050500, "side": "UP", "elapsed": 183.2, "real_ask": 0.97, "real_top3": 7410.0, "ws_ask": 0.97, "ptb_real": 79948.74, "ds_delta": 43.78, "ds_age_s": 1.2, "v60": -8.91, "pm_net_side_usd": 2326.8, "cvd_bn_60s_side": 3.851, "cvd_cb_30s_side": 0.166, "rule": "pm≥2062 cvd60≥2.529 v60<59.22", "kind": "FLOW_SIGNAL", "ok": true, "try": 1, "amount": 1.94, "fill_price": 0.97, "shares": 2.0, "paid_usdc": 1.94, "slip": 0.0, "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 8}
+
+================================================================================
+('FLOW', 'FLOW_SKIP_CUSH')
+================================================================================
+{"ts": 1793067105.75, "kind": "FLOW_SKIP_CUSH", "slug": "btc-updown-5m-1793067000", "epoch": 1793067000, "side": "DN", "elapsed": 105.7, "ds_delta": -15.43, "min_cush": 20.0, "ws_ask": 0.62, "rule": "pm≥2062 cvd60≥2.529 v60<59.22", "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 46}
+{"ts": 1793069246.36, "kind": "FLOW_SKIP_CUSH", "slug": "btc-updown-5m-1793069100", "epoch": 1793069100, "side": "UP", "elapsed": 146.3, "ds_delta": 11.16, "min_cush": 20.0, "ws_ask": 0.66, "rule": "pm≥2062 cvd60≥2.529 v60<59.22", "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 54}
+{"ts": 1793098609.71, "kind": "FLOW_SKIP_CUSH", "slug": "btc-updown-5m-1793098500", "epoch": 1793098500, "side": "UP", "elapsed": 109.6, "ds_delta": 15.9, "min_cush": 20.0, "ws_ask": 0.69, "rule": "pm≥2268 cvd60≥2.782 v60<53.3", "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 108}
+
+================================================================================
+('FLOW', 'FLOW_SKIP_EVENTO')
+================================================================================
+{"ts": 1793218022.06, "kind": "FLOW_SKIP_EVENTO", "slug": "btc-updown-5m-1793217900", "epoch": 1793217900, "side": "DN", "elapsed": 122.0, "evento": "Resultados Microsoft/Alphabet", "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 344}
+{"ts": 1793218923.75, "kind": "FLOW_SKIP_EVENTO", "slug": "btc-updown-5m-1793218800", "epoch": 1793218800, "side": "UP", "elapsed": 123.7, "evento": "Resultados Microsoft/Alphabet", "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 345}
+{"ts": 1793304175.37, "kind": "FLOW_SKIP_EVENTO", "slug": "btc-updown-5m-1793304000", "epoch": 1793304000, "side": "DN", "elapsed": 175.3, "evento": "Resultados Coinbase/Amazon", "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 403}
+
+================================================================================
+('FLOW', 'FLOW_SKIP_PRICE')
+================================================================================
+{"ts": 1793046743.88, "slug": "btc-updown-5m-1793046600", "epoch": 1793046600, "side": "UP", "elapsed": 143.9, "real_ask": 0.99, "real_top3": 5344.1, "ws_ask": 0.99, "ptb_real": 79720.79, "ds_delta": 61.27, "ds_age_s": 1.88, "v60": 48.07, "pm_net_side_usd": 2213.9, "cvd_bn_60s_side": 11.055, "cvd_cb_30s_side": 0.261, "rule": "pm≥2062 cvd60≥2.529 v60<59.22", "kind": "FLOW_SKIP_PRICE", "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 1}
+{"ts": 1793047301.55, "slug": "btc-updown-5m-1793047200", "epoch": 1793047200, "side": "DN", "elapsed": 101.5, "real_ask": 0.69, "real_top3": 725.7, "ws_ask": 0.71, "ptb_real": 79762.15, "ds_delta": -18.38, "ds_age_s": 1.55, "v60": 19.49, "pm_net_side_usd": 2163.7, "cvd_bn_60s_side": 2.729, "cvd_cb_30s_side": 2.866, "rule": "pm≥2062 cvd60≥2.529 v60<59.22", "kind": "FLOW_SKIP_PRICE", "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 4}
+{"ts": 1793048534.49, "slug": "btc-updown-5m-1793048400", "epoch": 1793048400, "side": "UP", "elapsed": 134.5, "real_ask": 0.99, "real_top3": 1706.0, "ws_ask": 0.99, "ptb_real": 79730.55, "ds_delta": 116.79, "ds_age_s": 1.47, "v60": 7.67, "pm_net_side_usd": 3499.4, "cvd_bn_60s_side": 6.687, "cvd_cb_30s_side": -0.426, "rule": "pm≥2062 cvd60≥2.529 v60<59.22", "kind": "FLOW_SKIP_PRICE", "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 7}
+
+================================================================================
+('FLOW', 'FLOW_SKIP_RET')
+================================================================================
+{"ts": 1793174824.07, "kind": "FLOW_SKIP_RET", "slug": "btc-updown-5m-1793174700", "epoch": 1793174700, "side": "UP", "elapsed": 124.1, "ds_delta": 42.59, "ret_rel": 0.531, "max_ret_rel": 0.3, "ws_ask": 0.88, "rule": "pm≥2268 cvd60≥2.782 v60<53.3 σ≥1.9", "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 290}
+{"ts": 1793176601.6, "kind": "FLOW_SKIP_RET", "slug": "btc-updown-5m-1793176500", "epoch": 1793176500, "side": "UP", "elapsed": 101.6, "ds_delta": 216.26, "ret_rel": 0.567, "max_ret_rel": 0.3, "ws_ask": 0.98, "rule": "pm≥2268 cvd60≥2.782 v60<53.3 σ≥1.9", "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 291}
+{"ts": 1793177219.89, "kind": "FLOW_SKIP_RET", "slug": "btc-updown-5m-1793177100", "epoch": 1793177100, "side": "DN", "elapsed": 119.9, "ds_delta": -87.27, "ret_rel": 0.673, "max_ret_rel": 0.3, "ws_ask": 0.91, "rule": "pm≥2268 cvd60≥2.782 v60<53.3 σ≥1.9", "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 292}
+
+================================================================================
+('FLOW', 'FLOW_SKIP_RET_MEM')
+================================================================================
+{"ts": 1793256793.94, "kind": "FLOW_SKIP_RET_MEM", "slug": "btc-updown-5m-1793256600", "epoch": 1793256600, "side": "UP", "elapsed": 193.8, "ds_delta": 34.75, "ret_rel": 0.16, "z": 2.136, "pico": false, "ws_ask": 0.96, "rule": "pm≥2062 cvd60≥2.529 v60<53.3 σ≥1.9 z≥1.5", "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 391}
+
+================================================================================
+('FLOW', 'FLOW_SKIP_VOL')
+================================================================================
+{"ts": 1793238718.56, "kind": "FLOW_SKIP_VOL", "slug": "btc-updown-5m-1793238600", "epoch": 1793238600, "side": "UP", "elapsed": 118.5, "sigma": 6.7169, "vol_max": 4.0, "rule": "pm≥2062 cvd60≥2.529 v60<53.3 σ≥1.9 z≥1.5", "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 374}
+{"ts": 1793239377.94, "kind": "FLOW_SKIP_VOL", "slug": "btc-updown-5m-1793239200", "epoch": 1793239200, "side": "UP", "elapsed": 177.8, "sigma": 7.7558, "vol_max": 4.0, "rule": "pm≥2062 cvd60≥2.529 v60<53.3 σ≥1.9 z≥1.5", "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 375}
+{"ts": 1793239668.9, "kind": "FLOW_SKIP_VOL", "slug": "btc-updown-5m-1793239500", "epoch": 1793239500, "side": "DN", "elapsed": 168.8, "sigma": 6.5697, "vol_max": 4.0, "rule": "pm≥2062 cvd60≥2.529 v60<53.3 σ≥1.9 z≥1.5", "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 376}
+
+================================================================================
+('FLOW', 'FLOW_SKIP_VOL60')
+================================================================================
+{"ts": 1793220410.51, "kind": "FLOW_SKIP_VOL60", "slug": "btc-updown-5m-1793220300", "epoch": 1793220300, "side": "DN", "elapsed": 110.5, "sigma60": 5.572, "vol60_max": 4.5, "rule": "pm≥2062 cvd60≥2.529 v60<53.3 σ≥1.9 z≥1.5", "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 346}
+{"ts": 1793221060.54, "kind": "FLOW_SKIP_VOL60", "slug": "btc-updown-5m-1793220900", "epoch": 1793220900, "side": "UP", "elapsed": 160.5, "sigma60": 4.679, "vol60_max": 4.5, "rule": "pm≥2062 cvd60≥2.529 v60<53.3 σ≥1.9 z≥1.5", "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 351}
+{"ts": 1793238477.57, "kind": "FLOW_SKIP_VOL60", "slug": "btc-updown-5m-1793238300", "epoch": 1793238300, "side": "DN", "elapsed": 177.5, "sigma60": 5.128, "vol60_max": 4.5, "rule": "pm≥2062 cvd60≥2.529 v60<53.3 σ≥1.9 z≥1.5", "_strategy": "FLOW", "_source_file": "flow_log.jsonl", "_line": 373}
+
+================================================================================
+('TW', 'TW_PAPER')
+================================================================================
+{"ts": 1793006233.81, "kind": "TW_PAPER", "slug": "btc-updown-5m-1793006100", "epoch": 1793006100, "side": "UP", "elapsed": 133.8, "real_ask": 0.92, "real_top3": 3864.2, "ws_ask": 0.92, "z": 2.531, "ptb_real": 80126.13, "ds_px": 80177.23, "ds_delta": 51.1, "ds_age_s": 1.81, "ret": 0.1, "v10": 8.11, "sigma": 1.7848, "motivo": "apagado tras pérdida", "ptb_bot": 80126.56, "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 14}
+{"ts": 1793006518.84, "kind": "TW_PAPER", "slug": "btc-updown-5m-1793006400", "epoch": 1793006400, "side": "UP", "elapsed": 118.8, "real_ask": 0.94, "real_top3": 3600.5, "ws_ask": 0.94, "z": 2.927, "ptb_real": 80295.63, "ds_px": 80399.24, "ds_delta": 103.6, "ds_age_s": 1.84, "ret": 0.0, "v10": 11.94, "sigma": 2.96, "motivo": "apagado tras pérdida", "ptb_bot": 80291.81, "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 16}
+{"ts": 1793008906.55, "kind": "TW_PAPER", "slug": "btc-updown-5m-1793008800", "epoch": 1793008800, "side": "DN", "elapsed": 106.5, "real_ask": 0.93, "real_top3": 1244.4, "ws_ask": 0.93, "z": 2.967, "ptb_real": 80426.3, "ds_px": 80370.69, "ds_delta": -55.61, "ds_age_s": 1.55, "ret": 0.0, "v10": 9.74, "sigma": 1.5056, "motivo": "apagado tras pérdida", "ptb_bot": 80426.53, "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 20}
+
+================================================================================
+('TW', 'TW_PAPER_RESULT')
+================================================================================
+{"ts": 1793006500.7939978, "kind": "TW_PAPER_RESULT", "slug": "btc-updown-5m-1793006100", "side": "UP", "winner": "UP", "won": true, "entry_real_ask": 0.92, "paper_wins": 1, "paper_losses": 0, "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 15}
+{"ts": 1793006800.4050152, "kind": "TW_PAPER_RESULT", "slug": "btc-updown-5m-1793006400", "side": "UP", "winner": "UP", "won": true, "entry_real_ask": 0.94, "paper_wins": 2, "paper_losses": 0, "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 17}
+{"ts": 1793009170.4882004, "kind": "TW_PAPER_RESULT", "slug": "btc-updown-5m-1793008800", "side": "DN", "winner": "DN", "won": true, "entry_real_ask": 0.93, "paper_wins": 3, "paper_losses": 0, "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 21}
+
+================================================================================
+('TW', 'TW_RESULT')
+================================================================================
+{"ts": 1792999971.0808423, "kind": "TW_RESULT", "slug": "btc-updown-5m-1792999500", "side": "DN", "winner": "DN", "won": true, "entry": 0.93, "usdc": 5.0, "pnl_est": 0.1, "wins": 1, "losses": 0, "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 2}
+{"ts": 1793000568.3136644, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793000100", "side": "DN", "winner": "DN", "won": true, "entry": 0.97, "usdc": 5.0, "pnl_est": 0.1, "wins": 2, "losses": 0, "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 4}
+{"ts": 1793002960.9504852, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793002500", "side": "UP", "winner": "UP", "won": true, "entry": 0.9800000000000001, "usdc": 4.9, "pnl_est": 0.1, "wins": 3, "losses": 0, "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 7}
+
+================================================================================
+('TW', 'TW_SIGNAL')
+================================================================================
+{"ts": 1792999658.56, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1792999500", "epoch": 1792999500, "side": "DN", "elapsed": 158.6, "ask": 0.93, "ask_top3": 3047.0299999999997, "z": 2.862, "ptb_real": 80001.61, "ptb_bot": 80001.62, "ds_px": 79948.25, "ds_delta": -53.35, "ds_age_s": 1.56, "ret": 0.0, "v10": 10.07, "sigma": 1.8366, "usdc": 5.0, "cl_delta_bot": -45.05198114999803, "fast_track_holding": false, "ok": true, "fill_price": 0.93, "shares": 5.102, "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 1}
+{"ts": 1793000229.76, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793000100", "epoch": 1793000100, "side": "DN", "elapsed": 129.8, "ask": 0.97, "ask_top3": 12738.07, "z": 2.897, "ptb_real": 79932.08, "ptb_bot": 79932.73, "ds_px": 79861.12, "ds_delta": -70.96, "ds_age_s": 1.76, "ret": 0.0, "v10": 32.2, "sigma": 2.1317, "usdc": 5.0, "cl_delta_bot": -48.070794489991385, "fast_track_holding": false, "ok": true, "fill_price": 0.97, "shares": 5.102, "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 3}
+{"ts": 1793001403.3, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793001300", "epoch": 1793001300, "side": "UP", "elapsed": 103.3, "ask": 0.97, "ask_top3": 14226.43, "z": 2.799, "ptb_real": 79904.33, "ptb_bot": 79903.51, "ds_px": 79980.84, "ds_delta": 76.51, "ds_age_s": 1.3, "ret": 0.0, "v10": 6.04, "sigma": 2.1751, "usdc": 5.0, "cl_delta_bot": 70.8700000000099, "fast_track_holding": false, "ok": false, "resp": "mercado excepción: PolyApiException[status_code=400, error_message={'error': 'invalid amounts, the market buy orders maker amount supports a max accuracy of 2 decimals, taker amount a max of 4 decimals'}]", "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 5}
+
+================================================================================
+('TW', 'TW_SKIP_EVENTO')
+================================================================================
+{"ts": 1793218001.82, "kind": "TW_SKIP_EVENTO", "slug": "btc-updown-5m-1793217900", "elapsed": 101.8, "evento": "Resultados Microsoft/Alphabet", "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 347}
+{"ts": 1793218601.64, "kind": "TW_SKIP_EVENTO", "slug": "btc-updown-5m-1793218500", "elapsed": 101.6, "evento": "Resultados Microsoft/Alphabet", "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 348}
+{"ts": 1793218901.49, "kind": "TW_SKIP_EVENTO", "slug": "btc-updown-5m-1793218800", "elapsed": 101.5, "evento": "Resultados Microsoft/Alphabet", "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 349}
+
+================================================================================
+('TW', 'TW_SKIP_PRICE')
+================================================================================
+{"ts": 1793002993.05, "kind": "TW_SKIP_PRICE", "slug": "btc-updown-5m-1793002800", "side": "UP", "elapsed": 193.0, "rest_ask": 0.99, "ws_ask": 0.99, "rest_top3": 3056.6, "z": 2.765, "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 8}
+{"ts": 1793005387.37, "kind": "TW_SKIP_PRICE", "slug": "btc-updown-5m-1793005200", "side": "DN", "elapsed": 187.4, "rest_ask": 0.99, "ws_ask": 0.99, "rest_top3": 6617.0, "z": 2.636, "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 9}
+{"ts": 1793007169.26, "kind": "TW_SKIP_PRICE", "slug": "btc-updown-5m-1793007000", "side": "DN", "elapsed": 169.3, "rest_ask": 0.99, "ws_ask": 0.99, "rest_top3": 5755.5, "z": 2.645, "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 18}
+
+================================================================================
+('TW', 'TW_SKIP_VOL')
+================================================================================
+{"ts": 1793217101.6, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793217000", "elapsed": 101.6, "sigma": 3.6175, "vol_max": 3.0, "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 346}
+{"ts": 1793238701.64, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793238600", "elapsed": 101.6, "sigma": 6.7169, "vol_max": 4.0, "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 379}
+{"ts": 1793239001.53, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793238900", "elapsed": 101.5, "sigma": 7.4994, "vol_max": 4.0, "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 380}
+
+================================================================================
+('TW', 'TW_SKIP_VOL60')
+================================================================================
+{"ts": 1793220400.41, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793220300", "elapsed": 100.4, "sigma60": 5.418, "vol60_max": 4.5, "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 352}
+{"ts": 1793221009.83, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793220900", "elapsed": 109.8, "sigma60": 4.586, "vol60_max": 4.5, "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 354}
+{"ts": 1793238146.46, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793238000", "elapsed": 146.5, "sigma60": 5.162, "vol60_max": 4.5, "_strategy": "TW", "_source_file": "tw_log.jsonl", "_line": 377}
