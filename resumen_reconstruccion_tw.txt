@@ -1,0 +1,16 @@
+RECONSTRUCCION DE RECHAZOS TW
+==============================
+Ciclos objetivo PTB: 94
+Rechazos TW_SKIP_VOL encontrados: 94
+Con snapshot previo: 90
+Sin snapshot previo: 4
+Ciclos sin evento de rechazo: 0
+Registros shadow adicionales: 101
+
+CICLOS SIN EVENTO TW_SKIP_VOL:
+
+RECHAZOS SIN SNAPSHOT PREVIO:
+{"epoch": "1793309400", "skip_ts": 1793309500.36, "skip_elapsed": 100.4, "skip_sigma": 5.8187, "skip_side": null, "skip_ask": null, "skip_ws_ask": null, "skip_top3": null, "skip_kind": "TW_SKIP_VOL"}
+{"epoch": "1793309700", "skip_ts": 1793309801.5, "skip_elapsed": 101.5, "skip_sigma": 5.5962, "skip_side": null, "skip_ask": null, "skip_ws_ask": null, "skip_top3": null, "skip_kind": "TW_SKIP_VOL"}
+{"epoch": "1793310300", "skip_ts": 1793310401.73, "skip_elapsed": 101.7, "skip_sigma": 5.8713, "skip_side": null, "skip_ask": null, "skip_ws_ask": null, "skip_top3": null, "skip_kind": "TW_SKIP_VOL"}
+{"epoch": "1793310900", "skip_ts": 1793311001.34, "skip_elapsed": 101.3, "skip_sigma": 5.4924, "skip_side": null, "skip_ask": null, "skip_ws_ask": null, "skip_top3": null, "skip_kind": "TW_SKIP_VOL"}
