@@ -1,0 +1,26 @@
+Archivos procesados: 97
+Ciclos analizados: 580
+
+=== Normal(<4)  n_ciclos=104 ===
+  range_usd: med=76.5  mean=85.1  max=285.5
+  candidatos con resultado: 87  wins=74  wr=85.1%
+  WINS n=74  z_med=1.6495  ret_rel_med=0.0
+  LOSS n=13  z_med=1.093  ret_rel_med=0.0
+
+=== Media-alta(4-5.5)  n_ciclos=151 ===
+  range_usd: med=102.0  mean=116.3  max=469.8
+  candidatos con resultado: 140  wins=117  wr=83.6%
+  WINS n=117  z_med=1.47  ret_rel_med=0.0
+  LOSS n=23  z_med=0.791  ret_rel_med=0.0
+
+=== Alta(5.5-7)  n_ciclos=125 ===
+  range_usd: med=82.1  mean=107.8  max=356.0
+  candidatos con resultado: 117  wins=91  wr=77.8%
+  WINS n=91  z_med=0.936  ret_rel_med=0.0
+  LOSS n=26  z_med=0.86  ret_rel_med=0.0
+
+=== Extrema(>7)  n_ciclos=200 ===
+  range_usd: med=77.5  mean=128.8  max=650.0
+  candidatos con resultado: 185  wins=147  wr=79.5%
+  WINS n=147  z_med=0.602  ret_rel_med=0.0
+  LOSS n=38  z_med=0.4295  ret_rel_med=0.0
