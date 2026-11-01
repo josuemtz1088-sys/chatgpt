@@ -1,0 +1,62 @@
+ANALISIS FLOW + CB | CICLOS 1793542500 Y 1793534700
+=================================================================
+
+CICLOS OBJETIVO:
+CB: 1793534700
+FLOW: 1793542500
+
+Registros objetivo extraidos: 547
+Eventos historicos candidatos extraidos: 115
+Microscopios seleccionados: 0
+
+ARCHIVOS MICROSCOPIO:
+
+EVENTOS HISTORICOS POR METODO:
+CB: 115
+
+EVENTOS HISTORICOS POR FUENTE:
+tar: 115
+
+DISTRIBUCION DE ELAPSED DETECTADOS:
+150-179s: 78
+180-209s: 37
+
+TIPOS EN CICLOS OBJETIVO:
+snapshot: 236
+UNKNOWN: 16
+cycle: 6
+shadow_entry: 4
+liq_dry: 4
+resolution: 4
+shadow_cbp: 3
+shadow_cbp_rng: 3
+liq15_dry: 1
+TW_SKIP_VOL60: 1
+FLOW_SIGNAL: 1
+FLOW_RESULT: 1
+CB_SIGNAL: 1
+CB_RESULT: 1
+LATE_SKIP_VOL60: 1
+QUIET_SKIP_VOL60: 1
+
+MIEMBROS DEL TAR:
+tw_log.jsonl
+flow_log.jsonl
+cb_log.jsonl
+late_log.jsonl
+quiet_log.jsonl
+tw_state.json
+flow_state.json
+cb_state.json
+late_state.json
+quiet_state.json
+signals_log.jsonl
+book_lag.jsonl
+bot_output.log
+
+ERRORES JSON:
+dataflow: 1
+
+IMPORTANTE: los conteos de candidatos no son conteos de operaciones.
+Se deben deduplicar por señal/orden/mercado antes de calcular win rate.
+La clasificacion de ganadores debe usar resultado final y fills reales.

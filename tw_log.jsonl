@@ -734,3 +734,282 @@
 {"ts": 1793408201.53, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793408100", "elapsed": 101.5, "sigma": 8.1316, "vol_max": 4.0}
 {"ts": 1793408501.58, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793408400", "elapsed": 101.6, "sigma": 7.42, "vol_max": 4.0}
 {"ts": 1793408801.0, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793408700", "elapsed": 101.0, "sigma": 7.4234, "vol_max": 4.0}
+{"ts": 1793409101.22, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793409000", "elapsed": 101.2, "sigma": 6.9059, "vol_max": 4.0}
+{"ts": 1793409401.57, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793409300", "elapsed": 101.6, "sigma": 7.1376, "vol_max": 4.0}
+{"ts": 1793409701.05, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793409600", "elapsed": 101.1, "sigma": 6.8005, "vol_max": 4.0}
+{"ts": 1793410001.3, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793409900", "elapsed": 101.3, "sigma": 7.1631, "vol_max": 4.0}
+{"ts": 1793410300.24, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793410200", "elapsed": 100.2, "sigma": 7.3741, "vol_max": 4.0}
+{"ts": 1793410601.33, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793410500", "elapsed": 101.3, "sigma": 7.3853, "vol_max": 4.0}
+{"ts": 1793410901.46, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793410800", "elapsed": 101.5, "sigma": 7.0894, "vol_max": 4.0}
+{"ts": 1793411201.43, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793411100", "elapsed": 101.4, "sigma": 6.7811, "vol_max": 4.0}
+{"ts": 1793411501.53, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793411400", "elapsed": 101.5, "sigma": 6.6009, "vol_max": 4.0}
+{"ts": 1793411801.82, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793411700", "elapsed": 101.8, "sigma": 6.1912, "vol_max": 4.0}
+{"ts": 1793412100.13, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793412000", "elapsed": 100.1, "sigma": 5.8554, "vol_max": 4.0}
+{"ts": 1793412400.77, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793412300", "elapsed": 100.8, "sigma": 6.2376, "vol_max": 4.0}
+{"ts": 1793412701.76, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793412600", "elapsed": 101.8, "sigma": 7.3387, "vol_max": 4.0}
+{"ts": 1793413001.15, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793412900", "elapsed": 101.1, "sigma": 7.7621, "vol_max": 4.0}
+{"ts": 1793413300.22, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793413200", "elapsed": 100.2, "sigma": 7.3255, "vol_max": 4.0}
+{"ts": 1793413601.5, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793413500", "elapsed": 101.5, "sigma": 6.5266, "vol_max": 4.0}
+{"ts": 1793413901.65, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793413800", "elapsed": 101.6, "sigma": 6.0783, "vol_max": 4.0}
+{"ts": 1793414201.33, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793414100", "elapsed": 101.3, "sigma": 5.7143, "vol_max": 4.0}
+{"ts": 1793414500.42, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793414400", "elapsed": 100.4, "sigma": 5.3914, "vol_max": 4.0}
+{"ts": 1793414800.49, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793414700", "elapsed": 100.5, "sigma": 5.3164, "vol_max": 4.0}
+{"ts": 1793415101.53, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793415000", "elapsed": 101.5, "sigma": 5.7043, "vol_max": 4.0}
+{"ts": 1793415401.86, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793415300", "elapsed": 101.9, "sigma": 5.6474, "vol_max": 4.0}
+{"ts": 1793415700.33, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793415600", "elapsed": 100.3, "sigma": 5.3691, "vol_max": 4.0}
+{"ts": 1793416000.59, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793415900", "elapsed": 100.6, "sigma": 5.2708, "vol_max": 4.0}
+{"ts": 1793416301.62, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793416200", "elapsed": 101.6, "sigma": 5.3087, "vol_max": 4.0}
+{"ts": 1793416601.09, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793416500", "elapsed": 101.1, "sigma": 5.6067, "vol_max": 4.0}
+{"ts": 1793416901.15, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793416800", "elapsed": 101.2, "sigma": 5.6583, "vol_max": 4.0}
+{"ts": 1793417201.14, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793417100", "elapsed": 101.1, "sigma": 5.6896, "vol_max": 4.0}
+{"ts": 1793417501.2, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793417400", "elapsed": 101.2, "sigma": 6.0533, "vol_max": 4.0}
+{"ts": 1793417801.18, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793417700", "elapsed": 101.2, "sigma": 6.0258, "vol_max": 4.0}
+{"ts": 1793418101.29, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793418000", "elapsed": 101.3, "sigma": 5.9992, "vol_max": 4.0}
+{"ts": 1793418401.22, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793418300", "elapsed": 101.2, "sigma": 5.7777, "vol_max": 4.0}
+{"ts": 1793418701.23, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793418600", "elapsed": 101.2, "sigma": 5.7291, "vol_max": 4.0}
+{"ts": 1793419001.22, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793418900", "elapsed": 101.2, "sigma": 5.4922, "vol_max": 4.0}
+{"ts": 1793419301.22, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793419200", "elapsed": 101.2, "sigma": 5.5516, "vol_max": 4.0}
+{"ts": 1793419601.78, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793419500", "elapsed": 101.8, "sigma": 5.3124, "vol_max": 4.0}
+{"ts": 1793419901.3, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793419800", "elapsed": 101.3, "sigma": 5.341, "vol_max": 4.0}
+{"ts": 1793420201.32, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793420100", "elapsed": 101.3, "sigma": 4.7778, "vol_max": 4.0}
+{"ts": 1793420501.45, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793420400", "elapsed": 101.4, "sigma": 4.5358, "vol_max": 4.0}
+{"ts": 1793420801.52, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793420700", "elapsed": 101.5, "sigma": 4.2856, "vol_max": 4.0}
+{"ts": 1793421100.03, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793421000", "elapsed": 100.0, "sigma60": 4.589, "vol60_max": 4.5}
+{"ts": 1793421401.19, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793421300", "elapsed": 101.2, "sigma60": 4.775, "vol60_max": 4.5}
+{"ts": 1793421701.13, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793421600", "elapsed": 101.1, "sigma": 4.2769, "vol_max": 4.0}
+{"ts": 1793422001.18, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793421900", "elapsed": 101.2, "sigma": 4.2811, "vol_max": 4.0}
+{"ts": 1793422301.17, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793422200", "elapsed": 101.2, "sigma": 4.1871, "vol_max": 4.0}
+{"ts": 1793422601.16, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793422500", "elapsed": 101.2, "sigma": 4.0636, "vol_max": 4.0}
+{"ts": 1793423201.19, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793423100", "elapsed": 101.2, "sigma60": 5.282, "vol60_max": 4.5}
+{"ts": 1793423567.14, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793423400", "elapsed": 167.1, "sigma60": 4.658, "vol60_max": 4.5}
+{"ts": 1793423801.2, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793423700", "elapsed": 101.2, "sigma60": 4.931, "vol60_max": 4.5}
+{"ts": 1793424101.13, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793424000", "elapsed": 101.1, "sigma": 4.4546, "vol_max": 4.0}
+{"ts": 1793424401.04, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793424300", "elapsed": 101.0, "sigma": 4.2712, "vol_max": 4.0}
+{"ts": 1793424789.8, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793424600", "elapsed": 189.8, "sigma60": 4.638, "vol60_max": 4.5}
+{"ts": 1793425601.09, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793425500", "elapsed": 101.1, "sigma60": 4.632, "vol60_max": 4.5}
+{"ts": 1793425901.1, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793425800", "elapsed": 101.1, "sigma": 4.1029, "vol_max": 4.0}
+{"ts": 1793426201.16, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793426100", "elapsed": 101.2, "sigma": 4.7297, "vol_max": 4.0}
+{"ts": 1793426501.18, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793426400", "elapsed": 101.2, "sigma": 4.8416, "vol_max": 4.0}
+{"ts": 1793426801.07, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793426700", "elapsed": 101.1, "sigma": 4.6835, "vol_max": 4.0}
+{"ts": 1793427101.31, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793427000", "elapsed": 101.3, "sigma": 4.739, "vol_max": 4.0}
+{"ts": 1793427401.73, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793427300", "elapsed": 101.7, "sigma": 4.8253, "vol_max": 4.0}
+{"ts": 1793427701.34, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793427600", "elapsed": 101.3, "sigma": 4.0285, "vol_max": 4.0}
+{"ts": 1793428301.48, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793428200", "elapsed": 101.5, "sigma60": 4.536, "vol60_max": 4.5}
+{"ts": 1793429239.92, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793429100", "elapsed": 139.9, "sigma60": 6.776, "vol60_max": 4.5}
+{"ts": 1793429501.53, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793429400", "elapsed": 101.5, "sigma": 4.1387, "vol_max": 4.0}
+{"ts": 1793429801.04, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793429700", "elapsed": 101.0, "sigma": 5.0934, "vol_max": 4.0}
+{"ts": 1793430101.07, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793430000", "elapsed": 101.1, "sigma": 5.4417, "vol_max": 4.0}
+{"ts": 1793430401.11, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793430300", "elapsed": 101.1, "sigma": 4.8419, "vol_max": 4.0}
+{"ts": 1793430701.14, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793430600", "elapsed": 101.1, "sigma": 4.5003, "vol_max": 4.0}
+{"ts": 1793431000.97, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793430900", "elapsed": 101.0, "sigma": 4.4817, "vol_max": 4.0}
+{"ts": 1793431301.62, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793431200", "elapsed": 101.6, "sigma": 4.4892, "vol_max": 4.0}
+{"ts": 1793431601.07, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793431500", "elapsed": 101.1, "sigma": 4.1882, "vol_max": 4.0}
+{"ts": 1793432235.63, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793432100", "elapsed": 135.6, "sigma60": 4.532, "vol60_max": 4.5}
+{"ts": 1793433401.1, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793433300", "elapsed": 101.1, "sigma60": 5.068, "vol60_max": 4.5}
+{"ts": 1793433735.56, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793433600", "elapsed": 135.6, "sigma60": 4.52, "vol60_max": 4.5}
+{"ts": 1793434001.29, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793433900", "elapsed": 101.3, "sigma": 4.1566, "vol_max": 4.0}
+{"ts": 1793434301.2, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793434200", "elapsed": 101.2, "sigma": 4.2839, "vol_max": 4.0}
+{"ts": 1793434901.33, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793434800", "elapsed": 101.3, "sigma60": 4.569, "vol60_max": 4.5}
+{"ts": 1793435801.14, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793435700", "elapsed": 101.1, "sigma": 4.1605, "vol_max": 4.0}
+{"ts": 1793438207.7, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793438100", "elapsed": 107.7, "sigma60": 4.697, "vol60_max": 4.5}
+{"ts": 1793438501.45, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793438400", "elapsed": 101.5, "sigma60": 5.448, "vol60_max": 4.5}
+{"ts": 1793438801.53, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793438700", "elapsed": 101.5, "sigma60": 5.019, "vol60_max": 4.5}
+{"ts": 1793439101.79, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793439000", "elapsed": 101.8, "sigma": 4.657, "vol_max": 4.0}
+{"ts": 1793439401.29, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793439300", "elapsed": 101.3, "sigma": 4.4628, "vol_max": 4.0}
+{"ts": 1793439701.46, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793439600", "elapsed": 101.5, "sigma": 4.2633, "vol_max": 4.0}
+{"ts": 1793440001.47, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793439900", "elapsed": 101.5, "sigma": 4.0063, "vol_max": 4.0}
+{"ts": 1793440301.41, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793440200", "elapsed": 101.4, "sigma": 4.2086, "vol_max": 4.0}
+{"ts": 1793440601.57, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793440500", "elapsed": 101.6, "sigma": 4.1917, "vol_max": 4.0}
+{"ts": 1793440901.09, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793440800", "elapsed": 101.1, "sigma": 4.7339, "vol_max": 4.0}
+{"ts": 1793441201.34, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793441100", "elapsed": 101.3, "sigma": 5.0716, "vol_max": 4.0}
+{"ts": 1793441501.39, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793441400", "elapsed": 101.4, "sigma": 5.6199, "vol_max": 4.0}
+{"ts": 1793441801.53, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793441700", "elapsed": 101.5, "sigma": 5.455, "vol_max": 4.0}
+{"ts": 1793442101.02, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793442000", "elapsed": 101.0, "sigma": 5.0444, "vol_max": 4.0}
+{"ts": 1793442401.13, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793442300", "elapsed": 101.1, "sigma": 4.155, "vol_max": 4.0}
+{"ts": 1793442701.19, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793442600", "elapsed": 101.2, "sigma60": 4.719, "vol60_max": 4.5}
+{"ts": 1793443391.99, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793443200", "elapsed": 192.0, "sigma60": 4.555, "vol60_max": 4.5}
+{"ts": 1793443601.46, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793443500", "elapsed": 101.5, "sigma60": 4.525, "vol60_max": 4.5}
+{"ts": 1793443901.53, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793443800", "elapsed": 101.5, "sigma": 4.0414, "vol_max": 4.0}
+{"ts": 1793444201.03, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793444100", "elapsed": 101.0, "sigma": 4.4098, "vol_max": 4.0}
+{"ts": 1793444501.11, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793444400", "elapsed": 101.1, "sigma": 4.7969, "vol_max": 4.0}
+{"ts": 1793444801.42, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793444700", "elapsed": 101.4, "sigma": 4.9498, "vol_max": 4.0}
+{"ts": 1793445101.5, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793445000", "elapsed": 101.5, "sigma": 5.0245, "vol_max": 4.0}
+{"ts": 1793445401.73, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793445300", "elapsed": 101.7, "sigma": 4.8074, "vol_max": 4.0}
+{"ts": 1793445700.26, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793445600", "elapsed": 100.3, "sigma": 5.1939, "vol_max": 4.0}
+{"ts": 1793446001.47, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793445900", "elapsed": 101.5, "sigma": 5.2582, "vol_max": 4.0}
+{"ts": 1793446301.66, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793446200", "elapsed": 101.7, "sigma": 5.4459, "vol_max": 4.0}
+{"ts": 1793446601.33, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793446500", "elapsed": 101.3, "sigma": 5.6552, "vol_max": 4.0}
+{"ts": 1793446901.36, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793446800", "elapsed": 101.4, "sigma": 5.9502, "vol_max": 4.0}
+{"ts": 1793447201.54, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793447100", "elapsed": 101.5, "sigma": 6.5897, "vol_max": 4.0}
+{"ts": 1793447501.14, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793447400", "elapsed": 101.1, "sigma": 6.5163, "vol_max": 4.0}
+{"ts": 1793447801.64, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793447700", "elapsed": 101.6, "sigma": 6.5061, "vol_max": 4.0}
+{"ts": 1793448101.22, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793448000", "elapsed": 101.2, "sigma": 5.9702, "vol_max": 4.0}
+{"ts": 1793448401.44, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793448300", "elapsed": 101.4, "sigma": 5.6855, "vol_max": 4.0}
+{"ts": 1793448701.55, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793448600", "elapsed": 101.6, "sigma": 5.3966, "vol_max": 4.0}
+{"ts": 1793449001.14, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793448900", "elapsed": 101.1, "sigma": 5.4228, "vol_max": 4.0}
+{"ts": 1793449301.26, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793449200", "elapsed": 101.3, "sigma": 5.3573, "vol_max": 4.0}
+{"ts": 1793449601.5, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793449500", "elapsed": 101.5, "sigma": 5.2266, "vol_max": 4.0}
+{"ts": 1793449901.06, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793449800", "elapsed": 101.1, "sigma": 5.5578, "vol_max": 4.0}
+{"ts": 1793450201.69, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793450100", "elapsed": 101.7, "sigma": 5.893, "vol_max": 4.0}
+{"ts": 1793450501.34, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793450400", "elapsed": 101.3, "sigma": 6.6899, "vol_max": 4.0}
+{"ts": 1793450801.48, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793450700", "elapsed": 101.5, "sigma": 6.4796, "vol_max": 4.0}
+{"ts": 1793451101.6, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793451000", "elapsed": 101.6, "sigma": 6.3687, "vol_max": 4.0}
+{"ts": 1793451401.7, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793451300", "elapsed": 101.7, "sigma": 5.8259, "vol_max": 4.0}
+{"ts": 1793451701.35, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793451600", "elapsed": 101.3, "sigma": 5.6677, "vol_max": 4.0}
+{"ts": 1793452001.25, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793451900", "elapsed": 101.3, "sigma": 6.047, "vol_max": 4.0}
+{"ts": 1793452301.26, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793452200", "elapsed": 101.3, "sigma": 6.3395, "vol_max": 4.0}
+{"ts": 1793452601.42, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793452500", "elapsed": 101.4, "sigma": 6.9088, "vol_max": 4.0}
+{"ts": 1793452901.45, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793452800", "elapsed": 101.4, "sigma": 7.8106, "vol_max": 4.0}
+{"ts": 1793453201.52, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793453100", "elapsed": 101.5, "sigma": 8.2839, "vol_max": 4.0}
+{"ts": 1793453501.09, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793453400", "elapsed": 101.1, "sigma": 8.7073, "vol_max": 4.0}
+{"ts": 1793453801.26, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793453700", "elapsed": 101.3, "sigma": 8.1474, "vol_max": 4.0}
+{"ts": 1793454101.45, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793454000", "elapsed": 101.4, "sigma": 7.8759, "vol_max": 4.0}
+{"ts": 1793454401.64, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793454300", "elapsed": 101.6, "sigma": 7.7927, "vol_max": 4.0}
+{"ts": 1793454701.36, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793454600", "elapsed": 101.4, "sigma": 7.9449, "vol_max": 4.0}
+{"ts": 1793455000.49, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793454900", "elapsed": 100.5, "sigma": 8.3464, "vol_max": 4.0}
+{"ts": 1793455300.66, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793455200", "elapsed": 100.7, "sigma": 8.3411, "vol_max": 4.0}
+{"ts": 1793455600.45, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793455500", "elapsed": 100.4, "sigma": 8.9116, "vol_max": 4.0}
+{"ts": 1793455901.61, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793455800", "elapsed": 101.6, "sigma": 9.3942, "vol_max": 4.0}
+{"ts": 1793456201.87, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793456100", "elapsed": 101.9, "sigma": 9.3771, "vol_max": 4.0}
+{"ts": 1793456501.39, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793456400", "elapsed": 101.4, "sigma": 8.3168, "vol_max": 4.0}
+{"ts": 1793456801.48, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793456700", "elapsed": 101.5, "sigma": 7.2064, "vol_max": 4.0}
+{"ts": 1793457101.62, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793457000", "elapsed": 101.6, "sigma": 5.9865, "vol_max": 4.0}
+{"ts": 1793457401.18, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793457300", "elapsed": 101.2, "sigma": 5.3569, "vol_max": 4.0}
+{"ts": 1793457701.24, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793457600", "elapsed": 101.2, "sigma": 4.1514, "vol_max": 4.0}
+{"ts": 1793458001.48, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793457900", "elapsed": 101.5, "sigma": 4.0926, "vol_max": 4.0}
+{"ts": 1793458301.67, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793458200", "elapsed": 101.7, "sigma": 5.1207, "vol_max": 4.0}
+{"ts": 1793458601.52, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793458500", "elapsed": 101.5, "sigma": 6.5225, "vol_max": 4.0}
+{"ts": 1793458900.47, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793458800", "elapsed": 100.5, "sigma": 7.2462, "vol_max": 4.0}
+{"ts": 1793459200.76, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793459100", "elapsed": 100.8, "sigma": 7.2425, "vol_max": 4.0}
+{"ts": 1793459501.18, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793459400", "elapsed": 101.2, "sigma": 7.0401, "vol_max": 4.0}
+{"ts": 1793459801.33, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793459700", "elapsed": 101.3, "sigma": 7.3715, "vol_max": 4.0}
+{"ts": 1793460101.61, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793460000", "elapsed": 101.6, "sigma": 8.985, "vol_max": 4.0}
+{"ts": 1793460401.57, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793460300", "elapsed": 101.6, "sigma": 9.5545, "vol_max": 4.0}
+{"ts": 1793460701.51, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793460600", "elapsed": 101.5, "sigma": 10.0717, "vol_max": 4.0}
+{"ts": 1793461001.47, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793460900", "elapsed": 101.5, "sigma": 9.749, "vol_max": 4.0}
+{"ts": 1793461303.24, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793461200", "elapsed": 103.2, "sigma": 10.2141, "vol_max": 4.0}
+{"ts": 1793461601.49, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793461500", "elapsed": 101.5, "sigma": 10.2682, "vol_max": 4.0}
+{"ts": 1793461901.16, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793461800", "elapsed": 101.2, "sigma": 10.536, "vol_max": 4.0}
+{"ts": 1793462201.2, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793462100", "elapsed": 101.2, "sigma": 10.0794, "vol_max": 4.0}
+{"ts": 1793462501.26, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793462400", "elapsed": 101.3, "sigma": 10.1204, "vol_max": 4.0}
+{"ts": 1793462801.54, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793462700", "elapsed": 101.5, "sigma": 9.8821, "vol_max": 4.0}
+{"ts": 1793463101.46, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793463000", "elapsed": 101.5, "sigma": 10.2207, "vol_max": 4.0}
+{"ts": 1793463401.85, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793463300", "elapsed": 101.8, "sigma": 10.4336, "vol_max": 4.0}
+{"ts": 1793463701.45, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793463600", "elapsed": 101.5, "sigma": 11.1414, "vol_max": 4.0}
+{"ts": 1793464001.5, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793463900", "elapsed": 101.5, "sigma": 11.3645, "vol_max": 4.0}
+{"ts": 1793464301.63, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793464200", "elapsed": 101.6, "sigma": 11.2456, "vol_max": 4.0}
+{"ts": 1793464601.43, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793464500", "elapsed": 101.4, "sigma": 10.7389, "vol_max": 4.0}
+{"ts": 1793464901.78, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793464800", "elapsed": 101.8, "sigma": 10.5843, "vol_max": 4.0}
+{"ts": 1793465201.67, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793465100", "elapsed": 101.7, "sigma": 10.4168, "vol_max": 4.0}
+{"ts": 1793465501.37, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793465400", "elapsed": 101.4, "sigma": 10.0795, "vol_max": 4.0}
+{"ts": 1793465801.31, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793465700", "elapsed": 101.3, "sigma": 9.6364, "vol_max": 4.0}
+{"ts": 1793466101.53, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793466000", "elapsed": 101.5, "sigma": 10.0143, "vol_max": 4.0}
+{"ts": 1793466401.06, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793466300", "elapsed": 101.1, "sigma": 10.338, "vol_max": 4.0}
+{"ts": 1793466701.47, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793466600", "elapsed": 101.5, "sigma": 11.2358, "vol_max": 4.0}
+{"ts": 1793467001.69, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793466900", "elapsed": 101.7, "sigma": 10.7716, "vol_max": 4.0}
+{"ts": 1793467301.5, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793467200", "elapsed": 101.5, "sigma": 9.9913, "vol_max": 4.0}
+{"ts": 1793467600.64, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793467500", "elapsed": 100.6, "sigma": 8.8485, "vol_max": 4.0}
+{"ts": 1793467901.71, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793467800", "elapsed": 101.7, "sigma": 8.3411, "vol_max": 4.0}
+{"ts": 1793468201.22, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793468100", "elapsed": 101.2, "sigma": 8.4985, "vol_max": 4.0}
+{"ts": 1793468501.5, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793468400", "elapsed": 101.5, "sigma": 8.5127, "vol_max": 4.0}
+{"ts": 1793468800.7, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793468700", "elapsed": 100.7, "sigma": 9.1107, "vol_max": 4.0}
+{"ts": 1793469101.27, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793469000", "elapsed": 101.3, "sigma": 9.0844, "vol_max": 4.0}
+{"ts": 1793469401.26, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793469300", "elapsed": 101.3, "sigma": 8.5387, "vol_max": 4.0}
+{"ts": 1793469700.31, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793469600", "elapsed": 100.3, "sigma": 7.1679, "vol_max": 4.0}
+{"ts": 1793470001.62, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793469900", "elapsed": 101.6, "sigma": 6.7634, "vol_max": 4.0}
+{"ts": 1793470301.22, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793470200", "elapsed": 101.2, "sigma": 7.0335, "vol_max": 4.0}
+{"ts": 1793470601.12, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793470500", "elapsed": 101.1, "sigma": 7.8423, "vol_max": 4.0}
+{"ts": 1793470901.66, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793470800", "elapsed": 101.7, "sigma": 8.4973, "vol_max": 4.0}
+{"ts": 1793471201.36, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793471100", "elapsed": 101.4, "sigma": 9.2046, "vol_max": 4.0}
+{"ts": 1793471501.39, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793471400", "elapsed": 101.4, "sigma": 9.4334, "vol_max": 4.0}
+{"ts": 1793471801.62, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793471700", "elapsed": 101.6, "sigma": 9.7797, "vol_max": 4.0}
+{"ts": 1793472101.05, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793472000", "elapsed": 101.0, "sigma": 10.1841, "vol_max": 4.0}
+{"ts": 1793472401.11, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793472300", "elapsed": 101.1, "sigma": 10.8701, "vol_max": 4.0}
+{"ts": 1793472701.3, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793472600", "elapsed": 101.3, "sigma": 10.7282, "vol_max": 4.0}
+{"ts": 1793473001.13, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793472900", "elapsed": 101.1, "sigma": 10.5146, "vol_max": 4.0}
+{"ts": 1793473301.26, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793473200", "elapsed": 101.3, "sigma": 9.7317, "vol_max": 4.0}
+{"ts": 1793473601.62, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793473500", "elapsed": 101.6, "sigma": 9.1164, "vol_max": 4.0}
+{"ts": 1793473901.27, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793473800", "elapsed": 101.3, "sigma": 7.9769, "vol_max": 4.0}
+{"ts": 1793474200.04, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793474100", "elapsed": 100.0, "sigma": 7.5897, "vol_max": 4.0}
+{"ts": 1793474501.61, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793474400", "elapsed": 101.6, "sigma": 7.2866, "vol_max": 4.0}
+{"ts": 1793474801.45, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793474700", "elapsed": 101.4, "sigma": 7.7935, "vol_max": 4.0}
+{"ts": 1793475101.38, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793475000", "elapsed": 101.4, "sigma": 7.9629, "vol_max": 4.0}
+{"ts": 1793475401.5, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793475300", "elapsed": 101.5, "sigma": 7.4608, "vol_max": 4.0}
+{"ts": 1793475701.05, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793475600", "elapsed": 101.1, "sigma": 6.1829, "vol_max": 4.0}
+{"ts": 1793476000.16, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793475900", "elapsed": 100.2, "sigma": 5.7102, "vol_max": 4.0}
+{"ts": 1793476301.21, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793476200", "elapsed": 101.2, "sigma": 6.2189, "vol_max": 4.0}
+{"ts": 1793476601.49, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793476500", "elapsed": 101.5, "sigma": 7.3448, "vol_max": 4.0}
+{"ts": 1793476901.11, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793476800", "elapsed": 101.1, "sigma": 7.7686, "vol_max": 4.0}
+{"ts": 1793477201.3, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793477100", "elapsed": 101.3, "sigma": 7.1735, "vol_max": 4.0}
+{"ts": 1793477501.43, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793477400", "elapsed": 101.4, "sigma": 6.3054, "vol_max": 4.0}
+{"ts": 1793477801.34, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793477700", "elapsed": 101.3, "sigma": 5.6072, "vol_max": 4.0}
+{"ts": 1793478101.52, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793478000", "elapsed": 101.5, "sigma": 6.2686, "vol_max": 4.0}
+{"ts": 1793478401.21, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793478300", "elapsed": 101.2, "sigma": 6.7446, "vol_max": 4.0}
+{"ts": 1793478701.21, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793478600", "elapsed": 101.2, "sigma": 6.6293, "vol_max": 4.0}
+{"ts": 1793479001.2, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793478900", "elapsed": 101.2, "sigma": 6.8008, "vol_max": 4.0}
+{"ts": 1793479301.8, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793479200", "elapsed": 101.8, "sigma": 6.9071, "vol_max": 4.0}
+{"ts": 1793479601.35, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793479500", "elapsed": 101.3, "sigma": 7.3992, "vol_max": 4.0}
+{"ts": 1793479901.36, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793479800", "elapsed": 101.4, "sigma": 7.7825, "vol_max": 4.0}
+{"ts": 1793480201.62, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793480100", "elapsed": 101.6, "sigma": 8.2832, "vol_max": 4.0}
+{"ts": 1793480501.13, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793480400", "elapsed": 101.1, "sigma": 7.9947, "vol_max": 4.0}
+{"ts": 1793480801.14, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793480700", "elapsed": 101.1, "sigma": 7.6606, "vol_max": 4.0}
+{"ts": 1793481101.24, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793481000", "elapsed": 101.2, "sigma": 7.0251, "vol_max": 4.0}
+{"ts": 1793481400.33, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793481300", "elapsed": 100.3, "sigma": 6.8656, "vol_max": 4.0}
+{"ts": 1793481701.42, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793481600", "elapsed": 101.4, "sigma": 5.3516, "vol_max": 4.0}
+{"ts": 1793482001.69, "kind": "TW_SKIP_VOL", "slug": "btc-updown-5m-1793481900", "elapsed": 101.7, "sigma": 4.0411, "vol_max": 4.0}
+{"ts": 1793483505.66, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793483400", "epoch": 1793483400, "side": "UP", "elapsed": 105.7, "ask": 0.95, "ask_top3": 2191.7799999999997, "ws_ask": 0.95, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.008, "try": 1, "z": 2.928, "ptb_real": 77436.45, "ptb_bot": 77436.17, "ds_px": 77471.65, "ds_delta": 35.2, "ds_age_s": 1.66, "ret": 0.46, "v10": 8.0, "sigma": 0.9625, "sigma60": 1.334, "usdc": 4.05, "pct": 0.25, "cl_delta_bot": 27.641201449994696, "fast_track_holding": false, "ok": true, "price_cap": 0.96, "fill_price": 0.95, "shares": 5.0526, "paid_usdc": 4.8, "slip": 0.0}
+{"ts": 1793483775.3395038, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793483400", "side": "UP", "winner": "UP", "won": true, "entry": 0.95, "usdc": 4.799989, "pnl_est": 0.25, "wins": 2, "losses": 0}
+{"ts": 1793483812.02, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793483700", "epoch": 1793483700, "side": "UP", "elapsed": 112.0, "ask": 0.97, "ask_top3": 10869.45, "ws_ask": 0.97, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.009, "try": 1, "z": 3.152, "ptb_real": 77454.15, "ptb_bot": 77454.17, "ds_px": 77491.79, "ds_delta": 37.64, "ds_age_s": 2.02, "ret": 0.0, "v10": 7.8, "sigma": 0.975, "sigma60": 1.471, "usdc": 4.11, "pct": 0.25, "cl_delta_bot": 25.983705660008127, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.97, "shares": 5.0515, "paid_usdc": 4.9, "slip": -0.0}
+{"ts": 1793484075.4361444, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793483700", "side": "UP", "winner": "UP", "won": true, "entry": 0.9699999980204029, "usdc": 4.899987, "pnl_est": 0.15, "wins": 3, "losses": 0}
+{"ts": 1793484127.07, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793484000", "epoch": 1793484000, "side": "UP", "elapsed": 127.1, "ask": 0.89, "ask_top3": 4000.46, "ws_ask": 0.89, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.009, "try": 1, "z": 3.869, "ptb_real": 77540.35, "ptb_bot": 77540.03, "ds_px": 77588.14, "ds_delta": 47.79, "ds_age_s": 2.07, "ret": 0.0, "v10": 42.85, "sigma": 1.0631, "sigma60": 3.731, "usdc": 4.15, "pct": 0.25, "cl_delta_bot": 5.420603360005771, "fast_track_holding": false, "ok": true, "price_cap": 0.9, "fill_price": 0.89, "shares": 5.0562, "paid_usdc": 4.5, "slip": -0.0}
+{"ts": 1793484375.510992, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793484000", "side": "UP", "winner": "UP", "won": true, "entry": 0.8899999841777534, "usdc": 4.499993, "pnl_est": 0.56, "wins": 4, "losses": 0}
+{"ts": 1793486827.07, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793486700", "epoch": 1793486700, "side": "DN", "elapsed": 127.1, "ask": 0.93, "ask_top3": 1767.0, "ws_ask": 0.93, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.009, "try": 1, "z": 2.804, "ptb_real": 77528.84, "ptb_bot": 77528.83, "ds_px": 77489.89, "ds_delta": -38.94, "ds_age_s": 2.07, "ret": 0.02, "v10": 10.31, "sigma": 1.1951, "sigma60": 1.288, "usdc": 3.49, "pct": 0.25, "cl_delta_bot": -20.920926799997687, "fast_track_holding": false, "ok": true, "price_cap": 0.94, "fill_price": 0.93, "shares": 5.0538, "paid_usdc": 4.7, "slip": -0.0}
+{"ts": 1793487075.4012418, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793486700", "side": "DN", "winner": "DN", "won": true, "entry": 0.9299998971063944, "usdc": 4.7, "pnl_est": 0.35, "wins": 5, "losses": 0}
+{"ts": 1793487107.79, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793487000", "epoch": 1793487000, "side": "DN", "elapsed": 107.8, "ask": 0.97, "ask_top3": 18016.61, "ws_ask": 0.97, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.01, "try": 1, "z": 2.842, "ptb_real": 77463.71, "ptb_bot": 77463.98, "ds_px": 77419.0, "ds_delta": -44.71, "ds_age_s": 1.79, "ret": 0.0, "v10": 14.49, "sigma": 1.2678, "sigma60": 1.778, "usdc": 4.57, "pct": 0.25, "cl_delta_bot": -30.95999999999185, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.97, "shares": 5.0515, "paid_usdc": 4.9, "slip": -0.0}
+{"ts": 1793487375.9579926, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793487000", "side": "DN", "winner": "DN", "won": true, "entry": 0.9699999980204029, "usdc": 4.899987, "pnl_est": 0.15, "wins": 6, "losses": 0}
+{"ts": 1793488341.93, "kind": "TW_SKIP_PRICE", "slug": "btc-updown-5m-1793488200", "side": "DN", "elapsed": 141.9, "rest_ask": 0.99, "ws_ask": 0.99, "rest_top3": 2641.4, "z": 5.394}
+{"ts": 1793492549.07, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793492400", "elapsed": 149.1, "sigma60": 4.603, "vol60_max": 4.5}
+{"ts": 1793492585.78, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793492400", "epoch": 1793492400, "side": "UP", "elapsed": 185.8, "ask": 0.94, "ask_top3": 1081.37, "ws_ask": 0.94, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.01, "try": 1, "z": 3.293, "ptb_real": 77419.07, "ptb_bot": 77419.08, "ds_px": 77448.02, "ds_delta": 28.96, "ds_age_s": 1.78, "ret": 1.15, "v10": 17.22, "sigma": 1.0089, "sigma60": 2.835, "usdc": 4.73, "pct": 0.25, "cl_delta_bot": 14.471308170002885, "fast_track_holding": false, "ok": true, "price_cap": 0.95, "fill_price": 0.94, "shares": 5.0532, "paid_usdc": 4.75, "slip": -0.0}
+{"ts": 1793492775.2663448, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793492400", "side": "UP", "winner": "UP", "won": true, "entry": 0.9399999960420986, "usdc": 4.749992, "pnl_est": 0.3, "wins": 7, "losses": 0}
+{"ts": 1793496782.05, "kind": "TW_SKIP_PRICE", "slug": "btc-updown-5m-1793496600", "side": "UP", "elapsed": 182.1, "rest_ask": 0.99, "ws_ask": 0.99, "rest_top3": 2893.2, "z": 2.916}
+{"ts": 1793497667.88, "kind": "TW_SKIP_PRICE", "slug": "btc-updown-5m-1793497500", "side": "DN", "elapsed": 167.9, "rest_ask": 0.99, "ws_ask": 0.99, "rest_top3": 466.8, "z": 3.07}
+{"ts": 1793498559.2, "kind": "TW_SKIP_PRICE", "slug": "btc-updown-5m-1793498400", "side": "UP", "elapsed": 159.2, "rest_ask": 0.99, "ws_ask": 0.99, "rest_top3": 2339.9, "z": 2.949}
+{"ts": 1793498801.6, "kind": "TW_SKIP_PRICE", "slug": "btc-updown-5m-1793498700", "side": "DN", "elapsed": 101.6, "rest_ask": 0.99, "ws_ask": 0.99, "rest_top3": 4572.7, "z": 3.025}
+{"ts": 1793498805.76, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793498700", "epoch": 1793498700, "side": "DN", "elapsed": 105.8, "ask": 0.97, "ask_top3": 5122.52, "ws_ask": 0.97, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.011, "try": 1, "z": 3.038, "ptb_real": 77732.5, "ptb_bot": 77731.68, "ds_px": 77649.96, "ds_delta": -82.54, "ds_age_s": 2.76, "ret": 0.69, "v10": 5.94, "sigma": 2.1682, "sigma60": 1.905, "usdc": 4.44, "pct": 0.25, "cl_delta_bot": -46.479999999995925, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.98, "shares": 5.0, "paid_usdc": 4.9, "slip": 0.01}
+{"ts": 1793499065.2883482, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793498700", "side": "DN", "winner": "DN", "won": true, "entry": 0.9800000000000001, "usdc": 4.9, "pnl_est": 0.1, "wins": 8, "losses": 0}
+{"ts": 1793499770.15, "kind": "TW_SKIP_PRICE", "slug": "btc-updown-5m-1793499600", "side": "DN", "elapsed": 170.1, "rest_ask": 0.99, "ws_ask": 0.99, "rest_top3": 1006.5, "z": 2.812}
+{"ts": 1793501225.57, "kind": "TW_SKIP_PRICE", "slug": "btc-updown-5m-1793501100", "side": "UP", "elapsed": 125.6, "rest_ask": 0.99, "ws_ask": 0.99, "rest_top3": 2233.1, "z": 2.926}
+{"ts": 1793504501.08, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793504400", "epoch": 1793504400, "side": "UP", "elapsed": 101.1, "ask": 0.95, "ask_top3": 5671.1900000000005, "ws_ask": 0.95, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.01, "try": 1, "z": 3.442, "ptb_real": 77688.17, "ptb_bot": 77687.26, "ds_px": 77723.58, "ds_delta": 35.41, "ds_age_s": 2.08, "ret": 0.0, "v10": 8.13, "sigma": 0.8107, "sigma60": 1.335, "usdc": 11.65, "pct": 0.65, "cl_delta_bot": 37.81121200000052, "fast_track_holding": false, "ok": true, "price_cap": 0.96, "fill_price": 0.95, "shares": 12.1263, "paid_usdc": 11.52, "slip": 0.0}
+{"ts": 1793504775.1392531, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793504400", "side": "UP", "winner": "UP", "won": true, "entry": 0.95, "usdc": 11.519985, "pnl_est": 0.61, "wins": 9, "losses": 0}
+{"ts": 1793504815.31, "kind": "TW_SKIP_PRICE", "slug": "btc-updown-5m-1793504700", "side": "DN", "elapsed": 115.3, "rest_ask": 0.99, "ws_ask": 0.99, "rest_top3": 2054.7, "z": 3.829}
+{"ts": 1793505770.36, "kind": "TW_SKIP_PRICE", "slug": "btc-updown-5m-1793505600", "side": "DN", "elapsed": 170.4, "rest_ask": 0.99, "ws_ask": 0.99, "rest_top3": 815.6, "z": 2.879}
+{"ts": 1793506088.91, "kind": "TW_SKIP_PRICE", "slug": "btc-updown-5m-1793505900", "side": "DN", "elapsed": 188.9, "rest_ask": 0.99, "ws_ask": 0.99, "rest_top3": 382.5, "z": 4.122}
+{"ts": 1793506369.13, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793506200", "epoch": 1793506200, "side": "UP", "elapsed": 169.1, "ask": 0.96, "ask_top3": 3731.04, "ws_ask": 0.96, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.009, "try": 1, "z": 3.454, "ptb_real": 77603.23, "ptb_bot": 77602.98, "ds_px": 77632.25, "ds_delta": 29.02, "ds_age_s": 1.13, "ret": 0.95, "v10": 24.75, "sigma": 0.876, "sigma60": 3.327, "usdc": 12.26, "pct": 0.65, "cl_delta_bot": 8.944500860001426, "fast_track_holding": false, "ok": true, "price_cap": 0.97, "fill_price": 0.96, "shares": 12.125, "paid_usdc": 11.64, "slip": 0.0}
+{"ts": 1793506635.5450203, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793506200", "side": "UP", "winner": "UP", "won": true, "entry": 0.9600000000000001, "usdc": 11.64, "pnl_est": 0.48, "wins": 10, "losses": 0}
+{"ts": 1793519509.44, "kind": "TW_SKIP_PRICE", "slug": "btc-updown-5m-1793519400", "side": "UP", "elapsed": 109.4, "rest_ask": 0.99, "ws_ask": 0.99, "rest_top3": 955.8, "z": 3.659}
+{"ts": 1793521350.05, "kind": "TW_SKIP_PRICE", "slug": "btc-updown-5m-1793521200", "side": "UP", "elapsed": 150.0, "rest_ask": 0.99, "ws_ask": 0.99, "rest_top3": 3164.3, "z": 3.314}
+{"ts": 1793521982.86, "kind": "TW_SKIP_PRICE", "slug": "btc-updown-5m-1793521800", "side": "UP", "elapsed": 182.9, "rest_ask": 0.99, "ws_ask": 0.99, "rest_top3": 558.7, "z": 3.882}
+{"ts": 1793523494.47, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793523300", "elapsed": 194.5, "sigma60": 5.467, "vol60_max": 4.5, "regime": "normal"}
+{"ts": 1793523792.93, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793523600", "epoch": 1793523600, "side": "DN", "elapsed": 192.9, "ask": 0.97, "ask_top3": 4939.94, "ws_ask": 0.97, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.147, "try": 1, "z": 2.903, "ptb_real": 78134.34, "ptb_bot": 78134.24, "ds_px": 78076.73, "ds_delta": -57.61, "ds_age_s": 1.93, "ret": 0.0, "v10": 7.27, "sigma": 2.3889, "sigma60": 3.374, "usdc": 3.71, "pct": 0.65, "cl_delta_bot": -28.30000000000291, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.97, "shares": 5.0515, "paid_usdc": 4.9, "slip": -0.0}
+{"ts": 1793524101.1186366, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793523600", "side": "DN", "winner": "DN", "won": true, "entry": 0.9699998832040957, "usdc": 4.9, "pnl_est": 0.15, "wins": 11, "losses": 0}
+{"ts": 1793525219.11, "kind": "TW_SKIP_PRICE", "slug": "btc-updown-5m-1793525100", "side": "DN", "elapsed": 119.1, "rest_ask": 0.99, "ws_ask": 0.99, "rest_top3": 2802.4, "z": 3.439}
+{"ts": 1793525237.99, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793525100", "elapsed": 138.0, "sigma60": 4.557, "vol60_max": 4.5, "regime": "normal"}
+{"ts": 1793526467.37, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793526300", "epoch": 1793526300, "side": "UP", "elapsed": 167.4, "ask": 0.95, "ask_top3": 2104.26, "ws_ask": 0.95, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.009, "try": 1, "z": 3.312, "ptb_real": 77942.35, "ptb_bot": 77942.28, "ds_px": 78007.62, "ds_delta": 65.27, "ds_age_s": 2.37, "ret": 1.15, "v10": 35.1, "sigma": 2.0218, "sigma60": 3.719, "usdc": 4.02, "pct": 0.65, "cl_delta_bot": 36.00240337000287, "fast_track_holding": false, "ok": true, "price_cap": 0.96, "fill_price": 0.95, "shares": 5.0526, "paid_usdc": 4.8, "slip": 0.0}
+{"ts": 1793526680.3462436, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793526300", "side": "UP", "winner": "UP", "won": true, "entry": 0.95, "usdc": 4.799989, "pnl_est": 0.25, "wins": 12, "losses": 0}
+{"ts": 1793527675.47, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793527500", "epoch": 1793527500, "side": "UP", "elapsed": 175.5, "ask": 0.94, "ask_top3": 2058.26, "ws_ask": 0.94, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.01, "try": 1, "z": 3.178, "ptb_real": 77993.56, "ptb_bot": 77993.77, "ds_px": 78030.29, "ds_delta": 36.74, "ds_age_s": 1.47, "ret": 0.68, "v10": 39.91, "sigma": 1.2465, "sigma60": 3.51, "usdc": 11.33, "pct": 0.65, "cl_delta_bot": -1.9151278200006345, "fast_track_holding": false, "ok": true, "price_cap": 0.95, "fill_price": 0.94, "shares": 11.117, "paid_usdc": 10.45, "slip": -0.0}
+{"ts": 1793527998.2827125, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793527500", "side": "UP", "winner": "UP", "won": true, "entry": 0.9399999388325397, "usdc": 10.45, "pnl_est": 0.67, "wins": 13, "losses": 0}
+{"ts": 1793532719.93, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793532600", "epoch": 1793532600, "side": "DN", "elapsed": 119.9, "ask": 0.96, "ask_top3": 2910.79, "ws_ask": 0.96, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.01, "try": 1, "z": 3.358, "ptb_real": 77891.47, "ptb_bot": 77891.53, "ds_px": 77858.92, "ds_delta": -32.55, "ds_age_s": 1.93, "ret": 0.0, "v10": 7.38, "sigma": 0.8135, "sigma60": 1.712, "usdc": 4.13, "pct": 0.65, "cl_delta_bot": -30.80014767999819, "fast_track_holding": false, "ok": true, "price_cap": 0.97, "fill_price": 0.96, "shares": 5.0521, "paid_usdc": 4.85, "slip": 0.0}
+{"ts": 1793532975.314878, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793532600", "side": "DN", "winner": "DN", "won": true, "entry": 0.96, "usdc": 4.849992, "pnl_est": 0.2, "wins": 14, "losses": 0}
+{"ts": 1793535401.45, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793535300", "elapsed": 101.4, "sigma60": 8.317, "vol60_max": 4.5, "regime": "normal"}
+{"ts": 1793538150.75, "kind": "TW_SKIP_PRICE", "slug": "btc-updown-5m-1793538000", "side": "UP", "elapsed": 150.8, "rest_ask": 0.99, "ws_ask": 0.99, "rest_top3": 4877.5, "z": 3.514}
+{"ts": 1793538152.9, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793538000", "epoch": 1793538000, "side": "UP", "elapsed": 152.9, "ask": 0.98, "ask_top3": 6243.71, "ws_ask": 0.98, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.01, "try": 1, "z": 3.446, "ptb_real": 77783.59, "ptb_bot": 77783.86, "ds_px": 77830.07, "ds_delta": 46.47, "ds_age_s": 1.9, "ret": 1.48, "v10": 7.0, "sigma": 1.2916, "sigma60": 1.508, "usdc": 4.72, "pct": 0.65, "cl_delta_bot": 34.442849130005925, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.98, "shares": 5.0, "paid_usdc": 4.9, "slip": 0.0}
+{"ts": 1793538405.4805238, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793538000", "side": "UP", "winner": "UP", "won": true, "entry": 0.9800000000000001, "usdc": 4.9, "pnl_est": 0.1, "wins": 15, "losses": 0}
+{"ts": 1793539379.41, "kind": "TW_SKIP_PRICE", "slug": "btc-updown-5m-1793539200", "side": "DN", "elapsed": 179.4, "rest_ask": 0.99, "ws_ask": 0.99, "rest_top3": 2277.5, "z": 2.862}
+{"ts": 1793539981.57, "kind": "TW_SKIP_PRICE", "slug": "btc-updown-5m-1793539800", "side": "UP", "elapsed": 181.6, "rest_ask": 0.99, "ws_ask": 0.99, "rest_top3": 7911.3, "z": 2.99}
+{"ts": 1793539983.75, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793539800", "epoch": 1793539800, "side": "UP", "elapsed": 183.7, "ask": 0.98, "ask_top3": 8474.58, "ws_ask": 0.98, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.01, "try": 1, "z": 3.023, "ptb_real": 77873.0, "ptb_bot": 77873.55, "ds_px": 77910.14, "ds_delta": 37.14, "ds_age_s": 1.75, "ret": 0.06, "v10": 27.18, "sigma": 1.3909, "sigma60": 1.734, "usdc": 4.78, "pct": 0.65, "cl_delta_bot": 8.362098359997617, "fast_track_holding": false, "ok": false, "price_cap": 0.98, "resp": "excepci\u00f3n: PolyApiException[status_code=400, error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID': '0xcce8af9c0014b766b4b27f602015c03eeef3b9879bd00e0dea956d6474c5ed68'}]"}
+{"ts": 1793539985.8, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793539800", "epoch": 1793539800, "side": "UP", "elapsed": 185.8, "ask": 0.98, "ask_top3": 8407.32, "ws_ask": 0.98, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.01, "try": 2, "z": 3.147, "ptb_real": 77873.0, "ptb_bot": 77873.55, "ds_px": 77911.16, "ds_delta": 38.16, "ds_age_s": 1.8, "ret": 0.0, "v10": 28.78, "sigma": 1.3909, "sigma60": 1.73, "usdc": 4.78, "pct": 0.65, "cl_delta_bot": 8.362098359997617, "fast_track_holding": false, "ok": true, "price_cap": 0.98, "fill_price": 0.98, "shares": 5.0, "paid_usdc": 4.9, "slip": 0.0}
+{"ts": 1793540175.4873438, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793539800", "side": "UP", "winner": "UP", "won": true, "entry": 0.9800000000000001, "usdc": 4.9, "pnl_est": 0.1, "wins": 16, "losses": 0}
+{"ts": 1793540222.8, "kind": "TW_SIGNAL", "slug": "btc-updown-5m-1793540100", "epoch": 1793540100, "side": "DN", "elapsed": 122.8, "ask": 0.95, "ask_top3": 4789.43, "ws_ask": 0.95, "ws_ask_minus_real": 0.0, "book_lag_p50_s": 0.011, "try": 1, "z": 2.993, "ptb_real": 77914.17, "ptb_bot": 77914.81, "ds_px": 77861.09, "ds_delta": -53.08, "ds_age_s": 1.8, "ret": 0.0, "v10": 31.98, "sigma": 1.5041, "sigma60": 2.769, "usdc": 4.84, "pct": 0.65, "cl_delta_bot": -27.539999999993597, "fast_track_holding": false, "ok": true, "price_cap": 0.96, "fill_price": 0.95, "shares": 5.0526, "paid_usdc": 4.8, "slip": 0.0}
+{"ts": 1793540475.4866943, "kind": "TW_RESULT", "slug": "btc-updown-5m-1793540100", "side": "DN", "winner": "DN", "won": true, "entry": 0.95, "usdc": 4.799989, "pnl_est": 0.25, "wins": 17, "losses": 0}
+{"ts": 1793541701.45, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793541600", "elapsed": 101.5, "sigma60": 5.478, "vol60_max": 4.5, "regime": "normal"}
+{"ts": 1793542679.69, "kind": "TW_SKIP_VOL60", "slug": "btc-updown-5m-1793542500", "elapsed": 179.7, "sigma60": 6.837, "vol60_max": 4.5, "regime": "normal"}
