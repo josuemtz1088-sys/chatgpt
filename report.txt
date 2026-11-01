@@ -1,0 +1,1424 @@
+=== PÉRDIDAS Y CONTEXTO DE SEÑAL ===
+
+{
+  "result": {
+    "ts": 1793006205.698925,
+    "kind": "TW_RESULT",
+    "slug": "btc-updown-5m-1793005800",
+    "side": "UP",
+    "winner": "DN",
+    "won": false,
+    "entry": 0.95,
+    "usdc": 4.799989,
+    "pnl_est": -4.8,
+    "wins": 4,
+    "losses": 1
+  },
+  "signal": {
+    "ts": 1793005948.51,
+    "kind": "TW_SIGNAL",
+    "slug": "btc-updown-5m-1793005800",
+    "epoch": 1793005800,
+    "side": "UP",
+    "elapsed": 148.5,
+    "ask": 0.95,
+    "ask_top3": 2881.68,
+    "ws_ask": 0.95,
+    "ws_ask_minus_real": 0.0,
+    "book_lag_p50_s": 0.011,
+    "try": 1,
+    "z": 2.559,
+    "ptb_real": 80138.04,
+    "ptb_bot": 80136.84,
+    "ds_px": 80189.45,
+    "ds_delta": 51.41,
+    "ds_age_s": 2.51,
+    "ret": 0.0,
+    "v10": 14.11,
+    "sigma": 1.8812,
+    "usdc": 5.0,
+    "cl_delta_bot": 23.779999999998836,
+    "fast_track_holding": false,
+    "ok": true,
+    "price_cap": 0.96,
+    "fill_price": 0.95,
+    "shares": 5.0526,
+    "paid_usdc": 4.8,
+    "slip": 0.0
+  },
+  "epoch": 1793005800,
+  "slug": "btc-updown-5m-1793005800"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793078501.1386924,
+    "kind": "LATE_RESULT",
+    "slug": "btc-updown-5m-1793078100",
+    "side": "DN",
+    "winner": "UP",
+    "won": false,
+    "entry": 0.91,
+    "usdc": 10.92,
+    "pnl_est": -10.92,
+    "wins": 2,
+    "losses": 1
+  },
+  "signal": {
+    "ts": 1793078285.33,
+    "slug": "btc-updown-5m-1793078100",
+    "epoch": 1793078100,
+    "side": "DN",
+    "elapsed": 185.3,
+    "real_ask": 0.91,
+    "real_top3": 2096.3,
+    "ws_ask": 0.95,
+    "ptb_real": 79692.24,
+    "ds_delta": -27.15,
+    "ds_age_s": 1.32,
+    "v60": 7.31,
+    "pm_net_side_usd": 4597.7,
+    "cvd_bn_60s_side": -1.53,
+    "cvd_cb_30s_side": -0.001,
+    "vel5": 3.35,
+    "pct": 0.1,
+    "rule": "t≥160 vel5≥2 v60≥0",
+    "kind": "LATE_SIGNAL",
+    "ok": true,
+    "try": 1,
+    "amount": 10.92,
+    "fill_price": 0.91,
+    "shares": 12.0,
+    "paid_usdc": 10.92,
+    "slip": 0.0
+  },
+  "epoch": 1793078100,
+  "slug": "btc-updown-5m-1793078100"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793102024.63928,
+    "kind": "LATE_PAPER_RESULT",
+    "slug": "btc-updown-5m-1793101500",
+    "side": "UP",
+    "winner": "DN",
+    "won": false,
+    "entry_real_ask": 0.93,
+    "paper_wins": 21,
+    "paper_losses": 1
+  },
+  "signal": {
+    "ts": 1793101691.42,
+    "slug": "btc-updown-5m-1793101500",
+    "epoch": 1793101500,
+    "side": "UP",
+    "elapsed": 191.3,
+    "real_ask": 0.93,
+    "real_top3": 2126.0,
+    "ws_ask": 0.93,
+    "ptb_real": 79755.22,
+    "ds_delta": 26.9,
+    "ds_age_s": 1.33,
+    "v60": 30.91,
+    "pm_net_side_usd": 1244.5,
+    "cvd_bn_60s_side": 1.776,
+    "cvd_cb_30s_side": -0.032,
+    "vel5": 11.09,
+    "pct": 0.1,
+    "rule": "t≥160 vel5≥2 v60≥0",
+    "kind": "LATE_PAPER",
+    "motivo": "apagado tras pérdida"
+  },
+  "epoch": 1793101500,
+  "slug": "btc-updown-5m-1793101500"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793125575.714612,
+    "kind": "LATE_PAPER_RESULT",
+    "slug": "btc-updown-5m-1793125200",
+    "side": "DN",
+    "winner": "UP",
+    "won": false,
+    "entry_real_ask": 0.91,
+    "paper_wins": 53,
+    "paper_losses": 2
+  },
+  "signal": {
+    "ts": 1793125363.82,
+    "slug": "btc-updown-5m-1793125200",
+    "epoch": 1793125200,
+    "side": "DN",
+    "elapsed": 163.7,
+    "real_ask": 0.91,
+    "real_top3": 1176.4,
+    "ws_ask": 0.9,
+    "ptb_real": 80510.71,
+    "ds_delta": -24.57,
+    "ds_age_s": 1.72,
+    "v60": 54.82,
+    "pm_net_side_usd": -729.7,
+    "cvd_bn_60s_side": 1.734,
+    "cvd_cb_30s_side": 0.323,
+    "vel5": 4.91,
+    "pct": 0.1,
+    "rule": "t≥160 vel5≥2 v60≥0",
+    "kind": "LATE_PAPER",
+    "motivo": "apagado tras pérdida"
+  },
+  "epoch": 1793125200,
+  "slug": "btc-updown-5m-1793125200"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793127168.3733096,
+    "kind": "FLOW_RESULT",
+    "slug": "btc-updown-5m-1793126700",
+    "side": "UP",
+    "winner": "DN",
+    "won": false,
+    "entry": 0.9200000000000002,
+    "usdc": 18.2436,
+    "pnl_est": -18.24,
+    "wins": 75,
+    "losses": 1
+  },
+  "signal": {
+    "ts": 1793126828.28,
+    "slug": "btc-updown-5m-1793126700",
+    "epoch": 1793126700,
+    "side": "UP",
+    "elapsed": 128.2,
+    "real_ask": 0.92,
+    "real_top3": 1386.3,
+    "ws_ask": 0.92,
+    "ptb_real": 80572.07,
+    "ds_delta": 20.91,
+    "ds_age_s": 2.17,
+    "v60": 0.07,
+    "pm_net_side_usd": 3503.5,
+    "cvd_bn_60s_side": 3.327,
+    "cvd_cb_30s_side": -0.046,
+    "vel5": -0.75,
+    "pct": 0.25,
+    "rule": "pm≥2268 cvd60≥2.782 v60<53.3",
+    "kind": "FLOW_SIGNAL",
+    "ok": true,
+    "try": 1,
+    "amount": 62.56,
+    "fill_price": 0.92,
+    "shares": 19.83,
+    "paid_usdc": 18.2436,
+    "slip": 0.0
+  },
+  "epoch": 1793126700,
+  "slug": "btc-updown-5m-1793126700"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793141770.5376735,
+    "kind": "FLOW_PAPER_RESULT",
+    "slug": "btc-updown-5m-1793141400",
+    "side": "DN",
+    "winner": "UP",
+    "won": false,
+    "entry_real_ask": 0.9,
+    "paper_wins": 12,
+    "paper_losses": 1
+  },
+  "signal": {
+    "ts": 1793141515.71,
+    "slug": "btc-updown-5m-1793141400",
+    "epoch": 1793141400,
+    "side": "DN",
+    "elapsed": 115.6,
+    "real_ask": 0.9,
+    "real_top3": 1798.3,
+    "ws_ask": 0.9,
+    "ptb_real": 80753.56,
+    "ds_delta": -29.7,
+    "ds_age_s": 1.59,
+    "v60": -7.34,
+    "pm_net_side_usd": 10252.3,
+    "cvd_bn_60s_side": 2.94,
+    "cvd_cb_30s_side": -1.036,
+    "vel5": 1.27,
+    "pct": 0.25,
+    "rule": "cb30<-0.6146",
+    "kind": "CB_SIGNAL",
+    "ok": true,
+    "try": 1,
+    "amount": 67.5,
+    "fill_price": 0.9,
+    "shares": 75.0,
+    "paid_usdc": 67.5,
+    "slip": 0.0
+  },
+  "epoch": 1793141400,
+  "slug": "btc-updown-5m-1793141400"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793141770.5395544,
+    "kind": "CB_RESULT",
+    "slug": "btc-updown-5m-1793141400",
+    "side": "DN",
+    "winner": "UP",
+    "won": false,
+    "entry": 0.9,
+    "usdc": 67.5,
+    "pnl_est": -67.5,
+    "wins": 55,
+    "losses": 1
+  },
+  "signal": {
+    "ts": 1793141515.71,
+    "slug": "btc-updown-5m-1793141400",
+    "epoch": 1793141400,
+    "side": "DN",
+    "elapsed": 115.6,
+    "real_ask": 0.9,
+    "real_top3": 1798.3,
+    "ws_ask": 0.9,
+    "ptb_real": 80753.56,
+    "ds_delta": -29.7,
+    "ds_age_s": 1.59,
+    "v60": -7.34,
+    "pm_net_side_usd": 10252.3,
+    "cvd_bn_60s_side": 2.94,
+    "cvd_cb_30s_side": -1.036,
+    "vel5": 1.27,
+    "pct": 0.25,
+    "rule": "cb30<-0.6146",
+    "kind": "CB_SIGNAL",
+    "ok": true,
+    "try": 1,
+    "amount": 67.5,
+    "fill_price": 0.9,
+    "shares": 75.0,
+    "paid_usdc": 67.5,
+    "slip": 0.0
+  },
+  "epoch": 1793141400,
+  "slug": "btc-updown-5m-1793141400"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793151970.3479488,
+    "kind": "CB_PAPER_RESULT",
+    "slug": "btc-updown-5m-1793151600",
+    "side": "UP",
+    "winner": "DN",
+    "won": false,
+    "entry_real_ask": 0.92,
+    "paper_wins": 6,
+    "paper_losses": 1
+  },
+  "signal": {
+    "ts": 1793151700.8,
+    "slug": "btc-updown-5m-1793151600",
+    "epoch": 1793151600,
+    "side": "UP",
+    "elapsed": 100.7,
+    "real_ask": 0.92,
+    "real_top3": 5060.5,
+    "ws_ask": 0.92,
+    "ptb_real": 80809.33,
+    "ds_delta": 64.23,
+    "ds_age_s": 1.7,
+    "v60": 61.15,
+    "pm_net_side_usd": 2771.7,
+    "cvd_bn_60s_side": 4.985,
+    "cvd_cb_30s_side": -0.627,
+    "vel5": 17.35,
+    "pct": 0.25,
+    "rule": "cb30<-0.6146",
+    "kind": "CB_PAPER",
+    "motivo": "apagado tras pérdida"
+  },
+  "epoch": 1793151600,
+  "slug": "btc-updown-5m-1793151600"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793153569.33843,
+    "kind": "CB_PAPER_RESULT",
+    "slug": "btc-updown-5m-1793153100",
+    "side": "DN",
+    "winner": "UP",
+    "won": false,
+    "entry_real_ask": 0.92,
+    "paper_wins": 7,
+    "paper_losses": 2
+  },
+  "signal": {
+    "ts": 1793153264.85,
+    "slug": "btc-updown-5m-1793153100",
+    "epoch": 1793153100,
+    "side": "DN",
+    "elapsed": 164.7,
+    "real_ask": 0.92,
+    "real_top3": 1432.2,
+    "ws_ask": 0.92,
+    "ptb_real": 80807.62,
+    "ds_delta": -36.08,
+    "ds_age_s": 1.7,
+    "v60": 2.53,
+    "pm_net_side_usd": 6259.5,
+    "cvd_bn_60s_side": -0.25,
+    "cvd_cb_30s_side": -4.103,
+    "vel5": 8.28,
+    "pct": 0.1,
+    "rule": "t≥160 vel5≥2 v60≥0",
+    "kind": "LATE_PAPER",
+    "motivo": "apagado tras pérdida"
+  },
+  "epoch": 1793153100,
+  "slug": "btc-updown-5m-1793153100"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793153569.3408678,
+    "kind": "LATE_PAPER_RESULT",
+    "slug": "btc-updown-5m-1793153100",
+    "side": "DN",
+    "winner": "UP",
+    "won": false,
+    "entry_real_ask": 0.92,
+    "paper_wins": 79,
+    "paper_losses": 3
+  },
+  "signal": {
+    "ts": 1793153264.85,
+    "slug": "btc-updown-5m-1793153100",
+    "epoch": 1793153100,
+    "side": "DN",
+    "elapsed": 164.7,
+    "real_ask": 0.92,
+    "real_top3": 1432.2,
+    "ws_ask": 0.92,
+    "ptb_real": 80807.62,
+    "ds_delta": -36.08,
+    "ds_age_s": 1.7,
+    "v60": 2.53,
+    "pm_net_side_usd": 6259.5,
+    "cvd_bn_60s_side": -0.25,
+    "cvd_cb_30s_side": -4.103,
+    "vel5": 8.28,
+    "pct": 0.1,
+    "rule": "t≥160 vel5≥2 v60≥0",
+    "kind": "LATE_PAPER",
+    "motivo": "apagado tras pérdida"
+  },
+  "epoch": 1793153100,
+  "slug": "btc-updown-5m-1793153100"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793168928.868167,
+    "kind": "FLOW_PAPER_RESULT",
+    "slug": "btc-updown-5m-1793168400",
+    "side": "UP",
+    "winner": "DN",
+    "won": false,
+    "entry_real_ask": 0.93,
+    "paper_wins": 31,
+    "paper_losses": 2
+  },
+  "signal": {
+    "ts": 1793168552.52,
+    "slug": "btc-updown-5m-1793168400",
+    "epoch": 1793168400,
+    "side": "UP",
+    "elapsed": 152.4,
+    "real_ask": 0.93,
+    "real_top3": 2398.2,
+    "ws_ask": 0.93,
+    "ptb_real": 80861.58,
+    "ds_delta": 23.41,
+    "ds_age_s": 2.42,
+    "v60": 13.37,
+    "pm_net_side_usd": 2500.7,
+    "cvd_bn_60s_side": 3.152,
+    "cvd_cb_30s_side": -0.12,
+    "vel5": 0.33,
+    "pct": 0.25,
+    "rule": "pm≥2268 cvd60≥2.782 v60<53.3",
+    "kind": "FLOW_PAPER",
+    "motivo": "apagado tras pérdida"
+  },
+  "epoch": 1793168400,
+  "slug": "btc-updown-5m-1793168400"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793192361.1894505,
+    "kind": "FLOW_RESULT",
+    "slug": "btc-updown-5m-1793191800",
+    "side": "UP",
+    "winner": "DN",
+    "won": false,
+    "entry": 0.9,
+    "usdc": 74.7,
+    "pnl_est": -74.7,
+    "wins": 4,
+    "losses": 1
+  },
+  "signal": {
+    "ts": 1793191960.14,
+    "slug": "btc-updown-5m-1793191800",
+    "epoch": 1793191800,
+    "side": "UP",
+    "elapsed": 160.0,
+    "real_ask": 0.9,
+    "real_top3": 3854.4,
+    "ws_ask": 0.9,
+    "ptb_real": 80639.33,
+    "ds_delta": 43.86,
+    "ds_age_s": 2.04,
+    "v60": 7.69,
+    "pm_net_side_usd": 2609.5,
+    "cvd_bn_60s_side": 3.461,
+    "cvd_cb_30s_side": 0.36,
+    "vel5": -0.15,
+    "ret_rel": 0.268,
+    "sigma": 3.5332,
+    "pct": 0.25,
+    "rule": "pm≥2268 cvd60≥2.782 v60<53.3 σ≥1.9",
+    "kind": "FLOW_SIGNAL",
+    "ok": true,
+    "try": 1,
+    "amount": 74.7,
+    "fill_price": 0.9,
+    "shares": 83.0,
+    "paid_usdc": 74.7,
+    "slip": 0.0
+  },
+  "epoch": 1793191800,
+  "slug": "btc-updown-5m-1793191800"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793202071.1009097,
+    "kind": "LATE_RESULT",
+    "slug": "btc-updown-5m-1793201700",
+    "side": "DN",
+    "winner": "UP",
+    "won": false,
+    "entry": 0.9299999999999999,
+    "usdc": 27.9,
+    "pnl_est": -27.9,
+    "wins": 17,
+    "losses": 1
+  },
+  "signal": {
+    "ts": 1793201874.51,
+    "slug": "btc-updown-5m-1793201700",
+    "epoch": 1793201700,
+    "side": "DN",
+    "elapsed": 174.5,
+    "real_ask": 0.93,
+    "real_top3": 2274.5,
+    "ws_ask": 0.93,
+    "ptb_real": 80499.42,
+    "ds_delta": -33.53,
+    "ds_age_s": 2.48,
+    "v60": 11.68,
+    "pm_net_side_usd": 3397.1,
+    "cvd_bn_60s_side": 0.524,
+    "cvd_cb_30s_side": 2.031,
+    "vel5": 7.51,
+    "ret_rel": 0.222,
+    "sigma": 2.1327,
+    "z": 1.676,
+    "pm60_side_usd": 2014.3,
+    "pct": 0.1,
+    "rule": "t≥160 vel5≥1 v10≥0 v60≥0",
+    "kind": "LATE_SIGNAL",
+    "ok": true,
+    "try": 1,
+    "amount": 27.9,
+    "fill_price": 0.93,
+    "shares": 30.0,
+    "paid_usdc": 27.9,
+    "slip": -0.0
+  },
+  "epoch": 1793201700,
+  "slug": "btc-updown-5m-1793201700"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793204170.2512822,
+    "kind": "CB_RESULT",
+    "slug": "btc-updown-5m-1793203800",
+    "side": "DN",
+    "winner": "UP",
+    "won": false,
+    "entry": 0.9,
+    "usdc": 66.589992,
+    "pnl_est": -66.59,
+    "wins": 18,
+    "losses": 1
+  },
+  "signal": {
+    "ts": 1793203961.16,
+    "slug": "btc-updown-5m-1793203800",
+    "epoch": 1793203800,
+    "side": "DN",
+    "elapsed": 161.1,
+    "real_ask": 0.94,
+    "real_top3": 2990.1,
+    "ws_ask": 0.94,
+    "ptb_real": 80450.59,
+    "ds_delta": -35.13,
+    "ds_age_s": 2.12,
+    "v60": 12.33,
+    "pm_net_side_usd": 4242.3,
+    "cvd_bn_60s_side": -1.176,
+    "cvd_cb_30s_side": 0.186,
+    "vel5": 1.89,
+    "ret_rel": 0.193,
+    "sigma": 1.8744,
+    "z": 1.865,
+    "pm60_side_usd": 3823.8,
+    "pct": 0.1,
+    "rule": "t≥160 vel5≥1 v10≥0 v60≥0",
+    "kind": "LATE_PAPER",
+    "motivo": "apagado tras pérdida"
+  },
+  "epoch": 1793203800,
+  "slug": "btc-updown-5m-1793203800"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793204170.2567058,
+    "kind": "LATE_PAPER_RESULT",
+    "slug": "btc-updown-5m-1793203800",
+    "side": "DN",
+    "winner": "UP",
+    "won": false,
+    "entry_real_ask": 0.94,
+    "paper_wins": 2,
+    "paper_losses": 1
+  },
+  "signal": {
+    "ts": 1793203961.16,
+    "slug": "btc-updown-5m-1793203800",
+    "epoch": 1793203800,
+    "side": "DN",
+    "elapsed": 161.1,
+    "real_ask": 0.94,
+    "real_top3": 2990.1,
+    "ws_ask": 0.94,
+    "ptb_real": 80450.59,
+    "ds_delta": -35.13,
+    "ds_age_s": 2.12,
+    "v60": 12.33,
+    "pm_net_side_usd": 4242.3,
+    "cvd_bn_60s_side": -1.176,
+    "cvd_cb_30s_side": 0.186,
+    "vel5": 1.89,
+    "ret_rel": 0.193,
+    "sigma": 1.8744,
+    "z": 1.865,
+    "pm60_side_usd": 3823.8,
+    "pct": 0.1,
+    "rule": "t≥160 vel5≥1 v10≥0 v60≥0",
+    "kind": "LATE_PAPER",
+    "motivo": "apagado tras pérdida"
+  },
+  "epoch": 1793203800,
+  "slug": "btc-updown-5m-1793203800"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793212637.0622804,
+    "kind": "LATE_RESULT",
+    "slug": "btc-updown-5m-1793212200",
+    "side": "DN",
+    "winner": "UP",
+    "won": false,
+    "entry": 0.94,
+    "usdc": 17.86,
+    "pnl_est": -17.86,
+    "wins": 8,
+    "losses": 1
+  },
+  "signal": {
+    "ts": 1793212376.94,
+    "slug": "btc-updown-5m-1793212200",
+    "epoch": 1793212200,
+    "side": "DN",
+    "elapsed": 176.9,
+    "real_ask": 0.94,
+    "real_top3": 2647.1,
+    "ws_ask": 0.94,
+    "ptb_real": 80832.74,
+    "ds_delta": -87.72,
+    "ds_age_s": 1.9,
+    "v60": 79.08,
+    "pm_net_side_usd": 2320.4,
+    "cvd_bn_60s_side": 2.622,
+    "cvd_cb_30s_side": 2.616,
+    "vel5": 31.46,
+    "ret_rel": 0.187,
+    "sigma": 3.3505,
+    "z": 2.84,
+    "pm60_side_usd": 3831.9,
+    "pct": 0.1,
+    "rule": "t≥160 vel5≥1 v10≥0 v60≥0 cb30<99",
+    "kind": "LATE_SIGNAL",
+    "ok": true,
+    "try": 1,
+    "amount": 17.86,
+    "fill_price": 0.94,
+    "shares": 19.0,
+    "paid_usdc": 17.86,
+    "slip": 0.0
+  },
+  "epoch": 1793212200,
+  "slug": "btc-updown-5m-1793212200"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793212637.0678358,
+    "kind": "TW_RESULT",
+    "slug": "btc-updown-5m-1793212200",
+    "side": "DN",
+    "winner": "UP",
+    "won": false,
+    "entry": 0.9099999992618428,
+    "usdc": 61.639992,
+    "pnl_est": -61.64,
+    "wins": 95,
+    "losses": 1
+  },
+  "signal": {
+    "ts": 1793212376.94,
+    "slug": "btc-updown-5m-1793212200",
+    "epoch": 1793212200,
+    "side": "DN",
+    "elapsed": 176.9,
+    "real_ask": 0.94,
+    "real_top3": 2647.1,
+    "ws_ask": 0.94,
+    "ptb_real": 80832.74,
+    "ds_delta": -87.72,
+    "ds_age_s": 1.9,
+    "v60": 79.08,
+    "pm_net_side_usd": 2320.4,
+    "cvd_bn_60s_side": 2.622,
+    "cvd_cb_30s_side": 2.616,
+    "vel5": 31.46,
+    "ret_rel": 0.187,
+    "sigma": 3.3505,
+    "z": 2.84,
+    "pm60_side_usd": 3831.9,
+    "pct": 0.1,
+    "rule": "t≥160 vel5≥1 v10≥0 v60≥0 cb30<99",
+    "kind": "LATE_SIGNAL",
+    "ok": true,
+    "try": 1,
+    "amount": 17.86,
+    "fill_price": 0.94,
+    "shares": 19.0,
+    "paid_usdc": 17.86,
+    "slip": 0.0
+  },
+  "epoch": 1793212200,
+  "slug": "btc-updown-5m-1793212200"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793212906.0871797,
+    "kind": "CB_RESULT",
+    "slug": "btc-updown-5m-1793212500",
+    "side": "UP",
+    "winner": "DN",
+    "won": false,
+    "entry": 0.98,
+    "usdc": 31.36,
+    "pnl_est": -31.36,
+    "wins": 4,
+    "losses": 1
+  },
+  "signal": {
+    "ts": 1793212663.95,
+    "slug": "btc-updown-5m-1793212500",
+    "epoch": 1793212500,
+    "side": "UP",
+    "elapsed": 163.9,
+    "real_ask": 0.96,
+    "real_top3": 6012.8,
+    "ws_ask": 0.96,
+    "ptb_real": 80956.49,
+    "ds_delta": 216.51,
+    "ds_age_s": 1.9,
+    "v60": 5.72,
+    "pm_net_side_usd": 7321.6,
+    "cvd_bn_60s_side": 9.594,
+    "cvd_cb_30s_side": -5.428,
+    "vel5": 10.08,
+    "ret_rel": 0.282,
+    "sigma": 6.4683,
+    "z": 3.381,
+    "pm60_side_usd": 3807.8,
+    "pct": 0.1,
+    "rule": "t≥160 vel5≥1 v10≥0 v60≥0 cb30<99",
+    "kind": "LATE_PAPER",
+    "motivo": "apagado tras pérdida"
+  },
+  "epoch": 1793212500,
+  "slug": "btc-updown-5m-1793212500"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793212906.0898204,
+    "kind": "TW_RESULT",
+    "slug": "btc-updown-5m-1793212500",
+    "side": "UP",
+    "winner": "DN",
+    "won": false,
+    "entry": 0.9600000000000001,
+    "usdc": 41.709984,
+    "pnl_est": -41.71,
+    "wins": 95,
+    "losses": 2
+  },
+  "signal": {
+    "ts": 1793212663.95,
+    "slug": "btc-updown-5m-1793212500",
+    "epoch": 1793212500,
+    "side": "UP",
+    "elapsed": 163.9,
+    "real_ask": 0.96,
+    "real_top3": 6012.8,
+    "ws_ask": 0.96,
+    "ptb_real": 80956.49,
+    "ds_delta": 216.51,
+    "ds_age_s": 1.9,
+    "v60": 5.72,
+    "pm_net_side_usd": 7321.6,
+    "cvd_bn_60s_side": 9.594,
+    "cvd_cb_30s_side": -5.428,
+    "vel5": 10.08,
+    "ret_rel": 0.282,
+    "sigma": 6.4683,
+    "z": 3.381,
+    "pm60_side_usd": 3807.8,
+    "pct": 0.1,
+    "rule": "t≥160 vel5≥1 v10≥0 v60≥0 cb30<99",
+    "kind": "LATE_PAPER",
+    "motivo": "apagado tras pérdida"
+  },
+  "epoch": 1793212500,
+  "slug": "btc-updown-5m-1793212500"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793212906.1024628,
+    "kind": "FLOW_RESULT",
+    "slug": "btc-updown-5m-1793212500",
+    "side": "UP",
+    "winner": "DN",
+    "won": false,
+    "entry": 0.9700000000000001,
+    "usdc": 23.28,
+    "pnl_est": -23.28,
+    "wins": 7,
+    "losses": 1
+  },
+  "signal": {
+    "ts": 1793212663.95,
+    "slug": "btc-updown-5m-1793212500",
+    "epoch": 1793212500,
+    "side": "UP",
+    "elapsed": 163.9,
+    "real_ask": 0.96,
+    "real_top3": 6012.8,
+    "ws_ask": 0.96,
+    "ptb_real": 80956.49,
+    "ds_delta": 216.51,
+    "ds_age_s": 1.9,
+    "v60": 5.72,
+    "pm_net_side_usd": 7321.6,
+    "cvd_bn_60s_side": 9.594,
+    "cvd_cb_30s_side": -5.428,
+    "vel5": 10.08,
+    "ret_rel": 0.282,
+    "sigma": 6.4683,
+    "z": 3.381,
+    "pm60_side_usd": 3807.8,
+    "pct": 0.1,
+    "rule": "t≥160 vel5≥1 v10≥0 v60≥0 cb30<99",
+    "kind": "LATE_PAPER",
+    "motivo": "apagado tras pérdida"
+  },
+  "epoch": 1793212500,
+  "slug": "btc-updown-5m-1793212500"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793212906.1473582,
+    "kind": "LATE_PAPER_RESULT",
+    "slug": "btc-updown-5m-1793212500",
+    "side": "UP",
+    "winner": "DN",
+    "won": false,
+    "entry_real_ask": 0.96,
+    "paper_wins": 0,
+    "paper_losses": 1
+  },
+  "signal": {
+    "ts": 1793212663.95,
+    "slug": "btc-updown-5m-1793212500",
+    "epoch": 1793212500,
+    "side": "UP",
+    "elapsed": 163.9,
+    "real_ask": 0.96,
+    "real_top3": 6012.8,
+    "ws_ask": 0.96,
+    "ptb_real": 80956.49,
+    "ds_delta": 216.51,
+    "ds_age_s": 1.9,
+    "v60": 5.72,
+    "pm_net_side_usd": 7321.6,
+    "cvd_bn_60s_side": 9.594,
+    "cvd_cb_30s_side": -5.428,
+    "vel5": 10.08,
+    "ret_rel": 0.282,
+    "sigma": 6.4683,
+    "z": 3.381,
+    "pm60_side_usd": 3807.8,
+    "pct": 0.1,
+    "rule": "t≥160 vel5≥1 v10≥0 v60≥0 cb30<99",
+    "kind": "LATE_PAPER",
+    "motivo": "apagado tras pérdida"
+  },
+  "epoch": 1793212500,
+  "slug": "btc-updown-5m-1793212500"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793221575.5141861,
+    "kind": "CB_RESULT",
+    "slug": "btc-updown-5m-1793221200",
+    "side": "DN",
+    "winner": "UP",
+    "won": false,
+    "entry": 0.8799999982013283,
+    "usdc": 19.569997,
+    "pnl_est": -19.57,
+    "wins": 0,
+    "losses": 1
+  },
+  "signal": {
+    "ts": 1793221370.91,
+    "slug": "btc-updown-5m-1793221200",
+    "epoch": 1793221200,
+    "side": "DN",
+    "elapsed": 170.9,
+    "real_ask": 0.89,
+    "real_top3": 3579.2,
+    "ws_ask": 0.89,
+    "ptb_real": 81254.41,
+    "ds_delta": -48.7,
+    "ds_age_s": 1.9,
+    "v60": 23.89,
+    "pm_net_side_usd": 862.3,
+    "cvd_bn_60s_side": -2.159,
+    "cvd_cb_30s_side": -2.701,
+    "vel5": 21.09,
+    "ret_rel": 0.0,
+    "sigma": 3.1949,
+    "sigma60": 2.134,
+    "z": 1.598,
+    "pm60_side_usd": 1357.0,
+    "pct": 0.25,
+    "rule": "cb30<-0.5",
+    "kind": "CB_SIGNAL",
+    "ok": true,
+    "try": 1,
+    "amount": 19.58,
+    "fill_price": 0.88,
+    "shares": 22.2386,
+    "paid_usdc": 19.57,
+    "slip": -0.01
+  },
+  "epoch": 1793221200,
+  "slug": "btc-updown-5m-1793221200"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793262375.3318334,
+    "kind": "FLOW_RESULT",
+    "slug": "btc-updown-5m-1793262000",
+    "side": "UP",
+    "winner": "DN",
+    "won": false,
+    "entry": 0.8999999999999999,
+    "usdc": 37.789992,
+    "pnl_est": -37.79,
+    "wins": 16,
+    "losses": 1
+  },
+  "signal": {
+    "ts": 1793262173.7,
+    "slug": "btc-updown-5m-1793262000",
+    "epoch": 1793262000,
+    "side": "UP",
+    "elapsed": 173.7,
+    "real_ask": 0.9,
+    "real_top3": 4474.7,
+    "ws_ask": 0.9,
+    "ptb_real": 79984.88,
+    "ds_delta": 51.24,
+    "ds_age_s": 1.68,
+    "v60": 6.43,
+    "pm_net_side_usd": 13147.9,
+    "cvd_bn_60s_side": 3.189,
+    "cvd_cb_30s_side": -0.012,
+    "vel5": 1.36,
+    "ret_rel": 0.008,
+    "sigma": 2.3495,
+    "sigma60": 1.539,
+    "z": 2.325,
+    "pm60_side_usd": 3959.3,
+    "pct": 0.25,
+    "rule": "t≥160 vel5≥1 v10≥0 v60≥0 cb30<99",
+    "kind": "LATE_SIGNAL",
+    "ok": true,
+    "try": 1,
+    "amount": 27.9,
+    "fill_price": 0.9,
+    "shares": 31.0,
+    "paid_usdc": 27.9,
+    "slip": -0.0
+  },
+  "epoch": 1793262000,
+  "slug": "btc-updown-5m-1793262000"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793262375.3329961,
+    "kind": "LATE_RESULT",
+    "slug": "btc-updown-5m-1793262000",
+    "side": "UP",
+    "winner": "DN",
+    "won": false,
+    "entry": 0.8999999999999999,
+    "usdc": 27.9,
+    "pnl_est": -27.9,
+    "wins": 40,
+    "losses": 1
+  },
+  "signal": {
+    "ts": 1793262173.7,
+    "slug": "btc-updown-5m-1793262000",
+    "epoch": 1793262000,
+    "side": "UP",
+    "elapsed": 173.7,
+    "real_ask": 0.9,
+    "real_top3": 4474.7,
+    "ws_ask": 0.9,
+    "ptb_real": 79984.88,
+    "ds_delta": 51.24,
+    "ds_age_s": 1.68,
+    "v60": 6.43,
+    "pm_net_side_usd": 13147.9,
+    "cvd_bn_60s_side": 3.189,
+    "cvd_cb_30s_side": -0.012,
+    "vel5": 1.36,
+    "ret_rel": 0.008,
+    "sigma": 2.3495,
+    "sigma60": 1.539,
+    "z": 2.325,
+    "pm60_side_usd": 3959.3,
+    "pct": 0.25,
+    "rule": "t≥160 vel5≥1 v10≥0 v60≥0 cb30<99",
+    "kind": "LATE_SIGNAL",
+    "ok": true,
+    "try": 1,
+    "amount": 27.9,
+    "fill_price": 0.9,
+    "shares": 31.0,
+    "paid_usdc": 27.9,
+    "slip": -0.0
+  },
+  "epoch": 1793262000,
+  "slug": "btc-updown-5m-1793262000"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793301405.7397828,
+    "kind": "CB_RESULT",
+    "slug": "btc-updown-5m-1793301000",
+    "side": "UP",
+    "winner": "DN",
+    "won": false,
+    "entry": 0.9199999999999999,
+    "usdc": 11.04,
+    "pnl_est": -11.04,
+    "wins": 14,
+    "losses": 1
+  },
+  "signal": {
+    "ts": 1793301113.94,
+    "slug": "btc-updown-5m-1793301000",
+    "epoch": 1793301000,
+    "side": "UP",
+    "elapsed": 113.9,
+    "real_ask": 0.92,
+    "real_top3": 1474.6,
+    "ws_ask": 0.92,
+    "ptb_real": 80724.96,
+    "ds_delta": 26.89,
+    "ds_age_s": 1.93,
+    "v60": 27.3,
+    "pm_net_side_usd": 1942.6,
+    "cvd_bn_60s_side": 2.113,
+    "cvd_cb_30s_side": -1.43,
+    "vel5": 10.49,
+    "ret_rel": 0.0,
+    "sigma": 1.6701,
+    "sigma60": 2.289,
+    "z": 1.324,
+    "pm60_side_usd": 2104.2,
+    "pct": 0.25,
+    "rule": "cb30<-0.5",
+    "kind": "CB_SIGNAL",
+    "ok": true,
+    "try": 1,
+    "amount": 11.04,
+    "fill_price": 0.92,
+    "shares": 12.0,
+    "paid_usdc": 11.04,
+    "slip": -0.0
+  },
+  "epoch": 1793301000,
+  "slug": "btc-updown-5m-1793301000"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793345865.7319202,
+    "kind": "CB_RESULT",
+    "slug": "btc-updown-5m-1793345400",
+    "side": "UP",
+    "winner": "DN",
+    "won": false,
+    "entry": 0.98,
+    "usdc": 7.84,
+    "pnl_est": -7.84,
+    "wins": 10,
+    "losses": 1
+  },
+  "signal": {
+    "ts": 1793345528.46,
+    "slug": "btc-updown-5m-1793345400",
+    "epoch": 1793345400,
+    "side": "UP",
+    "elapsed": 128.3,
+    "real_ask": 0.98,
+    "real_top3": 11353.8,
+    "ws_ask": 0.98,
+    "ptb_real": 78326.89,
+    "ds_delta": 87.07,
+    "ds_age_s": 2.34,
+    "v60": -3.36,
+    "pm_net_side_usd": 4538.6,
+    "cvd_bn_60s_side": 5.31,
+    "cvd_cb_30s_side": -0.876,
+    "vel5": -7.53,
+    "ret_rel": 0.189,
+    "sigma": 2.6114,
+    "sigma60": 3.544,
+    "z": 2.88,
+    "pm60_side_usd": 3702.0,
+    "pct": 0.6,
+    "rule": "cb30<-0.5 z≥1.5 (si disponible)",
+    "kind": "CB_SIGNAL",
+    "ok": true,
+    "try": 1,
+    "amount": 7.84,
+    "fill_price": 0.98,
+    "shares": 8.0,
+    "paid_usdc": 7.84,
+    "slip": 0.0
+  },
+  "epoch": 1793345400,
+  "slug": "btc-updown-5m-1793345400"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793345865.7503846,
+    "kind": "FLOW_RESULT",
+    "slug": "btc-updown-5m-1793345400",
+    "side": "UP",
+    "winner": "DN",
+    "won": false,
+    "entry": 0.9700000000000001,
+    "usdc": 20.37,
+    "pnl_est": -20.37,
+    "wins": 9,
+    "losses": 1
+  },
+  "signal": {
+    "ts": 1793345528.46,
+    "slug": "btc-updown-5m-1793345400",
+    "epoch": 1793345400,
+    "side": "UP",
+    "elapsed": 128.3,
+    "real_ask": 0.98,
+    "real_top3": 11353.8,
+    "ws_ask": 0.98,
+    "ptb_real": 78326.89,
+    "ds_delta": 87.07,
+    "ds_age_s": 2.34,
+    "v60": -3.36,
+    "pm_net_side_usd": 4538.6,
+    "cvd_bn_60s_side": 5.31,
+    "cvd_cb_30s_side": -0.876,
+    "vel5": -7.53,
+    "ret_rel": 0.189,
+    "sigma": 2.6114,
+    "sigma60": 3.544,
+    "z": 2.88,
+    "pm60_side_usd": 3702.0,
+    "pct": 0.6,
+    "rule": "cb30<-0.5 z≥1.5 (si disponible)",
+    "kind": "CB_SIGNAL",
+    "ok": true,
+    "try": 1,
+    "amount": 7.84,
+    "fill_price": 0.98,
+    "shares": 8.0,
+    "paid_usdc": 7.84,
+    "slip": 0.0
+  },
+  "epoch": 1793345400,
+  "slug": "btc-updown-5m-1793345400"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793345867.9336543,
+    "kind": "TW_RESULT",
+    "slug": "btc-updown-5m-1793345400",
+    "side": "UP",
+    "winner": "DN",
+    "won": false,
+    "entry": 0.9699999996264919,
+    "usdc": 51.939975,
+    "pnl_est": -51.94,
+    "wins": 29,
+    "losses": 1
+  },
+  "signal": {
+    "ts": 1793345528.46,
+    "slug": "btc-updown-5m-1793345400",
+    "epoch": 1793345400,
+    "side": "UP",
+    "elapsed": 128.3,
+    "real_ask": 0.98,
+    "real_top3": 11353.8,
+    "ws_ask": 0.98,
+    "ptb_real": 78326.89,
+    "ds_delta": 87.07,
+    "ds_age_s": 2.34,
+    "v60": -3.36,
+    "pm_net_side_usd": 4538.6,
+    "cvd_bn_60s_side": 5.31,
+    "cvd_cb_30s_side": -0.876,
+    "vel5": -7.53,
+    "ret_rel": 0.189,
+    "sigma": 2.6114,
+    "sigma60": 3.544,
+    "z": 2.88,
+    "pm60_side_usd": 3702.0,
+    "pct": 0.6,
+    "rule": "cb30<-0.5 z≥1.5 (si disponible)",
+    "kind": "CB_SIGNAL",
+    "ok": true,
+    "try": 1,
+    "amount": 7.84,
+    "fill_price": 0.98,
+    "shares": 8.0,
+    "paid_usdc": 7.84,
+    "slip": 0.0
+  },
+  "epoch": 1793345400,
+  "slug": "btc-updown-5m-1793345400"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793495774.8551326,
+    "kind": "LATE_RESULT",
+    "slug": "btc-updown-5m-1793495400",
+    "side": "UP",
+    "winner": "DN",
+    "won": false,
+    "entry": 0.88,
+    "usdc": 1.779998,
+    "pnl_est": -1.78,
+    "wins": 27,
+    "losses": 1
+  },
+  "signal": {
+    "ts": 1793495581.85,
+    "slug": "btc-updown-5m-1793495400",
+    "epoch": 1793495400,
+    "side": "UP",
+    "elapsed": 173.5,
+    "real_ask": 0.89,
+    "real_top3": 1346.4,
+    "ws_ask": 0.89,
+    "ptb_real": 77559.88,
+    "ds_delta": 27.62,
+    "ds_age_s": 2.46,
+    "v60": 33.31,
+    "pm_net_side_usd": -532.7,
+    "cvd_bn_60s_side": 3.254,
+    "cvd_cb_30s_side": 1.799,
+    "vel5": 33.97,
+    "ret_rel": 0.0,
+    "sigma": 1.5722,
+    "sigma60": 2.917,
+    "z": 1.862,
+    "pm60_side_usd": 12.9,
+    "pct": 0.1,
+    "rule": "t≥160 pm60<1112 vel5≥0.5",
+    "kind": "QUIET_PAPER",
+    "motivo": "solo papel"
+  },
+  "epoch": 1793495400,
+  "slug": "btc-updown-5m-1793495400"
+}
+
+------------------------------------------------------------
+
+{
+  "result": {
+    "ts": 1793495774.8580484,
+    "kind": "QUIET_PAPER_RESULT",
+    "slug": "btc-updown-5m-1793495400",
+    "side": "UP",
+    "winner": "DN",
+    "won": false,
+    "entry_real_ask": 0.89,
+    "paper_wins": 18,
+    "paper_losses": 1
+  },
+  "signal": {
+    "ts": 1793495581.85,
+    "slug": "btc-updown-5m-1793495400",
+    "epoch": 1793495400,
+    "side": "UP",
+    "elapsed": 173.5,
+    "real_ask": 0.89,
+    "real_top3": 1346.4,
+    "ws_ask": 0.89,
+    "ptb_real": 77559.88,
+    "ds_delta": 27.62,
+    "ds_age_s": 2.46,
+    "v60": 33.31,
+    "pm_net_side_usd": -532.7,
+    "cvd_bn_60s_side": 3.254,
+    "cvd_cb_30s_side": 1.799,
+    "vel5": 33.97,
+    "ret_rel": 0.0,
+    "sigma": 1.5722,
+    "sigma60": 2.917,
+    "z": 1.862,
+    "pm60_side_usd": 12.9,
+    "pct": 0.1,
+    "rule": "t≥160 pm60<1112 vel5≥0.5",
+    "kind": "QUIET_PAPER",
+    "motivo": "solo papel"
+  },
+  "epoch": 1793495400,
+  "slug": "btc-updown-5m-1793495400"
+}
+
+------------------------------------------------------------
