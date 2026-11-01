@@ -1,0 +1,42 @@
+﻿
+========== CB ==========
+HORA: 2026-11-01T05:04:58
+UNIX: 1793534698
+ðŸ• Nuevo ciclo | 1793534700 â†’ cierra 12:10 UTC
+â›“ï¸ PTB: $77,883.52 | BTC: $77,988.00
+ðŸ“ BTC vs PTB: +104.48
+ðŸ’° Balance: $6.90
+ðŸ”— https://polymarket.com/event/btc-updown-5m-1793534700
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+ðŸ’¬ Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,883.52)
+--------------------------------
+HORA: 2026-11-01T05:05:44
+UNIX: 1793534744
+ðŸ¤– PTB watcher aplicado: $77,878.06 (diff=-5.46 vs calculado $77,883.52)
+--------------------------------
+HORA: 2026-11-01T05:08:10
+UNIX: 1793534890
+ðŸ§­ CB BUY UP @0.970 (libro 0.970) | $12.61 | t+190s | btc-updown-5m-1793534700
+--------------------------------
+
+========== FLOW ==========
+HORA: 2026-11-01T07:14:58
+UNIX: 1793542498
+ðŸ• Nuevo ciclo | 1793542500 â†’ cierra 14:20 UTC
+â›“ï¸ PTB: $77,944.59 | BTC: $78,061.96
+ðŸ“ BTC vs PTB: +117.37
+ðŸ’° Balance: $7.78
+ðŸ”— https://polymarket.com/event/btc-updown-5m-1793542500
+â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”â”
+ðŸ’¬ Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,944.59)
+--------------------------------
+HORA: 2026-11-01T07:15:44
+UNIX: 1793542544
+ðŸ¤– PTB watcher aplicado: $77,921.11 (diff=-23.48 vs calculado $77,944.59)
+--------------------------------
+HORA: 2026-11-01T07:17:05
+UNIX: 1793542625
+ðŸ§­ FLOW BUY DN @0.920 (libro 0.930) | $4.65 | t+125s | btc-updown-5m-1793542500
+--------------------------------
