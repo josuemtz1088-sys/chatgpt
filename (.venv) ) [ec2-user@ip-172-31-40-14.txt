@@ -1,0 +1,427 @@
+(.venv) ) [ec2-user@ip-172-31-40-147 gabagool_bot]$ cd ~/gabagool_bot && python3 - <<'PY'
+import json, os
+
+targets = ("1793633100", "1793637000", "1793640900")
+files = [
+    "signals_log.jsonl",
+    "trades_log.jsonl",
+    "bot_output.log",
+    "cycle_log_mr.txt"
+]
+
+for fn in files:
+    print(f"\n===== {fn} =====")
+    if not os.path.exists(fn):
+        print("NO EXISTE")
+        continue
+
+    count = 0
+    with open(fn, "r", errors="replace") as f:
+        for line in f:
+            if not any(e in line for e in targets):
+                continue
+            print(line.rstrip())
+            count += 1
+    print("Coincidencias:", count)
+PY
+
+===== signals_log.jsonl =====
+{"ts": 1793633318.187613, "slug": "btc-updown-5m-1793633100", "asset": "btc", "signal": "TREND_UP", "side": "UP", "decision": "FAST_TRACK_REJECT: BN_chg=$10 < FT_BN_CHG_MIN=$40.0", "reject_category": "BN_CHANGE", "entry_price": 0.97, "elapsed_s": 218.0, "left_s": 82.0, "window_s": 300, "btc": 77980.01, "ptb": 77775.14, "cl_price": 77847.54, "cl_delta": 72.4, "cl_dir": "UP", "cl_confirms": 7, "div_usd": 10.0, "peak_usd": 10.0, "imb": 9.953, "depth_mom": -1.386, "bid_vol": 16.02, "ask_vol": 0.67, "wall_dist": null, "wall_size": null, "mm_score": 0, "mm_state": "NEUTRAL", "rsi": 49.9, "macd_hist": 7.67, "ema_cross": 0, "ema9_vs_21": null, "bb_pct_b": 0.519, "bb_width": 0.00317, "vol_surge": false, "vol_ratio": 1.48, "candle_mom": -0.04, "pattern": "DOUBLE_BOTTOM L1=77834.2 L2=77842.0 diff=0.01%", "pat_score": 3, "rev_score": 3, "last_candle": "REJECTION_UP", "forming": "BULL", "atr": 76.91, "dist_strike": 10.01, "dist_strike_pct": 0.0128, "btc_open": 77970.0, "velocity_30s": -0.2627, "velocity_60s": -0.099, "accel": -0.3327, "momentum_fading": true, "range_pos": 0.511, "tick_dir": 2, "strike_crosses": 0, "pm_book_imb": 1.0, "pm_opp_pressure": 9090.08, "outcome_ts": 1793633398.6831934, "exit_reason": "NOT_BOUGHT", "exit_price": null, "pnl": 0.0, "won": false, "hold_sec": null, "market_winning_side": "DN", "market_frac": -0.000359}
+{"ts": 1793633318.189393, "slug": "btc-updown-5m-1793633100", "asset": "btc", "signal": "TREND_UP", "side": "UP", "decision": "R1_CAPTURED", "reject_category": "R1_CAPTURED", "entry_price": 0.97, "elapsed_s": 218.0, "left_s": 82.0, "window_s": 300, "btc": 77980.01, "ptb": 77775.14, "cl_price": 77847.54, "cl_delta": 72.4, "cl_dir": "UP", "cl_confirms": 7, "div_usd": 10.0, "peak_usd": 10.0, "imb": 9.953, "depth_mom": -1.386, "bid_vol": 16.02, "ask_vol": 0.67, "wall_dist": null, "wall_size": null, "mm_score": 0, "mm_state": "NEUTRAL", "rsi": 49.9, "macd_hist": 7.67, "ema_cross": 0, "ema9_vs_21": null, "bb_pct_b": 0.519, "bb_width": 0.00317, "vol_surge": false, "vol_ratio": 1.48, "candle_mom": -0.04, "pattern": "DOUBLE_BOTTOM L1=77834.2 L2=77842.0 diff=0.01%", "pat_score": 3, "rev_score": 3, "last_candle": "REJECTION_UP", "forming": "BULL", "atr": 76.91, "dist_strike": 10.01, "dist_strike_pct": 0.0128, "btc_open": 77970.0, "velocity_30s": -0.2627, "velocity_60s": -0.099, "accel": -0.3327, "momentum_fading": true, "range_pos": 0.511, "tick_dir": 2, "strike_crosses": 0, "pm_book_imb": 1.0, "pm_opp_pressure": 9090.08, "outcome_ts": 1793633398.6832862, "exit_reason": "NOT_BOUGHT", "exit_price": null, "pnl": 0.0, "won": false, "hold_sec": null, "market_winning_side": "DN", "market_frac": -0.000359}
+{"ts": 1793641097.7997339, "slug": "btc-updown-5m-1793640900", "asset": "btc", "signal": "TREND_UP", "side": "UP", "decision": "FAST_TRACK_REJECT: price $0.870 < FT_PRICE_MIN $0.9", "reject_category": "PRICE_MIN", "entry_price": 0.87, "elapsed_s": 198.0, "left_s": 102.0, "window_s": 300, "btc": 77102.24, "ptb": 76955.89, "cl_price": 77032.42, "cl_delta": 76.53, "cl_dir": "UP", "cl_confirms": 3, "div_usd": 46.27, "peak_usd": 46.27, "imb": 4.429, "depth_mom": 4.306, "bid_vol": 7.75, "ask_vol": 0.36, "wall_dist": null, "wall_size": null, "mm_score": 0, "mm_state": "NEUTRAL", "rsi": 33.1, "macd_hist": 19.95, "ema_cross": 0, "ema9_vs_21": null, "bb_pct_b": 0.292, "bb_width": 0.00687, "vol_surge": false, "vol_ratio": 0.72, "candle_mom": -0.154, "pattern": null, "pat_score": 0, "rev_score": 1, "last_candle": "BEAR", "forming": "STRONG_BEAR", "atr": 66.16, "dist_strike": 46.24, "dist_strike_pct": 0.06, "btc_open": 77056.0, "velocity_30s": -1.6578, "velocity_60s": -1.3507, "accel": -0.609, "momentum_fading": true, "range_pos": 0.503, "tick_dir": -4, "strike_crosses": 0, "pm_book_imb": 1.0, "pm_opp_pressure": 3266.35, "outcome_ts": 1793641198.3649726, "exit_reason": "NOT_BOUGHT", "exit_price": null, "pnl": 0.0, "won": false, "hold_sec": null, "market_winning_side": "DN", "market_frac": -0.00041}
+{"ts": 1793641097.8012028, "slug": "btc-updown-5m-1793640900", "asset": "btc", "signal": "TREND_UP", "side": "UP", "decision": "R1_CAPTURED", "reject_category": "R1_CAPTURED", "entry_price": 0.87, "elapsed_s": 198.0, "left_s": 102.0, "window_s": 300, "btc": 77102.24, "ptb": 76955.89, "cl_price": 77032.42, "cl_delta": 76.53, "cl_dir": "UP", "cl_confirms": 3, "div_usd": 46.27, "peak_usd": 46.27, "imb": 4.429, "depth_mom": 4.306, "bid_vol": 7.75, "ask_vol": 0.36, "wall_dist": null, "wall_size": null, "mm_score": 0, "mm_state": "NEUTRAL", "rsi": 33.1, "macd_hist": 19.95, "ema_cross": 0, "ema9_vs_21": null, "bb_pct_b": 0.292, "bb_width": 0.00687, "vol_surge": false, "vol_ratio": 0.72, "candle_mom": -0.154, "pattern": null, "pat_score": 0, "rev_score": 1, "last_candle": "BEAR", "forming": "STRONG_BEAR", "atr": 66.16, "dist_strike": 46.24, "dist_strike_pct": 0.06, "btc_open": 77056.0, "velocity_30s": -1.6578, "velocity_60s": -1.3507, "accel": -0.609, "momentum_fading": true, "range_pos": 0.503, "tick_dir": -4, "strike_crosses": 0, "pm_book_imb": 1.0, "pm_opp_pressure": 3266.35, "outcome_ts": 1793641198.365069, "exit_reason": "NOT_BOUGHT", "exit_price": null, "pnl": 0.0, "won": false, "hold_sec": null, "market_winning_side": "DN", "market_frac": -0.00041}
+Coincidencias: 4
+
+===== trades_log.jsonl =====
+Coincidencias: 0
+
+===== bot_output.log =====
+⚡ Pre-fetch: btc-updown-5m-1793633100 listo
+   slug=btc-updown-5m-1793633100 | ends=2026-11-02 15:30:00+00:00 | tokens=2 | tick=0.01
+slug=btc-updown-5m-1793633100 | elapsed=45s left=255s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=47s left=253s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=49s left=251s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=51s left=249s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=53s left=247s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=55s left=245s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=57s left=243s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=59s left=241s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=61s left=239s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=63s left=237s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=65s left=235s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=67s left=233s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=69s left=231s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=71s left=229s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=73s left=227s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=75s left=225s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=77s left=223s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=79s left=221s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=81s left=219s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=83s left=217s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=85s left=215s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=87s left=213s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=89s left=211s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=91s left=209s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=93s left=207s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=95s left=205s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=97s left=203s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=99s left=201s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=102s left=198s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=104s left=196s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=106s left=194s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=108s left=192s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=110s left=190s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=112s left=188s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=114s left=186s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=117s left=183s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=119s left=181s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=121s left=179s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=123s left=177s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=125s left=175s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=127s left=173s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=129s left=171s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=132s left=168s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=134s left=166s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=136s left=164s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=138s left=162s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=140s left=160s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=142s left=158s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=144s left=156s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=146s left=154s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=149s left=151s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=151s left=149s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=153s left=147s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=155s left=145s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=157s left=143s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=159s left=141s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=162s left=138s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=164s left=136s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=166s left=134s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=168s left=132s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=170s left=130s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=172s left=128s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=175s left=125s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=177s left=123s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=179s left=121s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=181s left=119s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=183s left=117s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=186s left=114s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=188s left=112s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=190s left=110s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=192s left=108s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=194s left=106s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=196s left=104s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=198s left=102s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=200s left=100s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=202s left=98s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=204s left=96s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=206s left=94s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=208s left=92s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=210s left=90s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=212s left=88s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=214s left=86s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=216s left=84s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=218s left=82s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=220s left=80s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=222s left=78s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=224s left=76s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=226s left=74s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=228s left=72s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=230s left=70s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=232s left=68s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=234s left=66s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=236s left=64s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=238s left=62s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=240s left=60s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=242s left=58s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=244s left=56s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=246s left=54s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=248s left=52s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=250s left=50s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=252s left=48s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=254s left=46s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=256s left=44s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=258s left=42s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=260s left=40s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=262s left=38s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=264s left=36s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=266s left=34s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=268s left=32s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=270s left=30s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=272s left=28s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=274s left=26s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=276s left=24s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=278s left=22s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=280s left=20s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=282s left=18s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=284s left=16s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=286s left=14s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=288s left=12s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=290s left=10s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=292s left=8s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=294s left=6s | orders=0/1
+slug=btc-updown-5m-1793633100 | elapsed=296s left=4s | orders=0/1
+  Slug:   btc-updown-5m-1793633100
+📊 Window: btc-updown-5m-1793633100 BTC DN -0.00036 | history=10
+⚡ Pre-fetch: btc-updown-5m-1793637000 listo
+   slug=btc-updown-5m-1793637000 | ends=2026-11-02 16:35:00+00:00 | tokens=2 | tick=0.01
+slug=btc-updown-5m-1793637000 | elapsed=46s left=254s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=48s left=252s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=50s left=250s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=52s left=248s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=54s left=246s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=56s left=244s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=58s left=242s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=60s left=240s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=62s left=238s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=64s left=236s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=66s left=234s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=68s left=232s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=70s left=230s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=72s left=228s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=74s left=226s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=76s left=224s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=78s left=222s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=80s left=220s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=82s left=218s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=84s left=216s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=86s left=214s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=88s left=212s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=90s left=210s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=92s left=208s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=94s left=206s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=96s left=204s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=98s left=202s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=100s left=200s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=102s left=198s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=104s left=196s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=106s left=194s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=108s left=192s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=110s left=190s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=113s left=187s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=115s left=185s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=117s left=183s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=119s left=181s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=121s left=179s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=123s left=177s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=125s left=175s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=127s left=173s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=130s left=170s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=132s left=168s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=134s left=166s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=136s left=164s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=138s left=162s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=140s left=160s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=143s left=157s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=145s left=155s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=147s left=153s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=149s left=151s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=151s left=149s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=153s left=147s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=156s left=144s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=158s left=142s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=160s left=140s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=162s left=138s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=164s left=136s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=166s left=134s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=168s left=132s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=170s left=130s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=172s left=128s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=175s left=125s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=177s left=123s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=179s left=121s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=181s left=119s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=183s left=117s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=185s left=115s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=187s left=113s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=189s left=111s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=191s left=109s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=193s left=107s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=195s left=105s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=197s left=103s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=199s left=101s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=201s left=99s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=203s left=97s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=205s left=95s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=207s left=93s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=209s left=91s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=211s left=89s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=213s left=87s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=215s left=85s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=217s left=83s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=219s left=81s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=221s left=79s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=223s left=77s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=225s left=75s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=227s left=73s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=229s left=71s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=231s left=69s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=233s left=67s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=235s left=65s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=237s left=63s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=239s left=61s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=241s left=59s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=243s left=57s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=245s left=55s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=247s left=53s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=249s left=51s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=251s left=49s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=253s left=47s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=255s left=45s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=257s left=43s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=259s left=41s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=261s left=39s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=263s left=37s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=265s left=35s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=267s left=33s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=269s left=31s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=271s left=29s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=273s left=27s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=275s left=25s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=277s left=23s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=279s left=21s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=281s left=19s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=283s left=17s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=285s left=15s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=288s left=12s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=290s left=10s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=292s left=8s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=294s left=6s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=296s left=4s | orders=0/1
+slug=btc-updown-5m-1793637000 | elapsed=298s left=2s | orders=0/1
+  Slug:   btc-updown-5m-1793637000
+📊 Window: btc-updown-5m-1793637000 BTC UP +0.00298 | history=10
+⚡ Pre-fetch: btc-updown-5m-1793640900 listo
+   slug=btc-updown-5m-1793640900 | ends=2026-11-02 17:40:00+00:00 | tokens=2 | tick=0.01
+slug=btc-updown-5m-1793640900 | elapsed=45s left=255s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=47s left=253s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=49s left=251s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=51s left=249s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=53s left=247s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=55s left=245s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=57s left=243s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=59s left=241s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=61s left=239s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=63s left=237s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=65s left=235s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=67s left=233s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=69s left=231s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=71s left=229s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=73s left=227s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=76s left=224s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=78s left=222s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=80s left=220s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=82s left=218s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=84s left=216s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=86s left=214s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=88s left=212s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=90s left=210s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=92s left=208s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=94s left=206s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=96s left=204s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=98s left=202s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=100s left=200s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=102s left=198s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=104s left=196s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=106s left=194s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=108s left=192s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=110s left=190s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=112s left=188s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=115s left=185s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=117s left=183s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=119s left=181s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=121s left=179s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=123s left=177s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=125s left=175s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=128s left=172s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=130s left=170s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=132s left=168s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=134s left=166s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=136s left=164s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=138s left=162s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=140s left=160s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=142s left=158s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=144s left=156s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=146s left=154s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=149s left=151s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=151s left=149s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=153s left=147s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=155s left=145s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=157s left=143s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=159s left=141s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=161s left=139s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=164s left=136s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=166s left=134s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=168s left=132s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=170s left=130s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=172s left=128s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=174s left=126s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=176s left=124s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=179s left=121s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=181s left=119s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=183s left=117s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=185s left=115s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=187s left=113s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=189s left=111s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=192s left=108s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=194s left=106s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=196s left=104s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=198s left=102s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=200s left=100s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=202s left=98s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=204s left=96s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=206s left=94s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=208s left=92s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=210s left=90s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=212s left=88s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=214s left=86s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=216s left=84s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=218s left=82s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=220s left=80s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=222s left=78s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=224s left=76s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=226s left=74s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=228s left=72s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=230s left=70s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=232s left=68s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=234s left=66s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=236s left=64s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=238s left=62s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=240s left=60s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=242s left=58s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=244s left=56s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=246s left=54s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=248s left=52s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=250s left=50s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=252s left=48s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=254s left=46s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=256s left=44s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=258s left=42s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=260s left=40s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=262s left=38s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=264s left=36s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=266s left=34s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=268s left=32s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=270s left=30s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=272s left=28s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=274s left=26s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=276s left=24s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=278s left=22s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=280s left=20s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=282s left=18s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=284s left=16s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=286s left=14s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=289s left=11s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=291s left=9s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=293s left=7s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=295s left=5s | orders=0/1
+slug=btc-updown-5m-1793640900 | elapsed=297s left=3s | orders=0/1
+  Slug:   btc-updown-5m-1793640900
+📊 Window: btc-updown-5m-1793640900 BTC DN -0.00041 | history=10
+Coincidencias: 382
+
+===== cycle_log_mr.txt =====
+  Slug:   btc-updown-5m-1793633100
+  Slug:   btc-updown-5m-1793637000
+  Slug:   btc-updown-5m-1793640900
+Coincidencias: 3
