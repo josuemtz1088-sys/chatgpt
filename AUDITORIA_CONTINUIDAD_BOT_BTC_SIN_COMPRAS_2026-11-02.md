@@ -216,3 +216,104 @@ Realizar de una en una, con comandos de solo lectura y compartiendo la salida:
 **Confirmado:** el archivo EC2 y el archivo GitHub auditado son idénticos; `USE_TREND_FOLLOW=1` aparece en el env file; el diagnóstico filtrado reportó cero trades registrados; el código contiene rutas silenciosas que pueden impedir una compra sin generar un evento explicativo.
 
 **Pendiente:** configuración efectiva completa del proceso, identidad/ruta del proceso en ejecución, conteo de oportunidades que alcanzaron cada etapa y determinación de la causa concreta de la ausencia de compras.
+
+
+## 9. Ampliación: oportunidades CB y localización del capturador de Telegram
+
+### 9.1 Recuento CB agrupado por evento y mercado
+
+En una consulta posterior, el usuario compartió un agrupamiento más reciente de `cb_log.jsonl`, manteniendo el filtro temporal `ts >= 1793597400` (2026-11-02T05:30:00Z). El desglose actualizado fue:
+
+| Evento | Registros | Mercados con ese evento |
+|---|---:|---:|
+| `CB_CVD_ADVERSE_BLOCK` | 144 | 15 |
+| `CB_POST_LOSS_BLOCK` | 34 | 9 |
+| `CB_SKIP_PRICE` | 14 | 14 |
+| `CB_SKIP_RET` | 12 | 12 |
+| `CB_SKIP_RET_MEM` | 3 | 3 |
+| `CB_SKIP_VOL60` | 4 | 4 |
+| **Total** | **211** | — |
+
+La suma correcta de los registros de esta salida es **211**, no 221. Tampoco debe sumarse la columna de mercados para obtener mercados únicos: los mismos slugs pueden aparecer en varias categorías. Este desglose sustituye al recuento anterior de 180 eventos CB para esta agrupación posterior; en particular, CVD adverse pasó de 124 a 144 en la salida más reciente. La diferencia entre ambos reportes debe conservarse como diferencia de consultas/salidas, no reconciliarse suponiendo que uno es correcto sin revisar el archivo completo.
+
+Mercados más repetidos en `CB_CVD_ADVERSE_BLOCK` según la salida compartida:
+- `btc-updown-5m-1793640900`: 20
+- `btc-updown-5m-1793629800`: 18
+- `btc-updown-5m-1793605800`: 14
+- `btc-updown-5m-1793621100`: 14
+- `btc-updown-5m-1793606100`: 13
+- `btc-updown-5m-1793634000`: 12
+- `btc-updown-5m-1793633100`: 10
+- `btc-updown-5m-1793632200`: 8
+- `btc-updown-5m-1793606700`: 8
+- `btc-updown-5m-1793599500`: 6
+
+En `CB_POST_LOSS_BLOCK`, los mercados más repetidos fueron `1793612100` (11 eventos) y `1793608800` (9). La salida del usuario también enumeró 14 mercados para `CB_SKIP_PRICE`, 12 para `CB_SKIP_RET`, 3 para `CB_SKIP_RET_MEM` y 4 para `CB_SKIP_VOL60`; algunos listados fueron abreviados en la conversación.
+
+**Interpretación:** son registros de filtros/bloqueos, no 211 órdenes ni 211 operaciones independientes. Los eventos repetidos dentro de un mismo slug deben agruparse para analizar cada mercado, conservando a la vez el detalle temporal de cada evento. No se debe inferir el lado UP/DOWN a partir del nombre del slug ni del resultado final.
+
+### 9.2 Cruce solicitado: lado de compra, PTB y resultado
+
+Quedó planteado cruzar cada oportunidad CB con el archivo de resultados/mensajes de Telegram para obtener:
+- mercado/slug y timestamps de cada bloqueo;
+- lado que la estrategia estaba buscando comprar (UP o DOWN), leído del propio registro o del contexto de señal, no inferido;
+- PTB exacto aplicado por el watcher de Polymarket;
+- precio/resolución final del mercado y si ese lado habría ganado;
+- relación temporal con el reinicio del proceso.
+
+El cruce todavía **no está realizado**: no se ha leído el contenido completo de `cb_log.jsonl` ni de `result.json`. En notas previas sobre el formato del capturador se indicó que `won` no debe usarse como resultado definitivo cuando no utiliza el PTB exacto del watcher. El criterio debe basarse en el PTB exacto confirmado por el watcher y el valor de resolución/precio final correspondiente, verificando también empates y fuente temporal.
+
+El usuario no puede adjuntar esos archivos, pero confirmó que están en EC2. Se acordó hacer el análisis directamente allí mediante comandos de solo lectura, sin copiar, mover ni alterar los archivos.
+
+### 9.3 Proceso capturador identificado
+
+El usuario ejecutó en EC2:
+
+```bash
+tmux list-panes -t capturador -F 'pane_pid=#{pane_pid} pane_current_path=#{pane_current_path} pane_current_command=#{pane_current_command}'
+```
+
+Salida:
+- `pane_pid=1051051`
+- `pane_current_path=/home/ec2-user/monitor_pasivo`
+- `pane_current_command=python`
+
+Después se comprobó que el PID del pane era el shell, no el Python:
+```text
+PID 1051051, PPID 3238, comando -bash
+```
+
+Con `pstree -ap 1051051` se identificó el hijo:
+```text
+bash,1051051
+  └─python,1051125 capturar_telegram.py
+```
+
+Por tanto, el capturador real es `capturar_telegram.py`, PID **1051125**, trabajando desde `/home/ec2-user/monitor_pasivo`, dentro de la sesión tmux `capturador`. No se detuvo ni reinició.
+
+### 9.4 Archivo de salida confirmado
+
+El usuario inspeccionó el código con:
+```bash
+cd /home/ec2-user/monitor_pasivo && grep -nE 'open\\(|jsonl|result\\.json|write|append|logging|FileHandler|mkdir|makedirs|Path\\(' capturar_telegram.py
+```
+
+Salida compartida:
+```text
+13:OUTPUT_FILE = BASE_DIR / "telegram_eventos.jsonl"
+55:        with OUTPUT_FILE.open("a", encoding="utf-8") as archivo:
+56:            archivo.write(
+```
+
+Esto confirma que el capturador define el archivo de salida como **`/home/ec2-user/monitor_pasivo/telegram_eventos.jsonl`** (BASE_DIR corresponde al directorio del script) y lo abre en modo append (`"a"`), escribiendo eventos en JSONL. No se ha confirmado todavía que exista un archivo llamado `result.json` en ese directorio ni que ese sea el nombre del archivo que contiene los PTB/resoluciones. Tampoco se ha inspeccionado el formato completo de cada registro.
+
+### 9.5 Siguiente paso operativo
+
+Continuar desde EC2 con una sola instrucción de lectura por turno:
+1. Inspeccionar de forma segura el resto de `capturar_telegram.py` para entender el esquema de `telegram_eventos.jsonl` y cómo se serializan los mensajes.
+2. Localizar, primero dentro de `/home/ec2-user/monitor_pasivo` y `/home/ec2-user/gabagool_bot`, los archivos de resultados/Telegram relevantes, sin imprimir secretos ni el contenido completo de mensajes potencialmente sensibles.
+3. Extraer solo campos necesarios y cruzarlos con los eventos CB que cumplan `ts >= 1793597400`.
+4. Para comprobar si cada evento fue posterior al reinicio, comparar su timestamp `ts` con la hora exacta de inicio del proceso bot. El dato reportado hasta ahora es `Mon Nov 2 05:34:54 2026`, pero antes de usarlo como UTC se debe confirmar la zona horaria del servidor. El corte general de auditoría sigue siendo 05:30:00Z; no confundirlo con la hora de reinicio.
+5. No confundir el epoch del slug con el timestamp del evento ni con el reinicio.
+
+**Estado:** ya se localizó el mecanismo de captura y su archivo JSONL. El cruce de lado, PTB exacto, resultado final y posterioridad al reinicio continúa pendiente de extraer los registros reales.
