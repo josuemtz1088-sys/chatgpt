@@ -9158,9 +9158,21 @@ def _rule_late(ctx):
 
 def _rule_quiet(ctx):
     el, v5, pm60 = ctx.get("el"), ctx.get("vel5"), ctx.get("pm60")
-    info = {"rule": f"t≥{QUIET_FROM_SEC:g} pm60<{QUIET_PM60_MAX:g} vel5≥{QUIET_VEL5_MIN:g}"}
+    side = ctx.get("side")
+    cvd_cb30 = ctx.get("cvd_cb30")
+    ret_rel = ctx.get("ret_rel")
+    # Filtro adicional exclusivo para UP: bloquea solo cuando coinciden
+    # CVD Coinbase alineado > 0.543 y retroceso relativo < 0.005.
+    # Si alguna métrica no está disponible, no bloquea por este filtro.
+    up_cvd_ret_block = (
+        side == "UP"
+        and cvd_cb30 is not None and cvd_cb30 > 0.543
+        and ret_rel is not None and ret_rel < 0.005
+    )
+    info = {"rule": f"t≥{QUIET_FROM_SEC:g} pm60<{QUIET_PM60_MAX:g} vel5≥{QUIET_VEL5_MIN:g}; UP skip if cb30>0.543 and ret_rel<0.005"}
     ok = (el is not None and v5 is not None and pm60 is not None and el >= QUIET_FROM_SEC
-          and pm60 < QUIET_PM60_MAX and v5 >= QUIET_VEL5_MIN)
+          and pm60 < QUIET_PM60_MAX and v5 >= QUIET_VEL5_MIN
+          and not up_cvd_ret_block)
     return ok, info
 
 
