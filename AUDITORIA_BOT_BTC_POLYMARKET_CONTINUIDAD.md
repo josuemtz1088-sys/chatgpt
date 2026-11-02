@@ -404,4 +404,28 @@ Si la nueva conversación no tiene el contexto de GitHub, volver a consultar los
 
 ---
 
+
+## 15. Ajuste QUIET-UP — 2026-11-01
+
+**Alcance:** modificación exclusiva de la regla `_rule_quiet(ctx)`. No modifica FLOW, CB, LATE, TW, filtros globales ni tamaños de posición.
+
+**Evidencia retrospectiva usada:** 51 operaciones QUIET PAPER (49 ganadas, 2 perdidas). En el subconjunto UP hubo 26 señales: 24 ganadas y 2 perdidas. La combinación `cvd_cb30 > 0.543 AND ret_rel < 0.005` bloqueaba las dos pérdidas UP sin bloquear victorias UP en esa muestra. Aplicada globalmente habría bloqueado además tres victorias DN; por eso se limita a UP.
+
+**Condición añadida:**
+- Solo cuando `side == "UP"`.
+- Bloquea si `cvd_cb30` está disponible y es estrictamente mayor que `0.543`.
+- Y `ret_rel` está disponible y es estrictamente menor que `0.005`.
+- Es una condición AND: ambas deben cumplirse.
+- DN no se filtra por esta condición.
+- Si falta cualquiera de las métricas, este filtro adicional no bloquea.
+
+**Modo de operación:** QUIET permanece PAPER. `QUIET_LIVE=0` por defecto; no se habilita compra real. No cambiar ningún parámetro `*_PCT`.
+
+**Estado de despliegue:** el cambio fue preparado en el archivo de GitHub `mr_bot_v4 1.0.2.py`. La aplicación al archivo local `mr_bot_v4.py` en EC2 requiere parche puntual, validación y reinicio autorizado. La actualización de GitHub por sí sola no cambia el proceso que ya está ejecutándose. Registrar por separado la fecha/hora de aplicación local y reinicio cuando se confirmen; no asumir que ya ocurrieron.
+
+**Seguimiento:** conservar las 51 operaciones originales como línea base. Medir por separado señales QUIET-UP bloqueadas por esta condición, señales QUIET-UP que pasan, resultados PAPER y resultados DN. No mezclar esta evaluación con el análisis de LATE.
+
+
+---
+
 **Fin del documento de continuidad.**
