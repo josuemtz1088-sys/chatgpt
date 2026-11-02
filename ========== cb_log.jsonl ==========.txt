@@ -1,0 +1,761 @@
+========== cb_log.jsonl ==========
+[
+    {
+        "ts":  1793634159.82,
+        "kind":  "CB_CVD_ADVERSE_BLOCK",
+        "slug":  "btc-updown-5m-1793634000",
+        "epoch":  1793634000,
+        "side":  "UP",
+        "elapsed":  159.7,
+        "cvd_cb_30s_side":  -1.321,
+        "cvd_bn_60s_side":  3.565,
+        "reasons":  [
+                        "cb30\u003c-0.8"
+                    ]
+    },
+    {
+        "ts":  1793634161.95,
+        "kind":  "CB_CVD_ADVERSE_BLOCK",
+        "slug":  "btc-updown-5m-1793634000",
+        "epoch":  1793634000,
+        "side":  "UP",
+        "elapsed":  161.8,
+        "cvd_cb_30s_side":  -2.042,
+        "cvd_bn_60s_side":  3.645,
+        "reasons":  [
+                        "cb30\u003c-0.8"
+                    ]
+    },
+    {
+        "ts":  1793634164.06,
+        "kind":  "CB_CVD_ADVERSE_BLOCK",
+        "slug":  "btc-updown-5m-1793634000",
+        "epoch":  1793634000,
+        "side":  "UP",
+        "elapsed":  164.0,
+        "cvd_cb_30s_side":  -1.559,
+        "cvd_bn_60s_side":  3.455,
+        "reasons":  [
+                        "cb30\u003c-0.8"
+                    ]
+    },
+    {
+        "ts":  1793634177.06,
+        "kind":  "CB_SKIP_VOL60",
+        "slug":  "btc-updown-5m-1793634000",
+        "epoch":  1793634000,
+        "side":  "UP",
+        "elapsed":  176.9,
+        "sigma60":  7.046,
+        "vol60_max":  4.5,
+        "regime":  "normal",
+        "rule":  "cb30\u003c-0.5 z≥1.5 regime=normal"
+    },
+    {
+        "ts":  1793634181.61,
+        "kind":  "CB_CVD_ADVERSE_BLOCK",
+        "slug":  "btc-updown-5m-1793634000",
+        "epoch":  1793634000,
+        "side":  "UP",
+        "elapsed":  181.5,
+        "cvd_cb_30s_side":  -0.776,
+        "cvd_bn_60s_side":  -5.044,
+        "reasons":  [
+                        "bn60\u003c-2"
+                    ]
+    },
+    {
+        "ts":  1793634183.74,
+        "kind":  "CB_CVD_ADVERSE_BLOCK",
+        "slug":  "btc-updown-5m-1793634000",
+        "epoch":  1793634000,
+        "side":  "UP",
+        "elapsed":  183.6,
+        "cvd_cb_30s_side":  -0.528,
+        "cvd_bn_60s_side":  -3.486,
+        "reasons":  [
+                        "bn60\u003c-2"
+                    ]
+    },
+    {
+        "ts":  1793637131.7,
+        "kind":  "CB_CVD_ADVERSE_BLOCK",
+        "slug":  "btc-updown-5m-1793637000",
+        "epoch":  1793637000,
+        "side":  "UP",
+        "elapsed":  131.6,
+        "cvd_cb_30s_side":  -1.083,
+        "cvd_bn_60s_side":  1.038,
+        "reasons":  [
+                        "cb30\u003c-0.8"
+                    ]
+    },
+    {
+        "ts":  1793637133.83,
+        "kind":  "CB_CVD_ADVERSE_BLOCK",
+        "slug":  "btc-updown-5m-1793637000",
+        "epoch":  1793637000,
+        "side":  "UP",
+        "elapsed":  133.7,
+        "cvd_cb_30s_side":  -1.539,
+        "cvd_bn_60s_side":  1.08,
+        "reasons":  [
+                        "cb30\u003c-0.8"
+                    ]
+    },
+    {
+        "ts":  1793637136.19,
+        "kind":  "CB_CVD_ADVERSE_BLOCK",
+        "slug":  "btc-updown-5m-1793637000",
+        "epoch":  1793637000,
+        "side":  "UP",
+        "elapsed":  136.1,
+        "cvd_cb_30s_side":  -2.014,
+        "cvd_bn_60s_side":  0.456,
+        "reasons":  [
+                        "cb30\u003c-0.8"
+                    ]
+    },
+    {
+        "ts":  1793637142.59,
+        "kind":  "CB_CVD_ADVERSE_BLOCK",
+        "slug":  "btc-updown-5m-1793637000",
+        "epoch":  1793637000,
+        "side":  "UP",
+        "elapsed":  142.5,
+        "cvd_cb_30s_side":  -1.92,
+        "cvd_bn_60s_side":  0.06,
+        "reasons":  [
+                        "cb30\u003c-0.8"
+                    ]
+    },
+    {
+        "ts":  1793637144.71,
+        "kind":  "CB_CVD_ADVERSE_BLOCK",
+        "slug":  "btc-updown-5m-1793637000",
+        "epoch":  1793637000,
+        "side":  "UP",
+        "elapsed":  144.6,
+        "cvd_cb_30s_side":  -1.884,
+        "cvd_bn_60s_side":  0.505,
+        "reasons":  [
+                        "cb30\u003c-0.8"
+                    ]
+    },
+    {
+        "ts":  1793637146.82,
+        "kind":  "CB_CVD_ADVERSE_BLOCK",
+        "slug":  "btc-updown-5m-1793637000",
+        "epoch":  1793637000,
+        "side":  "UP",
+        "elapsed":  146.7,
+        "cvd_cb_30s_side":  -1.863,
+        "cvd_bn_60s_side":  0.509,
+        "reasons":  [
+                        "cb30\u003c-0.8"
+                    ]
+    }
+]
+
+========== tw_log.jsonl ==========
+[
+    {
+        "ts":  1793633201.49,
+        "kind":  "TW_SKIP_VOL60",
+        "slug":  "btc-updown-5m-1793633100",
+        "elapsed":  101.5,
+        "sigma60":  7.229,
+        "vol60_max":  6.0,
+        "regime":  "media"
+    },
+    {
+        "ts":  1793634123.0,
+        "kind":  "TW_SKIP_VOL60",
+        "slug":  "btc-updown-5m-1793634000",
+        "elapsed":  123.0,
+        "sigma60":  4.629,
+        "vol60_max":  4.5,
+        "regime":  "normal"
+    },
+    {
+        "ts":  1793634400.98,
+        "kind":  "TW_SKIP_VOL60",
+        "slug":  "btc-updown-5m-1793634300",
+        "elapsed":  101.0,
+        "sigma60":  5.251,
+        "vol60_max":  4.5,
+        "regime":  "normal"
+    },
+    {
+        "ts":  1793634774.77,
+        "kind":  "TW_SKIP_PRICE",
+        "slug":  "btc-updown-5m-1793634600",
+        "side":  "DN",
+        "elapsed":  174.8,
+        "rest_ask":  0.99,
+        "ws_ask":  0.99,
+        "rest_top3":  6359.4,
+        "z":  2.808
+    },
+    {
+        "ts":  1793635081.77,
+        "kind":  "TW_SKIP_PRICE",
+        "slug":  "btc-updown-5m-1793634900",
+        "side":  "DN",
+        "elapsed":  181.8,
+        "rest_ask":  0.99,
+        "ws_ask":  0.99,
+        "rest_top3":  2730.9,
+        "z":  3.106
+    },
+    {
+        "ts":  1793635092.32,
+        "kind":  "TW_SKIP_VOL60",
+        "slug":  "btc-updown-5m-1793634900",
+        "elapsed":  192.3,
+        "sigma60":  12.596,
+        "vol60_max":  6.0,
+        "regime":  "media"
+    },
+    {
+        "ts":  1793635624.25,
+        "kind":  "TW_SKIP_VOL60",
+        "slug":  "btc-updown-5m-1793635500",
+        "elapsed":  124.2,
+        "sigma60":  6.403,
+        "vol60_max":  6.0,
+        "regime":  "extrema"
+    },
+    {
+        "ts":  1793635901.36,
+        "kind":  "TW_SKIP_VOL60",
+        "slug":  "btc-updown-5m-1793635800",
+        "elapsed":  101.4,
+        "sigma60":  7.282,
+        "vol60_max":  6.0,
+        "regime":  "extrema"
+    },
+    {
+        "ts":  1793636200.77,
+        "kind":  "TW_SKIP_VOL60",
+        "slug":  "btc-updown-5m-1793636100",
+        "elapsed":  100.8,
+        "sigma60":  6.549,
+        "vol60_max":  6.0,
+        "regime":  "alta"
+    },
+    {
+        "ts":  1793637161.78,
+        "kind":  "TW_SKIP_PRICE",
+        "slug":  "btc-updown-5m-1793637000",
+        "side":  "UP",
+        "elapsed":  161.8,
+        "rest_ask":  0.99,
+        "ws_ask":  0.99,
+        "rest_top3":  2934.0,
+        "z":  2.801
+    },
+    {
+        "kind":  "TW_POST_LOSS_BLOCK",
+        "strategy":  "TW",
+        "blocked":  true,
+        "reason":  "INSUFFICIENT_DATA",
+        "missing":  [
+                        "cvd_perp_30s"
+                    ],
+        "ts":  1793637178.6439009,
+        "slug":  "btc-updown-5m-1793637000",
+        "side":  "UP",
+        "vel_15s":  34.88999999999942,
+        "vel_30s":  44.31999999999243,
+        "vel_60s":  72.25,
+        "ds_vel_30s":  32.699449101433856,
+        "cvd_perp_30s":  null
+    },
+    {
+        "kind":  "TW_POST_LOSS_BLOCK",
+        "strategy":  "TW",
+        "blocked":  true,
+        "reason":  "INSUFFICIENT_DATA",
+        "missing":  [
+                        "cvd_perp_30s"
+                    ],
+        "ts":  1793637186.8155887,
+        "slug":  "btc-updown-5m-1793637000",
+        "side":  "UP",
+        "vel_15s":  46.81999999999243,
+        "vel_30s":  51.05000000000291,
+        "vel_60s":  90.9600000000064,
+        "ds_vel_30s":  51.812896773568355,
+        "cvd_perp_30s":  null
+    }
+]
+
+========== flow_log.jsonl ==========
+[
+    {
+        "ts":  1793623365.38,
+        "slug":  "btc-updown-5m-1793623200",
+        "epoch":  1793623200,
+        "side":  "DN",
+        "elapsed":  165.2,
+        "real_ask":  0.99,
+        "real_top3":  2202.4,
+        "ws_ask":  0.99,
+        "ptb_real":  77716.44,
+        "ds_delta":  -121.62,
+        "ds_age_s":  2.24,
+        "v60":  44.37,
+        "pm_net_side_usd":  10771.7,
+        "cvd_bn_60s_side":  3.868,
+        "cvd_cb_30s_side":  1.403,
+        "vel5":  0.6,
+        "ret_rel":  0.01,
+        "sigma":  2.3785,
+        "sigma60":  3.637,
+        "z":  5.192,
+        "pm60_side_usd":  6149.8,
+        "pct":  0.8,
+        "rule":  "pm≥2062 cvd60≥2.529 v60\u003c53.3 σ≥1.9 z≥1.5 ret_rel≤0.10 regime=normal",
+        "kind":  "FLOW_SKIP_PRICE"
+    },
+    {
+        "ts":  1793623944.43,
+        "kind":  "FLOW_SKIP_VOL60",
+        "slug":  "btc-updown-5m-1793623800",
+        "epoch":  1793623800,
+        "side":  "DN",
+        "elapsed":  144.3,
+        "sigma60":  5.344,
+        "vol60_max":  4.5,
+        "regime":  "normal",
+        "rule":  "pm≥2062 cvd60≥2.529 v60\u003c53.3 σ≥1.9 z≥1.5 ret_rel≤0.10 regime=normal"
+    },
+    {
+        "ts":  1793623948.74,
+        "slug":  "btc-updown-5m-1793623800",
+        "epoch":  1793623800,
+        "side":  "DN",
+        "elapsed":  148.6,
+        "real_ask":  0.99,
+        "real_top3":  3763.9,
+        "ws_ask":  0.99,
+        "ptb_real":  77760.07,
+        "ds_delta":  -98.24,
+        "ds_age_s":  1.6,
+        "v60":  15.4,
+        "pm_net_side_usd":  6090.9,
+        "cvd_bn_60s_side":  5.639,
+        "cvd_cb_30s_side":  1.73,
+        "vel5":  0.4,
+        "ret_rel":  0.019,
+        "sigma":  3.856,
+        "sigma60":  4.428,
+        "z":  2.397,
+        "pm60_side_usd":  5369.9,
+        "pct":  0.8,
+        "rule":  "pm≥2062 cvd60≥2.529 v60\u003c53.3 σ≥1.9 z≥1.5 ret_rel≤0.10 regime=normal",
+        "kind":  "FLOW_SKIP_PRICE"
+    },
+    {
+        "kind":  "FLOW_POST_LOSS_BLOCK",
+        "strategy":  "FLOW",
+        "blocked":  true,
+        "reason":  "INSUFFICIENT_DATA",
+        "missing":  [
+                        "cvd_perp_30s"
+                    ],
+        "ts":  1793624557.6108623,
+        "slug":  "btc-updown-5m-1793624400",
+        "side":  "DN",
+        "vel_15s":  -18.94999999999709,
+        "vel_30s":  -32.24000000000524,
+        "vel_60s":  -55.16000000000349,
+        "ds_vel_30s":  null,
+        "cvd_perp_30s":  null
+    },
+    {
+        "ts":  1793624559.78,
+        "slug":  "btc-updown-5m-1793624400",
+        "epoch":  1793624400,
+        "side":  "DN",
+        "elapsed":  159.6,
+        "real_ask":  0.99,
+        "real_top3":  5224.1,
+        "ws_ask":  0.99,
+        "ptb_real":  77678.07,
+        "ds_delta":  -59.12,
+        "ds_age_s":  1.63,
+        "v60":  50.23,
+        "pm_net_side_usd":  19374.9,
+        "cvd_bn_60s_side":  5.667,
+        "cvd_cb_30s_side":  0.582,
+        "vel5":  1.27,
+        "ret_rel":  0.0,
+        "sigma":  3.0154,
+        "sigma60":  1.702,
+        "z":  1.941,
+        "pm60_side_usd":  11765.4,
+        "pct":  0.8,
+        "rule":  "pm≥2062 cvd60≥2.529 v60\u003c53.3 σ≥1.9 z≥1.5 ret_rel≤0.10 regime=normal",
+        "kind":  "FLOW_SKIP_PRICE"
+    },
+    {
+        "kind":  "FLOW_POST_LOSS_BLOCK",
+        "strategy":  "FLOW",
+        "blocked":  true,
+        "reason":  "INSUFFICIENT_DATA",
+        "missing":  [
+                        "cvd_perp_30s"
+                    ],
+        "ts":  1793624568.5143282,
+        "slug":  "btc-updown-5m-1793624400",
+        "side":  "DN",
+        "vel_15s":  -1.3699999999953434,
+        "vel_30s":  -20.80000000000291,
+        "vel_60s":  -38.24000000000524,
+        "ds_vel_30s":  null,
+        "cvd_perp_30s":  null
+    },
+    {
+        "ts":  1793625457.6,
+        "slug":  "btc-updown-5m-1793625300",
+        "epoch":  1793625300,
+        "side":  "DN",
+        "elapsed":  157.5,
+        "real_ask":  0.99,
+        "real_top3":  2321.2,
+        "ws_ask":  0.99,
+        "ptb_real":  77638.07,
+        "ds_delta":  -83.07,
+        "ds_age_s":  2.45,
+        "v60":  26.92,
+        "pm_net_side_usd":  6201.5,
+        "cvd_bn_60s_side":  3.037,
+        "cvd_cb_30s_side":  -1.041,
+        "vel5":  6.32,
+        "ret_rel":  0.0,
+        "sigma":  2.5011,
+        "sigma60":  1.696,
+        "z":  3.241,
+        "pm60_side_usd":  5922.5,
+        "pct":  0.8,
+        "rule":  "pm≥2062 cvd60≥2.529 v60\u003c53.3 σ≥1.9 z≥1.5 ret_rel≤0.10 regime=normal",
+        "kind":  "FLOW_SKIP_PRICE"
+    },
+    {
+        "kind":  "FLOW_POST_LOSS_BLOCK",
+        "strategy":  "FLOW",
+        "blocked":  true,
+        "reason":  "INSUFFICIENT_DATA",
+        "missing":  [
+                        "cvd_perp_30s"
+                    ],
+        "ts":  1793628757.2716377,
+        "slug":  "btc-updown-5m-1793628600",
+        "side":  "DN",
+        "vel_15s":  -5.4100000000034925,
+        "vel_30s":  -13.630000000004657,
+        "vel_60s":  -22.060000000012224,
+        "ds_vel_30s":  null,
+        "cvd_perp_30s":  null
+    },
+    {
+        "ts":  1793628761.52,
+        "slug":  "btc-updown-5m-1793628600",
+        "epoch":  1793628600,
+        "side":  "DN",
+        "elapsed":  161.4,
+        "real_ask":  0.99,
+        "real_top3":  3676.0,
+        "ws_ask":  0.99,
+        "ptb_real":  77903.81,
+        "ds_delta":  -110.05,
+        "ds_age_s":  1.38,
+        "v60":  23.38,
+        "pm_net_side_usd":  4042.8,
+        "cvd_bn_60s_side":  2.855,
+        "cvd_cb_30s_side":  0.695,
+        "vel5":  6.04,
+        "ret_rel":  0.0,
+        "sigma":  3.3827,
+        "sigma60":  1.566,
+        "z":  3.253,
+        "pm60_side_usd":  4280.3,
+        "pct":  0.8,
+        "rule":  "pm≥2062 cvd60≥2.529 v60\u003c53.3 σ≥1.9 z≥1.5 ret_rel≤0.10 regime=normal",
+        "kind":  "FLOW_SKIP_PRICE"
+    },
+    {
+        "ts":  1793629600.97,
+        "slug":  "btc-updown-5m-1793629500",
+        "epoch":  1793629500,
+        "side":  "DN",
+        "elapsed":  100.8,
+        "real_ask":  0.88,
+        "real_top3":  3206.1,
+        "ws_ask":  0.88,
+        "ptb_real":  77749.1,
+        "ds_delta":  -75.6,
+        "ds_age_s":  1.8,
+        "v60":  24.85,
+        "pm_net_side_usd":  2269.9,
+        "cvd_bn_60s_side":  3.036,
+        "cvd_cb_30s_side":  0.751,
+        "vel5":  -0.05,
+        "ret_rel":  0.044,
+        "sigma":  2.7314,
+        "sigma60":  1.301,
+        "z":  2.181,
+        "pm60_side_usd":  2269.9,
+        "pct":  0.8,
+        "rule":  "pm≥2062 cvd60≥2.529 v60\u003c53.3 σ≥1.9 z≥1.5 ret_rel≤0.10 regime=normal",
+        "kind":  "FLOW_SKIP_PRICE"
+    },
+    {
+        "ts":  1793629912.57,
+        "kind":  "FLOW_SKIP_VOL60",
+        "slug":  "btc-updown-5m-1793629800",
+        "epoch":  1793629800,
+        "side":  "UP",
+        "elapsed":  112.4,
+        "sigma60":  11.356,
+        "vol60_max":  4.5,
+        "regime":  "normal",
+        "rule":  "pm≥2062 cvd60≥2.529 v60\u003c53.3 σ≥1.9 z≥1.5 ret_rel≤0.10 regime=normal"
+    },
+    {
+        "ts":  1793634772.92,
+        "slug":  "btc-updown-5m-1793634600",
+        "epoch":  1793634600,
+        "side":  "DN",
+        "elapsed":  172.8,
+        "real_ask":  0.99,
+        "real_top3":  6326.5,
+        "ws_ask":  0.99,
+        "ptb_real":  77758.78,
+        "ds_delta":  -91.79,
+        "ds_age_s":  2.76,
+        "v60":  33.43,
+        "pm_net_side_usd":  3817.2,
+        "cvd_bn_60s_side":  13.247,
+        "cvd_cb_30s_side":  3.221,
+        "vel5":  5.58,
+        "ret_rel":  0.0,
+        "sigma":  4.0709,
+        "sigma60":  2.583,
+        "z":  2.377,
+        "pm60_side_usd":  3692.1,
+        "pct":  0.8,
+        "rule":  "pm≥2062 cvd60≥2.529 v60\u003c53.3 σ≥1.9 z≥1.8 ret_rel≤0.10 regime=media",
+        "kind":  "FLOW_SKIP_PRICE"
+    }
+]
+
+========== post_loss_guard_log.jsonl ==========
+[
+    {
+        "kind":  "POST_LOSS_GUARD",
+        "strategy":  "TW",
+        "blocked":  false,
+        "reason":  "CLEAR",
+        "missing":  [
+
+                    ],
+        "ts":  1793634793.3802238,
+        "slug":  "btc-updown-5m-1793634600",
+        "side":  "DN",
+        "vel_15s":  -51.229999999995925,
+        "vel_30s":  -89.36000000000058,
+        "vel_60s":  -113.22999999999593,
+        "ds_vel_30s":  -86.91950849398563,
+        "cvd_perp_30s":  -128.585
+    },
+    {
+        "kind":  "POST_LOSS_GUARD",
+        "strategy":  "TW",
+        "blocked":  false,
+        "reason":  "WAITING_FOR_SECOND_SAMPLE",
+        "missing":  [
+
+                    ],
+        "ts":  1793635081.7662046,
+        "slug":  "btc-updown-5m-1793634900",
+        "side":  "DN",
+        "vel_15s":  -19.869999999995343,
+        "vel_30s":  -37.86999999999534,
+        "vel_60s":  -75.8799999999901,
+        "ds_vel_30s":  -35.6638734456792,
+        "cvd_perp_30s":  -83.166
+    },
+    {
+        "kind":  "POST_LOSS_GUARD",
+        "strategy":  "TW",
+        "blocked":  false,
+        "reason":  "WAITING_FOR_SECOND_SAMPLE",
+        "missing":  [
+
+                    ],
+        "ts":  1793637161.7843692,
+        "slug":  "btc-updown-5m-1793637000",
+        "side":  "UP",
+        "vel_15s":  9.440000000002328,
+        "vel_30s":  33.820000000006985,
+        "vel_60s":  -2.4899999999906868,
+        "ds_vel_30s":  33.405986335885245,
+        "cvd_perp_30s":  33.707
+    },
+    {
+        "kind":  "POST_LOSS_GUARD",
+        "strategy":  "TW",
+        "blocked":  false,
+        "reason":  "WAITING_FOR_SECOND_SAMPLE",
+        "missing":  [
+
+                    ],
+        "ts":  1793637176.6160414,
+        "slug":  "btc-updown-5m-1793637000",
+        "side":  "UP",
+        "vel_15s":  20.70999999999185,
+        "vel_30s":  30.14999999999418,
+        "vel_60s":  58.080000000001746,
+        "ds_vel_30s":  15.202759586944012,
+        "cvd_perp_30s":  9.428
+    },
+    {
+        "kind":  "POST_LOSS_GUARD",
+        "strategy":  "TW",
+        "blocked":  true,
+        "reason":  "INSUFFICIENT_DATA",
+        "missing":  [
+                        "cvd_perp_30s"
+                    ],
+        "ts":  1793637178.6439009,
+        "slug":  "btc-updown-5m-1793637000",
+        "side":  "UP",
+        "vel_15s":  34.88999999999942,
+        "vel_30s":  44.31999999999243,
+        "vel_60s":  72.25,
+        "ds_vel_30s":  32.699449101433856,
+        "cvd_perp_30s":  null
+    },
+    {
+        "kind":  "POST_LOSS_GUARD",
+        "strategy":  "TW",
+        "blocked":  false,
+        "reason":  "CLEAR",
+        "missing":  [
+
+                    ],
+        "ts":  1793637180.766817,
+        "slug":  "btc-updown-5m-1793637000",
+        "side":  "UP",
+        "vel_15s":  38.61999999999534,
+        "vel_30s":  48.04999999998836,
+        "vel_60s":  76.36999999999534,
+        "ds_vel_30s":  42.42672231697361,
+        "cvd_perp_30s":  25.198
+    },
+    {
+        "kind":  "POST_LOSS_GUARD",
+        "strategy":  "TW",
+        "blocked":  false,
+        "reason":  "CLEAR",
+        "missing":  [
+
+                    ],
+        "ts":  1793637182.7971342,
+        "slug":  "btc-updown-5m-1793637000",
+        "side":  "UP",
+        "vel_15s":  38.61999999999534,
+        "vel_30s":  38.60999999998603,
+        "vel_60s":  76.35999999998603,
+        "ds_vel_30s":  44.68768573048874,
+        "cvd_perp_30s":  22.95
+    },
+    {
+        "kind":  "POST_LOSS_GUARD",
+        "strategy":  "TW",
+        "blocked":  false,
+        "reason":  "CLEAR",
+        "missing":  [
+
+                    ],
+        "ts":  1793637184.8074222,
+        "slug":  "btc-updown-5m-1793637000",
+        "side":  "UP",
+        "vel_15s":  40.830000000001746,
+        "vel_30s":  40.830000000001746,
+        "vel_60s":  78.58000000000175,
+        "ds_vel_30s":  43.32505209693045,
+        "cvd_perp_30s":  24.867
+    },
+    {
+        "kind":  "POST_LOSS_GUARD",
+        "strategy":  "TW",
+        "blocked":  true,
+        "reason":  "INSUFFICIENT_DATA",
+        "missing":  [
+                        "cvd_perp_30s"
+                    ],
+        "ts":  1793637186.8155887,
+        "slug":  "btc-updown-5m-1793637000",
+        "side":  "UP",
+        "vel_15s":  46.81999999999243,
+        "vel_30s":  51.05000000000291,
+        "vel_60s":  90.9600000000064,
+        "ds_vel_30s":  51.812896773568355,
+        "cvd_perp_30s":  null
+    },
+    {
+        "kind":  "POST_LOSS_GUARD",
+        "strategy":  "TW",
+        "blocked":  false,
+        "reason":  "CLEAR",
+        "missing":  [
+
+                    ],
+        "ts":  1793637188.940668,
+        "slug":  "btc-updown-5m-1793637000",
+        "side":  "UP",
+        "vel_15s":  41.88999999999942,
+        "vel_30s":  48.08999999999651,
+        "vel_60s":  83.41999999999825,
+        "ds_vel_30s":  52.06812377105234,
+        "cvd_perp_30s":  26.194
+    },
+    {
+        "kind":  "POST_LOSS_GUARD",
+        "strategy":  "TW",
+        "blocked":  false,
+        "reason":  "CLEAR",
+        "missing":  [
+
+                    ],
+        "ts":  1793637191.1406498,
+        "slug":  "btc-updown-5m-1793637000",
+        "side":  "UP",
+        "vel_15s":  42.58999999999651,
+        "vel_30s":  50.19000000000233,
+        "vel_60s":  84.0,
+        "ds_vel_30s":  48.20908603773569,
+        "cvd_perp_30s":  26.662
+    },
+    {
+        "kind":  "POST_LOSS_GUARD",
+        "strategy":  "TW",
+        "blocked":  false,
+        "reason":  "CLEAR",
+        "missing":  [
+
+                    ],
+        "ts":  1793637193.1476934,
+        "slug":  "btc-updown-5m-1793637000",
+        "side":  "UP",
+        "vel_15s":  30.360000000000582,
+        "vel_30s":  65.24000000000524,
+        "vel_60s":  84.94000000000233,
+        "ds_vel_30s":  47.85968669813883,
+        "cvd_perp_30s":  32.128
+    }
+]
