@@ -1,0 +1,418 @@
+========== CB: ESTRUCTURA Y MUESTRAS ==========
+
+CB_CVD_ADVERSE_BLOCK: 144 eventos
+{"ts": 1793599658.66, "kind": "CB_CVD_ADVERSE_BLOCK", "slug": "btc-updown-5m-1793599500", "epoch": 1793599500, "side": "UP", "elapsed": 158.6, "cvd_cb_30s_side": -1.276, "cvd_bn_60s_side": -1.549, "reasons": ["cb30<-0.8"]}
+{"ts": 1793599660.82, "kind": "CB_CVD_ADVERSE_BLOCK", "slug": "btc-updown-5m-1793599500", "epoch": 1793599500, "side": "UP", "elapsed": 160.8, "cvd_cb_30s_side": -1.081, "cvd_bn_60s_side": -1.544, "reasons": ["cb30<-0.8"]}
+
+CB_POST_LOSS_BLOCK: 42 eventos
+{"kind": "CB_POST_LOSS_BLOCK", "strategy": "CB", "blocked": true, "reason": "CB_TRIPLE_VELOCITY_ADVERSE", "missing": [], "ts": 1793600849.4496984, "slug": "btc-updown-5m-1793600700", "side": "DN", "vel_15s": 0.010000000009313226, "vel_30s": 0.010000000009313226, "vel_60s": 0.010000000009313226, "ds_vel_30s": null, "cvd_perp_30s": 1.9070000000000005}
+{"kind": "CB_POST_LOSS_BLOCK", "strategy": "CB", "blocked": true, "reason": "CB_TRIPLE_VELOCITY_ADVERSE", "missing": [], "ts": 1793600866.2969577, "slug": "btc-updown-5m-1793600700", "side": "DN", "vel_15s": 0.010000000009313226, "vel_30s": 0.010000000009313226, "vel_60s": 0.010000000009313226, "ds_vel_30s": null, "cvd_perp_30s": 5.434}
+
+CB_SKIP_PRICE: 14 eventos
+{"ts": 1793600851.61, "slug": "btc-updown-5m-1793600700", "epoch": 1793600700, "side": "DN", "elapsed": 151.4, "real_ask": 0.87, "real_top3": 1196.4, "ws_ask": 0.87, "ptb_real": 78122.51, "ds_delta": -29.14, "ds_age_s": 1.37, "v60": -1.69, "pm_net_side_usd": 2709.5, "cvd_bn_60s_side": 2.697, "cvd_cb_30s_side": -2.082, "vel5": -0.03, "ret_rel": 0.123, "sigma": 1.7925, "sigma60": 0.764, "z": 1.55, "pm60_side_usd": 1730.5, "pct": 0.8, "rule": "cb30<-0.5 z≥1.5 regime=normal", "kind": "CB_SKIP_PRICE"}
+{"ts": 1793601791.76, "slug": "btc-updown-5m-1793601600", "epoch": 1793601600, "side": "DN", "elapsed": 191.7, "real_ask": 0.87, "real_top3": 1118.8, "ws_ask": 0.86, "ptb_real": 78071.48, "ds_delta": -22.22, "ds_age_s": 1.72, "v60": 4.91, "pm_net_side_usd": 2238.5, "cvd_bn_60s_side": 1.33, "cvd_cb_30s_side": -0.935, "vel5": 3.85, "ret_rel": 0.0, "sigma": 1.4684, "sigma60": 1.132, "z": 1.809, "pm60_side_usd": 930.6, "pct": 0.8, "rule": "cb30<-0.5 z≥1.5 regime=normal", "kind": "CB_SKIP_PRICE"}
+
+CB_SKIP_RET: 12 eventos
+{"ts": 1793598482.49, "kind": "CB_SKIP_RET", "slug": "btc-updown-5m-1793598300", "epoch": 1793598300, "side": "DN", "elapsed": 182.3, "ds_delta": -26.31, "ret_rel": 0.696, "max_ret_rel": 0.33, "ws_ask": 0.88, "rule": "cb30<-0.5 z≥1.5 regime=normal"}
+{"ts": 1793599667.6, "kind": "CB_SKIP_RET", "slug": "btc-updown-5m-1793599500", "epoch": 1793599500, "side": "UP", "elapsed": 167.4, "ds_delta": 35.12, "ret_rel": 0.574, "max_ret_rel": 0.33, "ws_ask": 0.9, "rule": "cb30<-0.5 z≥1.5 regime=normal"}
+
+CB_SKIP_RET_MEM: 3 eventos
+{"ts": 1793633536.26, "kind": "CB_SKIP_RET_MEM", "slug": "btc-updown-5m-1793633400", "epoch": 1793633400, "side": "DN", "elapsed": 136.1, "ds_delta": -103.5, "ret_rel": 0.249, "z": 2.031, "pico": false, "ws_ask": 0.92, "rule": "cb30<-0.5 z≥1.8 regime=media"}
+{"ts": 1793638678.72, "kind": "CB_SKIP_RET_MEM", "slug": "btc-updown-5m-1793638500", "epoch": 1793638500, "side": "DN", "elapsed": 178.6, "ds_delta": -58.04, "ret_rel": 0.304, "z": 1.899, "pico": false, "ws_ask": 0.96, "rule": "cb30<-0.5 z≥1.5 regime=normal"}
+
+CB_SKIP_VOL60: 5 eventos
+{"ts": 1793629940.49, "kind": "CB_SKIP_VOL60", "slug": "btc-updown-5m-1793629800", "epoch": 1793629800, "side": "UP", "elapsed": 140.3, "sigma60": 8.82, "vol60_max": 4.5, "regime": "normal", "rule": "cb30<-0.5 z≥1.5 regime=normal"}
+{"ts": 1793630281.33, "kind": "CB_SKIP_VOL60", "slug": "btc-updown-5m-1793630100", "epoch": 1793630100, "side": "DN", "elapsed": 181.1, "sigma60": 8.359, "vol60_max": 6.0, "regime": "alta", "rule": "cb30<-0.5 z≥2 regime=alta"}
+
+========== TELEGRAM: MENSAJES RELACIONADOS ==========
+Mensajes relacionados encontrados: 1668
+
+--- fecha=2026-11-02T15:24:58+00:00 id=145002 ---
+🕐 Nuevo ciclo | 1793633100 → cierra 15:30 UTC
+⛓️ PTB: $77,776.75 | BTC: $77,970.00
+📏 BTC vs PTB: +193.25
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793633100
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,776.75)
+
+--- fecha=2026-11-02T15:25:44+00:00 id=145003 ---
+🤖 PTB watcher aplicado: $77,775.14 (diff=-1.61 vs calculado $77,776.75)
+
+--- fecha=2026-11-02T15:29:59+00:00 id=145004 ---
+🕐 Nuevo ciclo | 1793633400 → cierra 15:35 UTC
+⛓️ PTB: $77,848.41 | BTC: $77,942.01
+📏 BTC vs PTB: +93.60
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793633400
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,848.41)
+
+--- fecha=2026-11-02T15:30:44+00:00 id=145005 ---
+🤖 PTB watcher aplicado: $77,848.21 (diff=-0.20 vs calculado $77,848.41)
+
+--- fecha=2026-11-02T15:34:58+00:00 id=145006 ---
+🕐 Nuevo ciclo | 1793633700 → cierra 15:40 UTC
+⛓️ PTB: $77,742.13 | BTC: $77,830.00
+📏 BTC vs PTB: +87.87
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793633700
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,742.13)
+
+--- fecha=2026-11-02T15:35:49+00:00 id=145007 ---
+🤖 PTB watcher aplicado: $77,737.82 (diff=-4.31 vs calculado $77,742.13)
+
+--- fecha=2026-11-02T15:39:58+00:00 id=145008 ---
+🕐 Nuevo ciclo | 1793634000 → cierra 15:45 UTC
+⛓️ PTB: $77,691.46 | BTC: $77,840.01
+📏 BTC vs PTB: +148.55
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793634000
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,691.46)
+
+--- fecha=2026-11-02T15:40:44+00:00 id=145009 ---
+🤖 PTB watcher aplicado: $77,699.88 (diff=+8.42 vs calculado $77,691.46)
+
+--- fecha=2026-11-02T15:44:59+00:00 id=145010 ---
+🕐 Nuevo ciclo | 1793634300 → cierra 15:50 UTC
+⛓️ PTB: $77,898.07 | BTC: $78,010.00
+📏 BTC vs PTB: +111.93
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793634300
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,898.07)
+
+--- fecha=2026-11-02T15:45:49+00:00 id=145011 ---
+🤖 PTB watcher aplicado: $77,853.24 (diff=-44.83 vs calculado $77,898.07)
+
+--- fecha=2026-11-02T15:49:58+00:00 id=145012 ---
+🕐 Nuevo ciclo | 1793634600 → cierra 15:55 UTC
+⛓️ PTB: $77,743.11 | BTC: $77,848.04
+📏 BTC vs PTB: +104.93
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793634600
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,743.11)
+
+--- fecha=2026-11-02T15:50:45+00:00 id=145013 ---
+🤖 PTB watcher aplicado: $77,759.71 (diff=+16.60 vs calculado $77,743.11)
+
+--- fecha=2026-11-02T15:54:59+00:00 id=145014 ---
+🕐 Nuevo ciclo | 1793634900 → cierra 16:00 UTC
+⛓️ PTB: $77,595.47 | BTC: $77,722.00
+📏 BTC vs PTB: +126.53
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793634900
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,595.47)
+
+--- fecha=2026-11-02T15:55:45+00:00 id=145015 ---
+🤖 PTB watcher aplicado: $77,622.24 (diff=+26.77 vs calculado $77,595.47)
+
+--- fecha=2026-11-02T15:59:58+00:00 id=145016 ---
+🕐 Nuevo ciclo | 1793635200 → cierra 16:05 UTC
+⛓️ PTB: $77,374.20 | BTC: $77,512.50
+📏 BTC vs PTB: +138.30
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793635200
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,374.20)
+
+--- fecha=2026-11-02T16:00:44+00:00 id=145017 ---
+🤖 PTB watcher aplicado: $77,378.41 (diff=+4.21 vs calculado $77,374.20)
+
+--- fecha=2026-11-02T16:04:58+00:00 id=145018 ---
+🕐 Nuevo ciclo | 1793635500 → cierra 16:10 UTC
+⛓️ PTB: $77,528.03 | BTC: $77,634.01
+📏 BTC vs PTB: +105.98
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793635500
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,528.03)
+
+--- fecha=2026-11-02T16:05:45+00:00 id=145019 ---
+🤖 PTB watcher aplicado: $77,543.63 (diff=+15.60 vs calculado $77,528.03)
+
+--- fecha=2026-11-02T16:09:58+00:00 id=145020 ---
+🕐 Nuevo ciclo | 1793635800 → cierra 16:15 UTC
+⛓️ PTB: $77,383.84 | BTC: $77,480.83
+📏 BTC vs PTB: +96.99
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793635800
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,383.84)
+
+--- fecha=2026-11-02T16:10:44+00:00 id=145021 ---
+🤖 PTB watcher aplicado: $77,425.70 (diff=+41.86 vs calculado $77,383.84)
+
+--- fecha=2026-11-02T16:14:58+00:00 id=145022 ---
+🕐 Nuevo ciclo | 1793636100 → cierra 16:20 UTC
+⛓️ PTB: $77,276.20 | BTC: $77,402.74
+📏 BTC vs PTB: +126.54
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793636100
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,276.20)
+
+--- fecha=2026-11-02T16:15:47+00:00 id=145023 ---
+🤖 PTB watcher aplicado: $77,293.58 (diff=+17.38 vs calculado $77,276.20)
+
+--- fecha=2026-11-02T16:19:58+00:00 id=145024 ---
+🕐 Nuevo ciclo | 1793636400 → cierra 16:25 UTC
+⛓️ PTB: $77,318.93 | BTC: $77,445.11
+📏 BTC vs PTB: +126.18
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793636400
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,318.93)
+
+--- fecha=2026-11-02T16:20:45+00:00 id=145025 ---
+🤖 PTB watcher aplicado: $77,319.90 (diff=+0.97 vs calculado $77,318.93)
+
+--- fecha=2026-11-02T16:24:58+00:00 id=145026 ---
+🕐 Nuevo ciclo | 1793636700 → cierra 16:30 UTC
+⛓️ PTB: $77,311.25 | BTC: $77,419.26
+📏 BTC vs PTB: +108.01
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793636700
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,311.25)
+
+--- fecha=2026-11-02T16:25:49+00:00 id=145027 ---
+🤖 PTB watcher aplicado: $77,305.30 (diff=-5.95 vs calculado $77,311.25)
+
+--- fecha=2026-11-02T16:29:59+00:00 id=145028 ---
+🕐 Nuevo ciclo | 1793637000 → cierra 16:35 UTC
+⛓️ PTB: $77,206.82 | BTC: $77,334.29
+📏 BTC vs PTB: +127.47
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793637000
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,206.82)
+
+--- fecha=2026-11-02T16:30:44+00:00 id=145029 ---
+🤖 PTB watcher aplicado: $77,200.82 (diff=-6.00 vs calculado $77,206.82)
+
+--- fecha=2026-11-02T16:34:58+00:00 id=145030 ---
+🕐 Nuevo ciclo | 1793637300 → cierra 16:40 UTC
+⛓️ PTB: $77,401.20 | BTC: $77,564.67
+📏 BTC vs PTB: +163.47
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793637300
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,401.20)
+
+--- fecha=2026-11-02T16:35:44+00:00 id=145031 ---
+🤖 PTB watcher aplicado: $77,416.41 (diff=+15.21 vs calculado $77,401.20)
+
+--- fecha=2026-11-02T16:39:58+00:00 id=145032 ---
+🕐 Nuevo ciclo | 1793637600 → cierra 16:45 UTC
+⛓️ PTB: $77,370.99 | BTC: $77,464.53
+📏 BTC vs PTB: +93.54
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793637600
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,370.99)
+
+--- fecha=2026-11-02T16:40:44+00:00 id=145033 ---
+🤖 PTB watcher aplicado: $77,353.70 (diff=-17.29 vs calculado $77,370.99)
+
+--- fecha=2026-11-02T16:44:58+00:00 id=145034 ---
+🕐 Nuevo ciclo | 1793637900 → cierra 16:50 UTC
+⛓️ PTB: $77,417.51 | BTC: $77,537.95
+📏 BTC vs PTB: +120.44
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793637900
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,417.51)
+
+--- fecha=2026-11-02T16:45:44+00:00 id=145035 ---
+🤖 PTB watcher aplicado: $77,414.62 (diff=-2.89 vs calculado $77,417.51)
+
+--- fecha=2026-11-02T16:49:58+00:00 id=145036 ---
+🕐 Nuevo ciclo | 1793638200 → cierra 16:55 UTC
+⛓️ PTB: $77,378.12 | BTC: $77,503.59
+📏 BTC vs PTB: +125.47
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793638200
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,378.12)
+
+--- fecha=2026-11-02T16:50:44+00:00 id=145037 ---
+🤖 PTB watcher aplicado: $77,374.11 (diff=-4.01 vs calculado $77,378.12)
+
+--- fecha=2026-11-02T16:54:58+00:00 id=145038 ---
+🕐 Nuevo ciclo | 1793638500 → cierra 17:00 UTC
+⛓️ PTB: $77,383.94 | BTC: $77,481.28
+📏 BTC vs PTB: +97.34
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793638500
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,383.94)
+
+--- fecha=2026-11-02T16:55:44+00:00 id=145039 ---
+🤖 PTB watcher aplicado: $77,399.08 (diff=+15.14 vs calculado $77,383.94)
+
+--- fecha=2026-11-02T16:59:58+00:00 id=145040 ---
+🕐 Nuevo ciclo | 1793638800 → cierra 17:05 UTC
+⛓️ PTB: $77,389.28 | BTC: $77,501.74
+📏 BTC vs PTB: +112.46
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793638800
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,389.28)
+
+--- fecha=2026-11-02T17:00:44+00:00 id=145041 ---
+🤖 PTB watcher aplicado: $77,389.41 (diff=+0.13 vs calculado $77,389.28)
+
+--- fecha=2026-11-02T17:04:58+00:00 id=145042 ---
+🕐 Nuevo ciclo | 1793639100 → cierra 17:10 UTC
+⛓️ PTB: $77,402.45 | BTC: $77,500.81
+📏 BTC vs PTB: +98.36
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793639100
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,402.45)
+
+--- fecha=2026-11-02T17:05:44+00:00 id=145043 ---
+🤖 PTB watcher aplicado: $77,398.78 (diff=-3.67 vs calculado $77,402.45)
+
+--- fecha=2026-11-02T17:09:59+00:00 id=145044 ---
+🕐 Nuevo ciclo | 1793639400 → cierra 17:15 UTC
+⛓️ PTB: $77,321.11 | BTC: $77,436.87
+📏 BTC vs PTB: +115.76
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793639400
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,321.11)
+
+--- fecha=2026-11-02T17:10:44+00:00 id=145045 ---
+🤖 PTB watcher aplicado: $77,333.74 (diff=+12.63 vs calculado $77,321.11)
+
+--- fecha=2026-11-02T17:14:58+00:00 id=145046 ---
+🕐 Nuevo ciclo | 1793639700 → cierra 17:20 UTC
+⛓️ PTB: $77,316.49 | BTC: $77,438.01
+📏 BTC vs PTB: +121.52
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793639700
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,316.49)
+
+--- fecha=2026-11-02T17:15:45+00:00 id=145047 ---
+🤖 PTB watcher aplicado: $77,304.01 (diff=-12.48 vs calculado $77,316.49)
+
+--- fecha=2026-11-02T17:19:58+00:00 id=145048 ---
+🕐 Nuevo ciclo | 1793640000 → cierra 17:25 UTC
+⛓️ PTB: $77,357.19 | BTC: $77,456.01
+📏 BTC vs PTB: +98.82
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793640000
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,357.19)
+
+--- fecha=2026-11-02T17:20:45+00:00 id=145049 ---
+🤖 PTB watcher aplicado: $77,347.44 (diff=-9.75 vs calculado $77,357.19)
+
+--- fecha=2026-11-02T17:24:59+00:00 id=145050 ---
+🕐 Nuevo ciclo | 1793640300 → cierra 17:30 UTC
+⛓️ PTB: $77,204.20 | BTC: $77,356.01
+📏 BTC vs PTB: +151.81
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793640300
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,204.20)
+
+--- fecha=2026-11-02T17:25:45+00:00 id=145051 ---
+🤖 PTB watcher aplicado: $77,210.41 (diff=+6.21 vs calculado $77,204.20)
+
+--- fecha=2026-11-02T17:29:58+00:00 id=145052 ---
+🕐 Nuevo ciclo | 1793640600 → cierra 17:35 UTC
+⛓️ PTB: $77,055.01 | BTC: $77,169.23
+📏 BTC vs PTB: +114.22
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793640600
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $77,055.01)
+
+--- fecha=2026-11-02T17:30:44+00:00 id=145053 ---
+🤖 PTB watcher aplicado: $77,056.06 (diff=+1.05 vs calculado $77,055.01)
+
+--- fecha=2026-11-02T17:34:58+00:00 id=145054 ---
+🕐 Nuevo ciclo | 1793640900 → cierra 17:40 UTC
+⛓️ PTB: $76,956.79 | BTC: $77,056.00
+📏 BTC vs PTB: +99.21
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793640900
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $76,956.79)
+
+--- fecha=2026-11-02T17:35:44+00:00 id=145055 ---
+🤖 PTB watcher aplicado: $76,955.89 (diff=-0.90 vs calculado $76,956.79)
+
+--- fecha=2026-11-02T17:39:58+00:00 id=145056 ---
+🕐 Nuevo ciclo | 1793641200 → cierra 17:45 UTC
+⛓️ PTB: $76,976.92 | BTC: $77,024.42
+📏 BTC vs PTB: +47.50
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793641200
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $76,976.92)
+
+--- fecha=2026-11-02T17:40:49+00:00 id=145057 ---
+🤖 PTB watcher aplicado: $76,956.23 (diff=-20.69 vs calculado $76,976.92)
+
+--- fecha=2026-11-02T17:44:59+00:00 id=145058 ---
+🕐 Nuevo ciclo | 1793641500 → cierra 17:50 UTC
+⛓️ PTB: $76,909.52 | BTC: $77,012.13
+📏 BTC vs PTB: +102.61
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793641500
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $76,909.52)
+
+--- fecha=2026-11-02T17:45:44+00:00 id=145059 ---
+🤖 PTB watcher aplicado: $76,899.29 (diff=-10.23 vs calculado $76,909.52)
+
+--- fecha=2026-11-02T17:49:58+00:00 id=145060 ---
+🕐 Nuevo ciclo | 1793641800 → cierra 17:55 UTC
+⛓️ PTB: $76,881.91 | BTC: $77,001.17
+📏 BTC vs PTB: +119.26
+💰 Balance: $3.13
+🔗 https://polymarket.com/event/btc-updown-5m-1793641800
+━━━━━━━━━━━━━━━━
+💬 Responde con el PTB correcto en 300s para corregirlo
+   (o ignora para usar $76,881.91)
+
+--- fecha=2026-11-02T17:50:44+00:00 id=145061 ---
+🤖 PTB watcher aplicado: $76,849.52 (diff=-32.39 vs calculado $76,881.91)
