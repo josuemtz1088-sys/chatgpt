@@ -1,0 +1,241 @@
+import { useState } from "react";
+import { createFileRoute } from "@tanstack/react-router";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { AlertTriangle, Loader2, MessageCircle } from "lucide-react";
+import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
+import type { Tables } from "@/integrations/supabase/types";
+import { AdminTitle, AreaField, Panel, selectCls } from "@/components/admin/AdminUI";
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
+import { formatMXN, whatsappLink } from "@/lib/format";
+
+/**
+ * COTIZACIONES PENDIENTES
+ *
+ * Aquí llega todo lo que la clienta escribió en el checkout y que NO viajó
+ * por WhatsApp: nombre, teléfono, correo y dirección. Al chat solo llegan el
+ * carrito, el código postal y el folio; con el folio se busca aquí.
+ *
+ * Una cotización no es una venta: no descontó existencias ni gastó el código
+ * promocional. Cuando se cierre la venta, el inventario se ajusta a mano en
+ * Productos.
+ */
+
+export const Route = createFileRoute("/admin/cotizaciones")({
+  component: CotizacionesAdmin,
+});
+
+type Quote = Tables<"quotes">;
+type Item = {
+  name: string;
+  variant: string | null;
+  quantity: number;
+  unit_price: number;
+  line_total: number;
+  stock: number | null;
+};
+
+const QUOTE_STATUS_LABEL: Record<string, string> = {
+  pendiente: "Pendiente",
+  atendida: "Atendida",
+  descartada: "Descartada",
+};
+
+const items = (q: Quote) => (Array.isArray(q.items) ? (q.items as unknown as Item[]) : []);
+
+/** Con hora: dos cotizaciones del mismo día se distinguen por la hora. */
+const cuando = (v: string) =>
+  new Date(v).toLocaleString("es-MX", { day: "numeric", month: "short", hour: "numeric", minute: "2-digit" });
+
+function CotizacionesAdmin() {
+  const [status, setStatus] = useState("pendiente");
+  const [buscar, setBuscar] = useState("");
+  const [selected, setSelected] = useState<Quote | null>(null);
+
+  const { data: quotes = [], isLoading, error } = useQuery({
+    queryKey: ["admin", "quotes", status],
+    queryFn: async () => {
+      let q = supabase.from("quotes").select("*").order("created_at", { ascending: false }).limit(200);
+      if (status) q = q.eq("status", status);
+      const { data, error } = await q;
+      if (error) throw error;
+      return data as Quote[];
+    },
+  });
+
+  // El folio llega por WhatsApp; se busca tal cual, con o sin «ZC-».
+  const b = buscar.trim().toUpperCase().replace(/^ZC-?/, "");
+  const visibles = b
+    ? quotes.filter((q) => q.code.includes(b) || (/^\d{4,}$/.test(b) && q.phone.replace(/\D/g, "").includes(b)))
+    : quotes;
+
+  return (
+    <>
+      <AdminTitle
+        title="Cotizaciones pendientes"
+        text="Lo que piden desde el carrito. Por WhatsApp llega el folio y el código postal; aquí están los datos completos. Una cotización no descuenta existencias."
+      />
+      <div className="mb-5 flex flex-wrap gap-3">
+        <select value={status} onChange={(e) => setStatus(e.target.value)} className={`${selectCls} max-w-xs`} aria-label="Filtrar por estado">
+          {Object.entries(QUOTE_STATUS_LABEL).map(([k, v]) => (
+            <option key={k} value={k}>{v}s</option>
+          ))}
+          <option value="">Todas</option>
+        </select>
+        <input
+          value={buscar}
+          onChange={(e) => setBuscar(e.target.value)}
+          placeholder="Buscar folio o teléfono"
+          aria-label="Buscar folio o teléfono"
+          className={`${selectCls} max-w-xs`}
+        />
+      </div>
+      <Panel className="overflow-x-auto p-0">
+        {isLoading ? (
+          <p className="p-5"><Loader2 className="h-5 w-5 animate-spin text-cian" /></p>
+        ) : error ? (
+          // Lo más probable: no se ha corrido el archivo E en Supabase.
+          <p className="p-5 text-sm text-destructive">
+            No se pudieron leer las cotizaciones: {(error as Error).message}. Revisa que se haya corrido
+            el archivo <code>E-las-cotizaciones.sql</code> en Supabase.
+          </p>
+        ) : visibles.length === 0 ? (
+          <p className="p-5 text-sm text-muted-foreground">
+            {b ? "Ninguna cotización con ese folio o teléfono." : "No hay cotizaciones aquí."}
+          </p>
+        ) : (
+          <table className="w-full min-w-[720px] text-sm">
+            <thead className="text-left text-xs uppercase tracking-wider text-muted-foreground">
+              <tr className="border-b border-border">
+                <th className="p-4">Folio</th>
+                <th className="p-4">Fecha</th>
+                <th className="p-4">Cliente</th>
+                <th className="p-4">C.P.</th>
+                <th className="p-4">Piezas</th>
+                <th className="p-4 text-right">Subtotal</th>
+              </tr>
+            </thead>
+            <tbody>
+              {visibles.map((q) => {
+                const its = items(q);
+                const falta = its.some((i) => i.stock != null && i.quantity > i.stock);
+                return (
+                  <tr key={q.id} onClick={() => setSelected(q)} className="cursor-pointer border-b border-border last:border-0 hover:bg-foreground/5">
+                    <td className="p-4 font-semibold">{q.code}</td>
+                    <td className="p-4 text-muted-foreground">{cuando(q.created_at)}</td>
+                    <td className="p-4">{q.customer_name}</td>
+                    <td className="p-4">{q.postal_code}</td>
+                    <td className="p-4">
+                      {its.reduce((s, i) => s + Number(i.quantity), 0)}
+                      {falta && <AlertTriangle className="ml-1 inline h-3.5 w-3.5 text-destructive" aria-label="Pidió más de lo que había" />}
+                    </td>
+                    <td className="p-4 text-right">{formatMXN(q.subtotal)}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        )}
+      </Panel>
+      <Dialog open={!!selected} onOpenChange={(v) => !v && setSelected(null)}>
+        <DialogContent className="max-h-[90vh] overflow-y-auto border-border bg-popover sm:max-w-2xl">
+          {selected && <Detalle quote={selected} onDone={() => setSelected(null)} />}
+        </DialogContent>
+      </Dialog>
+    </>
+  );
+}
+
+function Detalle({ quote, onDone }: { quote: Quote; onDone: () => void }) {
+  const qc = useQueryClient();
+  const [status, setStatus] = useState(quote.status);
+  const [notes, setNotes] = useState(quote.internal_notes ?? "");
+  const [saving, setSaving] = useState(false);
+  const its = items(quote);
+
+  async function save() {
+    setSaving(true);
+    const { error } = await supabase
+      .from("quotes")
+      .update({ status, internal_notes: notes.trim() || null })
+      .eq("id", quote.id);
+    setSaving(false);
+    if (error) return void toast.error(error.message);
+    toast.success("Cotización actualizada");
+    qc.invalidateQueries({ queryKey: ["admin", "quotes"] });
+    onDone();
+  }
+
+  const nombre = quote.customer_name.split(" ")[0];
+  const aLaClienta = whatsappLink(
+    `52${quote.phone.replace(/\D/g, "").slice(-10)}`,
+    `Hola ${nombre}, te escribimos de Zona G sobre tu cotización ${quote.code}.`,
+  );
+
+  return (
+    <div className="space-y-5">
+      <div>
+        <DialogTitle className="font-display text-3xl font-medium">Cotización {quote.code}</DialogTitle>
+        <DialogDescription>{cuando(quote.created_at)}</DialogDescription>
+      </div>
+      <div className="grid gap-4 text-sm sm:grid-cols-2">
+        <div>
+          <p className="eyebrow mb-1">Cliente</p>
+          <p>{quote.customer_name}</p>
+          <p className="text-muted-foreground">{quote.email}</p>
+          <p className="text-muted-foreground">{quote.phone}</p>
+          <a href={aLaClienta} target="_blank" rel="noreferrer" className="mt-1 inline-flex items-center gap-1 text-cian hover:underline">
+            <MessageCircle className="h-3.5 w-3.5" /> Escribir por WhatsApp
+          </a>
+        </div>
+        <div>
+          <p className="eyebrow mb-1">Entrega</p>
+          <p>{quote.address_line}</p>
+          <p>{quote.city}, {quote.state} {quote.postal_code}</p>
+          {quote.address_notes && <p className="text-muted-foreground">{quote.address_notes}</p>}
+          {quote.shipping_method_name && <p className="mt-1 text-muted-foreground">Envío escogido: {quote.shipping_method_name}</p>}
+        </div>
+      </div>
+      {quote.customer_notes && <p className="rounded-xl border border-border p-3 text-sm">Nota de la clienta: {quote.customer_notes}</p>}
+      <ul className="space-y-1 border-y border-border py-3 text-sm">
+        {its.map((i, n) => {
+          const falta = i.stock != null && i.quantity > i.stock;
+          return (
+            <li key={n} className="flex justify-between gap-2">
+              <span>
+                {i.name}
+                {i.variant && i.variant !== "Única" ? ` · ${i.variant}` : ""} × {i.quantity}
+                {falta && (
+                  <span className="ml-2 text-xs text-destructive">
+                    al pedir había {i.stock}
+                  </span>
+                )}
+              </span>
+              <span>{formatMXN(i.line_total)}</span>
+            </li>
+          );
+        })}
+        <li className="flex justify-between pt-2 font-semibold">
+          <span>Subtotal (precios del día en que la pidió)</span>
+          <span>{formatMXN(quote.subtotal)}</span>
+        </li>
+        {quote.promo_code && (
+          <li className="text-muted-foreground">Escribió el código {quote.promo_code} (no se ha aplicado ni gastado).</li>
+        )}
+      </ul>
+      <div className="grid gap-3">
+        <label className="space-y-1.5 text-sm">
+          <span className="font-medium">Estado</span>
+          <select value={status} onChange={(e) => setStatus(e.target.value)} className={selectCls}>
+            {Object.entries(QUOTE_STATUS_LABEL).map(([k, v]) => <option key={k} value={k}>{v}</option>)}
+          </select>
+        </label>
+        <AreaField id="qnotes" label="Notas internas (solo el equipo)" rows={2} value={notes} onChange={(e) => setNotes(e.target.value)} />
+      </div>
+      <Button onClick={save} disabled={saving} className="w-full">
+        {saving && <Loader2 className="animate-spin" />} Guardar cambios
+      </Button>
+    </div>
+  );
+}
