@@ -1,0 +1,1770 @@
+Revisión de página web
+
+Created: 11/16/2026 15:17:14
+Updated: 11/16/2026 15:36:51
+Exported: 11/16/2026 15:40:16
+Link: https://chatgpt.com/c/6afb80e9-a808-83e8-af34-3b0529ccb9a5
+
+## Prompt:
+16/11/2026, 3:17:14 p.m.
+
+https://zonag.netlify.app/ Tengo esta pagina la puedes ver?
+
+## Response:
+16/11/2026, 3:17:15 p.m. · gpt-6
+
+Se buscó en 1 sitio web
+
+Ha pensado un par de segundos
+
+¡Sí! Ya pude abrirla y revisar su contenido. Es tu tienda Zona G, enfocada en lencería, juguetes para adultos, fragancias y bienestar íntimo.
+
+(Sitio accesible) (Contenido 18+)
+
+Zona G - Conecta en pareja
+
+Abrir Zona G
+
+Lo que encontré
+
+La página contempla:
+
+Lencería.
+
+Juguetes para adultos.
+
+Fragancias.
+
+Aceites y masajes.
+
+Bienestar íntimo.
+
+Accesorios sensuales.
+
+Juegos para parejas.
+
+Regalos y experiencias.
+
+Novedades y ofertas.
+
+También incluye funcionalidades interesantes:
+
+Selector de productos según intereses.
+
+Selector de regalos por presupuesto y ocasión.
+
+Favoritos.
+
+Consulta de pedidos.
+
+Atención por WhatsApp.
+
+Información de privacidad, pagos y envíos nacionales.
+
+¿Qué podemos hacer ahora?
+
+Puedo ayudarte a realizar una auditoría completa de la tienda, tanto visual como funcional:
+
+Diseño: apariencia, colores, tipografía, imágenes y experiencia de compra.
+
+Ventas: qué cambiar para convertir visitantes en compradores.
+
+Catálogo: organización de categorías, fichas de productos y precios.
+
+Funcionamiento: carrito, checkout, pagos, pedidos y WhatsApp.
+
+Marketing: SEO, posicionamiento en Google y estrategias para atraer clientes.
+
+Una pregunta importante: ¿Quieres que revisemos la página como si fuéramos clientes, intentando recorrer todo el proceso de compra, para detectar qué funciona, qué falla y qué falta antes de lanzarla oficialmente?
+
+## Prompt:
+16/11/2026, 3:19:59 p.m.
+
+Quisiera hacer unos pequeños cambios: En Cotizaciones Pendientes, del Panel del administrador, cambiar en lugar de atendida que diga Vendido, y al seleccionar eso, que la cantidad vendida se reste de la existencia para llevar el control del inventario (Pedir confirmación y añadir el mensaje de que el inventario se actualizará), y en caso de 0 existencias, inhabilitar el producto para que no se añada a el carrito de compras, y poder revertir lo de vendido en caso de cancelación, añadir una Nueva columna Productos para saber que producto se está cotizando en esa ventana (muestra el nombre del primer producto + “+X más” si hay varios).
+
+## Response:
+16/11/2026, 3:20:03 p.m. · gpt-6
+
+Perfecto. Estos cambios son importantes porque convierten las cotizaciones en una herramienta de control de ventas e inventario, no solamente de seguimiento de clientes.
+
+Te organizo los cambios para que no afectemos las funciones que ya tiene Zona G.
+
+Cambios solicitados - Panel de administrador
+
+1. Cambiar «Atendida» por «Vendido»
+
+En Cotizaciones Pendientes, cuando el administrador cambie el estado de una cotización a «Vendido», debe aparecer una confirmación:
+
+¿Confirmar venta?
+
+Al confirmar esta cotización como vendida:
+
+Se descontarán del inventario las cantidades correspondientes a cada producto.
+
+Se actualizarán las existencias automáticamente.
+
+Los productos que lleguen a cero existencias dejarán de estar disponibles para compra.
+
+¿Deseas continuar?
+
+Cancelar
+
+Confirmar venta
+
+Ejemplo ilustrativo del mensaje de confirmación.
+
+2. Descontar existencias automáticamente
+
+Al confirmar la venta:
+
+Identificar cada producto de la cotización.
+
+Obtener la cantidad cotizada de cada uno.
+
+Restar esas cantidades de las existencias actuales.
+
+Guardar el movimiento de inventario.
+
+Actualizar las existencias en la base de datos.
+
+Importante: el descuento debe ejecutarse una sola vez, aunque el administrador vuelva a abrir la cotización o actualice la página.
+
+3. Revertir una venta
+
+Si el cliente cancela después de haber marcado la cotización como «Vendido», el administrador podrá revertir la operación.
+
+Al hacerlo:
+
+Solicitar confirmación.
+
+Restaurar las cantidades descontadas.
+
+Registrar el movimiento inverso.
+
+Permitir que los productos vuelvan a estar disponibles si tienen existencias.
+
+No debe ser posible restaurar existencias dos veces por error.
+
+4. Deshabilitar productos agotados
+
+Producto sin existencias
+
+(Agotado)
+
+Existencias: 0
+
+El producto no podrá agregarse al carrito.
+
+La restricción debe aplicarse tanto visualmente como en la validación del carrito y del proceso de compra. No basta con ocultar el botón.
+
+Cuando el inventario vuelva a ser mayor que cero, el producto podrá habilitarse nuevamente.
+
+5. Nueva columna «Productos»
+
+En la tabla de Cotizaciones Pendientes, añadir una columna que permita identificar rápidamente qué se está cotizando.
+
+Ejemplos:
+
+Cotización
+Productos
+Estado
+#1024
+Body encaje negro +2 más
+Pendiente
+#1025
+Perfume de vainilla
+Pendiente
+#1026
+Kit de pareja +3 más
+Vendido
+
+Regla de presentación:
+
+Un producto: mostrar su nombre completo.
+
+Dos o más productos: mostrar el nombre del primero y «+X más».
+
+No modificar el contenido original de la cotización.
+
+Consideraciones técnicas importantes
+
+Quiero que la implementación contemple cuatro protecciones:
+
+Operación atómica: descontar todas las existencias de una cotización o ninguna. Evitar ventas parcialmente descontadas.
+
+Control de duplicados: una cotización vendida no puede volver a descontar inventario.
+
+Registro de movimientos: guardar producto, cantidad, existencia anterior, existencia posterior, cotización y fecha.
+
+Validación de existencias: impedir que dos ventas simultáneas provoquen inventarios negativos.
+
+Esto debe funcionar en la base de datos, no solamente en JavaScript.
+
+Para comenzar a implementarlo
+
+Necesito acceder al código fuente de Zona G. La página publicada en Netlify permite visualizar el sitio, pero no modificar directamente su lógica interna ni sus tablas de Supabase.
+
+¿Tienes conectado el proyecto a GitHub?
+
+Si es así, podemos trabajar directamente sobre el repositorio. Si no, puedes compartirme el ZIP del proyecto.
+
+Mi recomendación es hacer estos cambios sin rediseñar nada, sin modificar el funcionamiento de las cotizaciones actuales y conservando el diseño que ya tiene Zona G.
+
+## Prompt:
+16/11/2026, 3:22:53 p.m.
+
+001 y 002 son para Supabase, y te añado tambien admin.cotizaciones. Y la carpeta está armada así: https://raw.githubusercontent.com/josuemtz1088-sys/chatgpt/refs/heads/main/PS%20CUsersPaul%20camposDesktopPagina%20p.txt para Netlify.
+
+[Attachment: admin.cotizaciones.txt]
+
+[Attachment: 002 Las fotos por color.txt]
+
+[Attachment: 001 Los articulos las tallas y los colores.txt]
+
+## Response:
+16/11/2026, 3:22:53 p.m. · gpt-6
+
+Revisando la integración
+
+Estoy detectando una discrepancia entre los esquemas SQL aportados y la estructura actual del proyecto. Para implementar el inventario correctamente, necesito revisar cómo se crean los pedidos, cómo se identifican las variantes y qué componentes controlan el carrito.
+
+Consultando ProductCard.tsx en la rama principal
+
+Ha pensado durante 15s
+
+Perfecto. Ya tengo los tres archivos y pude revisar la estructura del proyecto de Zona G.
+
+Veo que está construido con React, TypeScript, TanStack Router, Supabase y Netlify. También identifiqué el archivo src/routes/admin/cotizaciones.tsx, que corresponde precisamente al panel que queremos modificar.
+
+Hay un detalle importante que debemos respetar: tu inventario no está organizado por producto solamente, sino por artículo + color + talla. Las existencias están en la tabla variantes, mientras que las cotizaciones guardan sus productos en quotes.items.
+
+Por eso, el descuento debe identificar la variante exacta. No debemos descontar simplemente por el nombre del artículo, porque podríamos restar existencias del color o talla equivocados.
+
+Lo que ya pude confirmar
+
+admin.cotizaciones actualmente guarda el cambio de estado directamente en quotes, sin modificar inventario. fileciteturn0file0
+
+El archivo 001 crea variantes.existencia, con una combinación única de artículo, color y talla. fileciteturn0file2
+
+El archivo 002 se ocupa de las vistas de fotografías y permisos; no necesita cambios para esta función. fileciteturn0file1
+
+Necesito revisar cuatro archivos más
+
+Para hacer la modificación completa y no romper el carrito ni el catálogo, compárteme:
+
+supabase/sql/E-las-cotizaciones.sql
+
+src/lib/cotizacion.ts
+
+src/components/site/CartSheet.tsx
+
+src/components/site/ProductCard.tsx
+
+Puedes subirlos individualmente o enviarme un ZIP con la carpeta src y supabase/sql.
+
+Cómo quedará el trabajo
+
+Separaré los cambios en dos partes:
+
+Supabase
+
+Función transaccional para registrar la venta.
+
+Descuento de existencias por variante.
+
+Registro de movimientos.
+
+Función para revertir ventas.
+
+Protección contra descuentos duplicados y existencias negativas.
+
+Netlify
+
+Columna Productos.
+
+Estado Vendido.
+
+Confirmación antes del descuento.
+
+Acción para revertir una venta.
+
+Bloqueo de productos agotados en el catálogo y carrito.
+
+No modificaré todavía la base de datos ni publicaré cambios en Netlify. Primero quiero comprobar cómo se relacionan las cotizaciones con las variantes reales.
+
+Así conservamos el diseño y las funciones actuales de Zona G, y añadimos el control de inventario correctamente.
+
+## Prompt:
+16/11/2026, 3:26:52 p.m.
+
+https://raw.githubusercontent.com/josuemtz1088-sys/chatgpt/refs/heads/main/E-las-cotizaciones.txt / https://raw.githubusercontent.com/josuemtz1088-sys/chatgpt/refs/heads/main/CartSheet.txt / https://raw.githubusercontent.com/josuemtz1088-sys/chatgpt/refs/heads/main/ProductCard.txt / https://raw.githubusercontent.com/josuemtz1088-sys/chatgpt/refs/heads/main/cotizacion.txt
+
+## Response:
+16/11/2026, 3:26:54 p.m. · gpt-6
+
+Buscando en la web
+
+Recuperado contenido exacto de archivos mediante URLs sin procesar
+
+Ha pensado durante 5s
+
+Perfecto. Ya pude abrir y revisar los cuatro archivos. Con esto ya tenemos una parte importante de la lógica real de Zona G y podemos avanzar sin inventar cómo está organizada la base de datos.
+
+Lo que encontré
+
+1. E-las-cotizaciones.txt — estructura de Supabase
+
+La tabla quotes contiene lo necesario para identificar y procesar cada producto cotizado:
+
+status: actualmente acepta pendiente, atendida y descartada.
+
+items: guarda los productos en formato JSON.
+
+Cada producto guarda product_id, variant_id, name, variant, quantity, unit_price, line_total y stock.
+
+La variante está identificada por su UUID, así que podemos descontar la existencia de la combinación exacta de producto, color y talla.
+
+Un detalle importante: el SQL actual no descuenta inventario al crear una cotización, lo cual es correcto. Sin embargo, tampoco reserva existencias mientras se cotiza. Por eso, al confirmar una venta debemos comprobar nuevamente que haya suficiente inventario.
+
+2. CartSheet.txt — carrito
+
+El carrito utiliza maxStock para limitar las cantidades y deshabilita los botones cuando se alcanza el límite. Esto nos da una base para impedir que se soliciten más unidades de las disponibles.
+
+3. ProductCard.txt — catálogo
+
+Ya existe una comprobación de inventario:
+
+Si stock <= 0, muestra «Agotado».
+
+Si es una variante única y tiene existencias, permite agregarla directamente.
+
+Si tiene varias variantes, dirige al detalle del producto.
+
+Habrá que comprobar también el detalle del producto, porque no basta con bloquear la tarjeta: debemos impedir que se agregue una variante agotada desde cualquier punto de la tienda.
+
+4. cotizacion.txt — generación de cotizaciones
+
+Este archivo construye el mensaje de WhatsApp y utiliza el folio de la base de datos. No necesita modificarse para descontar inventario; esa operación debe ocurrir desde el panel administrativo y Supabase.
+
+Cómo implementaría los cambios
+
+Propongo que el proceso funcione así:
+
+Caty selecciona Vendido.
+
+Aparece una confirmación indicando que se descontarán del inventario las cantidades de esa cotización.
+
+Al confirmar, Supabase verifica que la cotización siga pendiente y que cada variante tenga existencias suficientes.
+
+Descuenta todas las cantidades en una sola operación.
+
+Cambia el estado a vendido.
+
+Si la venta se cancela, se permite revertirla. Supabase devuelve las cantidades descontadas y cambia el estado nuevamente, evitando restauraciones duplicadas.
+
+También agregaría un registro de movimientos para poder auditar qué cotización descontó o restauró cada existencia.
+
+La columna Productos mostraría, por ejemplo:
+
+Vestido negro
+
+Vestido negro +2 más
+
+Vestido negro +4 más
+
+Me falta un archivo para completar la revisión
+
+Necesito el código del componente del panel donde se muestran y actualizan las cotizaciones: src/routes/admin/cotizaciones.tsx (o el archivo equivalente admin.cotizaciones que compartiste anteriormente).
+
+Ese archivo es indispensable para modificar los botones, la confirmación, el cambio de estado y la nueva columna.
+
+Por ahora no cambiaría ninguno de los archivos ni ejecutaría SQL. Primero quiero revisar ese componente y confirmar cómo consulta y actualiza actualmente las cotizaciones. Así podremos preparar los cambios completos y compatibles con lo que ya tienes.
+
+## Prompt:
+16/11/2026, 3:28:28 p.m.
+
+https://raw.githubusercontent.com/josuemtz1088-sys/chatgpt/refs/heads/main/admin.cotizaciones.txt Este?
+
+## Response:
+16/11/2026, 3:28:31 p.m. · gpt-6
+
+Revisado el archivo de cotizaciones administrativas
+
+Ha pensado un par de segundos
+
+Sí, ese es exactamente el archivo que necesito: admin.cotizaciones.txt.
+
+Corresponde al componente del panel donde podremos revisar cómo se muestran las cotizaciones y cómo se actualizan sus estados.
+
+¡Sí! Ya lo abrí y revisé. Este es el componente correcto: src/routes/admin/cotizaciones.tsx.
+
+Ahora sí tenemos las cuatro piezas del flujo y el panel administrativo.
+
+Encontré algo importante: actualmente el botón Guardar cambios actualiza directamente el estado mediante:
+
+supabase
+  .from("quotes")
+  .update({ status, internal_notes: notes.trim() || null })
+  .eq("id", quote.id);
+
+Eso significa que hoy se puede marcar una cotización como atendida sin realizar ninguna operación de inventario.
+
+También confirmé que el panel utiliza product_id y variant_id dentro de items, aunque el tipo Item de este componente todavía no los declara. Tendremos que incorporarlos para identificar correctamente cada variante.
+
+Mi propuesta es hacer los cambios en tres partes:
+
+Supabase: crear una función transaccional para vender, descontar existencias, cancelar una venta y restaurar existencias. Debe impedir descuentos dobles y cantidades negativas.
+
+Panel administrativo: sustituir «Atendida» por «Vendido», agregar confirmación, permitir cancelar una venta y mostrar la columna «Productos».
+
+Tienda: bloquear productos y variantes sin existencias, tanto en las tarjetas como en el detalle y el carrito.
+
+Una precaución: el SQL actual limita los estados a pendiente, atendida y descartada. No podemos simplemente enviar vendido desde React; primero hay que modificar esa restricción de forma compatible.
+
+Ya tengo suficiente código para diseñar la solución, pero antes de escribir el SQL definitivo necesito revisar cómo está definida la tabla product_variants y sus permisos. Eso evitará que la función de inventario choque con las reglas actuales de Supabase. No ejecutaré cambios en tu base ni en el sitio sin que revisemos primero el resultado.
+
+## Prompt:
+16/11/2026, 3:29:24 p.m.
+
+table_name,column_name,data_type
+product_variants,id,uuid
+product_variants,product_id,uuid
+product_variants,name,text
+product_variants,sku,text
+product_variants,color,text
+product_variants,size,text
+product_variants,scent,text
+product_variants,price,numeric
+product_variants,stock,integer
+product_variants,is_active,boolean
+product_variants,sort_order,integer
+product_variants,created_at,timestamp with time zone
+products,id,uuid
+products,slug,text
+products,name,text
+products,short_description,text
+products,description,text
+products,category_id,uuid
+products,brand,text
+products,material,text
+products,base_price,numeric
+products,compare_at_price,numeric
+products,images,ARRAY
+products,is_active,boolean
+products,is_featured,boolean
+products,badge_new,boolean
+products,badge_favorite,boolean
+products,badge_special,boolean
+products,usage_instructions,text
+products,care_instructions,text
+products,ingredients,text
+products,safety_info,text
+products,faq,jsonb
+products,created_at,timestamp with time zone
+products,updated_at,timestamp with time zone Te sirve?
+
+## Response:
+16/11/2026, 3:29:25 p.m. · gpt-6-mini
+
+¡Sí, me sirve! Con esto ya confirmamos la estructura básica de las dos tablas y podemos avanzar con la lógica de inventario de Zona G.
+
+Lo importante es que cada cotización identifica la variante mediante variant_id, y cada variante tiene su propio campo stock. Por lo tanto, el descuento debe hacerse sobre product_variants.stock, no sobre products.
+
+Lo que ya podemos definir
+
+Al marcar como Vendido: descontar de product_variants.stock la cantidad cotizada de cada variante.
+
+Al cancelar una venta: restaurar exactamente las cantidades que se descontaron.
+
+Evitar descuentos duplicados: si una cotización ya está vendida, no volver a descontar.
+
+Evitar inventario negativo: impedir la venta si ya no hay existencias suficientes.
+
+Producto agotado: si todas sus variantes tienen stock cero, impedir que se agregue al carrito.
+
+Columna Productos: mostrar el primer producto y, si hay más, indicar «+X más».
+
+Necesito una última revisión antes de escribir el SQL
+
+Lo que compartiste muestra las columnas, pero no las restricciones, políticas RLS, triggers ni funciones que puedan afectar el inventario.
+
+¿Puedes ejecutar esta consulta en Supabase SQL Editor y compartirme el resultado?
+
+-- Restricciones, triggers y políticas de inventario
+SELECT
+  'constraint' AS tipo,
+  c.conname AS nombre,
+  pg_get_constraintdef(c.oid) AS definicion
+FROM pg_constraint c
+JOIN pg_class t ON t.oid = c.conrelid
+JOIN pg_namespace n ON n.oid = t.relnamespace
+WHERE n.nspname = 'public'
+  AND t.relname IN ('products', 'product_variants', 'quotes')
+
+UNION ALL
+
+SELECT
+  'trigger',
+  trigger_name,
+  action_statement
+FROM information_schema.triggers
+WHERE event_object_schema = 'public'
+  AND event_object_table IN ('products', 'product_variants', 'quotes')
+
+UNION ALL
+
+SELECT
+  'policy',
+  tablename || '.' || policyname,
+  'cmd=' || cmd || '; roles=' || array_to_string(roles, ',')
+    || '; using=' || coalesce(qual, '')
+    || '; check=' || coalesce(with_check, '')
+FROM pg_policies
+WHERE schemaname = 'public'
+  AND tablename IN ('products', 'product_variants', 'quotes')
+
+ORDER BY 1, 2;
+
+Con eso podremos preparar una solución transaccional que descuente y restaure inventario correctamente, sin depender de varias actualizaciones independientes desde React. No modificaremos nada todavía.
+
+## Prompt:
+16/11/2026, 3:30:04 p.m.
+
+tipo,nombre,definicion
+constraint,compare_price_gt_base,CHECK (((compare_at_price IS NULL) OR (compare_at_price > base_price)))
+constraint,product_variants_pkey,PRIMARY KEY (id)
+constraint,product_variants_price_check,CHECK (((price IS NULL) OR (price >= (0)::numeric)))
+constraint,product_variants_product_id_fkey,FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
+constraint,product_variants_sku_key,UNIQUE (sku)
+constraint,product_variants_stock_check,CHECK ((stock >= 0))
+constraint,products_base_price_check,CHECK ((base_price >= (0)::numeric))
+constraint,products_category_id_fkey,FOREIGN KEY (category_id) REFERENCES categories(id) ON DELETE SET NULL
+constraint,products_compare_at_price_check,CHECK (((compare_at_price IS NULL) OR (compare_at_price >= (0)::numeric)))
+constraint,products_name_check,CHECK ((length(TRIM(BOTH FROM name)) > 0))
+constraint,products_pkey,PRIMARY KEY (id)
+constraint,products_slug_check,CHECK ((slug ~ '^[a-z0-9-]+$'::text))
+constraint,products_slug_key,UNIQUE (slug)
+constraint,quotes_code_key,UNIQUE (code)
+constraint,quotes_idempotency_key_key,UNIQUE (idempotency_key)
+constraint,quotes_pkey,PRIMARY KEY (id)
+constraint,quotes_status_check,"CHECK ((status = ANY (ARRAY['pendiente'::text, 'atendida'::text, 'descartada'::text])))"
+constraint,quotes_subtotal_check,CHECK ((subtotal >= (0)::numeric))
+policy,product_variants.Public reads active variants,"cmd=SELECT; roles=anon,authenticated; using=((is_active AND (EXISTS ( SELECT 1
+   FROM products p
+  WHERE ((p.id = product_variants.product_id) AND p.is_active)))) OR is_staff(auth.uid())); check="
+policy,product_variants.Staff manage variants,cmd=ALL; roles=authenticated; using=is_staff(auth.uid()); check=is_staff(auth.uid())
+policy,products.Public reads active products,"cmd=SELECT; roles=anon,authenticated; using=(is_active OR is_staff(auth.uid())); check="
+policy,products.Staff manage products,cmd=ALL; roles=authenticated; using=is_staff(auth.uid()); check=is_staff(auth.uid())
+policy,quotes.Staff deletes quotes,cmd=DELETE; roles=authenticated; using=is_staff(auth.uid()); check=
+policy,quotes.Staff reads quotes,cmd=SELECT; roles=authenticated; using=is_staff(auth.uid()); check=
+policy,quotes.Staff updates quotes,cmd=UPDATE; roles=authenticated; using=is_staff(auth.uid()); check=is_staff(auth.uid())
+trigger,products_touch,EXECUTE FUNCTION touch_updated_at()
+trigger,quotes_touch,EXECUTE FUNCTION touch_updated_at() Te sirve?
+
+## Response:
+16/11/2026, 3:30:13 p.m. · gpt-6-mini
+
+¡Sí! Ahora sí tenemos información suficiente para definir la parte delicada de la solución: cómo modificar el inventario sin permitir ventas duplicadas, existencias negativas o restauraciones incorrectas.
+
+Hay varios puntos importantes en los resultados:
+
+product_variants.stock tiene una restricción CHECK (stock >= 0). La propia base de datos impide guardar existencias negativas.
+
+Las variantes están relacionadas con products mediante product_id.
+
+El inventario solo puede ser administrado directamente por usuarios autorizados (is_staff).
+
+La tabla quotes todavía restringe los estados a pendiente, atendida y descartada. Para introducir vendido, habrá que modificar esa restricción.
+
+No aparecen triggers de inventario ni de cotizaciones que hagan descuentos automáticos. Por tanto, el descuento deberá ejecutarse explícitamente.
+
+Mi recomendación es no descontar ni restaurar inventario directamente desde React. Lo correcto es crear funciones SQL transaccionales en Supabase: una para registrar la venta y otra para cancelar la venta. Así, todas las cantidades se actualizan juntas o no se actualiza ninguna.
+
+También hay una decisión funcional que conviene resolver antes de preparar el SQL definitivo:
+
+Cuando se cancele una cotización que ya fue vendida, ¿qué estado quieres que aparezca?
+
+Mi recomendación es crear un estado independiente llamado Cancelada, en lugar de regresarla a Pendiente o marcarla como Descartada. Así podrás distinguir claramente:
+
+Pendiente: todavía no se concreta la venta.
+
+Vendido: se descontó el inventario.
+
+Cancelada: se canceló una venta y se restauró el inventario.
+
+Descartada: cotización que no se convirtió en venta.
+
+Con esa decisión podemos preparar los cambios de Supabase y después modificar admin.cotizaciones y las validaciones de la tienda.
+
+## Prompt:
+16/11/2026, 3:30:37 p.m.
+
+Adelante
+
+## Response:
+16/11/2026, 3:30:47 p.m. · gpt-6-mini
+
+Diseñando el esquema SQL
+
+Estoy definiendo una tabla de movimientos de inventario por presupuesto para registrar ventas y restauraciones de forma auditable. También estoy limitando las transiciones de estado mediante una función segura y contemplando registros antiguos sin reinterpretarlos automáticamente.
+
+Perfeccionando transiciones
+
+Estoy restringiendo la eliminación de presupuestos cuando existan movimientos registrados y manteniendo los estados históricos sin reinterpretarlos. La función permitirá vender, cancelar o descartar únicamente desde estados válidos, conservando notas y trazabilidad.
+
+Validando el flujo
+
+Estoy haciendo que repetir el estado solo actualice notas, mientras que vender, cancelar y descartar sigan rutas estrictas. También estoy agrupando cantidades por variante y registrando cada ajuste para impedir inconsistencias o restauraciones duplicadas.
+
+Diseñé el esquema SQL y validé el flujo de transiciones
+
+Preparando la migración
+
+Estoy redactando una migración segura y repetible: añade columnas, conserva estados antiguos, protege el libro de movimientos y expone una única operación controlada para modificar presupuestos e inventario.
+
+Preparaste la migración
+
+Obtenidos archivos SQL de cotizaciones actuales
+
+Ha pensado durante 1m 19s
+
+Perfecto. Adoptamos Cancelada como estado independiente. La regla será que una cotización solo descuente inventario al pasar a Vendido y que, al pasar de Vendido a Cancelada, se devuelvan las cantidades exactas a las variantes originales.
+
+La operación quedará protegida en Supabase: no se podrá vender dos veces la misma cotización, descontar más unidades de las disponibles ni restaurar existencias dos veces.
+
+Paso 1. Actualizar Supabase
+
+Preparé una migración que conserva las cotizaciones anteriores y agrega el registro de movimientos de inventario. También conserva atendida para no invalidar registros históricos; las nuevas ventas usarán vendido.
+
+Importante: esta migración no convierte automáticamente las cotizaciones antiguas en ventas ni modifica su inventario. Solo las nuevas operaciones realizadas mediante el panel aplicarán el control automático.
+
+Ejecuta este SQL completo en Supabase → SQL Editor → New query. Todavía no modifica el código de la tienda.
+
+-- ============================================================
+-- ZONA G | Control de ventas e inventario desde cotizaciones
+-- Ejecutar en Supabase SQL Editor
+-- ============================================================
+
+-- 1. Ampliar los estados sin borrar los estados históricos.
+ALTER TABLE public.quotes
+  DROP CONSTRAINT IF EXISTS quotes_status_check;
+
+ALTER TABLE public.quotes
+  ADD CONSTRAINT quotes_status_check
+  CHECK (status IN (
+    'pendiente',
+    'atendida',
+    'vendido',
+    'cancelada',
+    'descartada'
+  ));
+
+-- 2. Marcas para saber si el inventario ya se descontó o restauró.
+ALTER TABLE public.quotes
+  ADD COLUMN IF NOT EXISTS inventory_applied_at timestamptz,
+  ADD COLUMN IF NOT EXISTS inventory_reversed_at timestamptz;
+
+-- 3. Registro permanente de las cantidades descontadas por cotización.
+-- Este registro permite restaurar exactamente las variantes vendidas,
+-- aunque cambien posteriormente los datos de la cotización.
+CREATE TABLE IF NOT EXISTS public.quote_inventory_movements (
+  id uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  quote_id uuid NOT NULL
+    REFERENCES public.quotes(id) ON DELETE CASCADE,
+  variant_id uuid NOT NULL
+    REFERENCES public.product_variants(id) ON DELETE RESTRICT,
+  quantity integer NOT NULL CHECK (quantity > 0),
+  created_at timestamptz NOT NULL DEFAULT now(),
+  UNIQUE (quote_id, variant_id)
+);
+
+CREATE INDEX IF NOT EXISTS quote_inventory_movements_quote_idx
+  ON public.quote_inventory_movements (quote_id);
+
+-- Solo las funciones internas podrán consultar o modificar este registro.
+ALTER TABLE public.quote_inventory_movements ENABLE ROW LEVEL SECURITY;
+
+REVOKE ALL ON TABLE public.quote_inventory_movements
+  FROM PUBLIC, anon, authenticated;
+
+-- 4. Función única para cambiar el estado y controlar el inventario.
+CREATE OR REPLACE FUNCTION public.set_quote_status(
+  p_quote_id uuid,
+  p_status text,
+  p_internal_notes text DEFAULT NULL
+)
+RETURNS jsonb
+LANGUAGE plpgsql
+SECURITY DEFINER
+SET search_path = public
+AS $$
+DECLARE
+  v_quote public.quotes%ROWTYPE;
+  r record;
+  v_stock integer;
+BEGIN
+  -- Solo el personal autorizado puede realizar estas operaciones.
+  IF NOT public.is_staff(auth.uid()) THEN
+    RAISE EXCEPTION 'No tienes permiso para modificar cotizaciones';
+  END IF;
+
+  IF p_status NOT IN (
+    'pendiente', 'vendido', 'cancelada', 'descartada', 'atendida'
+  ) THEN
+    RAISE EXCEPTION 'Estado de cotización no válido';
+  END IF;
+
+  -- Bloquea la cotización para impedir dos operaciones simultáneas.
+  SELECT *
+    INTO v_quote
+    FROM public.quotes
+   WHERE id = p_quote_id
+   FOR UPDATE;
+
+  IF NOT FOUND THEN
+    RAISE EXCEPTION 'No se encontró la cotización';
+  END IF;
+
+  -- Si el estado no cambia, solo se actualizan las notas.
+  IF v_quote.status = p_status THEN
+    UPDATE public.quotes
+       SET internal_notes = nullif(trim(coalesce(p_internal_notes, '')), '')
+     WHERE id = p_quote_id;
+
+    RETURN jsonb_build_object(
+      'success', true,
+      'status', p_status,
+      'inventory_changed', false
+    );
+  END IF;
+
+  -- ==========================================================
+  -- VENTA: únicamente se permite pasar de pendiente a vendido.
+  -- ==========================================================
+  IF p_status = 'vendido' THEN
+
+    IF v_quote.status <> 'pendiente' THEN
+      RAISE EXCEPTION 'Solo una cotización pendiente puede marcarse como vendida';
+    END IF;
+
+    IF v_quote.inventory_applied_at IS NOT NULL THEN
+      RAISE EXCEPTION 'El inventario de esta cotización ya fue descontado';
+    END IF;
+
+    IF jsonb_typeof(v_quote.items) IS DISTINCT FROM 'array'
+       OR jsonb_array_length(v_quote.items) = 0 THEN
+      RAISE EXCEPTION 'La cotización no contiene productos válidos';
+    END IF;
+
+    -- Agrupa por variante por seguridad, por si hubiera IDs repetidos.
+    -- Ordenar los IDs ayuda a evitar bloqueos cruzados entre ventas.
+    FOR r IN
+      SELECT
+        (e->>'variant_id')::uuid AS variant_id,
+        sum((e->>'quantity')::integer)::integer AS quantity
+      FROM jsonb_array_elements(v_quote.items) AS e
+      GROUP BY (e->>'variant_id')::uuid
+      ORDER BY (e->>'variant_id')::uuid
+    LOOP
+      IF r.variant_id IS NULL OR r.quantity IS NULL OR r.quantity < 1 THEN
+        RAISE EXCEPTION 'La cotización contiene una variante o cantidad inválida';
+      END IF;
+
+      -- Bloquea la variante y comprueba la existencia actual.
+      SELECT stock
+        INTO v_stock
+        FROM public.product_variants
+       WHERE id = r.variant_id
+       FOR UPDATE;
+
+      IF NOT FOUND THEN
+        RAISE EXCEPTION 'Una variante de la cotización ya no existe';
+      END IF;
+
+      IF v_stock < r.quantity THEN
+        RAISE EXCEPTION
+          'Existencia insuficiente. Solicitadas: %, disponibles: %',
+          r.quantity, v_stock;
+      END IF;
+
+      UPDATE public.product_variants
+         SET stock = stock - r.quantity
+       WHERE id = r.variant_id;
+
+      INSERT INTO public.quote_inventory_movements (
+        quote_id, variant_id, quantity
+      )
+      VALUES (
+        p_quote_id, r.variant_id, r.quantity
+      );
+    END LOOP;
+
+    UPDATE public.quotes
+       SET status = 'vendido',
+           internal_notes = nullif(trim(coalesce(p_internal_notes, '')), ''),
+           inventory_applied_at = now(),
+           inventory_reversed_at = NULL
+     WHERE id = p_quote_id;
+
+    RETURN jsonb_build_object(
+      'success', true,
+      'status', 'vendido',
+      'inventory_changed', true
+    );
+  END IF;
+
+  -- ==========================================================
+  -- CANCELACIÓN: solo una venta puede cancelarse.
+  -- Restaura las cantidades del registro original.
+  -- ==========================================================
+  IF p_status = 'cancelada' THEN
+
+    IF v_quote.status <> 'vendido' THEN
+      RAISE EXCEPTION 'Solo una venta puede marcarse como cancelada';
+    END IF;
+
+    IF v_quote.inventory_applied_at IS NULL
+       OR v_quote.inventory_reversed_at IS NOT NULL THEN
+      RAISE EXCEPTION 'No se puede restaurar el inventario de esta cotización';
+    END IF;
+
+    IF NOT EXISTS (
+      SELECT 1
+        FROM public.quote_inventory_movements
+       WHERE quote_id = p_quote_id
+    ) THEN
+      RAISE EXCEPTION 'No se encontró el registro del inventario descontado';
+    END IF;
+
+    FOR r IN
+      SELECT variant_id, quantity
+        FROM public.quote_inventory_movements
+       WHERE quote_id = p_quote_id
+       ORDER BY variant_id
+    LOOP
+      UPDATE public.product_variants
+         SET stock = stock + r.quantity
+       WHERE id = r.variant_id;
+
+      IF NOT FOUND THEN
+        RAISE EXCEPTION 'No se pudo restaurar una variante del inventario';
+      END IF;
+    END LOOP;
+
+    UPDATE public.quotes
+       SET status = 'cancelada',
+           internal_notes = nullif(trim(coalesce(p_internal_notes, '')), ''),
+           inventory_reversed_at = now()
+     WHERE id = p_quote_id;
+
+    RETURN jsonb_build_object(
+      'success', true,
+      'status', 'cancelada',
+      'inventory_changed', true
+    );
+  END IF;
+
+  -- ==========================================================
+  -- DESCARTAR: solo cotizaciones que todavía no son ventas.
+  -- ==========================================================
+  IF p_status = 'descartada' THEN
+    IF v_quote.status <> 'pendiente' THEN
+      RAISE EXCEPTION 'Solo una cotización pendiente puede descartarse';
+    END IF;
+
+    UPDATE public.quotes
+       SET status = 'descartada',
+           internal_notes = nullif(trim(coalesce(p_internal_notes, '')), '')
+     WHERE id = p_quote_id;
+
+    RETURN jsonb_build_object(
+      'success', true,
+      'status', 'descartada',
+      'inventory_changed', false
+    );
+  END IF;
+
+  -- No se permite regresar una venta cancelada o descartada a pendiente.
+  RAISE EXCEPTION 'No está permitido cambiar de % a %',
+    v_quote.status, p_status;
+END;
+$$;
+
+-- La función solo puede invocarla personal autenticado.
+REVOKE ALL ON FUNCTION public.set_quote_status(uuid, text, text)
+  FROM PUBLIC, anon;
+
+GRANT EXECUTE ON FUNCTION public.set_quote_status(uuid, text, text)
+  TO authenticated;
+
+-- Actualizar el esquema que utiliza Supabase API.
+NOTIFY pgrst, 'reload schema';
+
+-- 5. Comprobaciones.
+SELECT
+  column_name,
+  data_type
+FROM information_schema.columns
+WHERE table_schema = 'public'
+  AND table_name = 'quotes'
+  AND column_name IN (
+    'inventory_applied_at',
+    'inventory_reversed_at'
+  )
+ORDER BY column_name;
+
+SELECT
+  routine_name,
+  routine_type
+FROM information_schema.routines
+WHERE routine_schema = 'public'
+  AND routine_name = 'set_quote_status';
+
+SELECT
+  table_name
+FROM information_schema.tables
+WHERE table_schema = 'public'
+  AND table_name = 'quote_inventory_movements';
+
+Qué debe aparecer al terminar
+
+Las tres consultas de comprobación del final deben devolver:
+
+Las dos columnas nuevas de quotes.
+
+La función set_quote_status.
+
+La tabla quote_inventory_movements.
+
+No marques cotizaciones como Vendido todavía desde el panel actual. El panel sigue haciendo una actualización directa de quotes.status, sin llamar a la nueva función. Primero debemos conectar el panel a ella.
+
+Cuando ejecutes el SQL, compárteme el resultado o cualquier error que aparezca. Después seguimos con el archivo admin.cotizaciones para implementar la confirmación de venta, cancelación, columna Productos y etiquetas de estado.
+
+## Prompt:
+16/11/2026, 3:33:19 p.m.
+
+Solo aparece table_name  quote_inventory_movements
+
+## Response:
+16/11/2026, 3:33:26 p.m. · gpt-6-mini
+
+Eso indica que la tabla quote_inventory_movements sí se creó, pero las otras dos comprobaciones no mostraron resultados. No debemos continuar todavía: necesitamos confirmar si las columnas y la función se crearon correctamente.
+
+Puede haber ocurrido que el editor solo te mostrara el último resultado de las tres consultas, o que alguna parte de la migración no se ejecutara.
+
+Ejecuta esta consulta por separado. Esta vez reúne todas las comprobaciones en un solo resultado, para que podamos ver exactamente qué quedó instalado.
+
+SELECT
+  'COLUMNAS' AS comprobacion,
+  column_name AS elemento,
+  data_type AS detalle
+FROM information_schema.columns
+WHERE table_schema = 'public'
+  AND table_name = 'quotes'
+  AND column_name IN (
+    'inventory_applied_at',
+    'inventory_reversed_at'
+  )
+
+UNION ALL
+
+SELECT
+  'FUNCION',
+  p.proname,
+  pg_get_function_identity_arguments(p.oid)
+FROM pg_proc p
+JOIN pg_namespace n ON n.oid = p.pronamespace
+WHERE n.nspname = 'public'
+  AND p.proname = 'set_quote_status'
+
+UNION ALL
+
+SELECT
+  'TABLA',
+  table_name,
+  'Existe'
+FROM information_schema.tables
+WHERE table_schema = 'public'
+  AND table_name = 'quote_inventory_movements'
+
+UNION ALL
+
+SELECT
+  'ESTADOS',
+  conname,
+  pg_get_constraintdef(oid)
+FROM pg_constraint
+WHERE conrelid = 'public.quotes'::regclass
+  AND conname = 'quotes_status_check'
+
+ORDER BY comprobacion, elemento;
+
+Deberíamos obtener cinco registros: dos columnas, una función, una tabla y una restricción de estados.
+
+Pásame el resultado tal como aparece. Así sabremos si la migración quedó completa o si hay que corregir alguna parte antes de tocar el panel administrador.
+
+## Prompt:
+16/11/2026, 3:34:00 p.m.
+
+comprobacion,elemento,detalle
+COLUMNAS,inventory_applied_at,timestamp with time zone
+COLUMNAS,inventory_reversed_at,timestamp with time zone
+ESTADOS,quotes_status_check,"CHECK ((status = ANY (ARRAY['pendiente'::text, 'atendida'::text, 'vendido'::text, 'cancelada'::text, 'descartada'::text])))"
+FUNCION,set_quote_status,"p_quote_id uuid, p_status text, p_internal_notes text"
+TABLA,quote_inventory_movements,Existe
+
+## Response:
+16/11/2026, 3:34:06 p.m. · gpt-6-mini
+
+Preparando cambios administrativos
+
+Estoy ajustando el panel para mostrar todos los estados, añadir la columna de productos, guardar notas internas y centralizar las transiciones mediante la función de base de datos. También incluiré confirmación antes de marcar una cotización como vendida o cancelada.
+
+Ajustando los estados
+
+Estoy configurando los cinco estados solicitados, mostrando los productos resumidos en cada fila y limitando las transiciones según el estado actual. También estoy incorporando confirmaciones antes de vender o cancelar, junto con el guardado de notas internas mediante la lógica centralizada.
+
+Preparaste cambios administrativos y ajustaste los estados
+
+Preparando el panel final
+
+Estoy integrando ahora la versión completa del panel con filtros de estado, productos resumidos, transiciones válidas, confirmaciones y notas internas. Mantendré la vista actual y modificaré únicamente la lógica necesaria para no romper el flujo existente.
+
+Preparé el panel final
+
+Actualizado el panel de cotizaciones y revisados tipos de Supabase
+
+Ha pensado durante 33s
+
+(Correcto) La migración quedó instalada correctamente.
+
+Ya aparecen los cinco elementos esperados:
+
+Las dos columnas de control de inventario.
+
+La función set_quote_status.
+
+La tabla quote_inventory_movements.
+
+La restricción que acepta vendido y cancelada.
+
+No necesitamos volver a ejecutar ese SQL. Ahora toca conectar el panel administrador con la función que acabamos de crear.
+
+Paso 2. Actualizar el panel de cotizaciones
+
+Volví a revisar el archivo admin.cotizaciones.txt. El cambio importante es sustituir la actualización directa de quotes.status por una llamada a set_quote_status.
+
+Esta versión incorpora:
+
+Estados Pendiente, Vendido, Cancelada, Descartada y Atendida (para conservar registros históricos).
+
+Confirmación antes de vender y antes de cancelar.
+
+Descuento y restauración mediante Supabase.
+
+Nueva columna Productos, con el primer nombre y «+X más».
+
+Opciones de estado limitadas a las transiciones permitidas.
+
+Reemplaza el contenido completo de admin.cotizaciones.tsx por este código:
+
+import { useState } from "react";
+import { createFileRoute } from "@tanstack/react-router";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { AlertTriangle, Loader2, MessageCircle } from "lucide-react";
+import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
+import type { Tables } from "@/integrations/supabase/types";
+import { AdminTitle, AreaField, Panel, selectCls } from "@/components/admin/AdminUI";
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
+import { formatMXN, whatsappLink } from "@/lib/format";
+
+export const Route = createFileRoute("/admin/cotizaciones")({
+  component: CotizacionesAdmin,
+});
+
+type Quote = Tables<"quotes">;
+
+type Item = {
+  product_id?: string;
+  variant_id?: string;
+  name: string;
+  variant: string | null;
+  quantity: number;
+  unit_price: number;
+  line_total: number;
+  stock: number | null;
+};
+
+const QUOTE_STATUS_LABEL: Record<string, string> = {
+  pendiente: "Pendiente",
+  atendida: "Atendida",
+  vendido: "Vendido",
+  cancelada: "Cancelada",
+  descartada: "Descartada",
+};
+
+const QUOTE_STATUS_FILTER_LABEL: Record<string, string> = {
+  pendiente: "Pendientes",
+  atendida: "Atendidas",
+  vendido: "Vendidas",
+  cancelada: "Canceladas",
+  descartada: "Descartadas",
+};
+
+const items = (q: Quote): Item[] =>
+  Array.isArray(q.items) ? (q.items as unknown as Item[]) : [];
+
+const cuando = (v: string) =>
+  new Date(v).toLocaleString("es-MX", {
+    day: "numeric",
+    month: "short",
+    hour: "numeric",
+    minute: "2-digit",
+  });
+
+function productosResumen(its: Item[]) {
+  const nombres = [...new Set(its.map((i) => i.name).filter(Boolean))];
+
+  if (nombres.length === 0) return "Sin productos";
+
+  return nombres.length === 1
+    ? nombres[0]
+    : `${nombres[0]} +${nombres.length - 1} más`;
+}
+
+function CotizacionesAdmin() {
+  const [status, setStatus] = useState("pendiente");
+  const [buscar, setBuscar] = useState("");
+  const [selected, setSelected] = useState<Quote | null>(null);
+
+  const { data: quotes = [], isLoading, error } = useQuery({
+    queryKey: ["admin", "quotes", status],
+    queryFn: async () => {
+      let q = supabase
+        .from("quotes")
+        .select("*")
+        .order("created_at", { ascending: false })
+        .limit(200);
+
+      if (status) q = q.eq("status", status);
+
+      const { data, error } = await q;
+      if (error) throw error;
+
+      return data as Quote[];
+    },
+  });
+
+  const b = buscar.trim().toUpperCase().replace(/^ZC-?/, "");
+
+  const visibles = b
+    ? quotes.filter(
+        (q) =>
+          q.code.includes(b) ||
+          (/^\d{4,}$/.test(b) && q.phone.replace(/\D/g, "").includes(b)),
+      )
+    : quotes;
+
+  return (
+    <>
+      <AdminTitle
+        title="Cotizaciones"
+        text="Consulta las solicitudes, confirma las ventas y controla automáticamente las existencias."
+      />
+
+      <div className="mb-5 flex flex-wrap gap-3">
+        <select
+          value={status}
+          onChange={(e) => setStatus(e.target.value)}
+          className={`${selectCls} max-w-xs`}
+          aria-label="Filtrar por estado"
+        >
+          {Object.entries(QUOTE_STATUS_FILTER_LABEL).map(([k, v]) => (
+            <option key={k} value={k}>{v}</option>
+          ))}
+          <option value="">Todas</option>
+        </select>
+
+        <input
+          value={buscar}
+          onChange={(e) => setBuscar(e.target.value)}
+          placeholder="Buscar folio o teléfono"
+          aria-label="Buscar folio o teléfono"
+          className={`${selectCls} max-w-xs`}
+        />
+      </div>
+
+      <Panel className="overflow-x-auto p-0">
+        {isLoading ? (
+          <p className="p-5">
+            <Loader2 className="h-5 w-5 animate-spin text-cian" />
+          </p>
+        ) : error ? (
+          <p className="p-5 text-sm text-destructive">
+            No se pudieron leer las cotizaciones: {(error as Error).message}.
+          </p>
+        ) : visibles.length === 0 ? (
+          <p className="p-5 text-sm text-muted-foreground">
+            {b ? "Ninguna cotización con ese folio o teléfono." : "No hay cotizaciones aquí."}
+          </p>
+        ) : (
+          <table className="w-full min-w-[900px] text-sm">
+            <thead className="text-left text-xs uppercase tracking-wider text-muted-foreground">
+              <tr className="border-b border-border">
+                <th className="p-4">Folio</th>
+                <th className="p-4">Fecha</th>
+                <th className="p-4">Cliente</th>
+                <th className="p-4">Productos</th>
+                <th className="p-4">C.P.</th>
+                <th className="p-4">Piezas</th>
+                <th className="p-4 text-right">Subtotal</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {visibles.map((q) => {
+                const its = items(q);
+                const falta = its.some(
+                  (i) => i.stock != null && i.quantity > i.stock,
+                );
+
+                return (
+                  <tr
+                    key={q.id}
+                    onClick={() => setSelected(q)}
+                    className="cursor-pointer border-b border-border last:border-0 hover:bg-foreground/5"
+                  >
+                    <td className="p-4 font-semibold">{q.code}</td>
+                    <td className="p-4 text-muted-foreground">{cuando(q.created_at)}</td>
+                    <td className="p-4">{q.customer_name}</td>
+                    <td className="p-4">{productosResumen(its)}</td>
+                    <td className="p-4">{q.postal_code}</td>
+                    <td className="p-4">
+                      {its.reduce((s, i) => s + Number(i.quantity), 0)}
+                      {falta && (
+                        <AlertTriangle
+                          className="ml-1 inline h-3.5 w-3.5 text-destructive"
+                          aria-label="Pidió más de lo que había al cotizar"
+                        />
+                      )}
+                    </td>
+                    <td className="p-4 text-right">{formatMXN(q.subtotal)}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        )}
+      </Panel>
+
+      <Dialog open={!!selected} onOpenChange={(v) => !v && setSelected(null)}>
+        <DialogContent className="max-h-[90vh] overflow-y-auto border-border bg-popover sm:max-w-2xl">
+          {selected && (
+            <Detalle
+              key={selected.id}
+              quote={selected}
+              onDone={() => setSelected(null)}
+            />
+          )}
+        </DialogContent>
+      </Dialog>
+    </>
+  );
+}
+
+function estadosPermitidos(actual: string): string[] {
+  switch (actual) {
+    case "pendiente":
+      return ["pendiente", "vendido", "descartada"];
+    case "vendido":
+      return ["vendido", "cancelada"];
+    case "cancelada":
+      return ["cancelada"];
+    case "descartada":
+      return ["descartada"];
+    case "atendida":
+      return ["atendida"];
+    default:
+      return [actual];
+  }
+}
+
+function Detalle({
+  quote,
+  onDone,
+}: {
+  quote: Quote;
+  onDone: () => void;
+}) {
+  const qc = useQueryClient();
+  const [status, setStatus] = useState(quote.status);
+  const [notes, setNotes] = useState(quote.internal_notes ?? "");
+  const [saving, setSaving] = useState(false);
+
+  const its = items(quote);
+  const opcionesEstado = estadosPermitidos(quote.status);
+
+  async function save() {
+    if (status === "vendido" && quote.status !== "vendido") {
+      const confirmar = window.confirm(
+        `¿Confirmas la venta de la cotización ${quote.code}?\n\nSe descontarán del inventario las cantidades de todos los productos y variantes. Esta operación no se podrá repetir.`,
+      );
+
+      if (!confirmar) return;
+    }
+
+    if (status === "cancelada" && quote.status === "vendido") {
+      const confirmar = window.confirm(
+        `¿Confirmas la cancelación de la venta ${quote.code}?\n\nSe devolverán al inventario las cantidades que se descontaron originalmente.`,
+      );
+
+      if (!confirmar) return;
+    }
+
+    setSaving(true);
+
+    try {
+      // El tipo generado de Supabase puede no incluir todavía la función
+      // nueva. Este adaptador mantiene tipada la llamada hasta regenerarlo.
+      const rpc = (supabase as unknown as {
+        rpc: (
+          functionName: string,
+          args: {
+            p_quote_id: string;
+            p_status: string;
+            p_internal_notes: string | null;
+          },
+        ) => Promise<{ data: unknown; error: { message: string } | null }>;
+      }).rpc;
+
+      const { error } = await rpc("set_quote_status", {
+        p_quote_id: quote.id,
+        p_status: status,
+        p_internal_notes: notes.trim() || null,
+      });
+
+      if (error) throw new Error(error.message);
+
+      if (status === "vendido" && quote.status !== "vendido") {
+        toast.success("Venta registrada. Inventario actualizado.");
+      } else if (status === "cancelada" && quote.status === "vendido") {
+        toast.success("Venta cancelada. Inventario restaurado.");
+      } else {
+        toast.success("Cotización actualizada.");
+      }
+
+      await qc.invalidateQueries({ queryKey: ["admin", "quotes"] });
+      onDone();
+    } catch (err) {
+      toast.error(
+        err instanceof Error ? err.message : "No se pudo actualizar la cotización.",
+      );
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  const nombre = quote.customer_name.split(" ")[0];
+
+  const aLaClienta = whatsappLink(
+    `52${quote.phone.replace(/\D/g, "").slice(-10)}`,
+    `Hola ${nombre}, te escribimos de Zona G sobre tu cotización ${quote.code}.`,
+  );
+
+  return (
+    <div className="space-y-5">
+      <div>
+        <DialogTitle className="font-display text-3xl font-medium">
+          Cotización {quote.code}
+        </DialogTitle>
+        <DialogDescription>{cuando(quote.created_at)}</DialogDescription>
+      </div>
+
+      <div className="grid gap-4 text-sm sm:grid-cols-2">
+        <div>
+          <p className="eyebrow mb-1">Cliente</p>
+          <p>{quote.customer_name}</p>
+          <p className="text-muted-foreground">{quote.email}</p>
+          <p className="text-muted-foreground">{quote.phone}</p>
+          <a
+            href={aLaClienta}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-1 inline-flex items-center gap-1 text-cian hover:underline"
+          >
+            <MessageCircle className="h-3.5 w-3.5" />
+            Escribir por WhatsApp
+          </a>
+        </div>
+
+        <div>
+          <p className="eyebrow mb-1">Entrega</p>
+          <p>{quote.address_line}</p>
+          <p>{quote.city}, {quote.state} {quote.postal_code}</p>
+          {quote.address_notes && (
+            <p className="text-muted-foreground">{quote.address_notes}</p>
+          )}
+          {quote.shipping_method_name && (
+            <p className="mt-1 text-muted-foreground">
+              Envío escogido: {quote.shipping_method_name}
+            </p>
+          )}
+        </div>
+      </div>
+
+      {quote.customer_notes && (
+        <p className="rounded-xl border border-border p-3 text-sm">
+          Nota de la clienta: {quote.customer_notes}
+        </p>
+      )}
+
+      <ul className="space-y-1 border-y border-border py-3 text-sm">
+        {its.map((i, n) => {
+          const falta = i.stock != null && i.quantity > i.stock;
+
+          return (
+            <li key={n} className="flex justify-between gap-2">
+              <span>
+                {i.name}
+                {i.variant && i.variant !== "Única" ? ` · ${i.variant}` : ""}
+                {" "}× {i.quantity}
+                {falta && (
+                  <span className="ml-2 text-xs text-destructive">
+                    al cotizar había {i.stock}
+                  </span>
+                )}
+              </span>
+              <span>{formatMXN(i.line_total)}</span>
+            </li>
+          );
+        })}
+
+        <li className="flex justify-between pt-2 font-semibold">
+          <span>Subtotal (precios del día en que la pidió)</span>
+          <span>{formatMXN(quote.subtotal)}</span>
+        </li>
+
+        {quote.promo_code && (
+          <li className="text-muted-foreground">
+            Escribió el código {quote.promo_code} (no se ha aplicado ni gastado).
+          </li>
+        )}
+      </ul>
+
+      <div className="grid gap-3">
+        <label className="space-y-1.5 text-sm">
+          <span className="font-medium">Estado</span>
+          <select
+            value={status}
+            onChange={(e) => setStatus(e.target.value)}
+            className={selectCls}
+            disabled={saving}
+          >
+            {opcionesEstado.map((k) => (
+              <option key={k} value={k}>
+                {QUOTE_STATUS_LABEL[k] ?? k}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <AreaField
+          id="qnotes"
+          label="Notas internas (solo el equipo)"
+          rows={2}
+          value={notes}
+          onChange={(e) => setNotes(e.target.value)}
+        />
+      </div>
+
+      <Button onClick={save} disabled={saving} className="w-full">
+        {saving && <Loader2 className="animate-spin" />}
+        Guardar cambios
+      </Button>
+    </div>
+  );
+}
+
+Paso 3. Todavía falta proteger la tienda
+
+Este cambio resuelve el panel, pero no da por terminada la protección del inventario. Después revisaremos el detalle del producto, el carrito y el store para garantizar que una variante con existencia cero no pueda agregarse por ninguna ruta.
+
+Primero, guarda el archivo y dime si compila correctamente. Si aparece un error, compárteme el mensaje completo; no publiques todavía el cambio en producción.
+
+
+
+Te voy a pegar aquí el resultado de la compilación: PS C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g> npm run build
+
+> build
+> vite build
+
+The plugin "vite-tsconfig-paths" is detected. Vite now supports tsconfig paths resolution natively via the resolve.tsconfigPaths option. You can remove the plugin and set resolve.tsconfigPaths: true in your Vite config instead.
+vite v8.1.5 building client environment for production...
+✓ 2102 modules transformed.
+computing gzip size...
+.output/public/assets/styles-BiD-z-Vw.css                   94.21 kB │ gzip:  16.23 kB
+.output/public/assets/queryOptions-Dfvzj6n2.js               0.03 kB │ gzip:   0.05 kB
+.output/public/assets/not-found-i5RsCZif.js                  0.11 kB │ gzip:   0.11 kB
+.output/public/assets/loader-circle-LmZjNfAe.js              0.14 kB │ gzip:   0.15 kB
+.output/public/assets/useRouter-CwjitLz4.js                  0.15 kB │ gzip:   0.14 kB
+.output/public/assets/x-_CKTk_uH.js                          0.15 kB │ gzip:   0.15 kB
+.output/public/assets/matchContext-D7fiU5TJ.js               0.16 kB │ gzip:   0.13 kB
+.output/public/assets/useSuspenseQuery-Bwx5jVzy.js           0.17 kB │ gzip:   0.16 kB
+.output/public/assets/useNavigate-D0meCJtU.js                0.22 kB │ gzip:   0.18 kB
+.output/public/assets/upload-CtVt_yre.js                     0.23 kB │ gzip:   0.19 kB
+.output/public/assets/admin.categorias-hMkdM3SC.js           0.29 kB │ gzip:   0.25 kB
+.output/public/assets/admin.colecciones-C4JYFDkO.js          0.29 kB │ gzip:   0.23 kB
+.output/public/assets/shield-check-DxYS0T48.js               0.32 kB │ gzip:   0.25 kB
+.output/public/assets/trash-2-BsJixwp9.js                    0.32 kB │ gzip:   0.21 kB
+.output/public/assets/categoria._slug-CRkMBc6C.js            0.40 kB │ gzip:   0.29 kB
+.output/public/assets/coleccion._slug-MxwR3VQ3.js            0.40 kB │ gzip:   0.28 kB
+.output/public/assets/producto._slug-G10zFJRN.js             0.40 kB │ gzip:   0.28 kB
+.output/public/assets/truck-C-DTwYGY.js                      0.40 kB │ gzip:   0.26 kB
+.output/public/assets/textarea-DU_EOyg5.js                   0.51 kB │ gzip:   0.35 kB
+.output/public/assets/categoria._slug-D_28OJ4k.js            0.61 kB │ gzip:   0.40 kB
+.output/public/assets/coleccion._slug-BEvnKtCb.js            0.62 kB │ gzip:   0.41 kB
+.output/public/assets/dist-CMRVsOmC.js                       0.67 kB │ gzip:   0.46 kB
+.output/public/assets/tienda-CPlU_1lp.js                     0.83 kB │ gzip:   0.53 kB
+.output/public/assets/tslib.es6-Tae09705.js                  1.06 kB │ gzip:   0.52 kB
+.output/public/assets/label-BGUK0tBL.js                      1.18 kB │ gzip:   0.64 kB
+.output/public/assets/createLucideIcon-CEGepnBf.js           1.19 kB │ gzip:   0.69 kB
+.output/public/assets/reset-password-Cj7QvkW2.js             1.22 kB │ gzip:   0.70 kB
+.output/public/assets/interests-B_oiIqS6.js                  1.31 kB │ gzip:   0.59 kB
+.output/public/assets/favoritos-B7joRiVA.js                  1.39 kB │ gzip:   0.70 kB
+.output/public/assets/AdminUI-CMVPkV0W.js                    1.47 kB │ gzip:   0.63 kB
+.output/public/assets/store-C4zdXpr4.js                      1.72 kB │ gzip:   0.82 kB
+.output/public/assets/admin-CEIBM5Ip.js                      1.81 kB │ gzip:   0.96 kB
+.output/public/assets/privacidad-DdPV5PTa.js                 1.94 kB │ gzip:   1.02 kB
+.output/public/assets/admin.clientes-CYT1hSVN.js             2.22 kB │ gzip:   0.95 kB
+.output/public/assets/ayuda-Omb20dZw.js                      2.33 kB │ gzip:   1.11 kB
+.output/public/assets/admin.equipo-BXtqjH-w.js               2.61 kB │ gzip:   1.23 kB
+.output/public/assets/nosotros-Bssq3Alv.js                   3.04 kB │ gzip:   1.20 kB
+.output/public/assets/admin.envios-BKF9diWf.js               3.05 kB │ gzip:   1.35 kB
+.output/public/assets/carrito-Dxf8bEuw.js                    3.06 kB │ gzip:   1.20 kB
+.output/public/assets/descubre-D_DR6zTv.js                   3.09 kB │ gzip:   1.40 kB
+.output/public/assets/admin.productos.index-DxHZVkhu.js      3.46 kB │ gzip:   1.37 kB
+.output/public/assets/ProductCard-ySjhqaLI.js                3.52 kB │ gzip:   1.51 kB
+.output/public/assets/admin.index-BkfoqI8W.js                4.11 kB │ gzip:   1.59 kB
+.output/public/assets/consultar-pedido-Big28u0u.js           4.31 kB │ gzip:   1.61 kB
+.output/public/assets/catalog-JudMiJDy.js                    4.65 kB │ gzip:   1.43 kB
+.output/public/assets/Blocks-ieX-3bBU.js                     4.77 kB │ gzip:   1.70 kB
+.output/public/assets/TaxonomyAdmin-CuD58rBf.js              4.88 kB │ gzip:   2.00 kB
+.output/public/assets/CatalogView-CMrrg_yp.js                5.13 kB │ gzip:   1.95 kB
+.output/public/assets/pedido-confirmado._code-0d7YBinV.js    5.45 kB │ gzip:   2.22 kB
+.output/public/assets/admin.promociones-C96dT3dr.js          5.52 kB │ gzip:   2.07 kB
+.output/public/assets/preload-helper-DAbsh2Pk.js             5.67 kB │ gzip:   2.22 kB
+.output/public/assets/cuenta-C450o_n7.js                     6.95 kB │ gzip:   2.68 kB
+.output/public/assets/admin.pedidos-ouiIj_KT.js              7.04 kB │ gzip:   2.35 kB
+.output/public/assets/routes-ywVAdySc.js                     7.08 kB │ gzip:   2.82 kB
+.output/public/assets/admin.contenido-mrhw-PSr.js            7.12 kB │ gzip:   2.62 kB
+.output/public/assets/dist-Dh7fpN1L.js                       7.20 kB │ gzip:   2.78 kB
+.output/public/assets/admin-tvrzGTdX.js                      7.94 kB │ gzip:   2.95 kB
+.output/public/assets/jsx-runtime-Cltr0gcK.js                8.43 kB │ gzip:   3.21 kB
+.output/public/assets/admin.cotizaciones-HgCDaT_C.js         8.74 kB │ gzip:   3.25 kB
+.output/public/assets/producto._slug-D8mJza-y.js             9.54 kB │ gzip:   3.59 kB
+.output/public/assets/checkout-C5vrZc78.js                  10.87 kB │ gzip:   4.21 kB
+.output/public/assets/link-Bo04l-EA.js                      11.26 kB │ gzip:   4.98 kB
+.output/public/assets/accordion-C248f0jN.js                 14.36 kB │ gzip:   4.94 kB
+.output/public/assets/admin.productos._id-BlELfuhl.js       16.08 kB │ gzip:   5.17 kB
+.output/public/assets/useBaseQuery-Bp87z7nU.js              23.78 kB │ gzip:   7.86 kB
+.output/public/assets/dist-BT3FjtnI.js                      26.28 kB │ gzip:   9.08 kB
+.output/public/assets/utils-XMmyfTGL.js                     34.28 kB │ gzip:  11.27 kB
+.output/public/assets/client-CHfc9RnG.js                   218.16 kB │ gzip:  56.42 kB
+.output/public/assets/index-BEvT1lIm.js                    431.37 kB │ gzip: 129.57 kB
+
+✓ built in 2.50s
+vite v8.1.5 building ssr environment for production...
+✓ 152 modules transformed.
+computing gzip size...
+node_modules/.nitro/vite/services/ssr/assets/styles-BiD-z-Vw.css                     94.21 kB │ gzip: 16.23 kB
+node_modules/.nitro/vite/services/ssr/assets/utils-C_uf36nf.js                        0.18 kB │ gzip:  0.15 kB
+node_modules/.nitro/vite/services/ssr/assets/empty-plugin-adapters-D9UWiqvJ.js        0.22 kB │ gzip:  0.16 kB
+node_modules/.nitro/vite/services/ssr/assets/admin.productos._id-eqank9Sh.js          0.36 kB │ gzip:  0.23 kB
+node_modules/.nitro/vite/services/ssr/assets/admin.categorias-7xAOePc4.js             0.45 kB │ gzip:  0.32 kB
+node_modules/.nitro/vite/services/ssr/assets/admin.colecciones-DEn2nw56.js            0.45 kB │ gzip:  0.30 kB
+node_modules/.nitro/vite/services/ssr/assets/categoria._slug-DmU-I1LN.js              0.61 kB │ gzip:  0.37 kB
+node_modules/.nitro/vite/services/ssr/assets/coleccion._slug-CbNMdD38.js              0.61 kB │ gzip:  0.37 kB
+node_modules/.nitro/vite/services/ssr/assets/producto._slug-BwoaITyA.js               0.61 kB │ gzip:  0.37 kB
+node_modules/.nitro/vite/services/ssr/assets/textarea-kko37XEX.js                     0.66 kB │ gzip:  0.42 kB
+node_modules/.nitro/vite/services/ssr/assets/consultar-pedido-BLuXmNBw.js             0.93 kB │ gzip:  0.46 kB
+node_modules/.nitro/vite/services/ssr/assets/pedido-confirmado._code-BzbA2Cz4.js      0.95 kB │ gzip:  0.47 kB
+node_modules/.nitro/vite/services/ssr/assets/categoria._slug-CNoAFPIo.js              1.00 kB │ gzip:  0.53 kB
+node_modules/.nitro/vite/services/ssr/assets/coleccion._slug-D7IiOiK8.js              1.02 kB │ gzip:  0.53 kB
+node_modules/.nitro/vite/services/ssr/assets/tienda-DnvGoEAQ.js                       1.19 kB │ gzip:  0.63 kB
+node_modules/.nitro/vite/services/ssr/assets/label-B7oQAA24.js                        1.27 kB │ gzip:  0.60 kB
+node_modules/.nitro/vite/services/ssr/assets/tienda-Ds0Npxqw.js                       1.31 kB │ gzip:  0.68 kB
+node_modules/.nitro/vite/services/ssr/assets/format-DfCEyRz1.js                       1.32 kB │ gzip:  0.72 kB
+node_modules/.nitro/vite/services/ssr/assets/Logo-ByKf9Cxf.js                         1.33 kB │ gzip:  0.75 kB
+node_modules/.nitro/vite/services/ssr/assets/settings-BLDEivMX.js                     1.50 kB │ gzip:  0.88 kB
+node_modules/.nitro/vite/services/ssr/assets/coleccion._slug-BUJUIVFJ.js              1.51 kB │ gzip:  0.65 kB
+node_modules/.nitro/vite/services/ssr/assets/categoria._slug-DBb1A7dm.js              1.56 kB │ gzip:  0.66 kB
+node_modules/.nitro/vite/services/ssr/assets/auth--FilpgZn.js                         1.60 kB │ gzip:  0.73 kB
+node_modules/.nitro/vite/services/ssr/assets/producto._slug-C-am3mD8.js               1.73 kB │ gzip:  0.73 kB
+node_modules/.nitro/vite/services/ssr/assets/accordion-uwqhymWC.js                    1.74 kB │ gzip:  0.68 kB
+node_modules/.nitro/vite/services/ssr/assets/interests-_Ngp8JDO.js                    1.78 kB │ gzip:  0.70 kB
+node_modules/.nitro/vite/services/ssr/assets/button-gMTd6tC1.js                       1.79 kB │ gzip:  0.85 kB
+node_modules/.nitro/vite/services/ssr/assets/reset-password-lJ3ac6im.js               1.87 kB │ gzip:  0.87 kB
+node_modules/.nitro/vite/services/ssr/assets/start-Yyevx_wh.js                        2.00 kB │ gzip:  0.88 kB
+node_modules/.nitro/vite/services/ssr/assets/AdminUI-CrHmhN2R.js                      2.10 kB │ gzip:  0.78 kB
+node_modules/.nitro/vite/services/ssr/assets/favoritos-zarvfOT3.js                    2.15 kB │ gzip:  0.88 kB
+node_modules/.nitro/vite/services/ssr/assets/privacidad-Dt5EWmd_.js                   2.48 kB │ gzip:  1.17 kB
+node_modules/.nitro/vite/services/ssr/assets/store-CsPDRiWz.js                        2.82 kB │ gzip:  1.05 kB
+node_modules/.nitro/vite/services/ssr/assets/dialog-BSdziEhF.js                       3.01 kB │ gzip:  0.97 kB
+node_modules/.nitro/vite/services/ssr/assets/createCsrfMiddleware-B2To0gPJ.js         3.19 kB │ gzip:  1.01 kB
+node_modules/.nitro/vite/services/ssr/assets/sheet-D410YndM.js                        3.48 kB │ gzip:  1.12 kB
+node_modules/.nitro/vite/services/ssr/assets/admin.clientes-BO6KC30x.js               3.48 kB │ gzip:  1.22 kB
+node_modules/.nitro/vite/services/ssr/assets/ayuda-K0eoHczn.js                        3.54 kB │ gzip:  1.39 kB
+node_modules/.nitro/vite/services/ssr/assets/admin-JIu6sOFC.js                        3.60 kB │ gzip:  1.74 kB
+node_modules/.nitro/vite/services/ssr/assets/admin.equipo-KAymW5fT.js                 3.89 kB │ gzip:  1.52 kB
+node_modules/.nitro/vite/services/ssr/assets/nosotros-Cj0SY0Dz.js                     4.55 kB │ gzip:  1.46 kB
+node_modules/.nitro/vite/services/ssr/index.js                                        4.61 kB │ gzip:  1.92 kB
+node_modules/.nitro/vite/services/ssr/assets/admin.envios-CMEc8CXg.js                 4.63 kB │ gzip:  1.67 kB
+node_modules/.nitro/vite/services/ssr/assets/descubre-nFZnD0fO.js                     4.71 kB │ gzip:  1.81 kB
+node_modules/.nitro/vite/services/ssr/assets/carrito-Db7q6cpp.js                      4.76 kB │ gzip:  1.53 kB
+node_modules/.nitro/vite/services/ssr/assets/admin.productos.index-BkrmD2PZ.js        5.34 kB │ gzip:  1.71 kB
+node_modules/.nitro/vite/services/ssr/assets/ProductCard-um7outzU.js                  5.43 kB │ gzip:  1.91 kB
+node_modules/.nitro/vite/services/ssr/assets/admin.index-O_BpkNRR.js                  5.97 kB │ gzip:  1.96 kB
+node_modules/.nitro/vite/services/ssr/assets/CartSheet-By98Isdm.js                    5.98 kB │ gzip:  1.79 kB
+node_modules/.nitro/vite/services/ssr/assets/Blocks-DcKA3I1i.js                       6.20 kB │ gzip:  1.88 kB
+node_modules/.nitro/vite/services/ssr/assets/admin-C8kkVkut.js                        6.30 kB │ gzip:  2.03 kB
+node_modules/.nitro/vite/services/ssr/assets/consultar-pedido-COAlE8kN.js             6.88 kB │ gzip:  2.05 kB
+node_modules/.nitro/vite/services/ssr/assets/client-DaUVSx77.js                       7.53 kB │ gzip:  2.58 kB
+node_modules/.nitro/vite/services/ssr/assets/CatalogView-CT2HjzMa.js                  7.57 kB │ gzip:  2.31 kB
+node_modules/.nitro/vite/services/ssr/assets/TaxonomyAdmin-Cq3VXWs_.js                7.86 kB │ gzip:  2.45 kB
+node_modules/.nitro/vite/services/ssr/assets/admin.promociones-DPZ0o9sj.js            8.29 kB │ gzip:  2.51 kB
+node_modules/.nitro/vite/services/ssr/assets/pedido-confirmado._code-Ce3iRXbb.js      9.09 kB │ gzip:  3.05 kB
+node_modules/.nitro/vite/services/ssr/assets/catalog-gbp4KrEW.js                      9.27 kB │ gzip:  2.71 kB
+node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-B7P63s_z.js   9.70 kB │ gzip:  1.76 kB
+node_modules/.nitro/vite/services/ssr/assets/routes-CDOr45gY.js                       9.76 kB │ gzip:  3.08 kB
+node_modules/.nitro/vite/services/ssr/assets/cuenta-DDJETegw.js                      10.15 kB │ gzip:  3.11 kB
+node_modules/.nitro/vite/services/ssr/assets/admin.contenido-Drp5SgtJ.js             11.20 kB │ gzip:  3.13 kB
+node_modules/.nitro/vite/services/ssr/assets/admin.pedidos-Cx3qIYSP.js               11.22 kB │ gzip:  3.02 kB
+node_modules/.nitro/vite/services/ssr/assets/admin.cotizaciones-bX1kFZwI.js          13.25 kB │ gzip:  3.98 kB
+node_modules/.nitro/vite/services/ssr/assets/producto._slug-COuTqqgj.js              15.83 kB │ gzip:  4.61 kB
+node_modules/.nitro/vite/services/ssr/assets/checkout-DSPrv8hC.js                    17.74 kB │ gzip:  5.34 kB
+node_modules/.nitro/vite/services/ssr/assets/admin.productos._id-CaLNvbgq.js         26.83 kB │ gzip:  6.73 kB
+node_modules/.nitro/vite/services/ssr/assets/router-Dv22wYc-.js                      45.97 kB │ gzip: 11.06 kB
+node_modules/.nitro/vite/services/ssr/assets/server-Cy-8kbUA.js                      66.34 kB │ gzip: 16.95 kB
+
+✓ built in 1.36s
+
+o Building [Nitro] (preset: cloudflare-module, compatibility: 2026-11-11)                                                               nitro 3:36:36 p.m.
+√ Generated public .output/public                                                                                                       nitro 3:36:36 p.m.
+vite v8.1.5 building nitro environment for production...
+
+ WARN  inlineDynamicImports option is ignored because the codeSplitting option is specified.
+
+✓ 2127 modules transformed.
+computing gzip size...
+.output/server/_ssr/empty-plugin-adapters-D9UWiqvJ.mjs      0.23 kB │ gzip:   0.16 kB
+.output/server/_ssr/utils-C_uf36nf.mjs                      0.29 kB │ gzip:   0.21 kB
+.output/server/_ssr/admin.productos._id-eqank9Sh.mjs        0.44 kB │ gzip:   0.28 kB
+.output/server/_ssr/admin.categorias-7xAOePc4.mjs           0.59 kB │ gzip:   0.39 kB
+.output/server/_ssr/admin.colecciones-DEn2nw56.mjs          0.59 kB │ gzip:   0.37 kB
+.output/server/_chunks/ssr-renderer.mjs                     0.60 kB │ gzip:   0.36 kB
+.output/server/_ssr/categoria._slug-DmU-I1LN.mjs            0.81 kB │ gzip:   0.45 kB
+.output/server/_ssr/coleccion._slug-CbNMdD38.mjs            0.81 kB │ gzip:   0.45 kB
+.output/server/_ssr/producto._slug-BwoaITyA.mjs             0.81 kB │ gzip:   0.44 kB
+.output/server/_ssr/textarea-kko37XEX.mjs                   0.92 kB │ gzip:   0.52 kB
+.output/server/_ssr/pedido-confirmado._code-BzbA2Cz4.mjs    0.93 kB │ gzip:   0.46 kB
+.output/server/_libs/radix-ui__react-label.mjs              0.95 kB │ gzip:   0.50 kB
+.output/server/_ssr/consultar-pedido-BLuXmNBw.mjs           1.00 kB │ gzip:   0.52 kB
+.output/server/_libs/hookable.mjs                           1.16 kB │ gzip:   0.51 kB
+.output/server/_runtime.mjs                                 1.18 kB │ gzip:   0.57 kB
+.output/server/_ssr/categoria._slug-CNoAFPIo.mjs            1.24 kB │ gzip:   0.59 kB
+.output/server/_ssr/coleccion._slug-D7IiOiK8.mjs            1.25 kB │ gzip:   0.60 kB
+.output/server/_ssr/tienda-DnvGoEAQ.mjs                     1.26 kB │ gzip:   0.68 kB
+.output/server/_ssr/format-DfCEyRz1.mjs                     1.36 kB │ gzip:   0.75 kB
+.output/server/_ssr/label-B7oQAA24.mjs                      1.51 kB │ gzip:   0.69 kB
+.output/server/_ssr/settings-BLDEivMX.mjs                   1.56 kB │ gzip:   0.92 kB
+.output/server/_ssr/coleccion._slug-BUJUIVFJ.mjs            1.59 kB │ gzip:   0.71 kB
+.output/server/_ssr/tienda-Ds0Npxqw.mjs                     1.60 kB │ gzip:   0.75 kB
+.output/server/_ssr/Logo-ByKf9Cxf.mjs                       1.60 kB │ gzip:   0.84 kB
+.output/server/_ssr/categoria._slug-DBb1A7dm.mjs            1.64 kB │ gzip:   0.72 kB
+.output/server/_ssr/producto._slug-C-am3mD8.mjs             1.81 kB │ gzip:   0.79 kB
+.output/server/_ssr/interests-_Ngp8JDO.mjs                  1.83 kB │ gzip:   0.73 kB
+.output/server/_libs/radix-ui__primitive.mjs                1.83 kB │ gzip:   0.72 kB
+.output/server/_ssr/start-Yyevx_wh.mjs                      1.90 kB │ gzip:   0.86 kB
+.output/server/_ssr/auth--FilpgZn.mjs                       1.93 kB │ gzip:   0.85 kB
+.output/server/_ssr/accordion-uwqhymWC.mjs                  2.02 kB │ gzip:   0.78 kB
+.output/server/_ssr/button-gMTd6tC1.mjs                     2.04 kB │ gzip:   0.94 kB
+.output/server/_ssr/reset-password-lJ3ac6im.mjs             2.33 kB │ gzip:   0.99 kB
+.output/server/_ssr/AdminUI-CrHmhN2R.mjs                    2.54 kB │ gzip:   0.86 kB
+.output/server/_ssr/favoritos-zarvfOT3.mjs                  2.61 kB │ gzip:   0.96 kB
+.output/server/_ssr/privacidad-Dt5EWmd_.mjs                 2.80 kB │ gzip:   1.24 kB
+.output/server/_ssr/createCsrfMiddleware-B2To0gPJ.mjs       3.11 kB │ gzip:   1.01 kB
+.output/server/_libs/class-variance-authority+clsx.mjs      3.17 kB │ gzip:   1.24 kB
+.output/server/_ssr/store-CsPDRiWz.mjs                      3.32 kB │ gzip:   1.19 kB
+.output/server/_ssr/dialog-BSdziEhF.mjs                     3.59 kB │ gzip:   1.11 kB
+.output/server/_ssr/admin-JIu6sOFC.mjs                      3.64 kB │ gzip:   1.77 kB
+.output/server/_ssr/sheet-D410YndM.mjs                      4.07 kB │ gzip:   1.25 kB
+.output/server/_ssr/admin.clientes-BO6KC30x.mjs             4.13 kB │ gzip:   1.30 kB
+.output/server/_ssr/ayuda-K0eoHczn.mjs                      4.18 kB │ gzip:   1.47 kB
+.output/server/_ssr/ssr.mjs                                 4.55 kB │ gzip:   1.92 kB
+.output/server/_ssr/admin.equipo-KAymW5fT.mjs               4.62 kB │ gzip:   1.64 kB
+.output/server/_ssr/admin.envios-CMEc8CXg.mjs               5.36 kB │ gzip:   1.80 kB
+.output/server/_ssr/nosotros-Cj0SY0Dz.mjs                   5.51 kB │ gzip:   1.55 kB
+.output/server/_ssr/descubre-nFZnD0fO.mjs                   5.61 kB │ gzip:   1.95 kB
+.output/server/_ssr/carrito-Db7q6cpp.mjs                    5.69 kB │ gzip:   1.63 kB
+.output/server/_ssr/ProductCard-um7outzU.mjs                6.15 kB │ gzip:   2.01 kB
+.output/server/_ssr/admin.productos.index-BkrmD2PZ.mjs      6.40 kB │ gzip:   1.85 kB
+.output/server/_libs/tanstack__react-query.mjs              6.92 kB │ gzip:   1.89 kB
+.output/server/_ssr/admin.index-O_BpkNRR.mjs                6.98 kB │ gzip:   2.06 kB
+.output/server/_ssr/CartSheet-By98Isdm.mjs                  7.11 kB │ gzip:   1.90 kB
+.output/server/_ssr/Blocks-DcKA3I1i.mjs                     7.31 kB │ gzip:   1.99 kB
+.output/server/_ssr/admin-C8kkVkut.mjs                      7.54 kB │ gzip:   2.20 kB
+.output/server/_ssr/client-DaUVSx77.mjs                     7.58 kB │ gzip:   2.62 kB
+.output/server/_ssr/consultar-pedido-COAlE8kN.mjs           8.25 kB │ gzip:   2.18 kB
+.output/server/_ssr/CatalogView-CT2HjzMa.mjs                8.93 kB │ gzip:   2.45 kB
+.output/server/_ssr/TaxonomyAdmin-Cq3VXWs_.mjs              9.01 kB │ gzip:   2.60 kB
+.output/server/_ssr/catalog-gbp4KrEW.mjs                    9.33 kB │ gzip:   2.75 kB
+.output/server/_ssr/admin.promociones-DPZ0o9sj.mjs          9.38 kB │ gzip:   2.64 kB
+.output/server/_tanstack-start-manifest_v-B7P63s_z.mjs      9.76 kB │ gzip:   1.79 kB
+.output/server/_libs/h3-v2+rou3+srvx.mjs                    9.89 kB │ gzip:   3.06 kB
+.output/server/_ssr/pedido-confirmado._code-Ce3iRXbb.mjs   10.47 kB │ gzip:   3.19 kB
+.output/server/_ssr/routes-CDOr45gY.mjs                    11.35 kB │ gzip:   3.20 kB
+.output/server/_ssr/cuenta-DDJETegw.mjs                    11.83 kB │ gzip:   3.28 kB
+.output/server/_libs/tanstack__history.mjs                 12.50 kB │ gzip:   3.70 kB
+.output/server/_libs/supabase__functions-js.mjs            12.54 kB │ gzip:   3.48 kB
+.output/server/_ssr/admin.contenido-Drp5SgtJ.mjs           13.06 kB │ gzip:   3.27 kB
+.output/server/_ssr/admin.pedidos-Cx3qIYSP.mjs             13.49 kB │ gzip:   3.18 kB
+.output/server/_ssr/admin.cotizaciones-bX1kFZwI.mjs        15.37 kB │ gzip:   4.14 kB
+.output/server/_libs/h3+rou3+srvx.mjs                      16.61 kB │ gzip:   4.80 kB
+.output/server/_ssr/producto._slug-COuTqqgj.mjs            18.04 kB │ gzip:   4.77 kB
+.output/server/_ssr/checkout-DSPrv8hC.mjs                  19.89 kB │ gzip:   5.50 kB
+.output/server/_libs/lucide-react.mjs                      23.23 kB │ gzip:   4.90 kB
+.output/server/index.mjs                                   28.74 kB │ gzip:   7.55 kB
+.output/server/_ssr/admin.productos._id-CaLNvbgq.mjs       29.58 kB │ gzip:   6.90 kB
+.output/server/_libs/@tanstack/router-core+[...].mjs       29.60 kB │ gzip:   7.98 kB
+.output/server/_libs/supabase__supabase-js.mjs             37.86 kB │ gzip:  11.17 kB
+.output/server/_ssr/router-Dv22wYc-.mjs                    48.45 kB │ gzip:  11.15 kB
+.output/server/_libs/supabase__phoenix.mjs                 50.54 kB │ gzip:  12.76 kB
+.output/server/_libs/sonner.mjs                            51.91 kB │ gzip:  11.77 kB
+.output/server/_libs/tanstack__query-core.mjs              62.80 kB │ gzip:  13.50 kB
+.output/server/_libs/@radix-ui/react-dialog+[...].mjs      64.16 kB │ gzip:  15.28 kB
+.output/server/_ssr/server-Cy-8kbUA.mjs                    64.73 kB │ gzip:  16.83 kB
+.output/server/_libs/@radix-ui/react-accordion+[...].mjs   78.48 kB │ gzip:  16.68 kB
+.output/server/_libs/supabase__realtime-js+unenv.mjs       81.93 kB │ gzip:  20.94 kB
+.output/server/_libs/tailwind-merge.mjs                    88.13 kB │ gzip:  15.66 kB
+.output/server/_libs/zod.mjs                               99.85 kB │ gzip:  17.25 kB
+.output/server/_libs/supabase__postgrest-js.mjs           110.46 kB │ gzip:  23.20 kB
+.output/server/_libs/@supabase/storage-js+[...].mjs       127.52 kB │ gzip:  23.94 kB
+.output/server/_libs/supabase__auth-js.mjs                319.51 kB │ gzip:  64.76 kB
+.output/server/_libs/@tanstack/react-router+[...].mjs     749.58 kB │ gzip: 158.58 kB
+
+✓ built in 788ms
+i Using auto generated worker name: tanstack-start-ts                                                                                   nitro 3:36:36 p.m.
+i Generated .output/server/wrangler.json                                                                                                      3:36:36 p.m.
+i Generated .wrangler/deploy/config.json                                                                                                      3:36:36 p.m.
+i Generated .output/public/_headers                                                                                                           3:36:36 p.m.
+i Generated .output/nitro.json                                                                                                                3:36:36 p.m.
+
+√ You can preview this build using npx vite preview                                                                                     nitro 3:36:36 p.m.
+√ You can deploy this build using npx nitro deploy --prebuilt                                                                           nitro 3:36:36 p.m.
+npm notice
+npm notice New major version of npm available! 11.19.0 -> 12.2.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+npm notice To update run: npm install -g npm@12.2.2
+npm notice
