@@ -1,0 +1,120 @@
+import { formatMXN } from "@/lib/format";
+
+/**
+ * La solicitud de cotización, escrita como mensaje de WhatsApp.
+ *
+ * El checkout ya no registra pedidos. Hace dos cosas:
+ *
+ *   1. Guarda la solicitud completa en la base (`request_quote`, archivo E):
+ *      nombre, teléfono, correo, dirección. Caty la ve en
+ *      Panel → Cotizaciones pendientes.
+ *   2. Abre WhatsApp con un mensaje CORTO: lo que pidió, el código postal y
+ *      el folio. Nada de datos personales viajando en el chat.
+ *
+ * El folio es lo que amarra las dos cosas: llega el WhatsApp con
+ * «folio ZC-4B0B481C» y en el panel está esa cotización con todo lo demás.
+ *
+ * SI LA BASE FALLA (se cayó la señal, Supabase en pausa…), el mensaje sale
+ * con TODOS los datos, como antes. Si saliera corto y sin folio, Caty
+ * recibiría un carrito y un código postal sin manera de saber de quién son, y
+ * la clienta se perdería.
+ *
+ * Los importes son «de referencia»: quien confirma precio, existencia y envío
+ * es Caty, en la conversación. Un total que se presenta como final y luego
+ * cambia es un cobro sorpresa.
+ */
+
+export type LineaCotizacion = {
+  name: string;
+  variantName: string | null;
+  price: number;
+  quantity: number;
+};
+
+export type DatosCotizacion = {
+  name: string;
+  email: string;
+  phone: string;
+  address_line: string;
+  city: string;
+  state: string;
+  postal_code: string;
+  address_notes?: string | undefined;
+  notes?: string | undefined;
+};
+
+export type ExtrasCotizacion = {
+  /** Folio que dio la base. Si no hay, la base no guardó nada. */
+  folio?: string | null;
+  /** Código promocional ya validado, con su descuento estimado. */
+  promo?: { code: string; discount: number } | null;
+  /** Método de envío escogido, si hay métodos dados de alta. */
+  envio?: { name: string; price: number } | null;
+};
+
+/** Lo que regresa `request_quote`: los artículos con el precio que puso la base. */
+export type CotizacionGuardada = {
+  code: string;
+  subtotal: number;
+  items: { name: string; variant: string | null; quantity: number; unit_price: number }[];
+};
+
+/** Los artículos que regresó la base, en la forma del mensaje. */
+export function lineasDeLaBase(g: CotizacionGuardada): LineaCotizacion[] {
+  return g.items.map((i) => ({
+    name: i.name,
+    variantName: i.variant,
+    price: Number(i.unit_price),
+    quantity: Number(i.quantity),
+  }));
+}
+
+const RAYA = "─".repeat(15);
+
+export function mensajeCotizacion(
+  lineas: LineaCotizacion[],
+  datos: DatosCotizacion,
+  extras: ExtrasCotizacion = {},
+): string {
+  const subtotal = Math.round(lineas.reduce((s, l) => s + l.price * l.quantity, 0) * 100) / 100;
+  const descuento = extras.promo?.discount ?? 0;
+  const envio = extras.envio ?? null;
+  const total = Math.max(subtotal - descuento + (envio ? envio.price : 0), 0);
+  const cp = `C.P. ${datos.postal_code.trim()}`;
+
+  const opcional = (etiqueta: string, valor: string | undefined) =>
+    valor && valor.trim() ? [`${etiqueta}: ${valor.trim()}`] : [];
+
+  // Con folio, los datos ya están en el panel: al chat solo va el C.P.
+  // Sin folio, van todos, para que la solicitud no se pierda.
+  const quienSoy = extras.folio
+    ? [cp, `Folio: ${extras.folio}`]
+    : [
+        `Mis datos:`,
+        `Nombre: ${datos.name.trim()}`,
+        `Teléfono: ${datos.phone.trim()}`,
+        `Correo: ${datos.email.trim()}`,
+        `Dirección: ${datos.address_line.trim()}, ${datos.city.trim()}, ${datos.state.trim()}, ${cp}`,
+        ...opcional("Referencias", datos.address_notes),
+        ...opcional("Notas", datos.notes),
+      ];
+
+  return [
+    `Hola Zona G, quiero solicitar una cotización.`,
+    ``,
+    ...lineas.map(
+      (l) =>
+        `${l.quantity} × ${l.name}${l.variantName && l.variantName !== "Única" ? ` — ${l.variantName}` : ""} — ${formatMXN(l.price * l.quantity)}`,
+    ),
+    RAYA,
+    ...(descuento > 0 ? [`Código ${extras.promo!.code}: −${formatMXN(descuento)}`] : []),
+    envio
+      ? `Envío (${envio.name}): ${Number(envio.price) === 0 ? "sin costo" : formatMXN(envio.price)}`
+      : `Envío: por confirmar`,
+    `Total de referencia: ${formatMXN(total)}`,
+    ``,
+    ...quienSoy,
+    ``,
+    `¿Me confirman precio, existencias y costo de envío?`,
+  ].join("\n");
+}
