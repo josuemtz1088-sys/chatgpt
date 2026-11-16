@@ -1,0 +1,1526 @@
+PS C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g> # Ir a la carpeta del proyecto
+PS C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g> cd "C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g"
+PS C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g>
+PS C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g> # Mostrar estructura (hasta 3 niveles de profundidad)
+PS C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g> Write-Host "`n=== ESTRUCTURA DE LA CARPETA ===" -ForegroundColor Cyan
+
+=== ESTRUCTURA DE LA CARPETA ===
+PS C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g> Get-ChildItem -Recurse -Depth 3 |
+>>     Where-Object { $_.FullName -notmatch 'node_modules|\.git|dist|build|\.next|out' } |
+>>     ForEach-Object {
+>>         $indent = "  " * ($_.FullName.Split('\').Count - (Get-Location).Path.Split('\').Count)
+>>         if ($_.PSIsContainer) {
+>>             Write-Host "$indent📁 $($_.Name)" -ForegroundColor Yellow
+>>         } else {
+>>             Write-Host "$indent📄 $($_.Name)" -ForegroundColor Gray
+>>         }
+>>     }
+  📁 .netlify
+  📁 drizzle
+  📁 public
+  📁 src
+  📁 supabase
+  📄 .prettierignore
+  📄 .prettierrc
+  📄 AGENTS.md
+  📄 bun.lock
+  📄 bunfig.toml
+  📄 components.json
+  📄 drizzle.config.ts
+  📄 eslint.config.js
+  📄 LEEME-ZONA-G.md
+  📄 netlify.toml
+  📄 package.json
+  📄 README.md
+  📄 roadmap.md
+  📄 tsconfig.json
+  📄 vite.config.ts
+  📄 vitest.config.ts
+    📁 functions
+    📁 functions-internal
+    📁 v1
+    📄 netlify.toml
+    📄 state.json
+      📄 manifest.json
+      📄 server.zip
+      📁 server
+      📄 nitro.json
+        📁 _chunks
+        📁 _libs
+        📁 _ssr
+        📄 main.mjs
+        📄 package.json
+        📄 server.mjs
+        📄 _runtime.mjs
+        📄 _tanstack-start-manifest_v-DxaTMF4y.mjs
+      📁 functions
+    📁 migrations
+    📄 schema.ts
+      📁 meta
+      📄 0000_migration.sql
+        📄 0000_snapshot.json
+        📄 _journal.json
+    📁 categorias
+    📄 apple-touch-icon.png
+    📄 favicon.ico
+    📄 hero.webp
+    📄 logo-256.webp
+    📄 logo.png
+    📄 logo.webp
+    📄 robots.txt
+      📄 accesorios.webp
+      📄 aceites.webp
+      📄 bienestar.webp
+      📄 fragancias.webp
+      📄 juegos.webp
+      📄 juguetes.webp
+      📄 lenceria.webp
+      📄 novedades.webp
+      📄 ofertas.webp
+      📄 regalos.webp
+    📁 assets
+    📁 components
+    📁 hooks
+    📁 integrations
+    📁 lib
+    📁 test
+    📄 server.ts
+    📄 start.ts
+    📄 styles.css
+      📁 admin
+      📁 site
+      📁 ui
+        📄 AdminUI.tsx
+        📄 TaxonomyAdmin.tsx
+        📄 Blocks.tsx
+        📄 CartSheet.tsx
+        📄 CatalogView.tsx
+        📄 Logo.tsx
+        📄 ProductCard.tsx
+        📄 PuertaDeEdad.tsx
+        📄 SearchDialog.tsx
+        📄 SiteFooter.tsx
+        📄 SiteHeader.tsx
+        📄 accordion.tsx
+        📄 alert-dialog.tsx
+        📄 alert.tsx
+        📄 aspect-ratio.tsx
+        📄 avatar.tsx
+        📄 badge.tsx
+        📄 breadcrumb.tsx
+        📄 button.tsx
+        📄 calendar.tsx
+        📄 card.tsx
+        📄 carousel.tsx
+        📄 chart.tsx
+        📄 checkbox.tsx
+        📄 collapsible.tsx
+        📄 command.tsx
+        📄 context-menu.tsx
+        📄 dialog.tsx
+        📄 drawer.tsx
+        📄 dropdown-menu.tsx
+        📄 form.tsx
+        📄 hover-card.tsx
+        📄 input-otp.tsx
+        📄 input.tsx
+        📄 label.tsx
+        📄 menubar.tsx
+        📄 navigation-menu.tsx
+        📄 pagination.tsx
+        📄 popover.tsx
+        📄 progress.tsx
+        📄 radio-group.tsx
+        📄 resizable.tsx
+        📄 scroll-area.tsx
+        📄 select.tsx
+        📄 separator.tsx
+        📄 sheet.tsx
+        📄 sidebar.tsx
+        📄 skeleton.tsx
+        📄 slider.tsx
+        📄 sonner.tsx
+        📄 switch.tsx
+        📄 table.tsx
+        📄 tabs.tsx
+        📄 textarea.tsx
+        📄 toggle-group.tsx
+        📄 toggle.tsx
+        📄 tooltip.tsx
+      📄 use-mobile.tsx
+      📁 lovable
+      📁 supabase
+        📄 index.ts
+        📄 auth-attacher.ts
+        📄 auth-middleware.ts
+        📄 client.server.ts
+        📄 client.ts
+        📄 cron-auth.ts
+        📄 previewAuthStorage.ts
+        📄 types.ts
+      📄 admin.ts
+      📄 auth.tsx
+      📄 catalog.ts
+      📄 cotizacion.ts
+      📄 error-capture.ts
+      📄 error-page.ts
+      📄 format.ts
+      📄 interests.ts
+      📄 lovable-error-reporting.ts
+      📄 pedido.ts
+      📄 settings.ts
+      📄 store.tsx
+      📄 utils.ts
+      📄 cotizacion.test.ts
+      📄 galeria-por-color.test.ts
+      📄 puerta-de-edad.test.tsx
+      📄 setup.ts
+    📁 sql
+    📄 config.toml
+      📄 A-borrar-lo-anterior.sql
+      📄 B-el-esquema-del-sitio.sql
+      📄 C-las-fotos-por-color.sql
+      📄 D-el-pago-por-transferencia.sql
+      📄 E-las-cotizaciones.sql
+      📄 pruebas-de-las-cotizaciones.sql
+      📄 pruebas-de-las-fotos.sql
+PS C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g>
+PS C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g> # Buscar archivos importantes
+PS C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g> Write-Host "`n=== ARCHIVOS CLAVE ===" -ForegroundColor Cyan
+
+=== ARCHIVOS CLAVE ===
+PS C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g> $importantes = @("package.json", "netlify.toml", "vite.config.*", "next.config.*", "astro.config.*", "index.html", "README.md", ".gitignore")
+PS C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g> Get-ChildItem -Recurse -File | Where-Object {
+>>     $name = $_.Name
+>>     $importantes | Where-Object { $name -like $_ }
+>> } | Select-Object FullName, Length, LastWriteTime | Format-Table -AutoSize
+
+FullName
+--------
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\.gitignore
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\netlify.toml
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\vite.config.ts
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\.netlify\netlify.toml
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\.netlify\functions-internal\server\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\.netlify\functions-internal\server\node_modules\tslib\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\.netlify\functions-internal\server\node_modules\tslib\modules\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@adobe\css-tools\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@adobe\css-tools\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\code-frame\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\code-frame\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\compat-data\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\compat-data\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\core\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\core\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\core\node_modules\@babel\types\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\core\node_modules\@babel\types\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\generator\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\generator\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\generator\node_modules\@babel\types\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\generator\node_modules\@babel\types\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\helper-compilation-targets\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\helper-compilation-targets\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\helper-globals\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\helper-globals\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\helper-module-imports\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\helper-module-imports\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\helper-module-imports\node_modules\@babel\types\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\helper-module-imports\node_modules\@babel\types\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\helper-module-transforms\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\helper-module-transforms\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\helper-plugin-utils\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\helper-plugin-utils\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\helper-string-parser\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\helper-string-parser\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\helper-validator-identifier\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\helper-validator-identifier\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\helper-validator-option\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\helper-validator-option\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\helpers\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\helpers\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\helpers\node_modules\@babel\types\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\helpers\node_modules\@babel\types\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\parser\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\parser\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\parser\node_modules\@babel\types\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\parser\node_modules\@babel\types\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\plugin-transform-react-jsx-self\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\plugin-transform-react-jsx-self\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\plugin-transform-react-jsx-source\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\plugin-transform-react-jsx-source\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\runtime\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\runtime\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\runtime\helpers\esm\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\template\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\template\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\template\node_modules\@babel\types\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\template\node_modules\@babel\types\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\traverse\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\traverse\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\traverse\node_modules\@babel\types\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\traverse\node_modules\@babel\types\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\types\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@babel\types\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@date-fns\tz\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@date-fns\tz\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@drizzle-team\brocli\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@drizzle-team\brocli\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@emnapi\core\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@emnapi\core\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@emnapi\runtime\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@emnapi\runtime\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@emnapi\wasi-threads\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@emnapi\wasi-threads\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@esbuild\win32-x64\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@esbuild\win32-x64\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@esbuild-kit\core-utils\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@esbuild-kit\core-utils\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@esbuild-kit\core-utils\node_modules\esbuild\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@esbuild-kit\core-utils\node_modules\esbuild\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@esbuild-kit\core-utils\node_modules\esbuild\node_modules\@esbuild\win32-x64\packa...
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@esbuild-kit\core-utils\node_modules\esbuild\node_modules\@esbuild\win32-x64\READM...
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@esbuild-kit\esm-loader\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@esbuild-kit\esm-loader\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@eslint\config-array\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@eslint\config-array\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@eslint\config-helpers\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@eslint\config-helpers\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@eslint\core\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@eslint\core\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@eslint\eslintrc\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@eslint\eslintrc\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@eslint\eslintrc\node_modules\globals\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@eslint\eslintrc\node_modules\globals\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@eslint\js\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@eslint\js\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@eslint\object-schema\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@eslint\object-schema\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@eslint\plugin-kit\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@eslint\plugin-kit\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@eslint-community\eslint-utils\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@eslint-community\eslint-utils\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@eslint-community\eslint-utils\node_modules\eslint-visitor-keys\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@eslint-community\eslint-utils\node_modules\eslint-visitor-keys\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@eslint-community\regexpp\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@eslint-community\regexpp\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@floating-ui\core\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@floating-ui\core\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@floating-ui\dom\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@floating-ui\dom\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@floating-ui\react-dom\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@floating-ui\react-dom\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@floating-ui\utils\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@floating-ui\utils\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@floating-ui\utils\dom\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@hookform\resolvers\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@hookform\resolvers\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@hookform\resolvers\ajv\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@hookform\resolvers\arktype\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@hookform\resolvers\ata-validator\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@hookform\resolvers\class-validator\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@hookform\resolvers\computed-types\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@hookform\resolvers\effect-ts\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@hookform\resolvers\fluentvalidation-ts\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@hookform\resolvers\io-ts\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@hookform\resolvers\joi\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@hookform\resolvers\nope\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@hookform\resolvers\standard-schema\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@hookform\resolvers\superstruct\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@hookform\resolvers\typanion\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@hookform\resolvers\typebox\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@hookform\resolvers\typeschema\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@hookform\resolvers\valibot\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@hookform\resolvers\vest\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@hookform\resolvers\vine\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@hookform\resolvers\yup\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@hookform\resolvers\zod\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@humanfs\core\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@humanfs\core\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@humanfs\node\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@humanfs\node\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@humanfs\types\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@humanfs\types\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@humanwhocodes\module-importer\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@humanwhocodes\module-importer\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@humanwhocodes\retry\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@humanwhocodes\retry\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@jridgewell\gen-mapping\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@jridgewell\gen-mapping\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@jridgewell\remapping\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@jridgewell\remapping\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@jridgewell\resolve-uri\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@jridgewell\resolve-uri\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@jridgewell\sourcemap-codec\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@jridgewell\sourcemap-codec\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@jridgewell\trace-mapping\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@jridgewell\trace-mapping\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@lovable.dev\cloud-auth-js\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@lovable.dev\cloud-auth-js\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@lovable.dev\vite-tanstack-config\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@lovable.dev\vite-tanstack-config\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@napi-rs\wasm-runtime\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@oozcitak\dom\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@oozcitak\dom\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@oozcitak\infra\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@oozcitak\infra\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@oozcitak\url\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@oozcitak\url\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@oozcitak\util\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@oozcitak\util\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@oxc-parser\binding-win32-x64-msvc\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@oxc-parser\binding-win32-x64-msvc\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@oxc-project\types\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@oxc-project\types\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@pkgr\core\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\number\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\number\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\primitive\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\primitive\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-accordion\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-accordion\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-alert-dialog\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-alert-dialog\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-arrow\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-arrow\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-aspect-ratio\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-aspect-ratio\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-avatar\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-avatar\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-checkbox\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-checkbox\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-collapsible\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-collapsible\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-collection\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-collection\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-compose-refs\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-compose-refs\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-context\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-context\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-context-menu\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-context-menu\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-dialog\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-dialog\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-direction\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-direction\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-dismissable-layer\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-dismissable-layer\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-dropdown-menu\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-dropdown-menu\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-focus-guards\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-focus-guards\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-focus-scope\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-focus-scope\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-hover-card\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-hover-card\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-id\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-id\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-label\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-label\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-menu\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-menu\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-menubar\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-menubar\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-navigation-menu\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-navigation-menu\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-popover\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-popover\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-popper\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-popper\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-portal\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-portal\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-presence\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-presence\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-primitive\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-primitive\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-progress\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-progress\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-radio-group\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-radio-group\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-roving-focus\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-roving-focus\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-scroll-area\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-scroll-area\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-select\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-select\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-separator\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-separator\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-slider\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-slider\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-slot\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-slot\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-switch\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-switch\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-tabs\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-tabs\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-toggle\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-toggle\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-toggle-group\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-toggle-group\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-tooltip\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-tooltip\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-use-callback-ref\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-use-callback-ref\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-use-controllable-state\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-use-controllable-state\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-use-effect-event\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-use-effect-event\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-use-is-hydrated\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-use-is-hydrated\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-use-layout-effect\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-use-layout-effect\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-use-previous\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-use-previous\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-use-rect\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-use-rect\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-use-size\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-use-size\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-visually-hidden\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\react-visually-hidden\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\rect\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@radix-ui\rect\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@rolldown\binding-wasm32-wasi\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@rolldown\binding-wasm32-wasi\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@rolldown\binding-win32-x64-msvc\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@rolldown\binding-win32-x64-msvc\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@rolldown\pluginutils\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@rolldown\pluginutils\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@standard-schema\spec\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@standard-schema\spec\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@standard-schema\utils\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@standard-schema\utils\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@supabase\auth-js\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@supabase\auth-js\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@supabase\auth-js\migrations\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@supabase\functions-js\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@supabase\functions-js\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@supabase\functions-js\migrations\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@supabase\phoenix\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@supabase\phoenix\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@supabase\postgrest-js\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@supabase\postgrest-js\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@supabase\postgrest-js\migrations\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@supabase\realtime-js\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@supabase\realtime-js\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@supabase\realtime-js\migrations\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@supabase\storage-js\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@supabase\storage-js\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@supabase\storage-js\migrations\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@supabase\supabase-js\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@supabase\supabase-js\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@supabase\supabase-js\migrations\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tabby_ai\hijri-converter\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tabby_ai\hijri-converter\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tailwindcss\node\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tailwindcss\node\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tailwindcss\node\node_modules\lightningcss\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tailwindcss\node\node_modules\lightningcss\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tailwindcss\node\node_modules\lightningcss\node_modules\lightningcss-win32-x64-ms...
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tailwindcss\node\node_modules\lightningcss\node_modules\lightningcss-win32-x64-ms...
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tailwindcss\oxide\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tailwindcss\oxide-win32-x64-msvc\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tailwindcss\oxide-win32-x64-msvc\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tailwindcss\vite\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tailwindcss\vite\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\devtools-bundler-core\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\devtools-bundler-core\node_modules\chalk\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\devtools-bundler-core\node_modules\chalk\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\devtools-client\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\devtools-client\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\devtools-event-bus\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\devtools-event-bus\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\devtools-event-client\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\devtools-event-client\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\devtools-vite\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\devtools-vite\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\devtools-vite\node_modules\chalk\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\devtools-vite\node_modules\chalk\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\history\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\query-core\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\react-query\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\react-query\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\react-query\build\codemods\src\v5\keep-previous-data\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\react-query\build\query-codemods\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\react-query\build\query-codemods\vite.config.ts
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\react-router\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\react-router\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\react-start\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\react-start\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\react-start-client\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\react-start-client\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\react-start-rsc\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\react-start-server\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\react-start-server\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\react-store\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-core\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-core\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-generator\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-generator\node_modules\zod\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-generator\node_modules\zod\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-generator\node_modules\zod\locales\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-generator\node_modules\zod\mini\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-generator\node_modules\zod\v3\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-generator\node_modules\zod\v4\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-generator\node_modules\zod\v4\classic\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-generator\node_modules\zod\v4\core\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-generator\node_modules\zod\v4\locales\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-generator\node_modules\zod\v4\mini\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-generator\node_modules\zod\v4-mini\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-plugin\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-plugin\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-plugin\node_modules\zod\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-plugin\node_modules\zod\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-plugin\node_modules\zod\locales\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-plugin\node_modules\zod\mini\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-plugin\node_modules\zod\v3\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-plugin\node_modules\zod\v4\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-plugin\node_modules\zod\v4\classic\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-plugin\node_modules\zod\v4\core\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-plugin\node_modules\zod\v4\locales\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-plugin\node_modules\zod\v4\mini\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-plugin\node_modules\zod\v4-mini\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-utils\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-utils\node_modules\@babel\generator\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-utils\node_modules\@babel\generator\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-utils\node_modules\@babel\parser\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\router-utils\node_modules\@babel\parser\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-client-core\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-client-core\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-fn-stubs\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-plugin-core\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-plugin-core\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-plugin-core\node_modules\picomatch\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-plugin-core\node_modules\picomatch\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-plugin-core\node_modules\source-map\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-plugin-core\node_modules\source-map\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-plugin-core\node_modules\zod\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-plugin-core\node_modules\zod\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-plugin-core\node_modules\zod\locales\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-plugin-core\node_modules\zod\mini\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-plugin-core\node_modules\zod\v3\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-plugin-core\node_modules\zod\v4\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-plugin-core\node_modules\zod\v4\classic\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-plugin-core\node_modules\zod\v4\core\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-plugin-core\node_modules\zod\v4\locales\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-plugin-core\node_modules\zod\v4\mini\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-plugin-core\node_modules\zod\v4-mini\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-server-core\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-server-core\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-storage-context\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\start-storage-context\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\store\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tanstack\virtual-file-routes\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@testing-library\dom\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@testing-library\dom\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@testing-library\dom\node_modules\aria-query\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@testing-library\dom\node_modules\aria-query\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@testing-library\dom\node_modules\dom-accessibility-api\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@testing-library\dom\node_modules\dom-accessibility-api\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@testing-library\jest-dom\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@testing-library\jest-dom\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@testing-library\react\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@testing-library\react\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@testing-library\user-event\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@testing-library\user-event\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@testing-library\user-event\dist\cjs\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@testing-library\user-event\dist\esm\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tootallnate\once\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tootallnate\once\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tybys\wasm-util\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@tybys\wasm-util\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\aria-query\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\aria-query\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\babel__core\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\babel__core\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\babel__core\node_modules\@babel\types\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\babel__core\node_modules\@babel\types\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\babel__generator\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\babel__generator\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\babel__generator\node_modules\@babel\types\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\babel__generator\node_modules\@babel\types\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\babel__template\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\babel__template\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\babel__template\node_modules\@babel\types\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\babel__template\node_modules\@babel\types\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\babel__traverse\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\babel__traverse\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\babel__traverse\node_modules\@babel\types\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\babel__traverse\node_modules\@babel\types\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\chai\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\chai\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\d3-array\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\d3-array\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\d3-color\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\d3-color\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\d3-ease\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\d3-ease\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\d3-interpolate\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\d3-interpolate\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\d3-path\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\d3-path\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\d3-scale\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\d3-scale\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\d3-shape\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\d3-shape\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\d3-time\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\d3-time\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\d3-timer\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\d3-timer\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\deep-eql\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\deep-eql\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\estree\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\estree\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\json-schema\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\json-schema\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\node\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\node\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\react\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\react\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\react-dom\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@types\react-dom\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\eslint-plugin\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\eslint-plugin\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\eslint-plugin\node_modules\ignore\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\eslint-plugin\node_modules\ignore\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\parser\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\parser\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\project-service\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\project-service\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\scope-manager\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\scope-manager\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\tsconfig-utils\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\tsconfig-utils\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\type-utils\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\type-utils\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\types\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\types\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\typescript-estree\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\typescript-estree\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\typescript-estree\node_modules\minimatch\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\typescript-estree\node_modules\minimatch\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\typescript-estree\node_modules\minimatch\dist\commonjs\package....
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\typescript-estree\node_modules\minimatch\dist\esm\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\typescript-estree\node_modules\minimatch\node_modules\brace-exp...
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\typescript-estree\node_modules\minimatch\node_modules\brace-exp...
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\typescript-estree\node_modules\minimatch\node_modules\brace-exp...
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\typescript-estree\node_modules\minimatch\node_modules\brace-exp...
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\typescript-estree\node_modules\minimatch\node_modules\brace-exp...
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\typescript-estree\node_modules\minimatch\node_modules\brace-exp...
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\typescript-estree\node_modules\minimatch\node_modules\brace-exp...
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\typescript-estree\node_modules\minimatch\node_modules\brace-exp...
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\typescript-estree\node_modules\semver\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\typescript-estree\node_modules\semver\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\utils\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\utils\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\visitor-keys\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\visitor-keys\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\visitor-keys\node_modules\eslint-visitor-keys\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@typescript-eslint\visitor-keys\node_modules\eslint-visitor-keys\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@vitejs\plugin-react\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@vitejs\plugin-react\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@vitest\expect\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@vitest\expect\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@vitest\mocker\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@vitest\mocker\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@vitest\pretty-format\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@vitest\pretty-format\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@vitest\runner\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@vitest\runner\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@vitest\snapshot\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@vitest\snapshot\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@vitest\spy\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@vitest\spy\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@vitest\utils\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\@vitest\utils\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\abab\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\abab\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\acorn\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\acorn\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\acorn-globals\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\acorn-globals\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\acorn-jsx\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\acorn-jsx\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\acorn-walk\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\acorn-walk\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\agent-base\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\agent-base\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ajv\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ajv\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ajv\lib\dotjs\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ansi-regex\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ansi-regex\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ansi-styles\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ansi-styles\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ansis\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ansis\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\argparse\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\argparse\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\aria-hidden\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\aria-hidden\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\aria-query\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\aria-query\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\assertion-error\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\assertion-error\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\asynckit\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\asynckit\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\babel-dead-code-elimination\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\babel-dead-code-elimination\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\babel-dead-code-elimination\node_modules\@babel\types\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\babel-dead-code-elimination\node_modules\@babel\types\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\balanced-match\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\balanced-match\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\baseline-browser-mapping\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\baseline-browser-mapping\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\brace-expansion\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\brace-expansion\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\brace-expansion\dist\commonjs\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\brace-expansion\dist\esm\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\browserslist\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\browserslist\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\buffer-from\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\buffer-from\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\call-bind-apply-helpers\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\call-bind-apply-helpers\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\callsites\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\callsites\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\caniuse-lite\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\caniuse-lite\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\chai\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\chai\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\chalk\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\chalk\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\chokidar\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\chokidar\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\class-variance-authority\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\class-variance-authority\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\clsx\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\clsx\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\cmdk\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\cmdk\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\color-convert\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\color-convert\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\color-name\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\color-name\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\combined-stream\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\combined-stream\Readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\concat-map\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\consola\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\consola\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\convert-source-map\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\convert-source-map\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\cookie-es\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\cookie-es\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\cross-spawn\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\cross-spawn\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\crossws\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\crossws\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\css.escape\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\css.escape\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\cssom\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\cssstyle\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\cssstyle\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\cssstyle\node_modules\cssom\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\csstype\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\csstype\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\d3-array\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\d3-array\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\d3-color\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\d3-color\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\d3-ease\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\d3-ease\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\d3-format\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\d3-format\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\d3-interpolate\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\d3-interpolate\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\d3-path\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\d3-path\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\d3-scale\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\d3-scale\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\d3-shape\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\d3-shape\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\d3-time\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\d3-time\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\d3-time-format\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\d3-time-format\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\d3-timer\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\d3-timer\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\data-urls\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\data-urls\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\date-fns\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\date-fns\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\date-fns-jalali\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\date-fns-jalali\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\db0\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\db0\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\debug\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\debug\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\decimal.js\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\decimal.js\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\decimal.js-light\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\decimal.js-light\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\deep-is\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\delayed-stream\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\delayed-stream\Readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dequal\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dequal\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\detect-libc\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\detect-libc\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\detect-node-es\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\detect-node-es\Readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\diff\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\diff\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\diff\libcjs\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\diff\libesm\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-accessibility-api\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-accessibility-api\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\activeElement\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\addClass\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\addEventListener\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\animate\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\animationFrame\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\attribute\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\camelize\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\camelizeStyle\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\canUseDOM\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\childElements\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\childNodes\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\clear\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\closest\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\collectElements\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\collectSiblings\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\contains\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\css\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\filterEventHandler\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\getComputedStyle\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\getScrollAccessor\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\hasClass\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\height\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\hyphenate\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\hyphenateStyle\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\insertAfter\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\isDocument\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\isInput\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\isTransform\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\isVisible\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\isWindow\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\listen\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\matches\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\nextUntil\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\offset\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\offsetParent\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\ownerDocument\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\ownerWindow\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\parents\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\position\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\prepend\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\querySelectorAll\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\remove\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\removeClass\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\removeEventListener\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\scrollbarSize\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\scrollLeft\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\scrollParent\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\scrollTo\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\scrollTop\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\siblings\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\text\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\toggleClass\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\transitionEnd\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\triggerEvent\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dom-helpers\width\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\domexception\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\domexception\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\drizzle-kit\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\drizzle-kit\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\drizzle-orm\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\drizzle-orm\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dunder-proto\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\dunder-proto\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\electron-to-chromium\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\electron-to-chromium\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\embla-carousel\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\embla-carousel\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\embla-carousel\cjs\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\embla-carousel\esm\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\embla-carousel-react\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\embla-carousel-react\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\embla-carousel-react\cjs\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\embla-carousel-react\esm\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\embla-carousel-reactive-utils\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\embla-carousel-reactive-utils\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\embla-carousel-reactive-utils\cjs\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\embla-carousel-reactive-utils\esm\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\enhanced-resolve\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\enhanced-resolve\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\entities\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\entities\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\entities\dist\commonjs\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\entities\dist\esm\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\env-runner\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\env-runner\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\es-define-property\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\es-define-property\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\es-errors\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\es-errors\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\es-module-lexer\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\es-module-lexer\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\es-object-atoms\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\es-object-atoms\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\es-set-tostringtag\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\es-set-tostringtag\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\esbuild\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\esbuild\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\escalade\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\escalade\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\escape-string-regexp\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\escape-string-regexp\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\escodegen\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\escodegen\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\eslint\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\eslint\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\eslint-config-prettier\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\eslint-config-prettier\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\eslint-plugin-prettier\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\eslint-plugin-prettier\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\eslint-plugin-react-hooks\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\eslint-plugin-react-hooks\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\eslint-plugin-react-refresh\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\eslint-plugin-react-refresh\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\eslint-scope\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\eslint-scope\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\eslint-visitor-keys\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\eslint-visitor-keys\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\espree\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\espree\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\esprima\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\esprima\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\esquery\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\esquery\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\esrecurse\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\esrecurse\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\estraverse\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\estraverse\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\estree-walker\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\estree-walker\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\esutils\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\esutils\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\eventemitter3\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\eventemitter3\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\expect-type\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\expect-type\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\exsolve\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\exsolve\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\fast-deep-equal\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\fast-deep-equal\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\fast-diff\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\fast-diff\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\fast-equals\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\fast-equals\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\fast-json-stable-stringify\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\fast-json-stable-stringify\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\fast-levenshtein\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\fast-levenshtein\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\fdir\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\fdir\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\fetchdts\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\fetchdts\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\file-entry-cache\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\file-entry-cache\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\find-up\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\find-up\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\flat-cache\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\flat-cache\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\flatted\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\flatted\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\flatted\cjs\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\flatted\golang\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\form-data\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\form-data\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\function-bind\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\function-bind\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\gensync\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\gensync\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\get-intrinsic\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\get-intrinsic\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\get-nonce\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\get-nonce\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\get-proto\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\get-proto\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\get-tsconfig\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\get-tsconfig\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\glob-parent\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\glob-parent\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\globals\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\globals\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\globrex\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\globrex\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\gopd\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\gopd\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\graceful-fs\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\graceful-fs\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\h3\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\h3\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\h3\dist\docs\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\h3\node_modules\srvx\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\h3\node_modules\srvx\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\h3-v2\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\h3-v2\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\h3-v2\dist\docs\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\h3-v2\node_modules\rou3\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\h3-v2\node_modules\rou3\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\has-flag\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\has-flag\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\has-symbols\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\has-symbols\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\has-tostringtag\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\has-tostringtag\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\hasown\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\hasown\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\hookable\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\hookable\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\html-encoding-sniffer\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\html-encoding-sniffer\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\http-proxy-agent\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\http-proxy-agent\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\https-proxy-agent\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\https-proxy-agent\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\httpxy\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\httpxy\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\iceberg-js\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\iceberg-js\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\iconv-lite\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\iconv-lite\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ignore\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ignore\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\import-fresh\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\import-fresh\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\imurmurhash\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\imurmurhash\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\indent-string\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\indent-string\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\input-otp\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\input-otp\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\internmap\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\internmap\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\is-extglob\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\is-extglob\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\is-glob\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\is-glob\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\is-potential-custom-element-name\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\is-potential-custom-element-name\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\isbot\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\isbot\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\isexe\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\isexe\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\jiti\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\jiti\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\js-tokens\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\js-tokens\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\js-yaml\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\js-yaml\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\jsdom\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\jsdom\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\jsesc\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\jsesc\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\json-buffer\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\json-buffer\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\json-schema-traverse\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\json-schema-traverse\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\json-stable-stringify-without-jsonify\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\json5\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\json5\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\keyv\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\keyv\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\launch-editor\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\levn\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\levn\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\lightningcss\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\lightningcss\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\lightningcss-win32-x64-msvc\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\lightningcss-win32-x64-msvc\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\locate-path\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\locate-path\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\lodash\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\lodash\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\lodash.merge\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\lodash.merge\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\loose-envify\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\loose-envify\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\lru-cache\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\lru-cache\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\lucide-react\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\lucide-react\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\lz-string\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\lz-string\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\magic-string\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\magic-string\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\math-intrinsics\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\math-intrinsics\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\mime-db\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\mime-db\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\mime-types\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\mime-types\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\min-indent\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\min-indent\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\minimatch\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\minimatch\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ms\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ms\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nanoid\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nanoid\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nanoid\async\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nanoid\non-secure\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nanoid\url-alphabet\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\natural-compare\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\natural-compare\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\dist\node_modules\@mapbox\node-pre-gyp\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\dist\node_modules\@mapbox\node-pre-gyp\lib\util\nw-pre-gyp\index.html
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\dist\node_modules\@mapbox\node-pre-gyp\lib\util\nw-pre-gyp\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\dist\node_modules\@rollup\pluginutils\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\dist\node_modules\@vercel\nft\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\dist\node_modules\abbrev\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\dist\node_modules\acorn\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\dist\node_modules\acorn-import-attributes\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\dist\node_modules\async-sema\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\dist\node_modules\bindings\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\dist\node_modules\consola\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\dist\node_modules\detect-libc\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\dist\node_modules\estree-walker\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\dist\node_modules\file-uri-to-path\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\dist\node_modules\glob\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\dist\node_modules\glob\dist\commonjs\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\dist\node_modules\graceful-fs\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\dist\node_modules\node-gyp-build\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\dist\node_modules\nopt\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\dist\node_modules\picomatch\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\dist\node_modules\resolve-from\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nf3\dist\node_modules\semver\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\dist\docs\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\dist\node_modules\@poppinss\colors\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\dist\node_modules\@poppinss\dumper\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\dist\node_modules\@poppinss\exception\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\dist\node_modules\@sindresorhus\is\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\dist\node_modules\@speed-highlight\core\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\dist\node_modules\cookie-es\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\dist\node_modules\croner\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\dist\node_modules\defu\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\dist\node_modules\destr\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\dist\node_modules\error-stack-parser-es\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\dist\node_modules\get-port-please\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\dist\node_modules\kleur\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\dist\node_modules\rendu\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\dist\node_modules\scule\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\dist\node_modules\source-map\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\dist\node_modules\supports-color\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\dist\node_modules\ufo\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\dist\node_modules\unctx\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\dist\node_modules\youch\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nitro\dist\node_modules\youch-core\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\node-releases\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\node-releases\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nwsapi\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\nwsapi\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\object-assign\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\object-assign\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\obug\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\obug\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ocache\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ocache\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ofetch\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ofetch\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ohash\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ohash\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\optionator\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\optionator\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\oxc-parser\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\oxc-parser\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\oxc-parser\node_modules\@oxc-project\types\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\oxc-parser\node_modules\@oxc-project\types\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\p-limit\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\p-limit\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\p-locate\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\p-locate\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\parent-module\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\parent-module\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\parse5\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\parse5\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\parse5\dist\cjs\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\path-exists\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\path-exists\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\path-key\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\path-key\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\pathe\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\pathe\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\picocolors\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\picocolors\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\picomatch\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\picomatch\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\postcss\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\postcss\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\postgres\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\postgres\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\postgres\cjs\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\postgres\types\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\prelude-ls\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\prelude-ls\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\prettier\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\prettier\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\prettier-linter-helpers\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\prettier-linter-helpers\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\pretty-format\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\pretty-format\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\pretty-format\node_modules\ansi-styles\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\pretty-format\node_modules\ansi-styles\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\pretty-format\node_modules\react-is\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\pretty-format\node_modules\react-is\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\prop-types\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\prop-types\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\prop-types\node_modules\react-is\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\prop-types\node_modules\react-is\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\psl\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\psl\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\psl\vite.config.js
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\punycode\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\punycode\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\querystringify\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\querystringify\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-day-picker\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-day-picker\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-day-picker\dist\cjs\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-dom\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-dom\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-hook-form\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-hook-form\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-is\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-is\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-refresh\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-refresh\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-remove-scroll\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-remove-scroll\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-remove-scroll\sidecar\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-remove-scroll\UI\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-remove-scroll-bar\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-remove-scroll-bar\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-remove-scroll-bar\constants\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-resizable-panels\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-resizable-panels\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-smooth\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-smooth\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-style-singleton\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-style-singleton\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-transition-group\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-transition-group\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-transition-group\config\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-transition-group\CSSTransition\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-transition-group\ReplaceTransition\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-transition-group\SwitchTransition\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-transition-group\Transition\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-transition-group\TransitionGroup\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\react-transition-group\TransitionGroupContext\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\readdirp\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\readdirp\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\recharts\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\recharts\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\recharts-scale\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\recharts-scale\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\redent\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\redent\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\requires-port\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\requires-port\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\resolve-from\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\resolve-from\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\resolve-pkg-maps\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\resolve-pkg-maps\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\rolldown\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\rolldown\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\rolldown\node_modules\@rolldown\pluginutils\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\rolldown\node_modules\@rolldown\pluginutils\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\rou3\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\rou3\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\safer-buffer\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\safer-buffer\Readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\saxes\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\saxes\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\scheduler\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\scheduler\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\semver\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\semver\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\seroval\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\seroval\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\seroval-plugins\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\seroval-plugins\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\shebang-command\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\shebang-command\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\shebang-regex\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\shebang-regex\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\shell-quote\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\shell-quote\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\siginfo\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\siginfo\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\sonner\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\sonner\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\source-map\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\source-map\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\source-map-js\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\source-map-js\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\source-map-support\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\source-map-support\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\srvx\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\srvx\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\stackback\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\stackback\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\std-env\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\std-env\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\strip-indent\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\strip-indent\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\strip-json-comments\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\strip-json-comments\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\supports-color\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\supports-color\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\symbol-tree\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\symbol-tree\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\synckit\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\synckit\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tailwind-merge\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tailwind-merge\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tailwindcss\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tailwindcss\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tapable\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tapable\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tiny-invariant\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tiny-invariant\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tiny-invariant\dist\esm\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tinybench\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tinybench\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tinyexec\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tinyexec\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tinyglobby\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tinyglobby\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tinyrainbow\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tinyrainbow\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tough-cookie\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tough-cookie\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tr46\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tr46\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ts-api-utils\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ts-api-utils\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tsconfck\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tsconfck\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tslib\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tslib\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tslib\modules\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tsx\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tsx\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tsx\node_modules\esbuild\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tsx\node_modules\esbuild\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tsx\node_modules\esbuild\node_modules\@esbuild\win32-x64\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tsx\node_modules\esbuild\node_modules\@esbuild\win32-x64\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tw-animate-css\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\tw-animate-css\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\type-check\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\type-check\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\typescript\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\typescript\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\typescript-eslint\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\typescript-eslint\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ufo\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ufo\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\undici-types\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\undici-types\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\unenv\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\unenv\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\unenv\dist\runtime\polyfill\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\universalify\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\universalify\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\unplugin\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\unplugin\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\unstorage\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\unstorage\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\update-browserslist-db\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\update-browserslist-db\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\uri-js\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\uri-js\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\url-parse\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\url-parse\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\use-callback-ref\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\use-callback-ref\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\use-sidecar\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\use-sidecar\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\use-sync-external-store\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\use-sync-external-store\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\vaul\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\vaul\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\victory-vendor\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\victory-vendor\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\vite\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\vite\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\vite-tsconfig-paths\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\vite-tsconfig-paths\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\vitefu\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\vitefu\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\vitest\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\vitest\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\vitest\node_modules\picomatch\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\vitest\node_modules\picomatch\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\w3c-xmlserializer\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\w3c-xmlserializer\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\webidl-conversions\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\webidl-conversions\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\webpack-virtual-modules\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\webpack-virtual-modules\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\whatwg-encoding\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\whatwg-encoding\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\whatwg-mimetype\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\whatwg-mimetype\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\whatwg-url\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\whatwg-url\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\which\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\which\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\why-is-node-running\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\why-is-node-running\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\word-wrap\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\word-wrap\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ws\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\ws\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\xml-name-validator\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\xml-name-validator\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\xmlbuilder2\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\xmlbuilder2\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\xmlchars\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\xmlchars\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\yallist\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\yallist\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\yocto-queue\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\yocto-queue\readme.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\zod\package.json
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\node_modules\zod\README.md
+C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\src\routes\README.md
+
+
+PS C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g>
+PS C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g> # Ver si existe carpeta de build
+PS C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g> Write-Host "`n=== CARPETAS DE BUILD / DIST ===" -ForegroundColor Cyan
+
+=== CARPETAS DE BUILD / DIST ===
+PS C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g> Get-ChildItem -Directory | Where-Object { $_.Name -match 'dist|build|out|.next|public' } |
+>>     Select-Object Name, FullName
+
+Name   FullName
+----   --------
+dist   C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\dist
+public C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g\public
+
+
+PS C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g>
+PS C:\Users\Paul campos\Desktop\Pagina para Caterint\zona-g> Write-Host "`nListo. Copia y pega TODO lo que salió aquí." -ForegroundColor Green
+
+Listo. Copia y pega TODO lo que salió aquí.
