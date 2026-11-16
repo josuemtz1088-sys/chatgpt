@@ -1,0 +1,158 @@
+import { useState } from "react";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { Loader2, Plus, Trash2, Upload } from "lucide-react";
+import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
+import { AdminTitle, AreaField, CheckField, Panel, TextField } from "./AdminUI";
+import { Button } from "@/components/ui/button";
+import { slugify } from "@/lib/format";
+import { uploadImage } from "@/lib/admin";
+
+type Row = {
+  id?: string;
+  slug: string;
+  name: string;
+  tagline: string | null;
+  description: string | null;
+  image_url: string | null;
+  sort_order: number;
+  is_active: boolean;
+  show_in_menu?: boolean;
+};
+
+/** Shared editor for categories and collections (same shape). */
+export function TaxonomyAdmin({ table, title, text }: { table: "categories" | "collections"; title: string; text: string }) {
+  const qc = useQueryClient();
+  const [editing, setEditing] = useState<Row | null>(null);
+  const [saving, setSaving] = useState(false);
+  const { data: rows = [], isLoading } = useQuery({
+    queryKey: ["admin", table],
+    queryFn: async () => {
+      const { data, error } = await supabase.from(table).select("*").order("sort_order");
+      if (error) throw error;
+      return data as Row[];
+    },
+  });
+
+  async function save() {
+    if (!editing) return;
+    const slug = slugify(editing.slug || editing.name);
+    if (!editing.name.trim() || !slug) return void toast.error("Escribe un nombre");
+    if (!Number.isInteger(editing.sort_order)) return void toast.error("El orden debe ser un número entero");
+    setSaving(true);
+    // Lo común a las dos tablas. `show_in_menu` solo existe en `categories`,
+    // así que se agrega aparte: metido aquí con un spread condicional, el
+    // compilador no puede probar que no acabe en `collections` y se queja.
+    const comun = {
+      slug,
+      name: editing.name.trim(),
+      tagline: editing.tagline?.trim() || null,
+      description: editing.description?.trim() || null,
+      image_url: editing.image_url,
+      sort_order: editing.sort_order,
+      is_active: editing.is_active,
+    };
+    const { error } =
+      table === "categories"
+        ? await (async () => {
+            const fila = { ...comun, show_in_menu: !!editing.show_in_menu };
+            return editing.id
+              ? supabase.from("categories").update(fila).eq("id", editing.id)
+              : supabase.from("categories").insert(fila);
+          })()
+        : editing.id
+          ? await supabase.from("collections").update(comun).eq("id", editing.id)
+          : await supabase.from("collections").insert(comun);
+    setSaving(false);
+    if (error) return void toast.error(error.message.includes("duplicate") ? "Ese enlace ya existe" : error.message);
+    toast.success("Guardado");
+    setEditing(null);
+    qc.invalidateQueries();
+  }
+
+  async function remove(row: Row) {
+    if (!row.id || !confirm(`¿Eliminar “${row.name}”? Los productos no se borran.`)) return;
+    const { error } = await supabase.from(table).delete().eq("id", row.id);
+    if (error) return void toast.error(error.message);
+    qc.invalidateQueries();
+  }
+
+  async function onFile(f: File | undefined) {
+    if (!f || !editing) return;
+    try {
+      const { url } = await uploadImage(f, table);
+      setEditing({ ...editing, image_url: url });
+    } catch (e) {
+      toast.error((e as Error).message);
+    }
+  }
+
+  return (
+    <>
+      <AdminTitle
+        title={title}
+        text={text}
+        action={
+          <Button
+            onClick={() =>
+              setEditing({ slug: "", name: "", tagline: "", description: "", image_url: null, sort_order: rows.length + 1, is_active: true, show_in_menu: false })
+            }
+          >
+            <Plus /> Nueva
+          </Button>
+        }
+      />
+      {editing && (
+        <Panel className="mb-6 grid gap-4 md:grid-cols-[10rem_1fr]">
+          <label className="relative grid aspect-[3/4] cursor-pointer place-items-center overflow-hidden rounded-xl border border-dashed border-border text-muted-foreground hover:border-cian">
+            {editing.image_url ? <img src={editing.image_url} alt="" className="absolute inset-0 h-full w-full object-cover" /> : <Upload className="h-5 w-5" />}
+            <input type="file" accept="image/*" className="sr-only" onChange={(e) => onFile(e.target.files?.[0])} />
+          </label>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <TextField id="t-name" label="Nombre" value={editing.name} onChange={(e) => setEditing({ ...editing, name: e.target.value, slug: editing.id ? editing.slug : slugify(e.target.value) })} />
+            <TextField id="t-slug" label="Enlace" value={editing.slug} onChange={(e) => setEditing({ ...editing, slug: slugify(e.target.value) })} />
+            <TextField id="t-tag" label="Frase corta" value={editing.tagline ?? ""} onChange={(e) => setEditing({ ...editing, tagline: e.target.value })} />
+            <TextField id="t-order" label="Orden" type="number" step={1} value={editing.sort_order} onChange={(e) => setEditing({ ...editing, sort_order: Number(e.target.value) })} />
+            <AreaField id="t-desc" label="Descripción" rows={2} value={editing.description ?? ""} onChange={(e) => setEditing({ ...editing, description: e.target.value })} className="sm:col-span-2" />
+            <div className="flex flex-wrap gap-4 sm:col-span-2">
+              <CheckField label="Visible" checked={editing.is_active} onChange={(v) => setEditing({ ...editing, is_active: v })} />
+              {table === "categories" && <CheckField label="Mostrar en el menú superior" checked={!!editing.show_in_menu} onChange={(v) => setEditing({ ...editing, show_in_menu: v })} />}
+            </div>
+            <div className="flex gap-2 sm:col-span-2">
+              <Button onClick={save} disabled={saving}>
+                {saving && <Loader2 className="animate-spin" />} Guardar
+              </Button>
+              <Button variant="outline" onClick={() => setEditing(null)}>
+                Cancelar
+              </Button>
+            </div>
+          </div>
+        </Panel>
+      )}
+      {isLoading ? (
+        <Loader2 className="h-5 w-5 animate-spin text-cian" />
+      ) : (
+        <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+          {rows.map((r) => (
+            <Panel key={r.id} className="flex items-center gap-4 p-3">
+              <div className="h-16 w-12 shrink-0 overflow-hidden rounded-lg bg-muted">{r.image_url && <img src={r.image_url} alt="" className="h-full w-full object-cover" />}</div>
+              <div className="min-w-0 flex-1">
+                <p className="truncate font-display text-xl">{r.name}</p>
+                <p className="text-xs text-muted-foreground">
+                  #{r.sort_order} · {r.is_active ? "Visible" : "Oculta"}
+                  {r.show_in_menu ? " · En menú" : ""}
+                </p>
+              </div>
+              <Button size="sm" variant="soft" onClick={() => setEditing(r)}>
+                Editar
+              </Button>
+              <button onClick={() => remove(r)} aria-label={`Eliminar ${r.name}`} className="text-muted-foreground hover:text-destructive">
+                <Trash2 className="h-4 w-4" />
+              </button>
+            </Panel>
+          ))}
+        </div>
+      )}
+    </>
+  );
+}
